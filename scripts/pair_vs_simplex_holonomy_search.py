@@ -1490,152 +1490,292 @@ def build_report(
             "",
             "## Artifacts",
             "",
-            f"- JSON: [{json_path.name}]({json_path})",
-            f"- Figure: [{svg_path.name}]({svg_path})",
+            f"- JSON: [{json_path.name}]({json_path.name})",
+            f"- Figure: [{svg_path.name}]({svg_path.name})",
         ]
     )
     if note_path is not None:
-        lines.append(f"- Note: [{note_path.name}]({note_path})")
+        lines.append(f"- Note: [{note_path.name}](../docs/writing/{note_path.name})")
     return "\n".join(lines) + "\n"
 
 
 def render_svg(summaries: Sequence[SemanticSummary], payload: Dict[str, object]) -> str:
-    width = 1680
-    height = 960
+    width = 1600
     left = 44
-    top = 54
+    top = 92
     table_width = width - 2 * left
-    row_height = 30
+    row_height = 38
+    card_gap = 16
+
+    reverse_seed_names = {family: name for name, family in SEED_FAMILIES.items()}
+
+    def family_badge(family: Family) -> str:
+        label = reverse_seed_names.get(family)
+        if label is not None:
+            return label
+        return f"|A|={len(family)}"
+
+    def split_marker(record: AnalysisRecord | None) -> str:
+        if record is None:
+            return "none"
+        return f'{family_badge(record.family)} @ (p={record.p}, k={record.k})'
+
+    def status_text(summary: SemanticSummary) -> str:
+        if summary.first_hidden_future_beyond_pair_split is not None:
+            return "hidden future"
+        if summary.first_pair_split is not None:
+            return "pair split"
+        if summary.first_assignment_split is not None:
+            return "assignment only"
+        return "flat"
+
+    control_count = sum(1 for summary in summaries if summary.category == "control")
+    hidden_count = sum(1 for summary in summaries if summary.first_hidden_future_beyond_pair_split is not None)
+    pair_split_count = sum(
+        1
+        for summary in summaries
+        if summary.first_pair_split is not None and summary.first_hidden_future_beyond_pair_split is None
+    )
+    assignment_only_count = sum(
+        1
+        for summary in summaries
+        if summary.first_assignment_split is not None
+        and summary.first_pair_split is None
+        and summary.first_hidden_future_beyond_pair_split is None
+    )
+
+    overall_pair = payload["overall_first_pair_split"]
+    overall_hidden_pair = payload["overall_first_hidden_future_beyond_pair_split"]
+    scan_info = payload["scan"]
+    families_scanned = summaries[0].families_scanned if summaries else 0
+
+    table_y = top + 154
+    table_height = 82 + row_height * len(summaries)
+    bottom_y = table_y + table_height + 24
+    witness_height = 320
+    footer_y = bottom_y + witness_height + 24
+    height = footer_y + 54
+
     lines = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
         "<style>",
-        "text { font-family: Menlo, Monaco, Consolas, monospace; font-size: 12px; fill: #1f2933; }",
-        ".title { font-size: 18px; font-weight: 700; }",
-        ".subtitle { fill: #52606d; }",
-        ".header { font-weight: 700; fill: #102a43; }",
-        ".panel { fill: #ffffff; stroke: #d9e2ec; stroke-width: 1; }",
-        ".control { fill: #f4f7f9; }",
-        ".pair { fill: #eef6ff; }",
-        ".simplex { fill: #f7efff; }",
-        ".winner { fill: #eefbf3; }",
+        "text { font-family: 'Inter', 'Segoe UI', Arial, sans-serif; font-size: 13px; fill: #243b53; }",
+        ".title { font-size: 24px; font-weight: 700; fill: #102a43; }",
+        ".subtitle { font-size: 14px; fill: #52606d; }",
+        ".panel { fill: #ffffff; stroke: #d9e2ec; stroke-width: 1.2; rx: 18; ry: 18; }",
+        ".card { fill: #ffffff; stroke: #d9e2ec; stroke-width: 1.2; rx: 16; ry: 16; }",
+        ".header { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; fill: #486581; }",
+        ".section { font-size: 17px; font-weight: 700; fill: #102a43; }",
+        ".metric { font-size: 30px; font-weight: 700; fill: #0f172a; }",
+        ".small { font-size: 12px; fill: #52606d; }",
+        ".cell { font-size: 12px; fill: #102a43; }",
+        ".mono { font-family: 'SFMono-Regular', Menlo, Monaco, Consolas, monospace; font-size: 12px; fill: #102a43; }",
+        ".control-row { fill: #f4f7f9; }",
+        ".pair-row { fill: #eff6ff; }",
+        ".simplex-row { fill: #f7efff; }",
+        ".winner-row { fill: #eefbf3; }",
+        ".divider { stroke: #e5e7eb; stroke-width: 1; }",
+        ".chip-flat { fill: #f1f5f9; stroke: #cbd2d9; stroke-width: 1; }",
+        ".chip-assign { fill: #dbeafe; stroke: #93c5fd; stroke-width: 1; }",
+        ".chip-pair { fill: #ede9fe; stroke: #c4b5fd; stroke-width: 1; }",
+        ".chip-hidden { fill: #dcfce7; stroke: #86efac; stroke-width: 1; }",
         "</style>",
-        f'<rect x="0" y="0" width="{width}" height="{height}" fill="#fbfbfd"/>',
-        f'<text x="{left}" y="28" class="title">Pair vs Simplex Holonomy Search</text>',
-        f'<text x="{left}" y="46" class="subtitle">The search for the first deterministic law where assignment plus pair transport is no longer exact.</text>',
-        f'<rect x="{left}" y="{top}" width="{table_width}" height="420" class="panel"/>',
+        f'<rect x="0" y="0" width="{width}" height="{height}" fill="#f7fafc"/>',
+        f'<text x="{left}" y="42" class="title">Pair vs Simplex Holonomy Search</text>',
+        f'<text x="{left}" y="66" class="subtitle">The exact base-grid search for the first deterministic law where assignment plus pair transport is no longer enough.</text>',
     ]
-    columns = {
-        "sem": left + 18,
-        "cat": left + 230,
-        "pair": left + 340,
-        "simplex": left + 410,
-        "seed": left + 500,
-        "pairsplit": left + 720,
-        "hiddenpair": left + 980,
-        "gap": left + 1260,
-        "rank": left + 1360,
-        "exact": left + 1470,
-        "note": left + 1565,
-    }
-    head_y = top + 24
-    for key, label in (
-        ("sem", "semantics"),
-        ("cat", "category"),
-        ("pair", "|pair|"),
-        ("simplex", "|simplex|"),
-        ("seed", "seed runtime/assign/pair/simplex"),
-        ("pairsplit", "first pair split"),
-        ("hiddenpair", "first hidden beyond pair"),
-        ("gap", "max pair gap"),
-        ("rank", "pair/simplex"),
-        ("exact", "pair exact"),
-        ("note", "status"),
-    ):
-        lines.append(f'<text x="{columns[key]}" y="{head_y}" class="header">{label}</text>')
-    for index, summary in enumerate(summaries):
-        y = head_y + 28 + index * row_height
-        if summary.category == "control":
-            row_class = "control"
-        elif summary.first_hidden_future_beyond_pair_split is not None:
-            row_class = "winner"
-        elif summary.first_pair_split is not None:
-            row_class = "simplex"
-        else:
-            row_class = "pair"
-        lines.append(f'<rect x="{left + 8}" y="{y - 14}" width="{table_width - 16}" height="22" class="{row_class}"/>')
-        seed = summary.seed_record
-        seed_text = "n/a"
-        if seed is not None:
-            seed_text = f"{seed.runtime_quotient_count}/{seed.assignment_quotient_count}/{seed.pair_quotient_count}/{seed.simplex_quotient_count}"
-        pair_split = "none"
-        if summary.first_pair_split is not None:
-            pair_split = f"(p={summary.first_pair_split.p},k={summary.first_pair_split.k})"
-        hidden_pair = "none"
-        if summary.first_hidden_future_beyond_pair_split is not None:
-            hidden_pair = f"(p={summary.first_hidden_future_beyond_pair_split.p},k={summary.first_hidden_future_beyond_pair_split.k})"
-        status = "flat"
-        if summary.first_hidden_future_beyond_pair_split is not None:
-            status = "hidden future"
-        elif summary.first_pair_split is not None:
-            status = "pair split"
-        elif summary.first_assignment_split is not None:
-            status = "assignment only"
-        lines.extend(
-            [
-                f'<text x="{columns["sem"]}" y="{y}">{summary.label}</text>',
-                f'<text x="{columns["cat"]}" y="{y}">{summary.category}</text>',
-                f'<text x="{columns["pair"]}" y="{y}">{summary.pair_alphabet_size}</text>',
-                f'<text x="{columns["simplex"]}" y="{y}">{summary.simplex_alphabet_size}</text>',
-                f'<text x="{columns["seed"]}" y="{y}">{seed_text}</text>',
-                f'<text x="{columns["pairsplit"]}" y="{y}">{pair_split}</text>',
-                f'<text x="{columns["hiddenpair"]}" y="{y}">{hidden_pair}</text>',
-                f'<text x="{columns["gap"]}" y="{y}">{summary.max_pair_curvature_gap:.3f}</text>',
-                f'<text x="{columns["rank"]}" y="{y}">{summary.max_pair_holonomy_rank}/{summary.max_simplex_holonomy_rank}</text>',
-                f'<text x="{columns["exact"]}" y="{y}">{summary.pair_exact_on_scan}</text>',
-                f'<text x="{columns["note"]}" y="{y}">{status}</text>',
-            ]
-        )
-    box_y = top + 448
-    lines.append(f'<rect x="{left}" y="{box_y}" width="{table_width}" height="388" class="panel"/>')
-    lines.append(f'<text x="{left + 16}" y="{box_y + 24}" class="header">Boundary statement</text>')
-    overall_pair = payload["overall_first_pair_split"]
-    overall_hidden_pair = payload["overall_first_hidden_future_beyond_pair_split"]
+
+    card_width = (table_width - 2 * card_gap) / 3
+    card_y = top
+    card_height = 126
+    for idx in range(3):
+        x = left + idx * (card_width + card_gap)
+        lines.append(f'<rect x="{x}" y="{card_y}" width="{card_width}" height="{card_height}" class="card"/>')
+
+    scan_x = left + 18
+    lines.extend(
+        [
+            f'<text x="{scan_x}" y="{card_y + 26}" class="header">Scan</text>',
+            f'<text x="{scan_x}" y="{card_y + 60}" class="metric">{families_scanned}</text>',
+            f'<text x="{scan_x + 82}" y="{card_y + 60}" class="section">families per semantics</text>',
+            f'<text x="{scan_x}" y="{card_y + 86}" class="small">Grid: p in {tuple(scan_info["base_p_scan"])}, k ≤ {scan_info["base_k_max"]}; {len(summaries)} local law families.</text>',
+            f'<text x="{scan_x}" y="{card_y + 108}" class="small">Status counts: {control_count} controls, {assignment_only_count} assignment-only, {pair_split_count} pair splits, {hidden_count} hidden-future winners.</text>',
+        ]
+    )
+
+    pair_card_x = left + card_width + card_gap + 18
     if overall_pair is None:
-        lines.append(f'<text x="{left + 16}" y="{box_y + 54}">No pair-insufficient witness was found on the scanned library.</text>')
+        pair_title = "No pair-insufficient split"
+        pair_line_1 = "Assignment plus pair transport stayed exact on the scanned library."
+        pair_line_2 = "The current boundary remained at the pair layer."
     else:
-        lines.extend(
-            [
-                f'<text x="{left + 16}" y="{box_y + 54}">First pair split: {overall_pair["semantics"]} on {tuple(tuple(edge) for edge in overall_pair["family"])}.</text>',
-                f'<text x="{left + 16}" y="{box_y + 76}">Counts: runtime {overall_pair["runtime_quotient_count"]}, assignment {overall_pair["assignment_quotient_count"]}, pair {overall_pair["pair_quotient_count"]}, simplex {overall_pair["simplex_quotient_count"]}.</text>',
-            ]
+        pair_title = "First pair-insufficient split"
+        pair_line_1 = (
+            f'{overall_pair["semantics"]} on {family_badge(tuple(tuple(edge) for edge in overall_pair["family"]))} '
+            f'@ (p={overall_pair["p"]}, k={overall_pair["k"]})'
         )
-        witness = overall_pair["pair_witness"]
-        if witness is not None:
-            lines.extend(
-                [
-                    f'<text x="{left + 16}" y="{box_y + 104}">u = {trace_text(tuple(witness["left_trace"]) if witness["left_trace"] else (), tuple(tuple(edge) for edge in overall_pair["family"]))}</text>',
-                    f'<text x="{left + 16}" y="{box_y + 126}">v = {trace_text(tuple(witness["right_trace"]) if witness["right_trace"] else (), tuple(tuple(edge) for edge in overall_pair["family"]))}</text>',
-                    f'<text x="{left + 16}" y="{box_y + 148}">w = {trace_text(tuple(witness["suffix"]) if witness["suffix"] else (), tuple(tuple(edge) for edge in overall_pair["family"]))}</text>',
-                    f'<text x="{left + 16}" y="{box_y + 170}">pair fiber = {witness["summary_value"]}</text>',
-                    f'<text x="{left + 16}" y="{box_y + 192}">outputs now: {witness["left_output_now"]} vs {witness["right_output_now"]}</text>',
-                ]
-            )
-    if overall_hidden_pair is None:
-        lines.append(f'<text x="{left + 16}" y="{box_y + 236}">No hidden future beyond pair transport was found.</text>')
-    else:
-        witness = overall_hidden_pair["hidden_future_beyond_pair_witness"]
-        lines.extend(
-            [
-                f'<text x="{left + 16}" y="{box_y + 236}">First hidden future beyond pair: {overall_hidden_pair["semantics"]} on {tuple(tuple(edge) for edge in overall_hidden_pair["family"])}.</text>',
-                f'<text x="{left + 16}" y="{box_y + 258}">shared pair fiber = {witness["summary_value"]}</text>',
-                f'<text x="{left + 16}" y="{box_y + 280}">shared current output = {witness["left_output_now"]}</text>',
-                f'<text x="{left + 16}" y="{box_y + 302}">future outputs after non-empty w: {witness["left_output_future"]} vs {witness["right_output_future"]}</text>',
-            ]
+        pair_line_2 = (
+            f'counts = {overall_pair["runtime_quotient_count"]} / {overall_pair["assignment_quotient_count"]} / '
+            f'{overall_pair["pair_quotient_count"]} / {overall_pair["simplex_quotient_count"]}'
         )
     lines.extend(
         [
-            f'<text x="{left + 16}" y="{box_y + 338}">Controls: broadcast stays flat; committed allocation keeps assignment and pair exact; pair-only laws break assignment but not pair summary.</text>',
-            f'<text x="{left + 16}" y="{box_y + 360}">If the first winner is positive, the exact runtime object moves from assignment+pair transport to assignment+pair+simplex transport.</text>',
+            f'<text x="{pair_card_x}" y="{card_y + 26}" class="header">Boundary</text>',
+            f'<text x="{pair_card_x}" y="{card_y + 54}" class="section">{pair_title}</text>',
+            f'<text x="{pair_card_x}" y="{card_y + 82}" class="small">{pair_line_1}</text>',
+            f'<text x="{pair_card_x}" y="{card_y + 104}" class="small">{pair_line_2}</text>',
+        ]
+    )
+
+    interp_x = left + 2 * (card_width + card_gap) + 18
+    interpretation = (
+        "Pair-only laws still stop at assignment curvature. The first exact boundary appears on the triangle family, "
+        "where simplex-local transport survives after assignment and pair summaries already agree."
+    )
+    lines.extend(
+        [
+            f'<text x="{interp_x}" y="{card_y + 26}" class="header">Interpretation</text>',
+            f'<text x="{interp_x}" y="{card_y + 54}" class="section">Runtime object moves to the 2-simplex layer</text>',
+            f'<text x="{interp_x}" y="{card_y + 82}" class="small">{interpretation}</text>',
+            f'<text x="{interp_x}" y="{card_y + 104}" class="small">The figure below separates controls, pair-only laws, and the first simplex winners.</text>',
+        ]
+    )
+
+    lines.append(f'<rect x="{left}" y="{table_y}" width="{table_width}" height="{table_height}" class="panel"/>')
+    lines.append(f'<text x="{left + 18}" y="{table_y + 28}" class="header">Semantic Library</text>')
+    lines.append(f'<text x="{left + 18}" y="{table_y + 52}" class="small">Seed quotients are runtime / assignment / pair / simplex on the smallest family where each semantics first shows structure.</text>')
+
+    columns = {
+        "sem": left + 20,
+        "cat": left + 395,
+        "tokens": left + 540,
+        "seed": left + 655,
+        "pair": left + 840,
+        "hidden": left + 1065,
+        "rank": left + 1300,
+        "status": left + 1435,
+    }
+    header_y = table_y + 82
+    for key, label in (
+        ("sem", "Semantics"),
+        ("cat", "Kind"),
+        ("tokens", "|pair| / |simplex|"),
+        ("seed", "Seed q"),
+        ("pair", "First pair split"),
+        ("hidden", "Hidden beyond pair"),
+        ("rank", "Holonomy rank"),
+        ("status", "Status"),
+    ):
+        lines.append(f'<text x="{columns[key]}" y="{header_y}" class="header">{label}</text>')
+    lines.append(
+        f'<line x1="{left + 18}" y1="{header_y + 10}" x2="{left + table_width - 18}" y2="{header_y + 10}" class="divider"/>'
+    )
+
+    for index, summary in enumerate(summaries):
+        y = header_y + 34 + index * row_height
+        if summary.category == "control":
+            row_class = "control-row"
+            chip_class = "chip-flat"
+        elif summary.first_hidden_future_beyond_pair_split is not None:
+            row_class = "winner-row"
+            chip_class = "chip-hidden"
+        elif summary.first_pair_split is not None:
+            row_class = "simplex-row"
+            chip_class = "chip-pair"
+        else:
+            row_class = "pair-row"
+            chip_class = "chip-assign"
+        lines.append(
+            f'<rect x="{left + 12}" y="{y - 18}" width="{table_width - 24}" height="28" rx="12" ry="12" class="{row_class}"/>'
+        )
+        seed = summary.seed_record
+        seed_text = "n/a"
+        if seed is not None:
+            seed_text = (
+                f"{seed.runtime_quotient_count} / {seed.assignment_quotient_count} / "
+                f"{seed.pair_quotient_count} / {seed.simplex_quotient_count}"
+            )
+        lines.extend(
+            [
+                f'<text x="{columns["sem"]}" y="{y}" class="cell">{summary.label}</text>',
+                f'<text x="{columns["cat"]}" y="{y}" class="cell">{summary.category}</text>',
+                f'<text x="{columns["tokens"]}" y="{y}" class="cell">{summary.pair_alphabet_size} / {summary.simplex_alphabet_size}</text>',
+                f'<text x="{columns["seed"]}" y="{y}" class="mono">{seed_text}</text>',
+                f'<text x="{columns["pair"]}" y="{y}" class="cell">{split_marker(summary.first_pair_split)}</text>',
+                f'<text x="{columns["hidden"]}" y="{y}" class="cell">{split_marker(summary.first_hidden_future_beyond_pair_split)}</text>',
+                f'<text x="{columns["rank"]}" y="{y}" class="cell">{summary.max_pair_holonomy_rank} / {summary.max_simplex_holonomy_rank}</text>',
+            ]
+        )
+        chip_x = columns["status"] - 8
+        chip_width = 118
+        lines.append(f'<rect x="{chip_x}" y="{y - 15}" width="{chip_width}" height="22" rx="11" ry="11" class="{chip_class}"/>')
+        lines.append(f'<text x="{chip_x + 12}" y="{y}" class="cell">{status_text(summary)}</text>')
+
+    card_width = (table_width - card_gap) / 2
+    card_height = witness_height
+    for idx in range(2):
+        x = left + idx * (card_width + card_gap)
+        lines.append(f'<rect x="{x}" y="{bottom_y}" width="{card_width}" height="{card_height}" class="card"/>')
+
+    pair_card_x = left + 18
+    lines.append(f'<text x="{pair_card_x}" y="{bottom_y + 28}" class="header">First Pair-Insufficient Witness</text>')
+    if overall_pair is None:
+        lines.append(
+            f'<text x="{pair_card_x}" y="{bottom_y + 58}" class="small">No same-assignment-plus-pair continuation split appeared on the scanned library.</text>'
+        )
+    else:
+        witness = overall_pair["pair_witness"]
+        family = tuple(tuple(edge) for edge in overall_pair["family"])
+        lines.extend(
+            [
+                f'<text x="{pair_card_x}" y="{bottom_y + 58}" class="section">{overall_pair["semantics"]}</text>',
+                f'<text x="{pair_card_x}" y="{bottom_y + 82}" class="small">{family_badge(family)} family at (p={overall_pair["p"]}, k={overall_pair["k"]}); counts {overall_pair["runtime_quotient_count"]} / {overall_pair["assignment_quotient_count"]} / {overall_pair["pair_quotient_count"]} / {overall_pair["simplex_quotient_count"]}.</text>',
+            ]
+        )
+        if witness is not None:
+            lines.extend(
+                [
+                    f'<text x="{pair_card_x}" y="{bottom_y + 118}" class="mono">u = {trace_text(tuple(witness["left_trace"]) if witness["left_trace"] else (), family)}</text>',
+                    f'<text x="{pair_card_x}" y="{bottom_y + 142}" class="mono">v = {trace_text(tuple(witness["right_trace"]) if witness["right_trace"] else (), family)}</text>',
+                    f'<text x="{pair_card_x}" y="{bottom_y + 166}" class="mono">w = {trace_text(tuple(witness["suffix"]) if witness["suffix"] else (), family)}</text>',
+                    f'<text x="{pair_card_x}" y="{bottom_y + 200}" class="small">Shared pair fiber: {witness["summary_value"]}</text>',
+                    f'<text x="{pair_card_x}" y="{bottom_y + 224}" class="small">Current outputs: {witness["left_output_now"]} vs {witness["right_output_now"]}</text>',
+                    f'<text x="{pair_card_x}" y="{bottom_y + 248}" class="small">Future outputs: {witness["left_output_future"]} vs {witness["right_output_future"]}</text>',
+                ]
+            )
+
+    hidden_card_x = left + card_width + card_gap + 18
+    lines.append(f'<text x="{hidden_card_x}" y="{bottom_y + 28}" class="header">First Hidden Future Beyond Pair</text>')
+    if overall_hidden_pair is None:
+        lines.append(
+            f'<text x="{hidden_card_x}" y="{bottom_y + 58}" class="small">No non-empty common suffix separated states that already agreed on assignment, pair summary, and current output.</text>'
+        )
+    else:
+        witness = overall_hidden_pair["hidden_future_beyond_pair_witness"]
+        family = tuple(tuple(edge) for edge in overall_hidden_pair["family"])
+        lines.extend(
+            [
+                f'<text x="{hidden_card_x}" y="{bottom_y + 58}" class="section">{overall_hidden_pair["semantics"]}</text>',
+                f'<text x="{hidden_card_x}" y="{bottom_y + 82}" class="small">{family_badge(family)} family at (p={overall_hidden_pair["p"]}, k={overall_hidden_pair["k"]}). This is the first witness where the future remembers simplex-local transport after the pair fiber already agrees.</text>',
+            ]
+        )
+        if witness is not None:
+            lines.extend(
+                [
+                    f'<text x="{hidden_card_x}" y="{bottom_y + 118}" class="mono">u = {trace_text(tuple(witness["left_trace"]) if witness["left_trace"] else (), family)}</text>',
+                    f'<text x="{hidden_card_x}" y="{bottom_y + 142}" class="mono">v = {trace_text(tuple(witness["right_trace"]) if witness["right_trace"] else (), family)}</text>',
+                    f'<text x="{hidden_card_x}" y="{bottom_y + 166}" class="mono">w = {trace_text(tuple(witness["suffix"]) if witness["suffix"] else (), family)}</text>',
+                    f'<text x="{hidden_card_x}" y="{bottom_y + 200}" class="small">Shared pair fiber: {witness["summary_value"]}</text>',
+                    f'<text x="{hidden_card_x}" y="{bottom_y + 224}" class="small">Shared current output: {witness["left_output_now"]}</text>',
+                    f'<text x="{hidden_card_x}" y="{bottom_y + 248}" class="small">Future outputs after non-empty w: {witness["left_output_future"]} vs {witness["right_output_future"]}</text>',
+                ]
+            )
+
+    canonical_order = ", ".join(payload["scan"]["canonical_first_order"])
+    lines.extend(
+        [
+            f'<text x="{left}" y="{footer_y}" class="small">Canonical first-order for ties: {canonical_order}.</text>',
+            f'<text x="{left}" y="{footer_y + 22}" class="small">Reading: broadcast stays flat; committed allocation adds coordinate curvature; pair-only laws still stop at the pair layer; simplex-local laws create the first exact boundary beyond pair transport.</text>',
         ]
     )
     lines.append("</svg>")

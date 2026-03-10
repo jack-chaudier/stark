@@ -521,12 +521,12 @@ def render_closure_svg(results: Sequence[FamilyClosureResult]) -> str:
 
 
 def render_stratigraphy_svg(rows: Sequence[Dict[str, object]]) -> str:
-    width = 980
-    row_height = 58
-    height = 76 + row_height * len(rows)
-    margin_left = 160
-    margin_right = 40
-    margin_top = 46
+    width = 1120
+    row_height = 62
+    height = 118 + row_height * len(rows)
+    margin_left = 210
+    margin_right = 88
+    margin_top = 78
     x_max = max(float(row["algebraic_bits"]) for row in rows) + 1.0
 
     def x_for(value: float) -> float:
@@ -543,20 +543,25 @@ def render_stratigraphy_svg(rows: Sequence[Dict[str, object]]) -> str:
     lines = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
         "<style>",
-        "text { font-family: Menlo, Monaco, Consolas, monospace; font-size: 11px; fill: #1f2933; }",
-        ".title { font-size: 14px; font-weight: 700; }",
-        ".grid { stroke: #d9e2ec; stroke-width: 1; stroke-dasharray: 4 4; }",
-        ".axis { stroke: #9fb3c8; stroke-width: 1; }",
+        'text { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 12px; fill: #243b53; }',
+        ".title { font-size: 22px; font-weight: 700; fill: #102a43; }",
+        ".subtitle { font-size: 13px; fill: #52606d; }",
+        ".label { font-size: 14px; font-weight: 600; fill: #102a43; }",
+        ".grid { stroke: #e5e7eb; stroke-width: 1; stroke-dasharray: 3 6; }",
+        ".axis { stroke: #9fb3c8; stroke-width: 1.2; }",
+        ".badge { fill: #ffffff; stroke: #d9e2ec; stroke-width: 1; }",
         "</style>",
-        f'<rect x="0" y="0" width="{width}" height="{height}" fill="#fffdf8"/>',
-        f'<text x="{margin_left}" y="24" class="title">Memory Stratigraphy: Algebraic, Empirical, and Observational Bit Thresholds</text>',
+        f'<rect x="0" y="0" width="{width}" height="{height}" fill="#fcfcfb"/>',
+        f'<text x="{margin_left}" y="34" class="title">Memory Stratigraphy</text>',
+        f'<text x="{margin_left}" y="56" class="subtitle">Bit thresholds from the canonical quotient down to answer-only observation</text>',
+        f'<rect x="{margin_left - 26}" y="{margin_top - 24}" width="{width - margin_left - margin_right + 52}" height="{height - margin_top - 28}" rx="18" ry="18" fill="#ffffff" stroke="#e6e8eb" stroke-width="1.2"/>',
     ]
     for tick in range(int(math.ceil(x_max)) + 1):
         x = x_for(float(tick))
-        lines.append(f'<line x1="{x:.2f}" y1="{margin_top}" x2="{x:.2f}" y2="{height - 28}" class="grid"/>')
-        lines.append(f'<text x="{x - 4:.2f}" y="{height - 10}">{tick}</text>')
-    lines.append(f'<line x1="{margin_left}" y1="{height - 28}" x2="{width - margin_right}" y2="{height - 28}" class="axis"/>')
-    lines.append(f'<text x="{(margin_left + width - margin_right) / 2 - 24:.2f}" y="{height - 44}">bits</text>')
+        lines.append(f'<line x1="{x:.2f}" y1="{margin_top}" x2="{x:.2f}" y2="{height - 54}" class="grid"/>')
+        lines.append(f'<text x="{x - 4:.2f}" y="{height - 28}">{tick}</text>')
+    lines.append(f'<line x1="{margin_left}" y1="{height - 46}" x2="{width - margin_right}" y2="{height - 46}" class="axis"/>')
+    lines.append(f'<text x="{(margin_left + width - margin_right) / 2 - 14:.2f}" y="{height - 12}" class="subtitle">bits</text>')
 
     legend = [
         ("algebraic", "algebraic"),
@@ -565,22 +570,22 @@ def render_stratigraphy_svg(rows: Sequence[Dict[str, object]]) -> str:
         ("witness", "probe-witness"),
         ("answer", "probe-answer"),
     ]
-    legend_x = width - 236
+    legend_x = width - 282
     for index, (key, label) in enumerate(legend):
-        y = 28 + index * 16
-        lines.append(f'<circle cx="{legend_x}" cy="{y}" r="4.5" fill="{colors[key]}"/>')
-        lines.append(f'<text x="{legend_x + 12}" y="{y + 4}">{label}</text>')
+        y = 30 + index * 20
+        lines.append(f'<circle cx="{legend_x}" cy="{y}" r="5.5" fill="{colors[key]}"/>')
+        lines.append(f'<text x="{legend_x + 14}" y="{y + 4}">{label}</text>')
 
     for row_index, row in enumerate(rows):
         y = margin_top + row_index * row_height + 28
         label = str(row["label"])
-        lines.append(f'<text x="18" y="{y + 4}">{label}</text>')
+        lines.append(f'<text x="28" y="{y + 4}" class="label">{label}</text>')
         x_answer = x_for(float(row["probe_answer_bits"]))
         x_witness = x_for(float(row["probe_witness_bits"]))
         x_joint = x_for(float(row["probe_joint_bits"]))
         x_empirical = x_for(float(row["empirical_bits"]))
         x_algebraic = x_for(float(row["algebraic_bits"]))
-        lines.append(f'<line x1="{x_answer:.2f}" y1="{y:.2f}" x2="{x_algebraic:.2f}" y2="{y:.2f}" stroke="#bcccdc" stroke-width="2"/>')
+        lines.append(f'<line x1="{x_answer:.2f}" y1="{y:.2f}" x2="{x_algebraic:.2f}" y2="{y:.2f}" stroke="#d9e2ec" stroke-width="7" stroke-linecap="round"/>')
         for key, x in (
             ("answer", x_answer),
             ("witness", x_witness),
@@ -588,9 +593,11 @@ def render_stratigraphy_svg(rows: Sequence[Dict[str, object]]) -> str:
             ("empirical", x_empirical),
             ("algebraic", x_algebraic),
         ):
-            lines.append(f'<circle cx="{x:.2f}" cy="{y:.2f}" r="5" fill="{colors[key]}"/>')
+            lines.append(f'<circle cx="{x:.2f}" cy="{y:.2f}" r="6" fill="{colors[key]}" stroke="#ffffff" stroke-width="1.5"/>')
+        badge_x = width - margin_right - 168
+        lines.append(f'<rect x="{badge_x}" y="{y - 16}" width="150" height="28" rx="14" ry="14" class="badge"/>')
         lines.append(
-            f'<text x="{x_algebraic + 10:.2f}" y="{y + 4:.2f}">Δ={float(row["probe_deficiency_bits"]):.3f}, ω={float(row["shelf_width_bits"]):.3f}</text>'
+            f'<text x="{badge_x + 12}" y="{y + 4:.2f}">Δ={float(row["probe_deficiency_bits"]):.3f}   ω={float(row["shelf_width_bits"]):.3f}</text>'
         )
 
     lines.append("</svg>")

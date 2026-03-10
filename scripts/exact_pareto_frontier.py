@@ -343,13 +343,13 @@ def render_markdown(model_payloads: Sequence[Dict[str, object]]) -> str:
 
 
 def render_svg(model_payloads: Sequence[Dict[str, object]]) -> str:
-    width = 1040
-    height = 600
-    margin_left = 88
-    margin_top = 54
-    panel_gap = 44
-    panel_width = (width - margin_left - 40 - panel_gap) / 2
-    panel_height = height - margin_top - 92
+    width = 1120
+    height = 660
+    margin_left = 92
+    margin_top = 86
+    panel_gap = 34
+    panel_width = (width - margin_left - 56 - panel_gap) / 2
+    panel_height = height - margin_top - 108
     colors = {
         "M_3": "#102a43",
         "Q_(3,2)": "#0b6e4f",
@@ -373,23 +373,40 @@ def render_svg(model_payloads: Sequence[Dict[str, object]]) -> str:
     lines = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
         "<style>",
-        "text { font-family: Menlo, Monaco, Consolas, monospace; font-size: 11px; fill: #1f2933; }",
-        ".title { font-size: 14px; font-weight: 700; }",
-        ".axis { stroke: #9fb3c8; stroke-width: 1; }",
-        ".grid { stroke: #d9e2ec; stroke-width: 1; stroke-dasharray: 4 4; }",
+        'text { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 12px; fill: #243b53; }',
+        ".title { font-size: 22px; font-weight: 700; fill: #102a43; }",
+        ".subtitle { font-size: 13px; fill: #52606d; }",
+        ".paneltitle { font-size: 15px; font-weight: 700; fill: #102a43; }",
+        ".axis { stroke: #9fb3c8; stroke-width: 1.2; }",
+        ".grid { stroke: #e5e7eb; stroke-width: 1; stroke-dasharray: 3 6; }",
         ".panel { fill: #ffffff; stroke: #d9e2ec; stroke-width: 1; }",
         "</style>",
-        f'<rect x="0" y="0" width="{width}" height="{height}" fill="#fbfbff"/>',
-        f'<text x="{margin_left}" y="26" class="title">Exact Pareto Frontier Envelopes</text>',
+        f'<rect x="0" y="0" width="{width}" height="{height}" fill="#fbfbfd"/>',
+        f'<text x="{margin_left}" y="34" class="title">Exact Pareto Frontier Envelopes</text>',
+        f'<text x="{margin_left}" y="56" class="subtitle">Solid lines track best achievable answer fidelity. Dashed lines track best achievable witness fidelity.</text>',
     ]
+    legend_x = width - 306
+    legend_y = 34
+    for index, payload in enumerate(model_payloads):
+        color = colors[payload["label"]]
+        y = legend_y + index * 20
+        lines.append(f'<line x1="{legend_x}" y1="{y}" x2="{legend_x + 26}" y2="{y}" stroke="{color}" stroke-width="3.5" stroke-linecap="round"/>')
+        lines.append(f'<text x="{legend_x + 36}" y="{y + 4}">{payload["label"]}</text>')
+    lines.append(f'<line x1="{legend_x}" y1="{legend_y + 110}" x2="{legend_x + 26}" y2="{legend_y + 110}" stroke="#52606d" stroke-width="3.5" stroke-linecap="round"/>')
+    lines.append(f'<line x1="{legend_x}" y1="{legend_y + 122}" x2="{legend_x + 26}" y2="{legend_y + 122}" stroke="#52606d" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round"/>')
+    lines.append(f'<text x="{legend_x + 36}" y="{legend_y + 114}">answer</text>')
+    lines.append(f'<text x="{legend_x + 36}" y="{legend_y + 126}">witness</text>')
     for panel_index, policy in enumerate(("forced", "breach")):
         left = margin_left + panel_index * (panel_width + panel_gap)
-        lines.append(f'<rect x="{left}" y="{margin_top}" width="{panel_width}" height="{panel_height}" class="panel"/>')
-        lines.append(f'<text x="{left + 10}" y="{margin_top - 10}" class="title">{policy}</text>')
+        lines.append(f'<rect x="{left}" y="{margin_top}" width="{panel_width}" height="{panel_height}" rx="18" ry="18" class="panel"/>')
+        title = "Forced decoding" if policy == "forced" else "Breach-enabled decoding"
+        subtitle = "quality preserved by output coercion" if policy == "forced" else "quality preserved by abstention"
+        lines.append(f'<text x="{left + 12}" y="{margin_top - 16}" class="paneltitle">{title}</text>')
+        lines.append(f'<text x="{left + 12}" y="{margin_top - 2}" class="subtitle">{subtitle}</text>')
         for tick in range(max_bits + 1):
             x = x_for(tick, max_bits, left)
             lines.append(f'<line x1="{x:.2f}" y1="{margin_top}" x2="{x:.2f}" y2="{margin_top + panel_height}" class="grid"/>')
-            lines.append(f'<text x="{x - 4:.2f}" y="{margin_top + panel_height + 18}">{tick}</text>')
+            lines.append(f'<text x="{x - 4:.2f}" y="{margin_top + panel_height + 22}">{tick}</text>')
         for tick in range(0, 11):
             value = tick / 10
             y = y_for(value, margin_top)
@@ -397,7 +414,7 @@ def render_svg(model_payloads: Sequence[Dict[str, object]]) -> str:
             lines.append(f'<text x="{left - 28}" y="{y + 4:.2f}">{value:.1f}</text>')
         lines.append(f'<line x1="{left}" y1="{margin_top + panel_height}" x2="{left + panel_width}" y2="{margin_top + panel_height}" class="axis"/>')
         lines.append(f'<line x1="{left}" y1="{margin_top}" x2="{left}" y2="{margin_top + panel_height}" class="axis"/>')
-        lines.append(f'<text x="{left + panel_width / 2 - 20:.2f}" y="{height - 26}">bits</text>')
+        lines.append(f'<text x="{left + panel_width / 2 - 12:.2f}" y="{height - 24}" class="subtitle">bits</text>')
         for payload in model_payloads:
             color = colors[payload["label"]]
             answer_points = []
@@ -409,18 +426,8 @@ def render_svg(model_payloads: Sequence[Dict[str, object]]) -> str:
                 witness_points.append(
                     f"{x_for(row['budget_bits'], max_bits, left):.2f},{y_for(row['best_witness'], margin_top):.2f}"
                 )
-            lines.append(f'<polyline fill="none" stroke="{color}" stroke-width="3" points="{" ".join(answer_points)}"/>')
-            lines.append(f'<polyline fill="none" stroke="{color}" stroke-width="2" stroke-dasharray="7 5" points="{" ".join(witness_points)}"/>')
-    legend_x = width - 278
-    legend_y = 42
-    for index, payload in enumerate(model_payloads):
-        color = colors[payload["label"]]
-        y = legend_y + index * 18
-        lines.append(f'<line x1="{legend_x}" y1="{y}" x2="{legend_x + 24}" y2="{y}" stroke="{color}" stroke-width="3"/>')
-        lines.append(f'<line x1="{legend_x}" y1="{y + 7}" x2="{legend_x + 24}" y2="{y + 7}" stroke="{color}" stroke-width="2" stroke-dasharray="7 5"/>')
-        lines.append(f'<text x="{legend_x + 34}" y="{y + 5}">{payload["label"]}</text>')
-    lines.append(f'<text x="{width - 278}" y="{height - 52}">solid = best answer</text>')
-    lines.append(f'<text x="{width - 278}" y="{height - 36}">dashed = best witness</text>')
+            lines.append(f'<polyline fill="none" stroke="{color}" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" points="{" ".join(answer_points)}"/>')
+            lines.append(f'<polyline fill="none" stroke="{color}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5" points="{" ".join(witness_points)}"/>')
     lines.append("</svg>")
     return "\n".join(lines)
 

@@ -683,13 +683,13 @@ def additive_counterexample_search() -> ExtensionCounterexample:
 
 
 def render_runtime_svg(runtime_groups: Sequence[GroupRuntimeRecord], counterexample: ExtensionCounterexample) -> str:
-    width = 1180
-    height = 680
-    left = 88
-    top = 58
-    gap = 46
-    panel_width = (width - left - 48 - gap) / 2
-    panel_height = height - top - 92
+    width = 1240
+    height = 720
+    left = 86
+    top = 84
+    gap = 36
+    panel_width = (width - left - 56 - gap) / 2
+    panel_height = height - top - 100
     right = left + panel_width + gap
 
     labels = [f"({record.p},{record.k})" for record in runtime_groups]
@@ -708,16 +708,20 @@ def render_runtime_svg(runtime_groups: Sequence[GroupRuntimeRecord], counterexam
     lines = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
         "<style>",
-        "text { font-family: Menlo, Monaco, Consolas, monospace; font-size: 11px; fill: #1f2933; }",
-        ".title { font-size: 14px; font-weight: 700; }",
+        'text { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 12px; fill: #243b53; }',
+        ".title { font-size: 22px; font-weight: 700; fill: #102a43; }",
+        ".subtitle { font-size: 13px; fill: #52606d; }",
+        ".paneltitle { font-size: 15px; font-weight: 700; fill: #102a43; }",
         ".panel { fill: #ffffff; stroke: #d9e2ec; stroke-width: 1; }",
-        ".grid { stroke: #d9e2ec; stroke-width: 1; stroke-dasharray: 4 4; }",
-        ".axis { stroke: #9fb3c8; stroke-width: 1; }",
+        ".grid { stroke: #e5e7eb; stroke-width: 1; stroke-dasharray: 3 6; }",
+        ".axis { stroke: #9fb3c8; stroke-width: 1.2; }",
         "</style>",
         f'<rect x="0" y="0" width="{width}" height="{height}" fill="#fbfbfd"/>',
-        f'<text x="{left}" y="24" class="title">Runtime Collapse Boundary</text>',
-        f'<rect x="{left}" y="{top}" width="{panel_width}" height="{panel_height}" class="panel"/>',
-        f'<text x="{left + 10}" y="{top - 10}" class="title">Current Semantics: Collapse Holds</text>',
+        f'<text x="{left}" y="34" class="title">Runtime Collapse Boundary</text>',
+        f'<text x="{left}" y="56" class="subtitle">Binary completion stays coordinate-exact on the scanned arbitrary-antichain grid; the first break appears only after semantic enrichment.</text>',
+        f'<rect x="{left}" y="{top}" width="{panel_width}" height="{panel_height}" rx="18" ry="18" class="panel"/>',
+        f'<text x="{left + 12}" y="{top - 16}" class="paneltitle">Current semantics: collapse holds</text>',
+        f'<text x="{left + 12}" y="{top - 2}" class="subtitle">family bits versus answer-bit ranges on the scanned exact classes</text>',
     ]
 
     for tick in range(int(math.ceil(max_bits)) + 1):
@@ -726,6 +730,8 @@ def render_runtime_svg(runtime_groups: Sequence[GroupRuntimeRecord], counterexam
         lines.append(f'<text x="{left - 30}" y="{y + 4:.2f}">{tick}</text>')
     lines.append(f'<line x1="{left}" y1="{top + panel_height}" x2="{left + panel_width}" y2="{top + panel_height}" class="axis"/>')
     lines.append(f'<line x1="{left}" y1="{top}" x2="{left}" y2="{top + panel_height}" class="axis"/>')
+    lines.append(f'<text x="{left + panel_width / 2 - 14:.2f}" y="{height - 24}" class="subtitle">(p, k)</text>')
+    lines.append(f'<text x="{28}" y="{top + 22}" class="subtitle">bits</text>')
 
     for index, record in enumerate(runtime_groups):
         x = x_group(index, left)
@@ -733,74 +739,47 @@ def render_runtime_svg(runtime_groups: Sequence[GroupRuntimeRecord], counterexam
         y_high = y_bits(record.answer_bit_range[1])
         y_family = y_bits(record.family_bits)
         lines.append(
-            f'<line x1="{x:.2f}" y1="{y_high:.2f}" x2="{x:.2f}" y2="{y_low:.2f}" stroke="#c44536" stroke-width="6"/>'
+            f'<line x1="{x:.2f}" y1="{y_high:.2f}" x2="{x:.2f}" y2="{y_low:.2f}" stroke="#c44536" stroke-width="7" stroke-linecap="round"/>'
         )
         lines.append(
-            f'<circle cx="{x:.2f}" cy="{y_family:.2f}" r="6" fill="#0b6e4f"/>'
+            f'<circle cx="{x:.2f}" cy="{y_family:.2f}" r="6.5" fill="#0b6e4f" stroke="#ffffff" stroke-width="1.5"/>'
         )
         lines.append(f'<text x="{x - 12:.2f}" y="{top + panel_height + 18}">{labels[index]}</text>')
-        lines.append(f'<text x="{x - 16:.2f}" y="{top + 20}">{record.family_count}</text>')
+        lines.append(f'<text x="{x - 18:.2f}" y="{top + 22}" class="subtitle">{record.family_count}</text>')
 
-    legend_x = left + panel_width - 150
-    lines.append(f'<circle cx="{legend_x}" cy="{top + 20}" r="5" fill="#0b6e4f"/>')
-    lines.append(f'<text x="{legend_x + 12}" y="{top + 24}">family bits</text>')
-    lines.append(f'<line x1="{legend_x - 5}" y1="{top + 38}" x2="{legend_x + 5}" y2="{top + 38}" stroke="#c44536" stroke-width="6"/>')
-    lines.append(f'<text x="{legend_x + 12}" y="{top + 42}">answer bit range</text>')
-    lines.append(f'<text x="{legend_x - 8}" y="{top + 58}">labels show exact antichain counts</text>')
+    legend_x = left + panel_width - 176
+    lines.append(f'<circle cx="{legend_x}" cy="{top + 22}" r="5.5" fill="#0b6e4f"/>')
+    lines.append(f'<text x="{legend_x + 14}" y="{top + 26}">family bits</text>')
+    lines.append(f'<line x1="{legend_x - 7}" y1="{top + 42}" x2="{legend_x + 7}" y2="{top + 42}" stroke="#c44536" stroke-width="7" stroke-linecap="round"/>')
+    lines.append(f'<text x="{legend_x + 14}" y="{top + 46}">answer bit range</text>')
+    lines.append(f'<text x="{legend_x - 4}" y="{top + 66}" class="subtitle">labels above bars are exact antichain counts</text>')
 
-    lines.append(f'<rect x="{right}" y="{top}" width="{panel_width}" height="{panel_height}" class="panel"/>')
-    lines.append(f'<text x="{right + 10}" y="{top - 10}" class="title">First Semantic Break</text>')
-    lines.append(
-        f'<text x="{right + 16}" y="{top + 28}">extension: additive partial activation</text>'
-    )
-    lines.append(
-        f'<text x="{right + 16}" y="{top + 46}">smallest hit: (p={counterexample.p}, k={counterexample.k})</text>'
-    )
-    lines.append(
-        f'<text x="{right + 16}" y="{top + 64}">family = {counterexample.family}</text>'
-    )
-    lines.append(
-        f'<text x="{right + 16}" y="{top + 82}">thresholds = {counterexample.thresholds}</text>'
-    )
-    lines.append(
-        f'<text x="{right + 16}" y="{top + 112}">shared old summary = {counterexample.shared_summary}</text>'
-    )
-    lines.append(
-        f'<text x="{right + 16}" y="{top + 144}">state s = {counterexample.left_state}</text>'
-    )
-    lines.append(
-        f'<text x="{right + 16}" y="{top + 162}">state t = {counterexample.alternate_state}</text>'
-    )
-    lines.append(
-        f'<text x="{right + 16}" y="{top + 180}">continuation r = {counterexample.right_state}</text>'
-    )
-    lines.append(
-        f'<text x="{right + 16}" y="{top + 212}">now(s) = {counterexample.left_output_now}</text>'
-    )
-    lines.append(
-        f'<text x="{right + 16}" y="{top + 230}">now(t) = {counterexample.alternate_output_now}</text>'
-    )
-    lines.append(
-        f'<text x="{right + 16}" y="{top + 262}">future(s ∘ r) = {counterexample.left_output_future}</text>'
-    )
-    lines.append(
-        f'<text x="{right + 16}" y="{top + 280}">future(t ∘ r) = {counterexample.alternate_output_future}</text>'
-    )
-    lines.append(
-        f'<text x="{right + 16}" y="{top + 312}">break type = {counterexample.break_kind}</text>'
-    )
-    lines.append(
-        f'<rect x="{right + 16}" y="{top + 336}" width="{panel_width - 32}" height="90" fill="#fff4f4" stroke="#c44536" stroke-width="1.5"/>'
-    )
-    lines.append(
-        f'<text x="{right + 28}" y="{top + 360}">The current collapse boundary is semantic, not combinatorial.</text>'
-    )
-    lines.append(
-        f'<text x="{right + 28}" y="{top + 378}">Arbitrary antichains do not break it. Additive partial progress does.</text>'
-    )
-    lines.append(
-        f'<text x="{right + 28}" y="{top + 396}">The first break is coordinate-level; overlap is not needed yet.</text>'
-    )
+    lines.append(f'<rect x="{right}" y="{top}" width="{panel_width}" height="{panel_height}" rx="18" ry="18" class="panel"/>')
+    lines.append(f'<text x="{right + 12}" y="{top - 16}" class="paneltitle">First semantic break</text>')
+    lines.append(f'<text x="{right + 12}" y="{top - 2}" class="subtitle">smallest exact counterexample after enriching the readout</text>')
+    card_x = right + 18
+    card_w = panel_width - 36
+    lines.append(f'<rect x="{card_x}" y="{top + 18}" width="{card_w}" height="128" rx="14" ry="14" fill="#f8fbff" stroke="#d9e2ec" stroke-width="1"/>')
+    lines.append(f'<text x="{card_x + 16}" y="{top + 44}" class="paneltitle">Additive partial activation</text>')
+    lines.append(f'<text x="{card_x + 16}" y="{top + 66}">smallest hit: (p={counterexample.p}, k={counterexample.k})</text>')
+    lines.append(f'<text x="{card_x + 16}" y="{top + 86}">family: {counterexample.family}</text>')
+    lines.append(f'<text x="{card_x + 16}" y="{top + 106}">thresholds: {counterexample.thresholds}</text>')
+    lines.append(f'<text x="{card_x + 16}" y="{top + 126}">shared old summary: {counterexample.shared_summary}</text>')
+    lines.append(f'<rect x="{card_x}" y="{top + 164}" width="{card_w}" height="170" rx="14" ry="14" fill="#ffffff" stroke="#d9e2ec" stroke-width="1"/>')
+    lines.append(f'<text x="{card_x + 16}" y="{top + 190}" class="paneltitle">Witness states</text>')
+    lines.append(f'<text x="{card_x + 16}" y="{top + 214}">s = {counterexample.left_state}</text>')
+    lines.append(f'<text x="{card_x + 16}" y="{top + 234}">t = {counterexample.alternate_state}</text>')
+    lines.append(f'<text x="{card_x + 16}" y="{top + 254}">r = {counterexample.right_state}</text>')
+    lines.append(f'<text x="{card_x + 16}" y="{top + 282}">now(s) = {counterexample.left_output_now}</text>')
+    lines.append(f'<text x="{card_x + 16}" y="{top + 302}">now(t) = {counterexample.alternate_output_now}</text>')
+    lines.append(f'<text x="{card_x + 16}" y="{top + 330}">future(s ∘ r) = {counterexample.left_output_future}</text>')
+    lines.append(f'<text x="{card_x + 16}" y="{top + 350}">future(t ∘ r) = {counterexample.alternate_output_future}</text>')
+    lines.append(f'<rect x="{card_x}" y="{top + 354}" width="{card_w}" height="112" rx="14" ry="14" fill="#fff5f5" stroke="#f2b8b5" stroke-width="1.4"/>')
+    lines.append(f'<text x="{card_x + 16}" y="{top + 382}" class="paneltitle">Interpretation</text>')
+    lines.append(f'<text x="{card_x + 16}" y="{top + 406}">The current collapse boundary is semantic, not combinatorial.</text>')
+    lines.append(f'<text x="{card_x + 16}" y="{top + 426}">Arbitrary antichains do not break it. Partial progress does.</text>')
+    lines.append(f'<text x="{card_x + 16}" y="{top + 446}">The first break is coordinate-level; overlap is not needed yet.</text>')
+    lines.append(f'<text x="{card_x + 16}" y="{top + 466}">break type: {counterexample.break_kind}</text>')
     lines.append("</svg>")
     return "\n".join(lines)
 
