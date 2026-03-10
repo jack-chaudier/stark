@@ -1,0 +1,955 @@
+{
+  "scan": {
+    "p_scan": [
+      2,
+      3,
+      4
+    ],
+    "k_max": 3,
+    "seed_family": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "families_per_semantics": 620
+  },
+  "semantics": [
+    {
+      "name": "broadcast_control",
+      "label": "Broadcast",
+      "description": "Current coordinate-broadcast control: completed families depend only on present coordinates.",
+      "families_scanned": 124,
+      "coordinate_split_count": 0,
+      "positive_gap_count": 0,
+      "coordinate_exact_on_scan": true,
+      "full_assignment_exact_on_scan": true,
+      "max_coordinate_curvature_gap": 0.0,
+      "max_fiber_holonomy_rank": 1,
+      "seed_record": {
+        "semantics": "broadcast_control",
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 8,
+        "runtime_quotient_count": 8,
+        "coordinate_quotient_count": 8,
+        "old_quotient_count": 8,
+        "incidence_quotient_count": 8,
+        "family_quotient_count": 7,
+        "full_assignment_quotient_count": 8,
+        "full_state_count": 8,
+        "coordinate_curvature_gap": 0.0,
+        "fiber_holonomy_rank": 1,
+        "coordinate_exact": true,
+        "old_exact": true,
+        "incidence_exact": true,
+        "family_exact": false,
+        "full_assignment_exact": true,
+        "witness_left_trace": null,
+        "witness_right_trace": null,
+        "witness_suffix": null,
+        "witness_left_state": null,
+        "witness_right_state": null,
+        "witness_suffix_text": null,
+        "witness_coordinate": null,
+        "witness_left_output_now": null,
+        "witness_right_output_now": null,
+        "witness_left_output_future": null,
+        "witness_right_output_future": null,
+        "same_now_future_separate": false,
+        "nontrivial_coordinate_fibers": []
+      },
+      "first_coordinate_split": null,
+      "first_positive_gap": null
+    },
+    {
+      "name": "incidence_local_progress",
+      "label": "Incidence Broadcast",
+      "description": "Track incidence-local progress, but broadcast every variable event to all incident edges.",
+      "families_scanned": 124,
+      "coordinate_split_count": 0,
+      "positive_gap_count": 0,
+      "coordinate_exact_on_scan": true,
+      "full_assignment_exact_on_scan": true,
+      "max_coordinate_curvature_gap": 0.0,
+      "max_fiber_holonomy_rank": 1,
+      "seed_record": {
+        "semantics": "incidence_local_progress",
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 8,
+        "runtime_quotient_count": 8,
+        "coordinate_quotient_count": 8,
+        "old_quotient_count": 8,
+        "incidence_quotient_count": 8,
+        "family_quotient_count": 7,
+        "full_assignment_quotient_count": 8,
+        "full_state_count": 8,
+        "coordinate_curvature_gap": 0.0,
+        "fiber_holonomy_rank": 1,
+        "coordinate_exact": true,
+        "old_exact": true,
+        "incidence_exact": true,
+        "family_exact": false,
+        "full_assignment_exact": true,
+        "witness_left_trace": null,
+        "witness_right_trace": null,
+        "witness_suffix": null,
+        "witness_left_state": null,
+        "witness_right_state": null,
+        "witness_suffix_text": null,
+        "witness_coordinate": null,
+        "witness_left_output_now": null,
+        "witness_right_output_now": null,
+        "witness_left_output_future": null,
+        "witness_right_output_future": null,
+        "same_now_future_separate": false,
+        "nontrivial_coordinate_fibers": []
+      },
+      "first_coordinate_split": null,
+      "first_positive_gap": null
+    },
+    {
+      "name": "exclusive_overlap_claim",
+      "label": "Exclusive Claim",
+      "description": "Each seen variable is routed to a single best-supported incident family edge.",
+      "families_scanned": 124,
+      "coordinate_split_count": 99,
+      "positive_gap_count": 10,
+      "coordinate_exact_on_scan": false,
+      "full_assignment_exact_on_scan": true,
+      "max_coordinate_curvature_gap": 0.0874628412503391,
+      "max_fiber_holonomy_rank": 4,
+      "seed_record": {
+        "semantics": "exclusive_overlap_claim",
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 10,
+        "runtime_quotient_count": 6,
+        "coordinate_quotient_count": 8,
+        "old_quotient_count": 8,
+        "incidence_quotient_count": 10,
+        "family_quotient_count": 8,
+        "full_assignment_quotient_count": 10,
+        "full_state_count": 10,
+        "coordinate_curvature_gap": -0.4150374992788439,
+        "fiber_holonomy_rank": 2,
+        "coordinate_exact": false,
+        "old_exact": false,
+        "incidence_exact": true,
+        "family_exact": false,
+        "full_assignment_exact": true,
+        "witness_left_trace": [
+          1,
+          3
+        ],
+        "witness_right_trace": [
+          3,
+          1
+        ],
+        "witness_suffix": [],
+        "witness_left_state": "{1->(1, 2), 3->(1, 3)}",
+        "witness_right_state": "{1->(1, 3), 3->(1, 3)}",
+        "witness_suffix_text": "[]",
+        "witness_coordinate": "(1, 0, 1)",
+        "witness_left_output_now": "()",
+        "witness_right_output_now": "((1, 3),)",
+        "witness_left_output_future": "()",
+        "witness_right_output_future": "((1, 3),)",
+        "same_now_future_separate": false,
+        "nontrivial_coordinate_fibers": [
+          {
+            "coordinate": "(1, 0, 1)",
+            "class_count": 2
+          },
+          {
+            "coordinate": "(1, 1, 1)",
+            "class_count": 2
+          }
+        ]
+      },
+      "first_coordinate_split": {
+        "semantics": "exclusive_overlap_claim",
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 10,
+        "runtime_quotient_count": 6,
+        "coordinate_quotient_count": 8,
+        "old_quotient_count": 8,
+        "incidence_quotient_count": 10,
+        "family_quotient_count": 8,
+        "full_assignment_quotient_count": 10,
+        "full_state_count": 10,
+        "coordinate_curvature_gap": -0.4150374992788439,
+        "fiber_holonomy_rank": 2,
+        "coordinate_exact": false,
+        "old_exact": false,
+        "incidence_exact": true,
+        "family_exact": false,
+        "full_assignment_exact": true,
+        "witness_left_trace": [
+          1,
+          3
+        ],
+        "witness_right_trace": [
+          3,
+          1
+        ],
+        "witness_suffix": [],
+        "witness_left_state": "{1->(1, 2), 3->(1, 3)}",
+        "witness_right_state": "{1->(1, 3), 3->(1, 3)}",
+        "witness_suffix_text": "[]",
+        "witness_coordinate": "(1, 0, 1)",
+        "witness_left_output_now": "()",
+        "witness_right_output_now": "((1, 3),)",
+        "witness_left_output_future": "()",
+        "witness_right_output_future": "((1, 3),)",
+        "same_now_future_separate": false,
+        "nontrivial_coordinate_fibers": [
+          {
+            "coordinate": "(1, 0, 1)",
+            "class_count": 2
+          },
+          {
+            "coordinate": "(1, 1, 1)",
+            "class_count": 2
+          }
+        ]
+      },
+      "first_positive_gap": {
+        "semantics": "exclusive_overlap_claim",
+        "p": 4,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "reachable_state_count": 24,
+        "runtime_quotient_count": 17,
+        "coordinate_quotient_count": 16,
+        "old_quotient_count": 16,
+        "incidence_quotient_count": 24,
+        "family_quotient_count": 19,
+        "full_assignment_quotient_count": 24,
+        "full_state_count": 24,
+        "coordinate_curvature_gap": 0.0874628412503391,
+        "fiber_holonomy_rank": 3,
+        "coordinate_exact": false,
+        "old_exact": false,
+        "incidence_exact": true,
+        "family_exact": false,
+        "full_assignment_exact": true,
+        "witness_left_trace": [
+          1,
+          3
+        ],
+        "witness_right_trace": [
+          3,
+          1
+        ],
+        "witness_suffix": [],
+        "witness_left_state": "{1->(1, 2), 3->(1, 3)}",
+        "witness_right_state": "{1->(1, 3), 3->(1, 3)}",
+        "witness_suffix_text": "[]",
+        "witness_coordinate": "(1, 0, 1, 0)",
+        "witness_left_output_now": "()",
+        "witness_right_output_now": "((1, 3),)",
+        "witness_left_output_future": "()",
+        "witness_right_output_future": "((1, 3),)",
+        "same_now_future_separate": false,
+        "nontrivial_coordinate_fibers": [
+          {
+            "coordinate": "(0, 0, 1, 1)",
+            "class_count": 2
+          },
+          {
+            "coordinate": "(0, 1, 1, 1)",
+            "class_count": 2
+          },
+          {
+            "coordinate": "(1, 0, 1, 0)",
+            "class_count": 2
+          },
+          {
+            "coordinate": "(1, 0, 1, 1)",
+            "class_count": 3
+          },
+          {
+            "coordinate": "(1, 1, 1, 0)",
+            "class_count": 2
+          },
+          {
+            "coordinate": "(1, 1, 1, 1)",
+            "class_count": 3
+          }
+        ]
+      }
+    },
+    {
+      "name": "shared_overlap_budget",
+      "label": "Budget Routing",
+      "description": "Each seen variable contributes one conserved credit routed to the least-funded incident edge.",
+      "families_scanned": 124,
+      "coordinate_split_count": 93,
+      "positive_gap_count": 3,
+      "coordinate_exact_on_scan": false,
+      "full_assignment_exact_on_scan": true,
+      "max_coordinate_curvature_gap": 0.3219280948873626,
+      "max_fiber_holonomy_rank": 3,
+      "seed_record": {
+        "semantics": "shared_overlap_budget",
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 10,
+        "runtime_quotient_count": 8,
+        "coordinate_quotient_count": 8,
+        "old_quotient_count": 8,
+        "incidence_quotient_count": 10,
+        "family_quotient_count": 7,
+        "full_assignment_quotient_count": 10,
+        "full_state_count": 10,
+        "coordinate_curvature_gap": 0.0,
+        "fiber_holonomy_rank": 2,
+        "coordinate_exact": false,
+        "old_exact": false,
+        "incidence_exact": true,
+        "family_exact": false,
+        "full_assignment_exact": true,
+        "witness_left_trace": [
+          1,
+          2
+        ],
+        "witness_right_trace": [
+          2,
+          1
+        ],
+        "witness_suffix": [],
+        "witness_left_state": "{1->(1, 2), 2->(1, 2)}",
+        "witness_right_state": "{1->(1, 3), 2->(1, 2)}",
+        "witness_suffix_text": "[]",
+        "witness_coordinate": "(1, 1, 0)",
+        "witness_left_output_now": "((1, 2),)",
+        "witness_right_output_now": "()",
+        "witness_left_output_future": "((1, 2),)",
+        "witness_right_output_future": "()",
+        "same_now_future_separate": false,
+        "nontrivial_coordinate_fibers": [
+          {
+            "coordinate": "(1, 1, 0)",
+            "class_count": 2
+          },
+          {
+            "coordinate": "(1, 1, 1)",
+            "class_count": 2
+          }
+        ]
+      },
+      "first_coordinate_split": {
+        "semantics": "shared_overlap_budget",
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 10,
+        "runtime_quotient_count": 8,
+        "coordinate_quotient_count": 8,
+        "old_quotient_count": 8,
+        "incidence_quotient_count": 10,
+        "family_quotient_count": 7,
+        "full_assignment_quotient_count": 10,
+        "full_state_count": 10,
+        "coordinate_curvature_gap": 0.0,
+        "fiber_holonomy_rank": 2,
+        "coordinate_exact": false,
+        "old_exact": false,
+        "incidence_exact": true,
+        "family_exact": false,
+        "full_assignment_exact": true,
+        "witness_left_trace": [
+          1,
+          2
+        ],
+        "witness_right_trace": [
+          2,
+          1
+        ],
+        "witness_suffix": [],
+        "witness_left_state": "{1->(1, 2), 2->(1, 2)}",
+        "witness_right_state": "{1->(1, 3), 2->(1, 2)}",
+        "witness_suffix_text": "[]",
+        "witness_coordinate": "(1, 1, 0)",
+        "witness_left_output_now": "((1, 2),)",
+        "witness_right_output_now": "()",
+        "witness_left_output_future": "((1, 2),)",
+        "witness_right_output_future": "()",
+        "same_now_future_separate": false,
+        "nontrivial_coordinate_fibers": [
+          {
+            "coordinate": "(1, 1, 0)",
+            "class_count": 2
+          },
+          {
+            "coordinate": "(1, 1, 1)",
+            "class_count": 2
+          }
+        ]
+      },
+      "first_positive_gap": {
+        "semantics": "shared_overlap_budget",
+        "p": 4,
+        "k": 2,
+        "family": [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "reachable_state_count": 24,
+        "runtime_quotient_count": 20,
+        "coordinate_quotient_count": 16,
+        "old_quotient_count": 16,
+        "incidence_quotient_count": 24,
+        "family_quotient_count": 14,
+        "full_assignment_quotient_count": 24,
+        "full_state_count": 24,
+        "coordinate_curvature_gap": 0.3219280948873626,
+        "fiber_holonomy_rank": 3,
+        "coordinate_exact": false,
+        "old_exact": false,
+        "incidence_exact": true,
+        "family_exact": false,
+        "full_assignment_exact": true,
+        "witness_left_trace": [
+          1,
+          3
+        ],
+        "witness_right_trace": [
+          3,
+          1
+        ],
+        "witness_suffix": [],
+        "witness_left_state": "{1->(1, 3), 3->(3, 4)}",
+        "witness_right_state": "{1->(1, 3), 3->(1, 3)}",
+        "witness_suffix_text": "[]",
+        "witness_coordinate": "(1, 0, 1, 0)",
+        "witness_left_output_now": "()",
+        "witness_right_output_now": "((1, 3),)",
+        "witness_left_output_future": "()",
+        "witness_right_output_future": "((1, 3),)",
+        "same_now_future_separate": false,
+        "nontrivial_coordinate_fibers": [
+          {
+            "coordinate": "(0, 1, 0, 1)",
+            "class_count": 2
+          },
+          {
+            "coordinate": "(0, 1, 1, 1)",
+            "class_count": 2
+          },
+          {
+            "coordinate": "(1, 0, 1, 0)",
+            "class_count": 2
+          },
+          {
+            "coordinate": "(1, 0, 1, 1)",
+            "class_count": 2
+          },
+          {
+            "coordinate": "(1, 1, 0, 1)",
+            "class_count": 2
+          },
+          {
+            "coordinate": "(1, 1, 1, 0)",
+            "class_count": 2
+          },
+          {
+            "coordinate": "(1, 1, 1, 1)",
+            "class_count": 3
+          }
+        ]
+      }
+    },
+    {
+      "name": "committed_allocation",
+      "label": "Committed Allocation",
+      "description": "Positive control: partial variable-to-edge assignments compose by disjoint-domain union on the V-hypergraph.",
+      "families_scanned": 124,
+      "coordinate_split_count": 103,
+      "positive_gap_count": 103,
+      "coordinate_exact_on_scan": false,
+      "full_assignment_exact_on_scan": true,
+      "max_coordinate_curvature_gap": 2.8826430493618416,
+      "max_fiber_holonomy_rank": 12,
+      "seed_record": {
+        "semantics": "committed_allocation",
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 12,
+        "runtime_quotient_count": 11,
+        "coordinate_quotient_count": 8,
+        "old_quotient_count": 8,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "full_assignment_quotient_count": 12,
+        "full_state_count": 12,
+        "coordinate_curvature_gap": 0.4594316186372973,
+        "fiber_holonomy_rank": 2,
+        "coordinate_exact": false,
+        "old_exact": false,
+        "incidence_exact": true,
+        "family_exact": false,
+        "full_assignment_exact": true,
+        "witness_left_trace": [
+          [
+            "segment",
+            [
+              0,
+              -1,
+              -1
+            ]
+          ]
+        ],
+        "witness_right_trace": [
+          [
+            "segment",
+            [
+              1,
+              -1,
+              -1
+            ]
+          ]
+        ],
+        "witness_suffix": [
+          [
+            "segment",
+            [
+              -1,
+              0,
+              -1
+            ]
+          ]
+        ],
+        "witness_left_state": "{1->(1, 2)}",
+        "witness_right_state": "{1->(1, 3)}",
+        "witness_suffix_text": "[{2->(1, 2)}]",
+        "witness_coordinate": "(1, 0, 0)",
+        "witness_left_output_now": "((2,),)",
+        "witness_right_output_now": "((3,),)",
+        "witness_left_output_future": "((),)",
+        "witness_right_output_future": "((3,),)",
+        "same_now_future_separate": false,
+        "nontrivial_coordinate_fibers": [
+          {
+            "coordinate": "(1, 0, 0)",
+            "class_count": 2
+          },
+          {
+            "coordinate": "(1, 0, 1)",
+            "class_count": 2
+          },
+          {
+            "coordinate": "(1, 1, 0)",
+            "class_count": 2
+          }
+        ]
+      },
+      "first_coordinate_split": {
+        "semantics": "committed_allocation",
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 12,
+        "runtime_quotient_count": 11,
+        "coordinate_quotient_count": 8,
+        "old_quotient_count": 8,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "full_assignment_quotient_count": 12,
+        "full_state_count": 12,
+        "coordinate_curvature_gap": 0.4594316186372973,
+        "fiber_holonomy_rank": 2,
+        "coordinate_exact": false,
+        "old_exact": false,
+        "incidence_exact": true,
+        "family_exact": false,
+        "full_assignment_exact": true,
+        "witness_left_trace": [
+          [
+            "segment",
+            [
+              0,
+              -1,
+              -1
+            ]
+          ]
+        ],
+        "witness_right_trace": [
+          [
+            "segment",
+            [
+              1,
+              -1,
+              -1
+            ]
+          ]
+        ],
+        "witness_suffix": [
+          [
+            "segment",
+            [
+              -1,
+              0,
+              -1
+            ]
+          ]
+        ],
+        "witness_left_state": "{1->(1, 2)}",
+        "witness_right_state": "{1->(1, 3)}",
+        "witness_suffix_text": "[{2->(1, 2)}]",
+        "witness_coordinate": "(1, 0, 0)",
+        "witness_left_output_now": "((2,),)",
+        "witness_right_output_now": "((3,),)",
+        "witness_left_output_future": "((),)",
+        "witness_right_output_future": "((3,),)",
+        "same_now_future_separate": false,
+        "nontrivial_coordinate_fibers": [
+          {
+            "coordinate": "(1, 0, 0)",
+            "class_count": 2
+          },
+          {
+            "coordinate": "(1, 0, 1)",
+            "class_count": 2
+          },
+          {
+            "coordinate": "(1, 1, 0)",
+            "class_count": 2
+          }
+        ]
+      },
+      "first_positive_gap": {
+        "semantics": "committed_allocation",
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 12,
+        "runtime_quotient_count": 11,
+        "coordinate_quotient_count": 8,
+        "old_quotient_count": 8,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "full_assignment_quotient_count": 12,
+        "full_state_count": 12,
+        "coordinate_curvature_gap": 0.4594316186372973,
+        "fiber_holonomy_rank": 2,
+        "coordinate_exact": false,
+        "old_exact": false,
+        "incidence_exact": true,
+        "family_exact": false,
+        "full_assignment_exact": true,
+        "witness_left_trace": [
+          [
+            "segment",
+            [
+              0,
+              -1,
+              -1
+            ]
+          ]
+        ],
+        "witness_right_trace": [
+          [
+            "segment",
+            [
+              1,
+              -1,
+              -1
+            ]
+          ]
+        ],
+        "witness_suffix": [
+          [
+            "segment",
+            [
+              -1,
+              0,
+              -1
+            ]
+          ]
+        ],
+        "witness_left_state": "{1->(1, 2)}",
+        "witness_right_state": "{1->(1, 3)}",
+        "witness_suffix_text": "[{2->(1, 2)}]",
+        "witness_coordinate": "(1, 0, 0)",
+        "witness_left_output_now": "((2,),)",
+        "witness_right_output_now": "((3,),)",
+        "witness_left_output_future": "((),)",
+        "witness_right_output_future": "((3,),)",
+        "same_now_future_separate": false,
+        "nontrivial_coordinate_fibers": [
+          {
+            "coordinate": "(1, 0, 0)",
+            "class_count": 2
+          },
+          {
+            "coordinate": "(1, 0, 1)",
+            "class_count": 2
+          },
+          {
+            "coordinate": "(1, 1, 0)",
+            "class_count": 2
+          }
+        ]
+      }
+    }
+  ],
+  "overall_first_coordinate_split": {
+    "semantics": "exclusive_overlap_claim",
+    "p": 3,
+    "k": 2,
+    "family": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "reachable_state_count": 10,
+    "runtime_quotient_count": 6,
+    "coordinate_quotient_count": 8,
+    "old_quotient_count": 8,
+    "incidence_quotient_count": 10,
+    "family_quotient_count": 8,
+    "full_assignment_quotient_count": 10,
+    "full_state_count": 10,
+    "coordinate_curvature_gap": -0.4150374992788439,
+    "fiber_holonomy_rank": 2,
+    "coordinate_exact": false,
+    "old_exact": false,
+    "incidence_exact": true,
+    "family_exact": false,
+    "full_assignment_exact": true,
+    "witness_left_trace": [
+      1,
+      3
+    ],
+    "witness_right_trace": [
+      3,
+      1
+    ],
+    "witness_suffix": [],
+    "witness_left_state": "{1->(1, 2), 3->(1, 3)}",
+    "witness_right_state": "{1->(1, 3), 3->(1, 3)}",
+    "witness_suffix_text": "[]",
+    "witness_coordinate": "(1, 0, 1)",
+    "witness_left_output_now": "()",
+    "witness_right_output_now": "((1, 3),)",
+    "witness_left_output_future": "()",
+    "witness_right_output_future": "((1, 3),)",
+    "same_now_future_separate": false,
+    "nontrivial_coordinate_fibers": [
+      {
+        "coordinate": "(1, 0, 1)",
+        "class_count": 2
+      },
+      {
+        "coordinate": "(1, 1, 1)",
+        "class_count": 2
+      }
+    ]
+  },
+  "overall_first_positive_gap": {
+    "semantics": "committed_allocation",
+    "p": 3,
+    "k": 2,
+    "family": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "reachable_state_count": 12,
+    "runtime_quotient_count": 11,
+    "coordinate_quotient_count": 8,
+    "old_quotient_count": 8,
+    "incidence_quotient_count": 12,
+    "family_quotient_count": 7,
+    "full_assignment_quotient_count": 12,
+    "full_state_count": 12,
+    "coordinate_curvature_gap": 0.4594316186372973,
+    "fiber_holonomy_rank": 2,
+    "coordinate_exact": false,
+    "old_exact": false,
+    "incidence_exact": true,
+    "family_exact": false,
+    "full_assignment_exact": true,
+    "witness_left_trace": [
+      [
+        "segment",
+        [
+          0,
+          -1,
+          -1
+        ]
+      ]
+    ],
+    "witness_right_trace": [
+      [
+        "segment",
+        [
+          1,
+          -1,
+          -1
+        ]
+      ]
+    ],
+    "witness_suffix": [
+      [
+        "segment",
+        [
+          -1,
+          0,
+          -1
+        ]
+      ]
+    ],
+    "witness_left_state": "{1->(1, 2)}",
+    "witness_right_state": "{1->(1, 3)}",
+    "witness_suffix_text": "[{2->(1, 2)}]",
+    "witness_coordinate": "(1, 0, 0)",
+    "witness_left_output_now": "((2,),)",
+    "witness_right_output_now": "((3,),)",
+    "witness_left_output_future": "((),)",
+    "witness_right_output_future": "((3,),)",
+    "same_now_future_separate": false,
+    "nontrivial_coordinate_fibers": [
+      {
+        "coordinate": "(1, 0, 0)",
+        "class_count": 2
+      },
+      {
+        "coordinate": "(1, 0, 1)",
+        "class_count": 2
+      },
+      {
+        "coordinate": "(1, 1, 0)",
+        "class_count": 2
+      }
+    ]
+  }
+}

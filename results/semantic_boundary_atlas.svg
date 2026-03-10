@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="558" viewBox="0 0 1400 558">
+<style>
+text { font-family: Menlo, Monaco, Consolas, monospace; font-size: 12px; fill: #1f2933; }
+.title { font-size: 16px; font-weight: 700; }
+.header { font-weight: 700; fill: #102a43; }
+.row { fill: #ffffff; stroke: #d9e2ec; stroke-width: 1; }
+.coord { fill: #fff6ec; }
+.family { fill: #eef6ff; }
+.hyper { fill: #eefbf3; }
+.stable { fill: #f4f7f9; }
+.muted { fill: #52606d; }
+</style>
+<rect x="0" y="0" width="1400" height="558" fill="#fbfbfd"/>
+<text x="36" y="28" class="title">Semantic Boundary Atlas</text>
+<text x="36" y="46" class="muted">First old-summary break, first family-gap world, and the earliest family-teaching change for each enrichment.</text>
+<text x="36" y="56" class="header">semantic</text>
+<text x="230" y="56" class="header">first old-summary break</text>
+<text x="500" y="56" class="header">break type</text>
+<text x="760" y="56" class="header">first family &gt; variable gap</text>
+<text x="1030" y="56" class="header">first family-teaching change</text>
+<rect x="36" y="58" width="1328" height="30" class="row stable"/>
+<text x="36" y="72">Binary</text>
+<text x="230" y="72">none on scan</text>
+<text x="500" y="72">preserved</text>
+<text x="760" y="72">none on scan</text>
+<text x="1030" y="72">none on scanned nontrivial groups</text>
+<rect x="36" y="100" width="1328" height="30" class="row coord"/>
+<text x="36" y="114">Additive</text>
+<text x="230" y="114">(p=2,k=2) ((1, 2),)</text>
+<text x="500" y="114">coordinate</text>
+<text x="760" y="114">(p=3,k=2) 2.322/3.322/3.459</text>
+<text x="1030" y="114">none on scanned nontrivial groups</text>
+<rect x="36" y="142" width="1328" height="30" class="row coord"/>
+<text x="36" y="156">Capped</text>
+<text x="230" y="156">(p=2,k=2) ((1, 2),)</text>
+<text x="500" y="156">coordinate</text>
+<text x="760" y="156">(p=2,k=2) 3.170/2.585/3.170</text>
+<text x="1030" y="156">none on scanned nontrivial groups</text>
+<rect x="36" y="184" width="1328" height="30" class="row coord"/>
+<text x="36" y="198">Weights</text>
+<text x="230" y="198">(p=2,k=2) ((1, 2),)</text>
+<text x="500" y="198">coordinate</text>
+<text x="760" y="198">(p=3,k=2) 2.807/3.322/3.459</text>
+<text x="1030" y="198">none on scanned nontrivial groups</text>
+<rect x="36" y="226" width="1328" height="30" class="row family"/>
+<text x="36" y="240">Family Priority</text>
+<text x="230" y="240">(p=3,k=2) ((1, 2), (3,))</text>
+<text x="500" y="240">family-specific</text>
+<text x="760" y="240">(p=3,k=2) 2.322/3.322/3.585</text>
+<text x="1030" y="240">none on scanned nontrivial groups</text>
+<rect x="36" y="268" width="1328" height="30" class="row coord"/>
+<text x="36" y="282">Order</text>
+<text x="230" y="282">(p=2,k=2) ((1, 2),)</text>
+<text x="500" y="282">coordinate</text>
+<text x="760" y="282">(p=2,k=2) 3.170/2.585/3.170</text>
+<text x="1030" y="282">(p=3,k=2) family probes inexact</text>
+<rect x="36" y="310" width="1328" height="30" class="row coord"/>
+<text x="36" y="324">Multilevel</text>
+<text x="230" y="324">(p=2,k=2) ((1, 2),)</text>
+<text x="500" y="324">coordinate</text>
+<text x="760" y="324">(p=2,k=2) 3.700/2.585/3.700</text>
+<text x="1030" y="324">none on scanned nontrivial groups</text>
+<rect x="36" y="352" width="1328" height="30" class="row hyper"/>
+<text x="36" y="366">Bonus</text>
+<text x="230" y="366">(p=3,k=2) ((1, 2), (1, 3))</text>
+<text x="500" y="366">overlap-required</text>
+<text x="760" y="366">(p=3,k=2) 4.392/3.322/4.858</text>
+<text x="1030" y="366">none on scanned nontrivial groups</text>
+<rect x="36" y="394" width="1328" height="30" class="row hyper"/>
+<text x="36" y="408">Exclusion</text>
+<text x="230" y="408">(p=3,k=2) ((1, 2), (1, 3))</text>
+<text x="500" y="408">overlap-required</text>
+<text x="760" y="408">(p=3,k=2) 4.087/3.322/4.087</text>
+<text x="1030" y="408">(p=3,k=2) family basis 3</text>
+</svg>

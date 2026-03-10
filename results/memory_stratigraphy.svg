@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="366" viewBox="0 0 980 366">
+<style>
+text { font-family: Menlo, Monaco, Consolas, monospace; font-size: 11px; fill: #1f2933; }
+.title { font-size: 14px; font-weight: 700; }
+.grid { stroke: #d9e2ec; stroke-width: 1; stroke-dasharray: 4 4; }
+.axis { stroke: #9fb3c8; stroke-width: 1; }
+</style>
+<rect x="0" y="0" width="980" height="366" fill="#fffdf8"/>
+<text x="160" y="24" class="title">Memory Stratigraphy: Algebraic, Empirical, and Observational Bit Thresholds</text>
+<line x1="160.00" y1="46" x2="160.00" y2="338" class="grid"/>
+<text x="156.00" y="356">0</text>
+<line x1="223.38" y1="46" x2="223.38" y2="338" class="grid"/>
+<text x="219.38" y="356">1</text>
+<line x1="286.77" y1="46" x2="286.77" y2="338" class="grid"/>
+<text x="282.77" y="356">2</text>
+<line x1="350.15" y1="46" x2="350.15" y2="338" class="grid"/>
+<text x="346.15" y="356">3</text>
+<line x1="413.53" y1="46" x2="413.53" y2="338" class="grid"/>
+<text x="409.53" y="356">4</text>
+<line x1="476.92" y1="46" x2="476.92" y2="338" class="grid"/>
+<text x="472.92" y="356">5</text>
+<line x1="540.30" y1="46" x2="540.30" y2="338" class="grid"/>
+<text x="536.30" y="356">6</text>
+<line x1="603.68" y1="46" x2="603.68" y2="338" class="grid"/>
+<text x="599.68" y="356">7</text>
+<line x1="667.07" y1="46" x2="667.07" y2="338" class="grid"/>
+<text x="663.07" y="356">8</text>
+<line x1="730.45" y1="46" x2="730.45" y2="338" class="grid"/>
+<text x="726.45" y="356">9</text>
+<line x1="793.83" y1="46" x2="793.83" y2="338" class="grid"/>
+<text x="789.83" y="356">10</text>
+<line x1="857.22" y1="46" x2="857.22" y2="338" class="grid"/>
+<text x="853.22" y="356">11</text>
+<line x1="920.60" y1="46" x2="920.60" y2="338" class="grid"/>
+<text x="916.60" y="356">12</text>
+<line x1="983.98" y1="46" x2="983.98" y2="338" class="grid"/>
+<text x="979.98" y="356">13</text>
+<line x1="160" y1="338" x2="940" y2="338" class="axis"/>
+<text x="526.00" y="322">bits</text>
+<circle cx="744" cy="28" r="4.5" fill="#102a43"/>
+<text x="756" y="32">algebraic</text>
+<circle cx="744" cy="44" r="4.5" fill="#0b6e4f"/>
+<text x="756" y="48">empirical</text>
+<circle cx="744" cy="60" r="4.5" fill="#22577a"/>
+<text x="756" y="64">probe-joint</text>
+<circle cx="744" cy="76" r="4.5" fill="#c44536"/>
+<text x="756" y="80">probe-witness</text>
+<circle cx="744" cy="92" r="4.5" fill="#f4a261"/>
+<text x="756" y="96">probe-answer</text>
+<text x="18" y="78">M_3</text>
+<line x1="307.17" y1="74.00" x2="401.32" y2="74.00" stroke="#bcccdc" stroke-width="2"/>
+<circle cx="307.17" cy="74.00" r="5" fill="#f4a261"/>
+<circle cx="160.00" cy="74.00" r="5" fill="#c44536"/>
+<circle cx="307.17" cy="74.00" r="5" fill="#22577a"/>
+<circle cx="401.32" cy="74.00" r="5" fill="#0b6e4f"/>
+<circle cx="401.32" cy="74.00" r="5" fill="#102a43"/>
+<text x="411.32" y="78.00">Δ=1.485, ω=0.000</text>
+<text x="18" y="136">Q_(3,2)</text>
+<line x1="307.17" y1="132.00" x2="524.76" y2="132.00" stroke="#bcccdc" stroke-width="2"/>
+<circle cx="307.17" cy="132.00" r="5" fill="#f4a261"/>
+<circle cx="337.94" cy="132.00" r="5" fill="#c44536"/>
+<circle cx="337.94" cy="132.00" r="5" fill="#22577a"/>
+<circle cx="524.76" cy="132.00" r="5" fill="#0b6e4f"/>
+<circle cx="524.76" cy="132.00" r="5" fill="#102a43"/>
+<text x="534.76" y="136.00">Δ=2.948, ω=0.485</text>
+<text x="18" y="194">Q_(4,2)</text>
+<line x1="323.84" y1="190.00" x2="571.48" y2="190.00" stroke="#bcccdc" stroke-width="2"/>
+<circle cx="323.84" cy="190.00" r="5" fill="#f4a261"/>
+<circle cx="350.15" cy="190.00" r="5" fill="#c44536"/>
+<circle cx="350.15" cy="190.00" r="5" fill="#22577a"/>
+<circle cx="571.48" cy="190.00" r="5" fill="#0b6e4f"/>
+<circle cx="571.48" cy="190.00" r="5" fill="#102a43"/>
+<text x="581.48" y="194.00">Δ=3.492, ω=0.415</text>
+<text x="18" y="252">Q_(5,3)</text>
+<line x1="337.94" y1="248.00" x2="769.30" y2="248.00" stroke="#bcccdc" stroke-width="2"/>
+<circle cx="337.94" cy="248.00" r="5" fill="#f4a261"/>
+<circle cx="394.55" cy="248.00" r="5" fill="#c44536"/>
+<circle cx="394.55" cy="248.00" r="5" fill="#22577a"/>
+<circle cx="769.30" cy="248.00" r="5" fill="#0b6e4f"/>
+<circle cx="769.30" cy="248.00" r="5" fill="#102a43"/>
+<text x="779.30" y="252.00">Δ=5.912, ω=0.893</text>
+<text x="18" y="310">causal_referee</text>
+<line x1="286.77" y1="306.00" x2="876.62" y2="306.00" stroke="#bcccdc" stroke-width="2"/>
+<circle cx="286.77" cy="306.00" r="5" fill="#f4a261"/>
+<circle cx="407.63" cy="306.00" r="5" fill="#c44536"/>
+<circle cx="407.63" cy="306.00" r="5" fill="#22577a"/>
+<circle cx="407.63" cy="306.00" r="5" fill="#0b6e4f"/>
+<circle cx="876.62" cy="306.00" r="5" fill="#102a43"/>
+<text x="886.62" y="310.00">Δ=7.399, ω=1.907</text>
+</svg>

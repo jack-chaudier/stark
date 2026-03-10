@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="920" viewBox="0 0 1600 920">
+<style>
+text { font-family: Menlo, Monaco, Consolas, monospace; font-size: 12px; fill: #1f2933; }
+.title { font-size: 18px; font-weight: 700; }
+.subtitle { fill: #52606d; }
+.header { font-weight: 700; fill: #102a43; }
+.panel { fill: #ffffff; stroke: #d9e2ec; stroke-width: 1; }
+.control { fill: #f4f7f9; }
+.pair { fill: #eef6ff; }
+.simplex { fill: #f7efff; }
+.winner { fill: #eefbf3; }
+</style>
+<rect x="0" y="0" width="1600" height="920" fill="#fbfbfd"/>
+<text x="48" y="28" class="title">Full Assignment Holonomy Search</text>
+<text x="48" y="46" class="subtitle">The search for the first runtime law where even raw assignment stops being exact.</text>
+<rect x="48" y="56" width="1504" height="352" class="panel"/>
+<text x="66" y="80" class="header">semantics</text>
+<text x="238" y="80" class="header">scope</text>
+<text x="318" y="80" class="header">|Sigma|</text>
+<text x="388" y="80" class="header">seed runtime/assign/token</text>
+<text x="578" y="80" class="header">first assignment split</text>
+<text x="868" y="80" class="header">first hidden future</text>
+<text x="1138" y="80" class="header">max assignment gap</text>
+<text x="1248" y="80" class="header">holonomy</text>
+<text x="1368" y="80" class="header">assign exact</text>
+<text x="1498" y="80" class="header">status</text>
+<rect x="56" y="94" width="1488" height="24" class="control"/>
+<text x="66" y="108">Broadcast</text>
+<text x="238" y="108">none</text>
+<text x="318" y="108">1</text>
+<text x="388" y="108">8/8/8</text>
+<text x="578" y="108">none</text>
+<text x="868" y="108">none</text>
+<text x="1138" y="108">0.000</text>
+<text x="1248" y="108">1/1</text>
+<text x="1368" y="108">True</text>
+<text x="1498" y="108">flat</text>
+<rect x="56" y="128" width="1488" height="24" class="control"/>
+<text x="66" y="142">Committed Allocation</text>
+<text x="238" y="142">none</text>
+<text x="318" y="142">1</text>
+<text x="388" y="142">11/12/12</text>
+<text x="578" y="142">none</text>
+<text x="868" y="142">none</text>
+<text x="1138" y="142">0.000</text>
+<text x="1248" y="142">1/1</text>
+<text x="1368" y="142">True</text>
+<text x="1498" y="142">coord control</text>
+<rect x="56" y="162" width="1488" height="24" class="winner"/>
+<text x="66" y="176">Pair Phase SL</text>
+<text x="238" y="176">pair</text>
+<text x="318" y="176">2</text>
+<text x="388" y="176">9/12/16</text>
+<text x="578" y="176">(p=3,k=2)</text>
+<text x="868" y="176">(p=3,k=2)</text>
+<text x="1138" y="176">0.000</text>
+<text x="1248" y="176">2/2</text>
+<text x="1368" y="176">False</text>
+<text x="1498" y="176">hidden future</text>
+<rect x="56" y="196" width="1488" height="24" class="winner"/>
+<text x="66" y="210">Pair Phase SU</text>
+<text x="238" y="210">pair</text>
+<text x="318" y="210">2</text>
+<text x="388" y="210">9/12/16</text>
+<text x="578" y="210">(p=3,k=2)</text>
+<text x="868" y="210">(p=3,k=2)</text>
+<text x="1138" y="210">0.000</text>
+<text x="1248" y="210">2/2</text>
+<text x="1368" y="210">False</text>
+<text x="1498" y="210">hidden future</text>
+<rect x="56" y="230" width="1488" height="24" class="winner"/>
+<text x="66" y="244">Pair Phase AL</text>
+<text x="238" y="244">pair</text>
+<text x="318" y="244">2</text>
+<text x="388" y="244">10/12/14</text>
+<text x="578" y="244">(p=3,k=2)</text>
+<text x="868" y="244">(p=4,k=3)</text>
+<text x="1138" y="244">0.000</text>
+<text x="1248" y="244">2/2</text>
+<text x="1368" y="244">False</text>
+<text x="1498" y="244">hidden future</text>
+<rect x="56" y="264" width="1488" height="24" class="winner"/>
+<text x="66" y="278">Pair Phase XL</text>
+<text x="238" y="278">pair</text>
+<text x="318" y="278">2</text>
+<text x="388" y="278">11/12/16</text>
+<text x="578" y="278">(p=3,k=2)</text>
+<text x="868" y="278">(p=3,k=2)</text>
+<text x="1138" y="278">0.115</text>
+<text x="1248" y="278">2/2</text>
+<text x="1368" y="278">False</text>
+<text x="1498" y="278">hidden future</text>
+<rect x="56" y="298" width="1488" height="24" class="winner"/>
+<text x="66" y="312">Braid Orient</text>
+<text x="238" y="312">pair</text>
+<text x="318" y="312">3</text>
+<text x="388" y="312">10/12/16</text>
+<text x="578" y="312">(p=3,k=2)</text>
+<text x="868" y="312">(p=3,k=2)</text>
+<text x="1138" y="312">0.000</text>
+<text x="1248" y="312">2/2</text>
+<text x="1368" y="312">False</text>
+<text x="1498" y="312">hidden future</text>
+<rect x="56" y="332" width="1488" height="24" class="winner"/>
+<text x="66" y="346">Debt Shared</text>
+<text x="238" y="346">pair</text>
+<text x="318" y="346">3</text>
+<text x="388" y="346">7/12/16</text>
+<text x="578" y="346">(p=4,k=3)</text>
+<text x="868" y="346">(p=4,k=3)</text>
+<text x="1138" y="346">0.000</text>
+<text x="1248" y="346">2/2</text>
+<text x="1368" y="346">False</text>
+<text x="1498" y="346">hidden future</text>
+<rect x="56" y="366" width="1488" height="24" class="pair"/>
+<text x="66" y="380">Catalytic Pair</text>
+<text x="238" y="380">pair</text>
+<text x="318" y="380">2</text>
+<text x="388" y="380">10/12/12</text>
+<text x="578" y="380">none</text>
+<text x="868" y="380">none</text>
+<text x="1138" y="380">0.000</text>
+<text x="1248" y="380">1/1</text>
+<text x="1368" y="380">True</text>
+<text x="1498" y="380">flat</text>
+<rect x="56" y="400" width="1488" height="24" class="simplex"/>
+<text x="66" y="414">Simplex Phase</text>
+<text x="238" y="414">simplex</text>
+<text x="318" y="414">2</text>
+<text x="388" y="414">7/12/12</text>
+<text x="578" y="414">none</text>
+<text x="868" y="414">none</text>
+<text x="1138" y="414">0.000</text>
+<text x="1248" y="414">1/1</text>
+<text x="1368" y="414">True</text>
+<text x="1498" y="414">flat</text>
+<rect x="56" y="434" width="1488" height="24" class="winner"/>
+<text x="66" y="448">Simplex Orient</text>
+<text x="238" y="448">simplex</text>
+<text x="318" y="448">4</text>
+<text x="388" y="448">7/12/12</text>
+<text x="578" y="448">(p=4,k=2)</text>
+<text x="868" y="448">(p=4,k=2)</text>
+<text x="1138" y="448">0.000</text>
+<text x="1248" y="448">3/3</text>
+<text x="1368" y="448">False</text>
+<text x="1498" y="448">hidden future</text>
+<rect x="48" y="436" width="1504" height="420" class="panel"/>
+<text x="64" y="460" class="header">Boundary statement</text>
+<text x="64" y="488">First assignment split: pair_phase_any_other_live_block_lower on ((1, 2), (1, 3)).</text>
+<text x="64" y="510">Counts: runtime 10, coordinate 8, assignment 12, token 14.</text>
+<text x="64" y="538">u = [1->(1, 2), 2->(1, 2), 3->(1, 3)]</text>
+<text x="64" y="560">v = [1->(1, 2), 3->(1, 3), 2->(1, 2)]</text>
+<text x="64" y="582">w = []</text>
+<text x="64" y="604">outputs now: () vs ((),)</text>
+<text x="64" y="626">outputs after suffix: () vs ((),)</text>
+<text x="64" y="672">First hidden future: pair_phase_exclusive_other_live_block_lower on ((1, 2), (1, 3)).</text>
+<text x="64" y="694">same assignment = {1->(1, 2), 3->(1, 3)}</text>
+<text x="64" y="716">shared current output = ((2,),)</text>
+<text x="64" y="738">future outputs after non-empty w: ((),) vs ()</text>
+<text x="64" y="780">Controls: broadcast stays flat; committed allocation keeps assignment exact while reproducing positive coordinate curvature.</text>
+<text x="64" y="802">If the first winner is pair-scoped, then pairwise nerve transport already suffices and simplex transport is not required for the first holonomy effect.</text>
+</svg>

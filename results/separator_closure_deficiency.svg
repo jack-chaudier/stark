@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="540" viewBox="0 0 980 540">
+<style>
+text { font-family: Menlo, Monaco, Consolas, monospace; font-size: 11px; fill: #1f2933; }
+.title { font-size: 14px; font-weight: 700; }
+.axis { stroke: #9fb3c8; stroke-width: 1; }
+.grid { stroke: #d9e2ec; stroke-width: 1; stroke-dasharray: 4 4; }
+.panel { fill: #ffffff; stroke: #d9e2ec; stroke-width: 1; }
+</style>
+<rect x="0" y="0" width="980" height="540" fill="#f8fbff"/>
+<text x="78" y="24" class="title">Separator Closure: Probe Deficiency Falls While Shelf Width Widens</text>
+<rect x="78" y="48" width="404.0" height="422" class="panel"/>
+<text x="88" y="38" class="title">Probe deficiency (bits)</text>
+<line x1="93.00" y1="48" x2="93.00" y2="470" class="grid"/>
+<text x="89.00" y="488">0</text>
+<line x1="167.80" y1="48" x2="167.80" y2="470" class="grid"/>
+<text x="163.80" y="488">1</text>
+<line x1="242.60" y1="48" x2="242.60" y2="470" class="grid"/>
+<text x="238.60" y="488">2</text>
+<line x1="317.40" y1="48" x2="317.40" y2="470" class="grid"/>
+<text x="313.40" y="488">3</text>
+<line x1="392.20" y1="48" x2="392.20" y2="470" class="grid"/>
+<text x="388.20" y="488">4</text>
+<line x1="467.00" y1="48" x2="467.00" y2="470" class="grid"/>
+<text x="463.00" y="488">5</text>
+<line x1="78" y1="454.00" x2="482.0" y2="454.00" class="grid"/>
+<text x="48" y="458.00">0</text>
+<line x1="78" y1="387.36" x2="482.0" y2="387.36" class="grid"/>
+<text x="48" y="391.36">1</text>
+<line x1="78" y1="320.72" x2="482.0" y2="320.72" class="grid"/>
+<text x="48" y="324.72">2</text>
+<line x1="78" y1="254.08" x2="482.0" y2="254.08" class="grid"/>
+<text x="48" y="258.08">3</text>
+<line x1="78" y1="187.44" x2="482.0" y2="187.44" class="grid"/>
+<text x="48" y="191.44">4</text>
+<line x1="78" y1="120.80" x2="482.0" y2="120.80" class="grid"/>
+<text x="48" y="124.80">5</text>
+<line x1="78" y1="54.16" x2="482.0" y2="54.16" class="grid"/>
+<text x="48" y="58.16">6</text>
+<line x1="78" y1="470" x2="482.0" y2="470" class="axis"/>
+<line x1="78" y1="48" x2="78" y2="470" class="axis"/>
+<text x="228.00" y="520">added separator actions</text>
+<polyline fill="none" stroke="#0b6e4f" stroke-width="3" points="93.00,257.58 167.80,363.20 242.60,420.22 317.40,454.00 392.20,454.00 467.00,454.00 541.80,454.00"/>
+<circle cx="93.00" cy="257.58" r="4.2" fill="#0b6e4f"/>
+<circle cx="167.80" cy="363.20" r="4.2" fill="#0b6e4f"/>
+<circle cx="242.60" cy="420.22" r="4.2" fill="#0b6e4f"/>
+<circle cx="317.40" cy="454.00" r="4.2" fill="#0b6e4f"/>
+<circle cx="392.20" cy="454.00" r="4.2" fill="#0b6e4f"/>
+<circle cx="467.00" cy="454.00" r="4.2" fill="#0b6e4f"/>
+<circle cx="541.80" cy="454.00" r="4.2" fill="#0b6e4f"/>
+<polyline fill="none" stroke="#c44536" stroke-width="3" points="93.00,221.31 167.80,330.85 242.60,391.54 317.40,429.84 392.20,454.00 467.00,454.00 541.80,454.00 616.60,454.00"/>
+<circle cx="93.00" cy="221.31" r="4.2" fill="#c44536"/>
+<circle cx="167.80" cy="330.85" r="4.2" fill="#c44536"/>
+<circle cx="242.60" cy="391.54" r="4.2" fill="#c44536"/>
+<circle cx="317.40" cy="429.84" r="4.2" fill="#c44536"/>
+<circle cx="392.20" cy="454.00" r="4.2" fill="#c44536"/>
+<circle cx="467.00" cy="454.00" r="4.2" fill="#c44536"/>
+<circle cx="541.80" cy="454.00" r="4.2" fill="#c44536"/>
+<circle cx="616.60" cy="454.00" r="4.2" fill="#c44536"/>
+<polyline fill="none" stroke="#22577a" stroke-width="3" points="93.00,60.00 167.80,217.65 242.60,312.66 317.40,377.14 392.20,422.63 467.00,454.00 541.80,454.00 616.60,454.00 691.40,454.00 766.20,454.00 841.00,454.00 915.80,454.00 990.60,454.00"/>
+<circle cx="93.00" cy="60.00" r="4.2" fill="#22577a"/>
+<circle cx="167.80" cy="217.65" r="4.2" fill="#22577a"/>
+<circle cx="242.60" cy="312.66" r="4.2" fill="#22577a"/>
+<circle cx="317.40" cy="377.14" r="4.2" fill="#22577a"/>
+<circle cx="392.20" cy="422.63" r="4.2" fill="#22577a"/>
+<circle cx="467.00" cy="454.00" r="4.2" fill="#22577a"/>
+<circle cx="541.80" cy="454.00" r="4.2" fill="#22577a"/>
+<circle cx="616.60" cy="454.00" r="4.2" fill="#22577a"/>
+<circle cx="691.40" cy="454.00" r="4.2" fill="#22577a"/>
+<circle cx="766.20" cy="454.00" r="4.2" fill="#22577a"/>
+<circle cx="841.00" cy="454.00" r="4.2" fill="#22577a"/>
+<circle cx="915.80" cy="454.00" r="4.2" fill="#22577a"/>
+<circle cx="990.60" cy="454.00" r="4.2" fill="#22577a"/>
+<rect x="536.0" y="48" width="404.0" height="422" class="panel"/>
+<text x="546.0" y="38" class="title">Shelf width (bits)</text>
+<line x1="551.00" y1="48" x2="551.00" y2="470" class="grid"/>
+<text x="547.00" y="488">0</text>
+<line x1="625.80" y1="48" x2="625.80" y2="470" class="grid"/>
+<text x="621.80" y="488">1</text>
+<line x1="700.60" y1="48" x2="700.60" y2="470" class="grid"/>
+<text x="696.60" y="488">2</text>
+<line x1="775.40" y1="48" x2="775.40" y2="470" class="grid"/>
+<text x="771.40" y="488">3</text>
+<line x1="850.20" y1="48" x2="850.20" y2="470" class="grid"/>
+<text x="846.20" y="488">4</text>
+<line x1="925.00" y1="48" x2="925.00" y2="470" class="grid"/>
+<text x="921.00" y="488">5</text>
+<line x1="536.0" y1="454.00" x2="940.0" y2="454.00" class="grid"/>
+<text x="506.0" y="458.00">0</text>
+<line x1="536.0" y1="372.90" x2="940.0" y2="372.90" class="grid"/>
+<text x="506.0" y="376.90">1</text>
+<line x1="536.0" y1="291.79" x2="940.0" y2="291.79" class="grid"/>
+<text x="506.0" y="295.79">2</text>
+<line x1="536.0" y1="210.69" x2="940.0" y2="210.69" class="grid"/>
+<text x="506.0" y="214.69">3</text>
+<line x1="536.0" y1="129.59" x2="940.0" y2="129.59" class="grid"/>
+<text x="506.0" y="133.59">4</text>
+<line x1="536.0" y1="48.48" x2="940.0" y2="48.48" class="grid"/>
+<text x="506.0" y="52.48">5</text>
+<line x1="536.0" y1="470" x2="940.0" y2="470" class="axis"/>
+<line x1="536.0" y1="48" x2="536.0" y2="470" class="axis"/>
+<text x="686.00" y="520">added separator actions</text>
+<polyline fill="none" stroke="#0b6e4f" stroke-width="3" points="551.00,414.63 625.80,354.86 700.60,319.13 775.40,296.05 850.20,296.05 925.00,296.05 999.80,296.05"/>
+<circle cx="551.00" cy="414.63" r="4.2" fill="#0b6e4f"/>
+<circle cx="625.80" cy="354.86" r="4.2" fill="#0b6e4f"/>
+<circle cx="700.60" cy="319.13" r="4.2" fill="#0b6e4f"/>
+<circle cx="775.40" cy="296.05" r="4.2" fill="#0b6e4f"/>
+<circle cx="850.20" cy="296.05" r="4.2" fill="#0b6e4f"/>
+<circle cx="925.00" cy="296.05" r="4.2" fill="#0b6e4f"/>
+<circle cx="999.80" cy="296.05" r="4.2" fill="#0b6e4f"/>
+<polyline fill="none" stroke="#c44536" stroke-width="3" points="551.00,420.34 625.80,357.94 700.60,320.37 775.40,295.09 850.20,278.01 925.00,278.01 999.80,278.01 1074.60,278.01"/>
+<circle cx="551.00" cy="420.34" r="4.2" fill="#c44536"/>
+<circle cx="625.80" cy="357.94" r="4.2" fill="#c44536"/>
+<circle cx="700.60" cy="320.37" r="4.2" fill="#c44536"/>
+<circle cx="775.40" cy="295.09" r="4.2" fill="#c44536"/>
+<circle cx="850.20" cy="278.01" r="4.2" fill="#c44536"/>
+<circle cx="925.00" cy="278.01" r="4.2" fill="#c44536"/>
+<circle cx="999.80" cy="278.01" r="4.2" fill="#c44536"/>
+<circle cx="1074.60" cy="278.01" r="4.2" fill="#c44536"/>
+<polyline fill="none" stroke="#22577a" stroke-width="3" points="551.00,381.57 625.80,262.14 700.60,184.58 775.40,129.59 850.20,89.18 925.00,60.00 999.80,60.00 1074.60,60.00 1149.40,60.00 1224.20,60.00 1299.00,60.00 1373.80,60.00 1448.60,60.00"/>
+<circle cx="551.00" cy="381.57" r="4.2" fill="#22577a"/>
+<circle cx="625.80" cy="262.14" r="4.2" fill="#22577a"/>
+<circle cx="700.60" cy="184.58" r="4.2" fill="#22577a"/>
+<circle cx="775.40" cy="129.59" r="4.2" fill="#22577a"/>
+<circle cx="850.20" cy="89.18" r="4.2" fill="#22577a"/>
+<circle cx="925.00" cy="60.00" r="4.2" fill="#22577a"/>
+<circle cx="999.80" cy="60.00" r="4.2" fill="#22577a"/>
+<circle cx="1074.60" cy="60.00" r="4.2" fill="#22577a"/>
+<circle cx="1149.40" cy="60.00" r="4.2" fill="#22577a"/>
+<circle cx="1224.20" cy="60.00" r="4.2" fill="#22577a"/>
+<circle cx="1299.00" cy="60.00" r="4.2" fill="#22577a"/>
+<circle cx="1373.80" cy="60.00" r="4.2" fill="#22577a"/>
+<circle cx="1448.60" cy="60.00" r="4.2" fill="#22577a"/>
+<line x1="720" y1="36" x2="746" y2="36" stroke="#0b6e4f" stroke-width="3"/>
+<circle cx="733" cy="36" r="4.2" fill="#0b6e4f"/>
+<text x="754" y="40">Q_(3,2)</text>
+<line x1="720" y1="54" x2="746" y2="54" stroke="#c44536" stroke-width="3"/>
+<circle cx="733" cy="54" r="4.2" fill="#c44536"/>
+<text x="754" y="58">Q_(4,2)</text>
+<line x1="720" y1="72" x2="746" y2="72" stroke="#22577a" stroke-width="3"/>
+<circle cx="733" cy="72" r="4.2" fill="#22577a"/>
+<text x="754" y="76">Q_(5,3)</text>
+</svg>

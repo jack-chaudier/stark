@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="960" viewBox="0 0 1680 960">
+<style>
+text { font-family: Menlo, Monaco, Consolas, monospace; font-size: 12px; fill: #1f2933; }
+.title { font-size: 18px; font-weight: 700; }
+.subtitle { fill: #52606d; }
+.header { font-weight: 700; fill: #102a43; }
+.panel { fill: #ffffff; stroke: #d9e2ec; stroke-width: 1; }
+.control { fill: #f4f7f9; }
+.pair { fill: #eef6ff; }
+.simplex { fill: #f7efff; }
+.winner { fill: #eefbf3; }
+</style>
+<rect x="0" y="0" width="1680" height="960" fill="#fbfbfd"/>
+<text x="44" y="28" class="title">Pair vs Simplex Holonomy Search</text>
+<text x="44" y="46" class="subtitle">The search for the first deterministic law where assignment plus pair transport is no longer exact.</text>
+<rect x="44" y="54" width="1592" height="420" class="panel"/>
+<text x="62" y="78" class="header">semantics</text>
+<text x="274" y="78" class="header">category</text>
+<text x="384" y="78" class="header">|pair|</text>
+<text x="454" y="78" class="header">|simplex|</text>
+<text x="544" y="78" class="header">seed runtime/assign/pair/simplex</text>
+<text x="764" y="78" class="header">first pair split</text>
+<text x="1024" y="78" class="header">first hidden beyond pair</text>
+<text x="1304" y="78" class="header">max pair gap</text>
+<text x="1404" y="78" class="header">pair/simplex</text>
+<text x="1514" y="78" class="header">pair exact</text>
+<text x="1609" y="78" class="header">status</text>
+<rect x="52" y="92" width="1576" height="22" class="control"/>
+<text x="62" y="106">Broadcast</text>
+<text x="274" y="106">control</text>
+<text x="384" y="106">1</text>
+<text x="454" y="106">1</text>
+<text x="544" y="106">8/8/8/8</text>
+<text x="764" y="106">none</text>
+<text x="1024" y="106">none</text>
+<text x="1304" y="106">0.000</text>
+<text x="1404" y="106">1/1</text>
+<text x="1514" y="106">True</text>
+<text x="1609" y="106">flat</text>
+<rect x="52" y="122" width="1576" height="22" class="control"/>
+<text x="62" y="136">Committed Allocation</text>
+<text x="274" y="136">control</text>
+<text x="384" y="136">1</text>
+<text x="454" y="136">1</text>
+<text x="544" y="136">11/12/12/12</text>
+<text x="764" y="136">none</text>
+<text x="1024" y="136">none</text>
+<text x="1304" y="136">0.000</text>
+<text x="1404" y="136">1/1</text>
+<text x="1514" y="136">True</text>
+<text x="1609" y="136">flat</text>
+<rect x="52" y="152" width="1576" height="22" class="pair"/>
+<text x="62" y="166">Pair Phase XL</text>
+<text x="274" y="166">pair_only</text>
+<text x="384" y="166">2</text>
+<text x="454" y="166">1</text>
+<text x="544" y="166">11/12/16/16</text>
+<text x="764" y="166">none</text>
+<text x="1024" y="166">none</text>
+<text x="1304" y="166">0.000</text>
+<text x="1404" y="166">1/1</text>
+<text x="1514" y="166">True</text>
+<text x="1609" y="166">assignment only</text>
+<rect x="52" y="182" width="1576" height="22" class="pair"/>
+<text x="62" y="196">Pair Phase SL</text>
+<text x="274" y="196">pair_only</text>
+<text x="384" y="196">2</text>
+<text x="454" y="196">1</text>
+<text x="544" y="196">9/12/16/16</text>
+<text x="764" y="196">none</text>
+<text x="1024" y="196">none</text>
+<text x="1304" y="196">0.000</text>
+<text x="1404" y="196">1/1</text>
+<text x="1514" y="196">True</text>
+<text x="1609" y="196">assignment only</text>
+<rect x="52" y="212" width="1576" height="22" class="pair"/>
+<text x="62" y="226">Pair Phase AL</text>
+<text x="274" y="226">pair_only</text>
+<text x="384" y="226">2</text>
+<text x="454" y="226">1</text>
+<text x="544" y="226">10/12/14/14</text>
+<text x="764" y="226">none</text>
+<text x="1024" y="226">none</text>
+<text x="1304" y="226">0.000</text>
+<text x="1404" y="226">1/1</text>
+<text x="1514" y="226">True</text>
+<text x="1609" y="226">assignment only</text>
+<rect x="52" y="242" width="1576" height="22" class="winner"/>
+<text x="62" y="256">Shared Pair Phase + 2-Live Orient</text>
+<text x="274" y="256">pair_plus_simplex</text>
+<text x="384" y="256">2</text>
+<text x="454" y="256">4</text>
+<text x="544" y="256">9/12/16/16</text>
+<text x="764" y="256">(p=3,k=2)</text>
+<text x="1024" y="256">(p=3,k=2)</text>
+<text x="1304" y="256">0.000</text>
+<text x="1404" y="256">2/1</text>
+<text x="1514" y="256">False</text>
+<text x="1609" y="256">hidden future</text>
+<rect x="52" y="272" width="1576" height="22" class="winner"/>
+<text x="62" y="286">Shared Pair Phase + 3-Live Orient</text>
+<text x="274" y="286">pair_plus_simplex</text>
+<text x="384" y="286">2</text>
+<text x="454" y="286">4</text>
+<text x="544" y="286">9/12/16/16</text>
+<text x="764" y="286">(p=4,k=2)</text>
+<text x="1024" y="286">(p=4,k=2)</text>
+<text x="1304" y="286">0.000</text>
+<text x="1404" y="286">2/1</text>
+<text x="1514" y="286">False</text>
+<text x="1609" y="286">hidden future</text>
+<rect x="52" y="302" width="1576" height="22" class="winner"/>
+<text x="62" y="316">Shared Pair Phase + 2/3-Live Orient</text>
+<text x="274" y="316">pair_plus_simplex</text>
+<text x="384" y="316">2</text>
+<text x="454" y="316">4</text>
+<text x="544" y="316">9/12/16/16</text>
+<text x="764" y="316">(p=3,k=2)</text>
+<text x="1024" y="316">(p=3,k=2)</text>
+<text x="1304" y="316">0.000</text>
+<text x="1404" y="316">2/1</text>
+<text x="1514" y="316">False</text>
+<text x="1609" y="316">hidden future</text>
+<rect x="52" y="332" width="1576" height="22" class="pair"/>
+<text x="62" y="346">Shared Pair Phase + Commutator Toggle</text>
+<text x="274" y="346">pair_plus_simplex</text>
+<text x="384" y="346">2</text>
+<text x="454" y="346">2</text>
+<text x="544" y="346">9/12/16/16</text>
+<text x="764" y="346">none</text>
+<text x="1024" y="346">none</text>
+<text x="1304" y="346">0.000</text>
+<text x="1404" y="346">1/1</text>
+<text x="1514" y="346">True</text>
+<text x="1609" y="346">assignment only</text>
+<rect x="52" y="362" width="1576" height="22" class="pair"/>
+<text x="62" y="376">Shared Pair Phase + Triangle Debt</text>
+<text x="274" y="376">triangle_debt</text>
+<text x="384" y="376">2</text>
+<text x="454" y="376">3</text>
+<text x="544" y="376">9/12/16/16</text>
+<text x="764" y="376">none</text>
+<text x="1024" y="376">none</text>
+<text x="1304" y="376">0.000</text>
+<text x="1404" y="376">1/1</text>
+<text x="1514" y="376">True</text>
+<text x="1609" y="376">assignment only</text>
+<rect x="52" y="392" width="1576" height="22" class="winner"/>
+<text x="62" y="406">Shared Pair Phase + Feedback Orient</text>
+<text x="274" y="406">higher_local_interaction</text>
+<text x="384" y="406">2</text>
+<text x="454" y="406">4</text>
+<text x="544" y="406">9/12/16/16</text>
+<text x="764" y="406">(p=3,k=2)</text>
+<text x="1024" y="406">(p=3,k=2)</text>
+<text x="1304" y="406">0.000</text>
+<text x="1404" y="406">4/1</text>
+<text x="1514" y="406">False</text>
+<text x="1609" y="406">hidden future</text>
+<rect x="44" y="502" width="1592" height="388" class="panel"/>
+<text x="60" y="526" class="header">Boundary statement</text>
+<text x="60" y="556">First pair split: pair_phase_shared_other_live_block_lower__feedback_orient_freeze_pairs on ((1, 2), (1, 3), (2, 3)).</text>
+<text x="60" y="578">Counts: runtime 24, assignment 27, pair 45, simplex 58.</text>
+<text x="60" y="606">u = [2->(1, 2), 3->(1, 3)]</text>
+<text x="60" y="628">v = [3->(1, 3), 2->(1, 2)]</text>
+<text x="60" y="650">w = [1->(1, 2)]</text>
+<text x="60" y="672">pair fiber = ((-1, 0, 1), (0, 0, 0))</text>
+<text x="60" y="694">outputs now: ((1,), (1,)) vs ((1,), (1,))</text>
+<text x="60" y="738">First hidden future beyond pair: pair_phase_shared_other_live_block_lower__feedback_orient_freeze_pairs on ((1, 2), (1, 3), (2, 3)).</text>
+<text x="60" y="760">shared pair fiber = ((-1, 0, 1), (0, 0, 0))</text>
+<text x="60" y="782">shared current output = ((1,), (1,))</text>
+<text x="60" y="804">future outputs after non-empty w: ((),) vs ()</text>
+<text x="60" y="840">Controls: broadcast stays flat; committed allocation keeps assignment and pair exact; pair-only laws break assignment but not pair summary.</text>
+<text x="60" y="862">If the first winner is positive, the exact runtime object moves from assignment+pair transport to assignment+pair+simplex transport.</text>
+</svg>

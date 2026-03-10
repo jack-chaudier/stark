@@ -1,0 +1,5397 @@
+{
+  "scan": {
+    "base_p_scan": [
+      2,
+      3,
+      4
+    ],
+    "base_k_max": 3,
+    "expanded_p_scan": [
+      5
+    ],
+    "expanded_k_max": 4,
+    "expanded_scan_triggered": false,
+    "seed_families": {
+      "V": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "triangle": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "overlap_star": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "k4_pair_family": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ]
+    },
+    "semantics": [
+      "broadcast_control",
+      "committed_allocation",
+      "pair_phase_shared_other_live_block_lower",
+      "pair_phase_shared_other_live_block_upper",
+      "pair_phase_any_other_live_block_lower",
+      "pair_phase_exclusive_other_live_block_lower",
+      "braid_orientation_shared_other_live",
+      "transport_debt_shared_other_live",
+      "catalytic_pair_activation",
+      "simplex_phase_triangle_activate",
+      "simplex_orientation_triangle_activate"
+    ]
+  },
+  "semantics": [
+    {
+      "name": "broadcast_control",
+      "label": "Broadcast",
+      "description": "Negative control: broadcast presence semantics; edge choice never enters the carrier.",
+      "token_scope": "none",
+      "token_alphabet_size": 1,
+      "families_scanned": 124,
+      "coordinate_split_count": 0,
+      "coordinate_gap_count": 0,
+      "full_assignment_split_count": 0,
+      "hidden_future_count": 0,
+      "full_assignment_exact_on_scan": true,
+      "max_coordinate_curvature_gap": 0.0,
+      "max_assignment_curvature_gap": 0.0,
+      "max_assignment_holonomy_rank": 1,
+      "max_hidden_future_rank": 1,
+      "seed_record": {
+        "semantics": "broadcast_control",
+        "token_scope": "none",
+        "token_alphabet_size": 1,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 8,
+        "runtime_quotient_count": 8,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 8,
+        "token_quotient_count": 8,
+        "incidence_quotient_count": 8,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": 0.0,
+        "assignment_curvature_gap": 0.0,
+        "coordinate_exact": true,
+        "full_assignment_exact": true,
+        "token_exact": true,
+        "incidence_exact": true,
+        "family_exact": false,
+        "assignment_holonomy_rank": 1,
+        "hidden_future_rank": 1,
+        "coordinate_witness": null,
+        "full_assignment_witness": null,
+        "hidden_future_witness": null
+      },
+      "first_coordinate_split": null,
+      "first_coordinate_gap": null,
+      "first_full_assignment_split": null,
+      "first_hidden_future_split": null
+    },
+    {
+      "name": "committed_allocation",
+      "label": "Committed Allocation",
+      "description": "Positive control: variable-to-edge assignment with disjoint-domain segment composition on the V-hypergraph.",
+      "token_scope": "none",
+      "token_alphabet_size": 1,
+      "families_scanned": 124,
+      "coordinate_split_count": 103,
+      "coordinate_gap_count": 103,
+      "full_assignment_split_count": 0,
+      "hidden_future_count": 0,
+      "full_assignment_exact_on_scan": true,
+      "max_coordinate_curvature_gap": 2.8826430493618416,
+      "max_assignment_curvature_gap": 0.0,
+      "max_assignment_holonomy_rank": 1,
+      "max_hidden_future_rank": 1,
+      "seed_record": {
+        "semantics": "committed_allocation",
+        "token_scope": "none",
+        "token_alphabet_size": 1,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 12,
+        "runtime_quotient_count": 11,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 12,
+        "token_quotient_count": 12,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": 0.4594316186372973,
+        "assignment_curvature_gap": -0.12553088208385876,
+        "coordinate_exact": false,
+        "full_assignment_exact": true,
+        "token_exact": true,
+        "incidence_exact": true,
+        "family_exact": false,
+        "assignment_holonomy_rank": 1,
+        "hidden_future_rank": 1,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              "segment",
+              [
+                0,
+                -1,
+                1
+              ]
+            ]
+          ],
+          "right_trace": [
+            [
+              "segment",
+              [
+                1,
+                -1,
+                1
+              ]
+            ]
+          ],
+          "suffix": [
+            [
+              "segment",
+              [
+                -1,
+                -1,
+                -1
+              ]
+            ]
+          ],
+          "summary_value": "(1, 0, 1)",
+          "left_state": "{1->(1, 2), 3->(1, 3)}",
+          "right_state": "{1->(1, 3), 3->(1, 3)}",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((),)",
+          "same_now": false,
+          "non_empty_suffix": true
+        },
+        "full_assignment_witness": null,
+        "hidden_future_witness": null
+      },
+      "first_coordinate_split": {
+        "semantics": "committed_allocation",
+        "token_scope": "none",
+        "token_alphabet_size": 1,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 12,
+        "runtime_quotient_count": 11,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 12,
+        "token_quotient_count": 12,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": 0.4594316186372973,
+        "assignment_curvature_gap": -0.12553088208385876,
+        "coordinate_exact": false,
+        "full_assignment_exact": true,
+        "token_exact": true,
+        "incidence_exact": true,
+        "family_exact": false,
+        "assignment_holonomy_rank": 1,
+        "hidden_future_rank": 1,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              "segment",
+              [
+                0,
+                -1,
+                1
+              ]
+            ]
+          ],
+          "right_trace": [
+            [
+              "segment",
+              [
+                1,
+                -1,
+                1
+              ]
+            ]
+          ],
+          "suffix": [
+            [
+              "segment",
+              [
+                -1,
+                -1,
+                -1
+              ]
+            ]
+          ],
+          "summary_value": "(1, 0, 1)",
+          "left_state": "{1->(1, 2), 3->(1, 3)}",
+          "right_state": "{1->(1, 3), 3->(1, 3)}",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((),)",
+          "same_now": false,
+          "non_empty_suffix": true
+        },
+        "full_assignment_witness": null,
+        "hidden_future_witness": null
+      },
+      "first_coordinate_gap": {
+        "semantics": "committed_allocation",
+        "token_scope": "none",
+        "token_alphabet_size": 1,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 12,
+        "runtime_quotient_count": 11,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 12,
+        "token_quotient_count": 12,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": 0.4594316186372973,
+        "assignment_curvature_gap": -0.12553088208385876,
+        "coordinate_exact": false,
+        "full_assignment_exact": true,
+        "token_exact": true,
+        "incidence_exact": true,
+        "family_exact": false,
+        "assignment_holonomy_rank": 1,
+        "hidden_future_rank": 1,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              "segment",
+              [
+                0,
+                -1,
+                1
+              ]
+            ]
+          ],
+          "right_trace": [
+            [
+              "segment",
+              [
+                1,
+                -1,
+                1
+              ]
+            ]
+          ],
+          "suffix": [
+            [
+              "segment",
+              [
+                -1,
+                -1,
+                -1
+              ]
+            ]
+          ],
+          "summary_value": "(1, 0, 1)",
+          "left_state": "{1->(1, 2), 3->(1, 3)}",
+          "right_state": "{1->(1, 3), 3->(1, 3)}",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((),)",
+          "same_now": false,
+          "non_empty_suffix": true
+        },
+        "full_assignment_witness": null,
+        "hidden_future_witness": null
+      },
+      "first_full_assignment_split": null,
+      "first_hidden_future_split": null
+    },
+    {
+      "name": "pair_phase_shared_other_live_block_lower",
+      "label": "Pair Phase SL",
+      "description": "Pair phase mod 2: a shared claim into the lower edge toggles when the upper edge is already live; odd phase suppresses lower completion.",
+      "token_scope": "pair",
+      "token_alphabet_size": 2,
+      "families_scanned": 124,
+      "coordinate_split_count": 103,
+      "coordinate_gap_count": 95,
+      "full_assignment_split_count": 103,
+      "hidden_future_count": 103,
+      "full_assignment_exact_on_scan": false,
+      "max_coordinate_curvature_gap": 2.9188632372745946,
+      "max_assignment_curvature_gap": 0.0,
+      "max_assignment_holonomy_rank": 2,
+      "max_hidden_future_rank": 2,
+      "seed_record": {
+        "semantics": "pair_phase_shared_other_live_block_lower",
+        "token_scope": "pair",
+        "token_alphabet_size": 2,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 16,
+        "runtime_quotient_count": 9,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 12,
+        "token_quotient_count": 16,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": 0.16992500144231215,
+        "assignment_curvature_gap": -0.4150374992788439,
+        "coordinate_exact": false,
+        "full_assignment_exact": false,
+        "token_exact": true,
+        "incidence_exact": false,
+        "family_exact": false,
+        "assignment_holonomy_rank": 2,
+        "hidden_future_rank": 2,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(1, 0, 0)",
+          "left_state": "((0, -1, -1), (0,), ())",
+          "right_state": "((1, -1, -1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((3,),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2), 3->(1, 3)}",
+          "left_state": "((0, -1, 1), (0,), ())",
+          "right_state": "((0, -1, 1), (1,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((2,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        },
+        "hidden_future_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2), 3->(1, 3)}",
+          "left_state": "((0, -1, 1), (0,), ())",
+          "right_state": "((0, -1, 1), (1,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((2,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        }
+      },
+      "first_coordinate_split": {
+        "semantics": "pair_phase_shared_other_live_block_lower",
+        "token_scope": "pair",
+        "token_alphabet_size": 2,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 16,
+        "runtime_quotient_count": 9,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 12,
+        "token_quotient_count": 16,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": 0.16992500144231215,
+        "assignment_curvature_gap": -0.4150374992788439,
+        "coordinate_exact": false,
+        "full_assignment_exact": false,
+        "token_exact": true,
+        "incidence_exact": false,
+        "family_exact": false,
+        "assignment_holonomy_rank": 2,
+        "hidden_future_rank": 2,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(1, 0, 0)",
+          "left_state": "((0, -1, -1), (0,), ())",
+          "right_state": "((1, -1, -1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((3,),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2), 3->(1, 3)}",
+          "left_state": "((0, -1, 1), (0,), ())",
+          "right_state": "((0, -1, 1), (1,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((2,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        },
+        "hidden_future_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2), 3->(1, 3)}",
+          "left_state": "((0, -1, 1), (0,), ())",
+          "right_state": "((0, -1, 1), (1,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((2,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        }
+      },
+      "first_coordinate_gap": {
+        "semantics": "pair_phase_shared_other_live_block_lower",
+        "token_scope": "pair",
+        "token_alphabet_size": 2,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 16,
+        "runtime_quotient_count": 9,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 12,
+        "token_quotient_count": 16,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": 0.16992500144231215,
+        "assignment_curvature_gap": -0.4150374992788439,
+        "coordinate_exact": false,
+        "full_assignment_exact": false,
+        "token_exact": true,
+        "incidence_exact": false,
+        "family_exact": false,
+        "assignment_holonomy_rank": 2,
+        "hidden_future_rank": 2,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(1, 0, 0)",
+          "left_state": "((0, -1, -1), (0,), ())",
+          "right_state": "((1, -1, -1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((3,),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2), 3->(1, 3)}",
+          "left_state": "((0, -1, 1), (0,), ())",
+          "right_state": "((0, -1, 1), (1,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((2,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        },
+        "hidden_future_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2), 3->(1, 3)}",
+          "left_state": "((0, -1, 1), (0,), ())",
+          "right_state": "((0, -1, 1), (1,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((2,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        }
+      },
+      "first_full_assignment_split": {
+        "semantics": "pair_phase_shared_other_live_block_lower",
+        "token_scope": "pair",
+        "token_alphabet_size": 2,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 16,
+        "runtime_quotient_count": 9,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 12,
+        "token_quotient_count": 16,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": 0.16992500144231215,
+        "assignment_curvature_gap": -0.4150374992788439,
+        "coordinate_exact": false,
+        "full_assignment_exact": false,
+        "token_exact": true,
+        "incidence_exact": false,
+        "family_exact": false,
+        "assignment_holonomy_rank": 2,
+        "hidden_future_rank": 2,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(1, 0, 0)",
+          "left_state": "((0, -1, -1), (0,), ())",
+          "right_state": "((1, -1, -1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((3,),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2), 3->(1, 3)}",
+          "left_state": "((0, -1, 1), (0,), ())",
+          "right_state": "((0, -1, 1), (1,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((2,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        },
+        "hidden_future_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2), 3->(1, 3)}",
+          "left_state": "((0, -1, 1), (0,), ())",
+          "right_state": "((0, -1, 1), (1,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((2,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        }
+      },
+      "first_hidden_future_split": {
+        "semantics": "pair_phase_shared_other_live_block_lower",
+        "token_scope": "pair",
+        "token_alphabet_size": 2,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 16,
+        "runtime_quotient_count": 9,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 12,
+        "token_quotient_count": 16,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": 0.16992500144231215,
+        "assignment_curvature_gap": -0.4150374992788439,
+        "coordinate_exact": false,
+        "full_assignment_exact": false,
+        "token_exact": true,
+        "incidence_exact": false,
+        "family_exact": false,
+        "assignment_holonomy_rank": 2,
+        "hidden_future_rank": 2,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(1, 0, 0)",
+          "left_state": "((0, -1, -1), (0,), ())",
+          "right_state": "((1, -1, -1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((3,),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2), 3->(1, 3)}",
+          "left_state": "((0, -1, 1), (0,), ())",
+          "right_state": "((0, -1, 1), (1,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((2,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        },
+        "hidden_future_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2), 3->(1, 3)}",
+          "left_state": "((0, -1, 1), (0,), ())",
+          "right_state": "((0, -1, 1), (1,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((2,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        }
+      }
+    },
+    {
+      "name": "pair_phase_shared_other_live_block_upper",
+      "label": "Pair Phase SU",
+      "description": "Pair phase mod 2 with upper-edge suppression.",
+      "token_scope": "pair",
+      "token_alphabet_size": 2,
+      "families_scanned": 124,
+      "coordinate_split_count": 103,
+      "coordinate_gap_count": 91,
+      "full_assignment_split_count": 103,
+      "hidden_future_count": 103,
+      "full_assignment_exact_on_scan": false,
+      "max_coordinate_curvature_gap": 2.9188632372745946,
+      "max_assignment_curvature_gap": 0.0,
+      "max_assignment_holonomy_rank": 2,
+      "max_hidden_future_rank": 2,
+      "seed_record": {
+        "semantics": "pair_phase_shared_other_live_block_upper",
+        "token_scope": "pair",
+        "token_alphabet_size": 2,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 16,
+        "runtime_quotient_count": 9,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 12,
+        "token_quotient_count": 16,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": 0.16992500144231215,
+        "assignment_curvature_gap": -0.4150374992788439,
+        "coordinate_exact": false,
+        "full_assignment_exact": false,
+        "token_exact": true,
+        "incidence_exact": false,
+        "family_exact": false,
+        "assignment_holonomy_rank": 2,
+        "hidden_future_rank": 2,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(1, 0, 0)",
+          "left_state": "((0, -1, -1), (0,), ())",
+          "right_state": "((1, -1, -1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((3,),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": {
+          "left_trace": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              2,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [
+            [
+              3,
+              1
+            ]
+          ],
+          "summary_value": "{1->(1, 3), 2->(1, 2)}",
+          "left_state": "((1, 0, -1), (0,), ())",
+          "right_state": "((1, 0, -1), (1,), ())",
+          "left_output_now": "((3,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        },
+        "hidden_future_witness": {
+          "left_trace": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              2,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [
+            [
+              3,
+              1
+            ]
+          ],
+          "summary_value": "{1->(1, 3), 2->(1, 2)}",
+          "left_state": "((1, 0, -1), (0,), ())",
+          "right_state": "((1, 0, -1), (1,), ())",
+          "left_output_now": "((3,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        }
+      },
+      "first_coordinate_split": {
+        "semantics": "pair_phase_shared_other_live_block_upper",
+        "token_scope": "pair",
+        "token_alphabet_size": 2,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 16,
+        "runtime_quotient_count": 9,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 12,
+        "token_quotient_count": 16,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": 0.16992500144231215,
+        "assignment_curvature_gap": -0.4150374992788439,
+        "coordinate_exact": false,
+        "full_assignment_exact": false,
+        "token_exact": true,
+        "incidence_exact": false,
+        "family_exact": false,
+        "assignment_holonomy_rank": 2,
+        "hidden_future_rank": 2,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(1, 0, 0)",
+          "left_state": "((0, -1, -1), (0,), ())",
+          "right_state": "((1, -1, -1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((3,),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": {
+          "left_trace": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              2,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [
+            [
+              3,
+              1
+            ]
+          ],
+          "summary_value": "{1->(1, 3), 2->(1, 2)}",
+          "left_state": "((1, 0, -1), (0,), ())",
+          "right_state": "((1, 0, -1), (1,), ())",
+          "left_output_now": "((3,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        },
+        "hidden_future_witness": {
+          "left_trace": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              2,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [
+            [
+              3,
+              1
+            ]
+          ],
+          "summary_value": "{1->(1, 3), 2->(1, 2)}",
+          "left_state": "((1, 0, -1), (0,), ())",
+          "right_state": "((1, 0, -1), (1,), ())",
+          "left_output_now": "((3,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        }
+      },
+      "first_coordinate_gap": {
+        "semantics": "pair_phase_shared_other_live_block_upper",
+        "token_scope": "pair",
+        "token_alphabet_size": 2,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 16,
+        "runtime_quotient_count": 9,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 12,
+        "token_quotient_count": 16,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": 0.16992500144231215,
+        "assignment_curvature_gap": -0.4150374992788439,
+        "coordinate_exact": false,
+        "full_assignment_exact": false,
+        "token_exact": true,
+        "incidence_exact": false,
+        "family_exact": false,
+        "assignment_holonomy_rank": 2,
+        "hidden_future_rank": 2,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(1, 0, 0)",
+          "left_state": "((0, -1, -1), (0,), ())",
+          "right_state": "((1, -1, -1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((3,),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": {
+          "left_trace": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              2,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [
+            [
+              3,
+              1
+            ]
+          ],
+          "summary_value": "{1->(1, 3), 2->(1, 2)}",
+          "left_state": "((1, 0, -1), (0,), ())",
+          "right_state": "((1, 0, -1), (1,), ())",
+          "left_output_now": "((3,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        },
+        "hidden_future_witness": {
+          "left_trace": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              2,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [
+            [
+              3,
+              1
+            ]
+          ],
+          "summary_value": "{1->(1, 3), 2->(1, 2)}",
+          "left_state": "((1, 0, -1), (0,), ())",
+          "right_state": "((1, 0, -1), (1,), ())",
+          "left_output_now": "((3,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        }
+      },
+      "first_full_assignment_split": {
+        "semantics": "pair_phase_shared_other_live_block_upper",
+        "token_scope": "pair",
+        "token_alphabet_size": 2,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 16,
+        "runtime_quotient_count": 9,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 12,
+        "token_quotient_count": 16,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": 0.16992500144231215,
+        "assignment_curvature_gap": -0.4150374992788439,
+        "coordinate_exact": false,
+        "full_assignment_exact": false,
+        "token_exact": true,
+        "incidence_exact": false,
+        "family_exact": false,
+        "assignment_holonomy_rank": 2,
+        "hidden_future_rank": 2,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(1, 0, 0)",
+          "left_state": "((0, -1, -1), (0,), ())",
+          "right_state": "((1, -1, -1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((3,),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": {
+          "left_trace": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              2,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [
+            [
+              3,
+              1
+            ]
+          ],
+          "summary_value": "{1->(1, 3), 2->(1, 2)}",
+          "left_state": "((1, 0, -1), (0,), ())",
+          "right_state": "((1, 0, -1), (1,), ())",
+          "left_output_now": "((3,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        },
+        "hidden_future_witness": {
+          "left_trace": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              2,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [
+            [
+              3,
+              1
+            ]
+          ],
+          "summary_value": "{1->(1, 3), 2->(1, 2)}",
+          "left_state": "((1, 0, -1), (0,), ())",
+          "right_state": "((1, 0, -1), (1,), ())",
+          "left_output_now": "((3,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        }
+      },
+      "first_hidden_future_split": {
+        "semantics": "pair_phase_shared_other_live_block_upper",
+        "token_scope": "pair",
+        "token_alphabet_size": 2,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 16,
+        "runtime_quotient_count": 9,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 12,
+        "token_quotient_count": 16,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": 0.16992500144231215,
+        "assignment_curvature_gap": -0.4150374992788439,
+        "coordinate_exact": false,
+        "full_assignment_exact": false,
+        "token_exact": true,
+        "incidence_exact": false,
+        "family_exact": false,
+        "assignment_holonomy_rank": 2,
+        "hidden_future_rank": 2,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(1, 0, 0)",
+          "left_state": "((0, -1, -1), (0,), ())",
+          "right_state": "((1, -1, -1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((3,),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": {
+          "left_trace": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              2,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [
+            [
+              3,
+              1
+            ]
+          ],
+          "summary_value": "{1->(1, 3), 2->(1, 2)}",
+          "left_state": "((1, 0, -1), (0,), ())",
+          "right_state": "((1, 0, -1), (1,), ())",
+          "left_output_now": "((3,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        },
+        "hidden_future_witness": {
+          "left_trace": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              2,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [
+            [
+              3,
+              1
+            ]
+          ],
+          "summary_value": "{1->(1, 3), 2->(1, 2)}",
+          "left_state": "((1, 0, -1), (0,), ())",
+          "right_state": "((1, 0, -1), (1,), ())",
+          "left_output_now": "((3,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        }
+      }
+    },
+    {
+      "name": "pair_phase_any_other_live_block_lower",
+      "label": "Pair Phase AL",
+      "description": "Pair phase mod 2: any claim into a pair edge toggles once the opposite edge is already live; odd phase suppresses lower completion.",
+      "token_scope": "pair",
+      "token_alphabet_size": 2,
+      "families_scanned": 124,
+      "coordinate_split_count": 103,
+      "coordinate_gap_count": 103,
+      "full_assignment_split_count": 103,
+      "hidden_future_count": 45,
+      "full_assignment_exact_on_scan": false,
+      "max_coordinate_curvature_gap": 2.8703647195834048,
+      "max_assignment_curvature_gap": 0.0,
+      "max_assignment_holonomy_rank": 2,
+      "max_hidden_future_rank": 2,
+      "seed_record": {
+        "semantics": "pair_phase_any_other_live_block_lower",
+        "token_scope": "pair",
+        "token_alphabet_size": 2,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 14,
+        "runtime_quotient_count": 10,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 12,
+        "token_quotient_count": 14,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": 0.3219280948873622,
+        "assignment_curvature_gap": -0.2630344058337939,
+        "coordinate_exact": false,
+        "full_assignment_exact": false,
+        "token_exact": true,
+        "incidence_exact": false,
+        "family_exact": false,
+        "assignment_holonomy_rank": 2,
+        "hidden_future_rank": 1,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(1, 0, 0)",
+          "left_state": "((0, -1, -1), (0,), ())",
+          "right_state": "((1, -1, -1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((3,),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(0, 0, 1)",
+          "left_state": "((0, 0, 1), (1,), ())",
+          "right_state": "((0, 0, 1), (0,), ())",
+          "left_output_now": "()",
+          "right_output_now": "((),)",
+          "left_output_future": "()",
+          "right_output_future": "((),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "hidden_future_witness": null
+      },
+      "first_coordinate_split": {
+        "semantics": "pair_phase_any_other_live_block_lower",
+        "token_scope": "pair",
+        "token_alphabet_size": 2,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 14,
+        "runtime_quotient_count": 10,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 12,
+        "token_quotient_count": 14,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": 0.3219280948873622,
+        "assignment_curvature_gap": -0.2630344058337939,
+        "coordinate_exact": false,
+        "full_assignment_exact": false,
+        "token_exact": true,
+        "incidence_exact": false,
+        "family_exact": false,
+        "assignment_holonomy_rank": 2,
+        "hidden_future_rank": 1,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(1, 0, 0)",
+          "left_state": "((0, -1, -1), (0,), ())",
+          "right_state": "((1, -1, -1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((3,),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(0, 0, 1)",
+          "left_state": "((0, 0, 1), (1,), ())",
+          "right_state": "((0, 0, 1), (0,), ())",
+          "left_output_now": "()",
+          "right_output_now": "((),)",
+          "left_output_future": "()",
+          "right_output_future": "((),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "hidden_future_witness": null
+      },
+      "first_coordinate_gap": {
+        "semantics": "pair_phase_any_other_live_block_lower",
+        "token_scope": "pair",
+        "token_alphabet_size": 2,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 14,
+        "runtime_quotient_count": 10,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 12,
+        "token_quotient_count": 14,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": 0.3219280948873622,
+        "assignment_curvature_gap": -0.2630344058337939,
+        "coordinate_exact": false,
+        "full_assignment_exact": false,
+        "token_exact": true,
+        "incidence_exact": false,
+        "family_exact": false,
+        "assignment_holonomy_rank": 2,
+        "hidden_future_rank": 1,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(1, 0, 0)",
+          "left_state": "((0, -1, -1), (0,), ())",
+          "right_state": "((1, -1, -1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((3,),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(0, 0, 1)",
+          "left_state": "((0, 0, 1), (1,), ())",
+          "right_state": "((0, 0, 1), (0,), ())",
+          "left_output_now": "()",
+          "right_output_now": "((),)",
+          "left_output_future": "()",
+          "right_output_future": "((),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "hidden_future_witness": null
+      },
+      "first_full_assignment_split": {
+        "semantics": "pair_phase_any_other_live_block_lower",
+        "token_scope": "pair",
+        "token_alphabet_size": 2,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 14,
+        "runtime_quotient_count": 10,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 12,
+        "token_quotient_count": 14,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": 0.3219280948873622,
+        "assignment_curvature_gap": -0.2630344058337939,
+        "coordinate_exact": false,
+        "full_assignment_exact": false,
+        "token_exact": true,
+        "incidence_exact": false,
+        "family_exact": false,
+        "assignment_holonomy_rank": 2,
+        "hidden_future_rank": 1,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(1, 0, 0)",
+          "left_state": "((0, -1, -1), (0,), ())",
+          "right_state": "((1, -1, -1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((3,),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(0, 0, 1)",
+          "left_state": "((0, 0, 1), (1,), ())",
+          "right_state": "((0, 0, 1), (0,), ())",
+          "left_output_now": "()",
+          "right_output_now": "((),)",
+          "left_output_future": "()",
+          "right_output_future": "((),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "hidden_future_witness": null
+      },
+      "first_hidden_future_split": {
+        "semantics": "pair_phase_any_other_live_block_lower",
+        "token_scope": "pair",
+        "token_alphabet_size": 2,
+        "p": 4,
+        "k": 3,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3,
+            4
+          ]
+        ],
+        "reachable_state_count": 32,
+        "runtime_quotient_count": 24,
+        "coordinate_quotient_count": 16,
+        "full_assignment_quotient_count": 24,
+        "token_quotient_count": 32,
+        "incidence_quotient_count": 24,
+        "family_quotient_count": 13,
+        "coordinate_curvature_gap": 0.5849625007211561,
+        "assignment_curvature_gap": 0.0,
+        "coordinate_exact": false,
+        "full_assignment_exact": false,
+        "token_exact": true,
+        "incidence_exact": false,
+        "family_exact": false,
+        "assignment_holonomy_rank": 2,
+        "hidden_future_rank": 2,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(1, 0, 0, 0)",
+          "left_state": "((0, -1, -1, -1), (0,), ())",
+          "right_state": "((1, -1, -1, -1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((3, 4),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((3, 4),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "{1->(1, 2), 2->(1, 2), 3->(1, 3, 4)}",
+          "left_state": "((0, 0, 1, -1), (1,), ())",
+          "right_state": "((0, 0, 1, -1), (0,), ())",
+          "left_output_now": "()",
+          "right_output_now": "((),)",
+          "left_output_future": "()",
+          "right_output_future": "((),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "hidden_future_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2), 3->(1, 3, 4), 4->(1, 3, 4)}",
+          "left_state": "((0, -1, 1, 1), (0,), ())",
+          "right_state": "((0, -1, 1, 1), (1,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((2,),)",
+          "left_output_future": "()",
+          "right_output_future": "((),)",
+          "same_now": true,
+          "non_empty_suffix": true
+        }
+      }
+    },
+    {
+      "name": "pair_phase_exclusive_other_live_block_lower",
+      "label": "Pair Phase XL",
+      "description": "Pair phase mod 2 triggered only by exclusive claims into a live pair.",
+      "token_scope": "pair",
+      "token_alphabet_size": 2,
+      "families_scanned": 124,
+      "coordinate_split_count": 103,
+      "coordinate_gap_count": 103,
+      "full_assignment_split_count": 103,
+      "hidden_future_count": 103,
+      "full_assignment_exact_on_scan": false,
+      "max_coordinate_curvature_gap": 3.0,
+      "max_assignment_curvature_gap": 0.11547721741993566,
+      "max_assignment_holonomy_rank": 2,
+      "max_hidden_future_rank": 2,
+      "seed_record": {
+        "semantics": "pair_phase_exclusive_other_live_block_lower",
+        "token_scope": "pair",
+        "token_alphabet_size": 2,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 16,
+        "runtime_quotient_count": 11,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 12,
+        "token_quotient_count": 16,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": 0.4594316186372973,
+        "assignment_curvature_gap": -0.12553088208385876,
+        "coordinate_exact": false,
+        "full_assignment_exact": false,
+        "token_exact": true,
+        "incidence_exact": false,
+        "family_exact": false,
+        "assignment_holonomy_rank": 2,
+        "hidden_future_rank": 2,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(1, 0, 0)",
+          "left_state": "((0, -1, -1), (0,), ())",
+          "right_state": "((1, -1, -1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((3,),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2), 3->(1, 3)}",
+          "left_state": "((0, -1, 1), (1,), ())",
+          "right_state": "((0, -1, 1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((2,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        },
+        "hidden_future_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2), 3->(1, 3)}",
+          "left_state": "((0, -1, 1), (1,), ())",
+          "right_state": "((0, -1, 1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((2,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        }
+      },
+      "first_coordinate_split": {
+        "semantics": "pair_phase_exclusive_other_live_block_lower",
+        "token_scope": "pair",
+        "token_alphabet_size": 2,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 16,
+        "runtime_quotient_count": 11,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 12,
+        "token_quotient_count": 16,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": 0.4594316186372973,
+        "assignment_curvature_gap": -0.12553088208385876,
+        "coordinate_exact": false,
+        "full_assignment_exact": false,
+        "token_exact": true,
+        "incidence_exact": false,
+        "family_exact": false,
+        "assignment_holonomy_rank": 2,
+        "hidden_future_rank": 2,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(1, 0, 0)",
+          "left_state": "((0, -1, -1), (0,), ())",
+          "right_state": "((1, -1, -1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((3,),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2), 3->(1, 3)}",
+          "left_state": "((0, -1, 1), (1,), ())",
+          "right_state": "((0, -1, 1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((2,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        },
+        "hidden_future_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2), 3->(1, 3)}",
+          "left_state": "((0, -1, 1), (1,), ())",
+          "right_state": "((0, -1, 1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((2,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        }
+      },
+      "first_coordinate_gap": {
+        "semantics": "pair_phase_exclusive_other_live_block_lower",
+        "token_scope": "pair",
+        "token_alphabet_size": 2,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 16,
+        "runtime_quotient_count": 11,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 12,
+        "token_quotient_count": 16,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": 0.4594316186372973,
+        "assignment_curvature_gap": -0.12553088208385876,
+        "coordinate_exact": false,
+        "full_assignment_exact": false,
+        "token_exact": true,
+        "incidence_exact": false,
+        "family_exact": false,
+        "assignment_holonomy_rank": 2,
+        "hidden_future_rank": 2,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(1, 0, 0)",
+          "left_state": "((0, -1, -1), (0,), ())",
+          "right_state": "((1, -1, -1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((3,),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2), 3->(1, 3)}",
+          "left_state": "((0, -1, 1), (1,), ())",
+          "right_state": "((0, -1, 1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((2,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        },
+        "hidden_future_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2), 3->(1, 3)}",
+          "left_state": "((0, -1, 1), (1,), ())",
+          "right_state": "((0, -1, 1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((2,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        }
+      },
+      "first_full_assignment_split": {
+        "semantics": "pair_phase_exclusive_other_live_block_lower",
+        "token_scope": "pair",
+        "token_alphabet_size": 2,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 16,
+        "runtime_quotient_count": 11,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 12,
+        "token_quotient_count": 16,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": 0.4594316186372973,
+        "assignment_curvature_gap": -0.12553088208385876,
+        "coordinate_exact": false,
+        "full_assignment_exact": false,
+        "token_exact": true,
+        "incidence_exact": false,
+        "family_exact": false,
+        "assignment_holonomy_rank": 2,
+        "hidden_future_rank": 2,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(1, 0, 0)",
+          "left_state": "((0, -1, -1), (0,), ())",
+          "right_state": "((1, -1, -1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((3,),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2), 3->(1, 3)}",
+          "left_state": "((0, -1, 1), (1,), ())",
+          "right_state": "((0, -1, 1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((2,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        },
+        "hidden_future_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2), 3->(1, 3)}",
+          "left_state": "((0, -1, 1), (1,), ())",
+          "right_state": "((0, -1, 1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((2,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        }
+      },
+      "first_hidden_future_split": {
+        "semantics": "pair_phase_exclusive_other_live_block_lower",
+        "token_scope": "pair",
+        "token_alphabet_size": 2,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 16,
+        "runtime_quotient_count": 11,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 12,
+        "token_quotient_count": 16,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": 0.4594316186372973,
+        "assignment_curvature_gap": -0.12553088208385876,
+        "coordinate_exact": false,
+        "full_assignment_exact": false,
+        "token_exact": true,
+        "incidence_exact": false,
+        "family_exact": false,
+        "assignment_holonomy_rank": 2,
+        "hidden_future_rank": 2,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(1, 0, 0)",
+          "left_state": "((0, -1, -1), (0,), ())",
+          "right_state": "((1, -1, -1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((3,),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2), 3->(1, 3)}",
+          "left_state": "((0, -1, 1), (1,), ())",
+          "right_state": "((0, -1, 1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((2,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        },
+        "hidden_future_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2), 3->(1, 3)}",
+          "left_state": "((0, -1, 1), (1,), ())",
+          "right_state": "((0, -1, 1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((2,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        }
+      }
+    },
+    {
+      "name": "braid_orientation_shared_other_live",
+      "label": "Braid Orient",
+      "description": "Orientation token records which pair edge received the decisive shared claim once the other edge is live; the oriented edge is blocked on completion.",
+      "token_scope": "pair",
+      "token_alphabet_size": 3,
+      "families_scanned": 124,
+      "coordinate_split_count": 103,
+      "coordinate_gap_count": 99,
+      "full_assignment_split_count": 103,
+      "hidden_future_count": 103,
+      "full_assignment_exact_on_scan": false,
+      "max_coordinate_curvature_gap": 2.9307373375628867,
+      "max_assignment_curvature_gap": 0.0,
+      "max_assignment_holonomy_rank": 2,
+      "max_hidden_future_rank": 2,
+      "seed_record": {
+        "semantics": "braid_orientation_shared_other_live",
+        "token_scope": "pair",
+        "token_alphabet_size": 3,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 16,
+        "runtime_quotient_count": 10,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 12,
+        "token_quotient_count": 16,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": 0.3219280948873622,
+        "assignment_curvature_gap": -0.2630344058337939,
+        "coordinate_exact": false,
+        "full_assignment_exact": false,
+        "token_exact": true,
+        "incidence_exact": false,
+        "family_exact": false,
+        "assignment_holonomy_rank": 2,
+        "hidden_future_rank": 2,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(1, 0, 0)",
+          "left_state": "((0, -1, -1), (0,), ())",
+          "right_state": "((1, -1, -1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((3,),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2), 3->(1, 3)}",
+          "left_state": "((0, -1, 1), (0,), ())",
+          "right_state": "((0, -1, 1), (1,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((2,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        },
+        "hidden_future_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2), 3->(1, 3)}",
+          "left_state": "((0, -1, 1), (0,), ())",
+          "right_state": "((0, -1, 1), (1,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((2,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        }
+      },
+      "first_coordinate_split": {
+        "semantics": "braid_orientation_shared_other_live",
+        "token_scope": "pair",
+        "token_alphabet_size": 3,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 16,
+        "runtime_quotient_count": 10,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 12,
+        "token_quotient_count": 16,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": 0.3219280948873622,
+        "assignment_curvature_gap": -0.2630344058337939,
+        "coordinate_exact": false,
+        "full_assignment_exact": false,
+        "token_exact": true,
+        "incidence_exact": false,
+        "family_exact": false,
+        "assignment_holonomy_rank": 2,
+        "hidden_future_rank": 2,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(1, 0, 0)",
+          "left_state": "((0, -1, -1), (0,), ())",
+          "right_state": "((1, -1, -1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((3,),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2), 3->(1, 3)}",
+          "left_state": "((0, -1, 1), (0,), ())",
+          "right_state": "((0, -1, 1), (1,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((2,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        },
+        "hidden_future_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2), 3->(1, 3)}",
+          "left_state": "((0, -1, 1), (0,), ())",
+          "right_state": "((0, -1, 1), (1,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((2,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        }
+      },
+      "first_coordinate_gap": {
+        "semantics": "braid_orientation_shared_other_live",
+        "token_scope": "pair",
+        "token_alphabet_size": 3,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 16,
+        "runtime_quotient_count": 10,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 12,
+        "token_quotient_count": 16,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": 0.3219280948873622,
+        "assignment_curvature_gap": -0.2630344058337939,
+        "coordinate_exact": false,
+        "full_assignment_exact": false,
+        "token_exact": true,
+        "incidence_exact": false,
+        "family_exact": false,
+        "assignment_holonomy_rank": 2,
+        "hidden_future_rank": 2,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(1, 0, 0)",
+          "left_state": "((0, -1, -1), (0,), ())",
+          "right_state": "((1, -1, -1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((3,),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2), 3->(1, 3)}",
+          "left_state": "((0, -1, 1), (0,), ())",
+          "right_state": "((0, -1, 1), (1,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((2,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        },
+        "hidden_future_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2), 3->(1, 3)}",
+          "left_state": "((0, -1, 1), (0,), ())",
+          "right_state": "((0, -1, 1), (1,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((2,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        }
+      },
+      "first_full_assignment_split": {
+        "semantics": "braid_orientation_shared_other_live",
+        "token_scope": "pair",
+        "token_alphabet_size": 3,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 16,
+        "runtime_quotient_count": 10,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 12,
+        "token_quotient_count": 16,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": 0.3219280948873622,
+        "assignment_curvature_gap": -0.2630344058337939,
+        "coordinate_exact": false,
+        "full_assignment_exact": false,
+        "token_exact": true,
+        "incidence_exact": false,
+        "family_exact": false,
+        "assignment_holonomy_rank": 2,
+        "hidden_future_rank": 2,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(1, 0, 0)",
+          "left_state": "((0, -1, -1), (0,), ())",
+          "right_state": "((1, -1, -1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((3,),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2), 3->(1, 3)}",
+          "left_state": "((0, -1, 1), (0,), ())",
+          "right_state": "((0, -1, 1), (1,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((2,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        },
+        "hidden_future_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2), 3->(1, 3)}",
+          "left_state": "((0, -1, 1), (0,), ())",
+          "right_state": "((0, -1, 1), (1,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((2,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        }
+      },
+      "first_hidden_future_split": {
+        "semantics": "braid_orientation_shared_other_live",
+        "token_scope": "pair",
+        "token_alphabet_size": 3,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 16,
+        "runtime_quotient_count": 10,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 12,
+        "token_quotient_count": 16,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": 0.3219280948873622,
+        "assignment_curvature_gap": -0.2630344058337939,
+        "coordinate_exact": false,
+        "full_assignment_exact": false,
+        "token_exact": true,
+        "incidence_exact": false,
+        "family_exact": false,
+        "assignment_holonomy_rank": 2,
+        "hidden_future_rank": 2,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(1, 0, 0)",
+          "left_state": "((0, -1, -1), (0,), ())",
+          "right_state": "((1, -1, -1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((3,),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2), 3->(1, 3)}",
+          "left_state": "((0, -1, 1), (0,), ())",
+          "right_state": "((0, -1, 1), (1,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((2,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        },
+        "hidden_future_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2), 3->(1, 3)}",
+          "left_state": "((0, -1, 1), (0,), ())",
+          "right_state": "((0, -1, 1), (1,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((2,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        }
+      }
+    },
+    {
+      "name": "transport_debt_shared_other_live",
+      "label": "Debt Shared",
+      "description": "Capped debt token increments when a shared claim lands across a live overlap; level 2 debt blocks lower-edge completion.",
+      "token_scope": "pair",
+      "token_alphabet_size": 3,
+      "families_scanned": 124,
+      "coordinate_split_count": 103,
+      "coordinate_gap_count": 72,
+      "full_assignment_split_count": 17,
+      "hidden_future_count": 17,
+      "full_assignment_exact_on_scan": false,
+      "max_coordinate_curvature_gap": 2.78135971352466,
+      "max_assignment_curvature_gap": 0.0,
+      "max_assignment_holonomy_rank": 2,
+      "max_hidden_future_rank": 2,
+      "seed_record": {
+        "semantics": "transport_debt_shared_other_live",
+        "token_scope": "pair",
+        "token_alphabet_size": 3,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 16,
+        "runtime_quotient_count": 7,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 12,
+        "token_quotient_count": 16,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": -0.19264507794239583,
+        "assignment_curvature_gap": -0.7776075786635519,
+        "coordinate_exact": false,
+        "full_assignment_exact": true,
+        "token_exact": true,
+        "incidence_exact": true,
+        "family_exact": true,
+        "assignment_holonomy_rank": 1,
+        "hidden_future_rank": 1,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(1, 0, 0)",
+          "left_state": "((0, -1, -1), (0,), ())",
+          "right_state": "((1, -1, -1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((3,),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": null,
+        "hidden_future_witness": null
+      },
+      "first_coordinate_split": {
+        "semantics": "transport_debt_shared_other_live",
+        "token_scope": "pair",
+        "token_alphabet_size": 3,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 16,
+        "runtime_quotient_count": 7,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 12,
+        "token_quotient_count": 16,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": -0.19264507794239583,
+        "assignment_curvature_gap": -0.7776075786635519,
+        "coordinate_exact": false,
+        "full_assignment_exact": true,
+        "token_exact": true,
+        "incidence_exact": true,
+        "family_exact": true,
+        "assignment_holonomy_rank": 1,
+        "hidden_future_rank": 1,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(1, 0, 0)",
+          "left_state": "((0, -1, -1), (0,), ())",
+          "right_state": "((1, -1, -1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((3,),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": null,
+        "hidden_future_witness": null
+      },
+      "first_coordinate_gap": {
+        "semantics": "transport_debt_shared_other_live",
+        "token_scope": "pair",
+        "token_alphabet_size": 3,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "reachable_state_count": 49,
+        "runtime_quotient_count": 18,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 27,
+        "token_quotient_count": 49,
+        "incidence_quotient_count": 27,
+        "family_quotient_count": 15,
+        "coordinate_curvature_gap": 1.1699250014423122,
+        "assignment_curvature_gap": -0.5849625007211561,
+        "coordinate_exact": false,
+        "full_assignment_exact": true,
+        "token_exact": true,
+        "incidence_exact": true,
+        "family_exact": false,
+        "assignment_holonomy_rank": 1,
+        "hidden_future_rank": 1,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              2
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(0, 0, 1)",
+          "left_state": "((-1, -1, 1), (0, 0, 0), (0,))",
+          "right_state": "((-1, -1, 2), (0, 0, 0), (0,))",
+          "left_output_now": "((1, 2), (1,))",
+          "right_output_now": "((1, 2), (2,))",
+          "left_output_future": "((1, 2), (1,))",
+          "right_output_future": "((1, 2), (2,))",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": null,
+        "hidden_future_witness": null
+      },
+      "first_full_assignment_split": {
+        "semantics": "transport_debt_shared_other_live",
+        "token_scope": "pair",
+        "token_alphabet_size": 3,
+        "p": 4,
+        "k": 3,
+        "family": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            4
+          ]
+        ],
+        "reachable_state_count": 58,
+        "runtime_quotient_count": 21,
+        "coordinate_quotient_count": 16,
+        "full_assignment_quotient_count": 36,
+        "token_quotient_count": 58,
+        "incidence_quotient_count": 36,
+        "family_quotient_count": 14,
+        "coordinate_curvature_gap": 0.3923174227787607,
+        "assignment_curvature_gap": -0.7776075786635515,
+        "coordinate_exact": false,
+        "full_assignment_exact": false,
+        "token_exact": true,
+        "incidence_exact": false,
+        "family_exact": false,
+        "assignment_holonomy_rank": 2,
+        "hidden_future_rank": 2,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              2,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              2,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(0, 1, 0, 0)",
+          "left_state": "((-1, 0, -1, -1), (0,), ())",
+          "right_state": "((-1, 1, -1, -1), (0,), ())",
+          "left_output_now": "((1, 3),)",
+          "right_output_now": "((1, 4),)",
+          "left_output_future": "((1, 3),)",
+          "right_output_future": "((1, 4),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              4,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              4,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2, 3), 4->(1, 2, 4)}",
+          "left_state": "((0, -1, -1, 1), (0,), ())",
+          "right_state": "((0, -1, -1, 1), (1,), ())",
+          "left_output_now": "((2, 3),)",
+          "right_output_now": "((2, 3),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        },
+        "hidden_future_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              4,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              4,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2, 3), 4->(1, 2, 4)}",
+          "left_state": "((0, -1, -1, 1), (0,), ())",
+          "right_state": "((0, -1, -1, 1), (1,), ())",
+          "left_output_now": "((2, 3),)",
+          "right_output_now": "((2, 3),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        }
+      },
+      "first_hidden_future_split": {
+        "semantics": "transport_debt_shared_other_live",
+        "token_scope": "pair",
+        "token_alphabet_size": 3,
+        "p": 4,
+        "k": 3,
+        "family": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            4
+          ]
+        ],
+        "reachable_state_count": 58,
+        "runtime_quotient_count": 21,
+        "coordinate_quotient_count": 16,
+        "full_assignment_quotient_count": 36,
+        "token_quotient_count": 58,
+        "incidence_quotient_count": 36,
+        "family_quotient_count": 14,
+        "coordinate_curvature_gap": 0.3923174227787607,
+        "assignment_curvature_gap": -0.7776075786635515,
+        "coordinate_exact": false,
+        "full_assignment_exact": false,
+        "token_exact": true,
+        "incidence_exact": false,
+        "family_exact": false,
+        "assignment_holonomy_rank": 2,
+        "hidden_future_rank": 2,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              2,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              2,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(0, 1, 0, 0)",
+          "left_state": "((-1, 0, -1, -1), (0,), ())",
+          "right_state": "((-1, 1, -1, -1), (0,), ())",
+          "left_output_now": "((1, 3),)",
+          "right_output_now": "((1, 4),)",
+          "left_output_future": "((1, 3),)",
+          "right_output_future": "((1, 4),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              4,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              4,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2, 3), 4->(1, 2, 4)}",
+          "left_state": "((0, -1, -1, 1), (0,), ())",
+          "right_state": "((0, -1, -1, 1), (1,), ())",
+          "left_output_now": "((2, 3),)",
+          "right_output_now": "((2, 3),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        },
+        "hidden_future_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              4,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              4,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2, 3), 4->(1, 2, 4)}",
+          "left_state": "((0, -1, -1, 1), (0,), ())",
+          "right_state": "((0, -1, -1, 1), (1,), ())",
+          "left_output_now": "((2, 3),)",
+          "right_output_now": "((2, 3),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        }
+      }
+    },
+    {
+      "name": "catalytic_pair_activation",
+      "label": "Catalytic Pair",
+      "description": "A latent pair catalyst latches when the overlap pair first becomes jointly live; active catalyst blocks lower-edge completion.",
+      "token_scope": "pair",
+      "token_alphabet_size": 2,
+      "families_scanned": 124,
+      "coordinate_split_count": 103,
+      "coordinate_gap_count": 99,
+      "full_assignment_split_count": 0,
+      "hidden_future_count": 0,
+      "full_assignment_exact_on_scan": true,
+      "max_coordinate_curvature_gap": 2.768184324776926,
+      "max_assignment_curvature_gap": 0.0,
+      "max_assignment_holonomy_rank": 1,
+      "max_hidden_future_rank": 1,
+      "seed_record": {
+        "semantics": "catalytic_pair_activation",
+        "token_scope": "pair",
+        "token_alphabet_size": 2,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 12,
+        "runtime_quotient_count": 10,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 12,
+        "token_quotient_count": 12,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": 0.3219280948873622,
+        "assignment_curvature_gap": -0.2630344058337939,
+        "coordinate_exact": false,
+        "full_assignment_exact": true,
+        "token_exact": true,
+        "incidence_exact": true,
+        "family_exact": false,
+        "assignment_holonomy_rank": 1,
+        "hidden_future_rank": 1,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(1, 0, 0)",
+          "left_state": "((0, -1, -1), (0,), ())",
+          "right_state": "((1, -1, -1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((3,),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": null,
+        "hidden_future_witness": null
+      },
+      "first_coordinate_split": {
+        "semantics": "catalytic_pair_activation",
+        "token_scope": "pair",
+        "token_alphabet_size": 2,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 12,
+        "runtime_quotient_count": 10,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 12,
+        "token_quotient_count": 12,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": 0.3219280948873622,
+        "assignment_curvature_gap": -0.2630344058337939,
+        "coordinate_exact": false,
+        "full_assignment_exact": true,
+        "token_exact": true,
+        "incidence_exact": true,
+        "family_exact": false,
+        "assignment_holonomy_rank": 1,
+        "hidden_future_rank": 1,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(1, 0, 0)",
+          "left_state": "((0, -1, -1), (0,), ())",
+          "right_state": "((1, -1, -1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((3,),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": null,
+        "hidden_future_witness": null
+      },
+      "first_coordinate_gap": {
+        "semantics": "catalytic_pair_activation",
+        "token_scope": "pair",
+        "token_alphabet_size": 2,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 12,
+        "runtime_quotient_count": 10,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 12,
+        "token_quotient_count": 12,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": 0.3219280948873622,
+        "assignment_curvature_gap": -0.2630344058337939,
+        "coordinate_exact": false,
+        "full_assignment_exact": true,
+        "token_exact": true,
+        "incidence_exact": true,
+        "family_exact": false,
+        "assignment_holonomy_rank": 1,
+        "hidden_future_rank": 1,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(1, 0, 0)",
+          "left_state": "((0, -1, -1), (0,), ())",
+          "right_state": "((1, -1, -1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((3,),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": null,
+        "hidden_future_witness": null
+      },
+      "first_full_assignment_split": null,
+      "first_hidden_future_split": null
+    },
+    {
+      "name": "simplex_phase_triangle_activate",
+      "label": "Simplex Phase",
+      "description": "Triangle-phase mod 2 toggles when a nerve triangle first becomes jointly live; odd phase blocks the lowest edge completion.",
+      "token_scope": "simplex",
+      "token_alphabet_size": 2,
+      "families_scanned": 124,
+      "coordinate_split_count": 103,
+      "coordinate_gap_count": 70,
+      "full_assignment_split_count": 0,
+      "hidden_future_count": 0,
+      "full_assignment_exact_on_scan": true,
+      "max_coordinate_curvature_gap": 2.9068905956085187,
+      "max_assignment_curvature_gap": 0.0,
+      "max_assignment_holonomy_rank": 1,
+      "max_hidden_future_rank": 1,
+      "seed_record": {
+        "semantics": "simplex_phase_triangle_activate",
+        "token_scope": "simplex",
+        "token_alphabet_size": 2,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 12,
+        "runtime_quotient_count": 7,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 12,
+        "token_quotient_count": 12,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": -0.19264507794239583,
+        "assignment_curvature_gap": -0.7776075786635519,
+        "coordinate_exact": false,
+        "full_assignment_exact": true,
+        "token_exact": true,
+        "incidence_exact": true,
+        "family_exact": true,
+        "assignment_holonomy_rank": 1,
+        "hidden_future_rank": 1,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(1, 0, 0)",
+          "left_state": "((0, -1, -1), (0,), ())",
+          "right_state": "((1, -1, -1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((3,),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": null,
+        "hidden_future_witness": null
+      },
+      "first_coordinate_split": {
+        "semantics": "simplex_phase_triangle_activate",
+        "token_scope": "simplex",
+        "token_alphabet_size": 2,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 12,
+        "runtime_quotient_count": 7,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 12,
+        "token_quotient_count": 12,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": -0.19264507794239583,
+        "assignment_curvature_gap": -0.7776075786635519,
+        "coordinate_exact": false,
+        "full_assignment_exact": true,
+        "token_exact": true,
+        "incidence_exact": true,
+        "family_exact": true,
+        "assignment_holonomy_rank": 1,
+        "hidden_future_rank": 1,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(1, 0, 0)",
+          "left_state": "((0, -1, -1), (0,), ())",
+          "right_state": "((1, -1, -1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((3,),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": null,
+        "hidden_future_witness": null
+      },
+      "first_coordinate_gap": {
+        "semantics": "simplex_phase_triangle_activate",
+        "token_scope": "simplex",
+        "token_alphabet_size": 2,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "reachable_state_count": 27,
+        "runtime_quotient_count": 18,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 27,
+        "token_quotient_count": 27,
+        "incidence_quotient_count": 27,
+        "family_quotient_count": 15,
+        "coordinate_curvature_gap": 1.1699250014423122,
+        "assignment_curvature_gap": -0.5849625007211561,
+        "coordinate_exact": false,
+        "full_assignment_exact": true,
+        "token_exact": true,
+        "incidence_exact": true,
+        "family_exact": false,
+        "assignment_holonomy_rank": 1,
+        "hidden_future_rank": 1,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              2
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(0, 0, 1)",
+          "left_state": "((-1, -1, 1), (0, 0, 0), (0,))",
+          "right_state": "((-1, -1, 2), (0, 0, 0), (0,))",
+          "left_output_now": "((1, 2), (1,))",
+          "right_output_now": "((1, 2), (2,))",
+          "left_output_future": "((1, 2), (1,))",
+          "right_output_future": "((1, 2), (2,))",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": null,
+        "hidden_future_witness": null
+      },
+      "first_full_assignment_split": null,
+      "first_hidden_future_split": null
+    },
+    {
+      "name": "simplex_orientation_triangle_activate",
+      "label": "Simplex Orient",
+      "description": "Triangle orientation remembers which edge activated the live 2-simplex; that edge is blocked on completion.",
+      "token_scope": "simplex",
+      "token_alphabet_size": 4,
+      "families_scanned": 124,
+      "coordinate_split_count": 103,
+      "coordinate_gap_count": 70,
+      "full_assignment_split_count": 45,
+      "hidden_future_count": 45,
+      "full_assignment_exact_on_scan": false,
+      "max_coordinate_curvature_gap": 2.9307373375628867,
+      "max_assignment_curvature_gap": 0.0,
+      "max_assignment_holonomy_rank": 3,
+      "max_hidden_future_rank": 3,
+      "seed_record": {
+        "semantics": "simplex_orientation_triangle_activate",
+        "token_scope": "simplex",
+        "token_alphabet_size": 4,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 12,
+        "runtime_quotient_count": 7,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 12,
+        "token_quotient_count": 12,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": -0.19264507794239583,
+        "assignment_curvature_gap": -0.7776075786635519,
+        "coordinate_exact": false,
+        "full_assignment_exact": true,
+        "token_exact": true,
+        "incidence_exact": true,
+        "family_exact": true,
+        "assignment_holonomy_rank": 1,
+        "hidden_future_rank": 1,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(1, 0, 0)",
+          "left_state": "((0, -1, -1), (0,), ())",
+          "right_state": "((1, -1, -1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((3,),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": null,
+        "hidden_future_witness": null
+      },
+      "first_coordinate_split": {
+        "semantics": "simplex_orientation_triangle_activate",
+        "token_scope": "simplex",
+        "token_alphabet_size": 4,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "reachable_state_count": 12,
+        "runtime_quotient_count": 7,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 12,
+        "token_quotient_count": 12,
+        "incidence_quotient_count": 12,
+        "family_quotient_count": 7,
+        "coordinate_curvature_gap": -0.19264507794239583,
+        "assignment_curvature_gap": -0.7776075786635519,
+        "coordinate_exact": false,
+        "full_assignment_exact": true,
+        "token_exact": true,
+        "incidence_exact": true,
+        "family_exact": true,
+        "assignment_holonomy_rank": 1,
+        "hidden_future_rank": 1,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(1, 0, 0)",
+          "left_state": "((0, -1, -1), (0,), ())",
+          "right_state": "((1, -1, -1), (0,), ())",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((3,),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": null,
+        "hidden_future_witness": null
+      },
+      "first_coordinate_gap": {
+        "semantics": "simplex_orientation_triangle_activate",
+        "token_scope": "simplex",
+        "token_alphabet_size": 4,
+        "p": 3,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "reachable_state_count": 31,
+        "runtime_quotient_count": 18,
+        "coordinate_quotient_count": 8,
+        "full_assignment_quotient_count": 27,
+        "token_quotient_count": 31,
+        "incidence_quotient_count": 27,
+        "family_quotient_count": 15,
+        "coordinate_curvature_gap": 1.1699250014423122,
+        "assignment_curvature_gap": -0.5849625007211561,
+        "coordinate_exact": false,
+        "full_assignment_exact": true,
+        "token_exact": true,
+        "incidence_exact": true,
+        "family_exact": false,
+        "assignment_holonomy_rank": 1,
+        "hidden_future_rank": 1,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              2
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(0, 0, 1)",
+          "left_state": "((-1, -1, 1), (0, 0, 0), (0,))",
+          "right_state": "((-1, -1, 2), (0, 0, 0), (0,))",
+          "left_output_now": "((1, 2), (1,))",
+          "right_output_now": "((1, 2), (2,))",
+          "left_output_future": "((1, 2), (1,))",
+          "right_output_future": "((1, 2), (2,))",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": null,
+        "hidden_future_witness": null
+      },
+      "first_full_assignment_split": {
+        "semantics": "simplex_orientation_triangle_activate",
+        "token_scope": "simplex",
+        "token_alphabet_size": 4,
+        "p": 4,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "reachable_state_count": 46,
+        "runtime_quotient_count": 18,
+        "coordinate_quotient_count": 16,
+        "full_assignment_quotient_count": 32,
+        "token_quotient_count": 46,
+        "incidence_quotient_count": 32,
+        "family_quotient_count": 12,
+        "coordinate_curvature_gap": 0.16992500144231215,
+        "assignment_curvature_gap": -0.8300749985576878,
+        "coordinate_exact": false,
+        "full_assignment_exact": false,
+        "token_exact": true,
+        "incidence_exact": false,
+        "family_exact": false,
+        "assignment_holonomy_rank": 3,
+        "hidden_future_rank": 3,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(1, 0, 0, 0)",
+          "left_state": "((0, -1, -1, -1), (0, 0, 0), (0,))",
+          "right_state": "((1, -1, -1, -1), (0, 0, 0), (0,))",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((3,),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2), 3->(1, 3), 4->(1, 4)}",
+          "left_state": "((0, -1, 1, 2), (0, 0, 0), (2,))",
+          "right_state": "((0, -1, 1, 2), (0, 0, 0), (1,))",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((2,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        },
+        "hidden_future_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2), 3->(1, 3), 4->(1, 4)}",
+          "left_state": "((0, -1, 1, 2), (0, 0, 0), (2,))",
+          "right_state": "((0, -1, 1, 2), (0, 0, 0), (1,))",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((2,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        }
+      },
+      "first_hidden_future_split": {
+        "semantics": "simplex_orientation_triangle_activate",
+        "token_scope": "simplex",
+        "token_alphabet_size": 4,
+        "p": 4,
+        "k": 2,
+        "family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "reachable_state_count": 46,
+        "runtime_quotient_count": 18,
+        "coordinate_quotient_count": 16,
+        "full_assignment_quotient_count": 32,
+        "token_quotient_count": 46,
+        "incidence_quotient_count": 32,
+        "family_quotient_count": 12,
+        "coordinate_curvature_gap": 0.16992500144231215,
+        "assignment_curvature_gap": -0.8300749985576878,
+        "coordinate_exact": false,
+        "full_assignment_exact": false,
+        "token_exact": true,
+        "incidence_exact": false,
+        "family_exact": false,
+        "assignment_holonomy_rank": 3,
+        "hidden_future_rank": 3,
+        "coordinate_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ]
+          ],
+          "right_trace": [
+            [
+              1,
+              1
+            ]
+          ],
+          "suffix": [],
+          "summary_value": "(1, 0, 0, 0)",
+          "left_state": "((0, -1, -1, -1), (0, 0, 0), (0,))",
+          "right_state": "((1, -1, -1, -1), (0, 0, 0), (0,))",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((3,),)",
+          "left_output_future": "((2,),)",
+          "right_output_future": "((3,),)",
+          "same_now": false,
+          "non_empty_suffix": false
+        },
+        "full_assignment_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2), 3->(1, 3), 4->(1, 4)}",
+          "left_state": "((0, -1, 1, 2), (0, 0, 0), (2,))",
+          "right_state": "((0, -1, 1, 2), (0, 0, 0), (1,))",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((2,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        },
+        "hidden_future_witness": {
+          "left_trace": [
+            [
+              1,
+              0
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "right_trace": [
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "suffix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "summary_value": "{1->(1, 2), 3->(1, 3), 4->(1, 4)}",
+          "left_state": "((0, -1, 1, 2), (0, 0, 0), (2,))",
+          "right_state": "((0, -1, 1, 2), (0, 0, 0), (1,))",
+          "left_output_now": "((2,),)",
+          "right_output_now": "((2,),)",
+          "left_output_future": "((),)",
+          "right_output_future": "()",
+          "same_now": true,
+          "non_empty_suffix": true
+        }
+      }
+    }
+  ],
+  "overall_first_coordinate_split": {
+    "semantics": "committed_allocation",
+    "token_scope": "none",
+    "token_alphabet_size": 1,
+    "p": 3,
+    "k": 2,
+    "family": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "reachable_state_count": 12,
+    "runtime_quotient_count": 11,
+    "coordinate_quotient_count": 8,
+    "full_assignment_quotient_count": 12,
+    "token_quotient_count": 12,
+    "incidence_quotient_count": 12,
+    "family_quotient_count": 7,
+    "coordinate_curvature_gap": 0.4594316186372973,
+    "assignment_curvature_gap": -0.12553088208385876,
+    "coordinate_exact": false,
+    "full_assignment_exact": true,
+    "token_exact": true,
+    "incidence_exact": true,
+    "family_exact": false,
+    "assignment_holonomy_rank": 1,
+    "hidden_future_rank": 1,
+    "coordinate_witness": {
+      "left_trace": [
+        [
+          "segment",
+          [
+            0,
+            -1,
+            1
+          ]
+        ]
+      ],
+      "right_trace": [
+        [
+          "segment",
+          [
+            1,
+            -1,
+            1
+          ]
+        ]
+      ],
+      "suffix": [
+        [
+          "segment",
+          [
+            -1,
+            -1,
+            -1
+          ]
+        ]
+      ],
+      "summary_value": "(1, 0, 1)",
+      "left_state": "{1->(1, 2), 3->(1, 3)}",
+      "right_state": "{1->(1, 3), 3->(1, 3)}",
+      "left_output_now": "((2,),)",
+      "right_output_now": "((),)",
+      "left_output_future": "((2,),)",
+      "right_output_future": "((),)",
+      "same_now": false,
+      "non_empty_suffix": true
+    },
+    "full_assignment_witness": null,
+    "hidden_future_witness": null
+  },
+  "overall_first_coordinate_gap": {
+    "semantics": "committed_allocation",
+    "token_scope": "none",
+    "token_alphabet_size": 1,
+    "p": 3,
+    "k": 2,
+    "family": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "reachable_state_count": 12,
+    "runtime_quotient_count": 11,
+    "coordinate_quotient_count": 8,
+    "full_assignment_quotient_count": 12,
+    "token_quotient_count": 12,
+    "incidence_quotient_count": 12,
+    "family_quotient_count": 7,
+    "coordinate_curvature_gap": 0.4594316186372973,
+    "assignment_curvature_gap": -0.12553088208385876,
+    "coordinate_exact": false,
+    "full_assignment_exact": true,
+    "token_exact": true,
+    "incidence_exact": true,
+    "family_exact": false,
+    "assignment_holonomy_rank": 1,
+    "hidden_future_rank": 1,
+    "coordinate_witness": {
+      "left_trace": [
+        [
+          "segment",
+          [
+            0,
+            -1,
+            1
+          ]
+        ]
+      ],
+      "right_trace": [
+        [
+          "segment",
+          [
+            1,
+            -1,
+            1
+          ]
+        ]
+      ],
+      "suffix": [
+        [
+          "segment",
+          [
+            -1,
+            -1,
+            -1
+          ]
+        ]
+      ],
+      "summary_value": "(1, 0, 1)",
+      "left_state": "{1->(1, 2), 3->(1, 3)}",
+      "right_state": "{1->(1, 3), 3->(1, 3)}",
+      "left_output_now": "((2,),)",
+      "right_output_now": "((),)",
+      "left_output_future": "((2,),)",
+      "right_output_future": "((),)",
+      "same_now": false,
+      "non_empty_suffix": true
+    },
+    "full_assignment_witness": null,
+    "hidden_future_witness": null
+  },
+  "overall_first_full_assignment_split": {
+    "semantics": "pair_phase_any_other_live_block_lower",
+    "token_scope": "pair",
+    "token_alphabet_size": 2,
+    "p": 3,
+    "k": 2,
+    "family": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "reachable_state_count": 14,
+    "runtime_quotient_count": 10,
+    "coordinate_quotient_count": 8,
+    "full_assignment_quotient_count": 12,
+    "token_quotient_count": 14,
+    "incidence_quotient_count": 12,
+    "family_quotient_count": 7,
+    "coordinate_curvature_gap": 0.3219280948873622,
+    "assignment_curvature_gap": -0.2630344058337939,
+    "coordinate_exact": false,
+    "full_assignment_exact": false,
+    "token_exact": true,
+    "incidence_exact": false,
+    "family_exact": false,
+    "assignment_holonomy_rank": 2,
+    "hidden_future_rank": 1,
+    "coordinate_witness": {
+      "left_trace": [
+        [
+          1,
+          0
+        ]
+      ],
+      "right_trace": [
+        [
+          1,
+          1
+        ]
+      ],
+      "suffix": [],
+      "summary_value": "(1, 0, 0)",
+      "left_state": "((0, -1, -1), (0,), ())",
+      "right_state": "((1, -1, -1), (0,), ())",
+      "left_output_now": "((2,),)",
+      "right_output_now": "((3,),)",
+      "left_output_future": "((2,),)",
+      "right_output_future": "((3,),)",
+      "same_now": false,
+      "non_empty_suffix": false
+    },
+    "full_assignment_witness": {
+      "left_trace": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "right_trace": [
+        [
+          1,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "suffix": [],
+      "summary_value": "(0, 0, 1)",
+      "left_state": "((0, 0, 1), (1,), ())",
+      "right_state": "((0, 0, 1), (0,), ())",
+      "left_output_now": "()",
+      "right_output_now": "((),)",
+      "left_output_future": "()",
+      "right_output_future": "((),)",
+      "same_now": false,
+      "non_empty_suffix": false
+    },
+    "hidden_future_witness": null
+  },
+  "overall_first_hidden_future_split": {
+    "semantics": "pair_phase_exclusive_other_live_block_lower",
+    "token_scope": "pair",
+    "token_alphabet_size": 2,
+    "p": 3,
+    "k": 2,
+    "family": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "reachable_state_count": 16,
+    "runtime_quotient_count": 11,
+    "coordinate_quotient_count": 8,
+    "full_assignment_quotient_count": 12,
+    "token_quotient_count": 16,
+    "incidence_quotient_count": 12,
+    "family_quotient_count": 7,
+    "coordinate_curvature_gap": 0.4594316186372973,
+    "assignment_curvature_gap": -0.12553088208385876,
+    "coordinate_exact": false,
+    "full_assignment_exact": false,
+    "token_exact": true,
+    "incidence_exact": false,
+    "family_exact": false,
+    "assignment_holonomy_rank": 2,
+    "hidden_future_rank": 2,
+    "coordinate_witness": {
+      "left_trace": [
+        [
+          1,
+          0
+        ]
+      ],
+      "right_trace": [
+        [
+          1,
+          1
+        ]
+      ],
+      "suffix": [],
+      "summary_value": "(1, 0, 0)",
+      "left_state": "((0, -1, -1), (0,), ())",
+      "right_state": "((1, -1, -1), (0,), ())",
+      "left_output_now": "((2,),)",
+      "right_output_now": "((3,),)",
+      "left_output_future": "((2,),)",
+      "right_output_future": "((3,),)",
+      "same_now": false,
+      "non_empty_suffix": false
+    },
+    "full_assignment_witness": {
+      "left_trace": [
+        [
+          1,
+          0
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "right_trace": [
+        [
+          3,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "suffix": [
+        [
+          2,
+          0
+        ]
+      ],
+      "summary_value": "{1->(1, 2), 3->(1, 3)}",
+      "left_state": "((0, -1, 1), (1,), ())",
+      "right_state": "((0, -1, 1), (0,), ())",
+      "left_output_now": "((2,),)",
+      "right_output_now": "((2,),)",
+      "left_output_future": "((),)",
+      "right_output_future": "()",
+      "same_now": true,
+      "non_empty_suffix": true
+    },
+    "hidden_future_witness": {
+      "left_trace": [
+        [
+          1,
+          0
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "right_trace": [
+        [
+          3,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "suffix": [
+        [
+          2,
+          0
+        ]
+      ],
+      "summary_value": "{1->(1, 2), 3->(1, 3)}",
+      "left_state": "((0, -1, 1), (1,), ())",
+      "right_state": "((0, -1, 1), (0,), ())",
+      "left_output_now": "((2,),)",
+      "right_output_now": "((2,),)",
+      "left_output_future": "((),)",
+      "right_output_future": "()",
+      "same_now": true,
+      "non_empty_suffix": true
+    }
+  }
+}
