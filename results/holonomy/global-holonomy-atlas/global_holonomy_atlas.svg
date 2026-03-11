@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1540" height="992" viewBox="0 0 1540 992">
+<style>
+text { font-family: 'Inter', 'Segoe UI', Arial, sans-serif; font-size: 13px; fill: #243b53; }
+.title { font-size: 24px; font-weight: 700; fill: #102a43; }
+.subtitle { font-size: 14px; fill: #52606d; }
+.panel { fill: #ffffff; stroke: #d9e2ec; stroke-width: 1.2; rx: 18; ry: 18; }
+.card { fill: #ffffff; stroke: #d9e2ec; stroke-width: 1.2; rx: 16; ry: 16; }
+.header { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; fill: #486581; }
+.section { font-size: 17px; font-weight: 700; fill: #102a43; }
+.metric { font-size: 28px; font-weight: 700; fill: #0f172a; }
+.small { font-size: 12px; fill: #52606d; }
+.mono { font-family: 'SFMono-Regular', Menlo, Monaco, Consolas, monospace; font-size: 11px; fill: #102a43; }
+.row-control { fill: #f4f7f9; }
+.row-simplex { fill: #f7efff; }
+.row-cycle { fill: #eefbf3; }
+.row-tetra { fill: #fff4e6; }
+.divider { stroke: #e5e7eb; stroke-width: 1; }
+</style>
+<rect x="0" y="0" width="1540" height="992" fill="#f7fafc"/>
+<text x="36" y="40" class="title">Global Holonomy Atlas</text>
+<text x="36" y="64" class="subtitle">Classifying the first static and dynamic obstructions beyond simplex transport, then testing explicit compressed quotients inside the global layer.</text>
+<text x="36" y="84" class="subtitle">Static = same assignment + pair + simplex, different now. Dynamic = same assignment + pair + simplex, same now, different future under a non-empty suffix.</text>
+<rect x="36.0" y="104" width="478.6666666666667" height="122" class="card"/>
+<rect x="530.6666666666667" y="104" width="478.6666666666667" height="122" class="card"/>
+<rect x="1025.3333333333335" y="104" width="478.6666666666667" height="122" class="card"/>
+<text x="54" y="130" class="header">Scan</text>
+<text x="54" y="162" class="metric">1032</text>
+<text x="158" y="162" class="section">semantic-family analyses</text>
+<text x="54" y="190" class="small">Base grid p ≤ 4, k ≤ 3. Expanded pass on five global semantics: False.</text>
+<text x="54" y="210" class="small">Larger normalized p ≤ 5, k ≤ 4 follow-up omitted because p = 4 already fixes the minimal-boundary winners.</text>
+<text x="548.6666666666667" y="130" class="header">Boundary Split</text>
+<text x="548.6666666666667" y="158" class="section">static = |A|=5</text>
+<text x="548.6666666666667" y="182" class="small">dynamic = |A|=4</text>
+<text x="548.6666666666667" y="204" class="small">winners differ = True</text>
+<text x="1043.3333333333335" y="130" class="header">Compression</text>
+<text x="1043.3333333333335" y="158" class="section">Best explicit exact quotient</text>
+<text x="1043.3333333333335" y="186" class="small">Component cochain signature = 1774 on k4_pair_family</text>
+<rect x="36" y="254" width="1468" height="346" class="panel"/>
+<text x="54" y="280" class="header">Semantic Summary</text>
+<text x="54" y="318" class="header">Semantics</text>
+<text x="456" y="318" class="header">Kind</text>
+<text x="596" y="318" class="header">|pair| / |simplex| / |extra|</text>
+<text x="726" y="318" class="header">Families</text>
+<text x="826" y="318" class="header">First static</text>
+<text x="1071" y="318" class="header">First dynamic</text>
+<text x="1316" y="318" class="header">Best exact compression</text>
+<line x1="54" y1="328" x2="1486" y2="328" class="divider"/>
+<rect x="48" y="334" width="1444" height="28" rx="12" ry="12" class="row-control"/>
+<text x="54" y="352">Broadcast</text>
+<text x="456" y="352">control</text>
+<text x="596" y="352">1 / 1 / 1</text>
+<text x="726" y="352" class="mono">129</text>
+<text x="826" y="352">none</text>
+<text x="1071" y="352">none</text>
+<text x="1316" y="352">none</text>
+<rect x="48" y="368" width="1444" height="28" rx="12" ry="12" class="row-control"/>
+<text x="54" y="386">Committed Allocation</text>
+<text x="456" y="386">control</text>
+<text x="596" y="386">1 / 1 / 1</text>
+<text x="726" y="386" class="mono">129</text>
+<text x="826" y="386">none</text>
+<text x="1071" y="386">none</text>
+<text x="1316" y="386">none</text>
+<rect x="48" y="402" width="1444" height="28" rx="12" ry="12" class="row-simplex"/>
+<text x="54" y="420">Shared Pair Phase + Feedback Orient</text>
+<text x="456" y="420">simplex_control</text>
+<text x="596" y="420">2 / 4 / 1</text>
+<text x="726" y="420" class="mono">129</text>
+<text x="826" y="420">none</text>
+<text x="1071" y="420">none</text>
+<text x="1316" y="420">none</text>
+<rect x="48" y="436" width="1444" height="28" rx="12" ry="12" class="row-cycle"/>
+<text x="54" y="454">Feedback Orient + Cycle Flux</text>
+<text x="456" y="454">global_cycle</text>
+<text x="596" y="454">2 / 4 / 2</text>
+<text x="726" y="454" class="mono">129</text>
+<text x="826" y="454">|A|=5</text>
+<text x="1071" y="454">|A|=4</text>
+<text x="1316" y="454">none</text>
+<rect x="48" y="470" width="1444" height="28" rx="12" ry="12" class="row-cycle"/>
+<text x="54" y="488">Feedback Orient + Feedback Loop</text>
+<text x="456" y="488">global_cycle</text>
+<text x="596" y="488">2 / 4 / 2</text>
+<text x="726" y="488" class="mono">129</text>
+<text x="826" y="488">|A|=5</text>
+<text x="1071" y="488">|A|=4</text>
+<text x="1316" y="488">none</text>
+<rect x="48" y="504" width="1444" height="28" rx="12" ry="12" class="row-cycle"/>
+<text x="54" y="522">Feedback Orient + Face-Order Parity</text>
+<text x="456" y="522">global_cycle</text>
+<text x="596" y="522">2 / 4 / 2</text>
+<text x="726" y="522" class="mono">129</text>
+<text x="826" y="522">|A|=5</text>
+<text x="1071" y="522">|A|=4</text>
+<text x="1316" y="522">Component cochain signature (1774)</text>
+<rect x="48" y="538" width="1444" height="28" rx="12" ry="12" class="row-tetra"/>
+<text x="54" y="556">Feedback Orient + Tetra Freeze</text>
+<text x="456" y="556">tetra_local</text>
+<text x="596" y="556">2 / 4 / 2</text>
+<text x="726" y="556" class="mono">129</text>
+<text x="826" y="556">|A|=4</text>
+<text x="1071" y="556">|A|=4</text>
+<text x="1316" y="556">none</text>
+<rect x="48" y="572" width="1444" height="28" rx="12" ry="12" class="row-tetra"/>
+<text x="54" y="590">Feedback Orient + Tetra Toggle</text>
+<text x="456" y="590">tetra_local</text>
+<text x="596" y="590">2 / 4 / 2</text>
+<text x="726" y="590" class="mono">129</text>
+<text x="826" y="590">|A|=4</text>
+<text x="1071" y="590">four_edge_star</text>
+<text x="1316" y="590">none</text>
+<rect x="36.0" y="622" width="726.0" height="300" class="card"/>
+<rect x="778.0" y="622" width="726.0" height="300" class="card"/>
+<text x="54" y="650" class="header">Static vs Dynamic Obstruction</text>
+<text x="54" y="678" class="section">pair_phase_shared_other_live_block_lower__feedback_orient_freeze_pairs__triangle_cycle_flux</text>
+<text x="54" y="702" class="small">Static family: |A|=5; kind = cycle_of_triangles.</text>
+<text x="54" y="726" class="small">Simplex witness separates current outputs inside one lower-layer fiber.</text>
+<text x="54" y="762" class="section">pair_phase_shared_other_live_block_lower__feedback_orient_freeze_pairs__tetra_freeze_simplex</text>
+<text x="54" y="786" class="small">Dynamic family: |A|=4; kind = mixed.</text>
+<text x="54" y="810" class="small">Same-now / future-separate witness persists under a non-empty common suffix.</text>
+<text x="796.0" y="650" class="header">Compression Candidates</text>
+<text x="796.0" y="678" class="section">pair_phase_shared_other_live_block_lower__feedback_orient_freeze_pairs__parity_on_face_order</text>
+<text x="796.0" y="702" class="small">Family: k4_pair_family</text>
+<text x="796.0" y="726" class="small">Runtime / raw global = 156 / 1942</text>
+<text x="796.0" y="750" class="small">Best explicit exact = Component cochain signature (1774)</text>
+<text x="796.0" y="784" class="small">Sorted extra tokens: 1774, exact = True</text>
+<text x="796.0" y="806" class="small">Extra-token histogram: 1774, exact = True</text>
+<text x="796.0" y="828" class="small">Per-component histogram: 1774, exact = True</text>
+<text x="796.0" y="850" class="small">Component token multiset: 1774, exact = True</text>
+<text x="796.0" y="872" class="small">Support-weighted histogram: 1828, exact = True</text>
+<text x="36" y="946" class="small">Reading: the first current-output obstruction and the first hidden-future obstruction need not be the same family, and the global layer still admits explicit compression attempts beyond raw extra tokens.</text>
+</svg>

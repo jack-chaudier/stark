@@ -8,6 +8,8 @@ This repository studies a single question from several angles:
 
 The project starts from tropical threshold memory, proves that bare capacity is too coarse for causal identity, builds the protected-witness quotient, validates unique-minimal causal factorization exactly, measures the mirage shelf where answers outlive reasons, and then pushes into overlapping-family and runtime-holonomy boundaries.
 
+Holonomy tower so far: `coordinate -> assignment -> pair -> simplex -> global`.
+
 ## Inspection Map
 
 The repo now has one canonical, experiment-oriented layout:
@@ -43,6 +45,10 @@ Then use the layer-specific notes and reports as needed:
   - [Full-assignment holonomy](docs/writing/experiments/holonomy/full-assignment-holonomy.md)
   - [Simplex-holonomy boundary](docs/writing/experiments/holonomy/simplex-holonomy-boundary.md)
   - [Global-holonomy boundary](docs/writing/experiments/holonomy/global-holonomy-boundary.md)
+  - [Global-holonomy atlas](docs/writing/experiments/holonomy/global-holonomy-atlas.md)
+  - [Atlas report](results/holonomy/global-holonomy-atlas/global_holonomy_atlas.md)
+  - [Atlas figure](results/holonomy/global-holonomy-atlas/global_holonomy_atlas.svg)
+  - [Global-quotient compression](docs/writing/experiments/holonomy/global-quotient-compression.md)
   - [Simplex-quotient compression](docs/writing/experiments/holonomy/simplex-quotient-compression.md)
 
 ## What This Repo Establishes
@@ -61,6 +67,8 @@ Then use the layer-specific notes and reports as needed:
 - Pair transport is enough to break raw assignment exactness.
 - Pair transport is not final: on the exact base grid, a triangle-local simplex law already breaks `assignment + pair` exactness.
 - Simplex transport is not final either: on the scanned tetra/cycle-local law library, the first simplex-insufficient split appears on a 5-edge overlap family and the first hidden future beyond simplex appears on a 4-edge mixed family.
+- Beyond simplex, the first static obstruction and the first dynamic hidden-future obstruction do not coincide.
+- The raw global token layer is not canonical: at least one explicit global compression stays exact while shrinking the raw global quotient.
 
 ## Best Figures
 
@@ -90,11 +98,12 @@ Shows the first exact base-grid boundary where pairwise transport stops being en
 
 ![Pair vs simplex holonomy](results/holonomy/pair-vs-simplex-holonomy/pair_vs_simplex_holonomy_search.svg)
 
-### 5. Simplex vs Global Holonomy Boundary
+### 5. Global Holonomy Atlas
 
-Shows the next seam: a cycle-local law breaks simplex exactness, while a tetra-local law yields the first hidden future beyond the full simplex fiber.
+Shows that the first static global obstruction is cycle-like, while the first dynamic hidden-future obstruction is mixed/tetra-local.
+Static means same lower-layer summary, different now; dynamic means same lower-layer summary, same now, different future under a non-empty suffix.
 
-![Simplex vs global holonomy](results/holonomy/simplex-vs-global-holonomy/simplex_vs_global_holonomy_search.svg)
+![Global holonomy atlas](results/holonomy/global-holonomy-atlas/global_holonomy_atlas.svg)
 
 ## Repo Layout
 
@@ -146,6 +155,7 @@ Most scripts follow the same pattern:
 - [Full-assignment holonomy search](results/holonomy/full-assignment-holonomy/full_assignment_holonomy_search.md)
 - [Pair-vs-simplex holonomy search](results/holonomy/pair-vs-simplex-holonomy/pair_vs_simplex_holonomy_search.md)
 - [Simplex-vs-global holonomy search](results/holonomy/simplex-vs-global-holonomy/simplex_vs_global_holonomy_search.md)
+- [Global holonomy atlas](results/holonomy/global-holonomy-atlas/global_holonomy_atlas.md)
 
 ## Reproducibility
 
@@ -161,6 +171,7 @@ Representative scripts:
 - [Full-assignment holonomy search](scripts/holonomy/full_assignment_holonomy_search.py)
 - [Pair-vs-simplex holonomy search](scripts/holonomy/pair_vs_simplex_holonomy_search.py)
 - [Simplex-vs-global holonomy search](scripts/holonomy/simplex_vs_global_holonomy_search.py)
+- [Global holonomy atlas](scripts/holonomy/global_holonomy_atlas.py)
 
 Verification artifact:
 
@@ -175,4 +186,4 @@ The strongest clean statement currently supported by the repo is:
 
 So the next seam is now:
 
-> Is the new exact runtime object tetra transport, cycle holonomy, or something still more global than the current local token layers?
+> Static and dynamic beyond-simplex obstructions already separate on the exact scanned set, and the raw global layer is compressible. Is the canonical runtime object a cycle/tetra local quotient on the overlap complex, or something still more global than the current token summaries?
