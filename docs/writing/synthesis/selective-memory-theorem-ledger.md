@@ -1,6 +1,6 @@
 # Selective Memory Theorem And Status Ledger
 
-This ledger collects every main statement in the selective-memory / causal-memory program and labels each by proof status: fully proved, verified by exhaustive computation, observed as a pattern, or still open. It serves as a quick reference for what is established and what remains.
+This ledger collects every main statement in the selective-memory / causal-memory program and labels each by proof status: fully proved, proposition (a proved structural statement narrower than the main target), verified by exhaustive computation, observed as a pattern, or still open. It serves as a quick reference for what is established and what remains.
 
 It is a companion to [selective-memory-master-synthesis.md](selective-memory-master-synthesis.md).
 

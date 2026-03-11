@@ -4,7 +4,7 @@
 
 Suppose a system must reason about cause and effect — for example, deciding which variables to adjust for in a causal analysis — but has only limited memory. How much memory does it need to get the right answer? And how much more to know _why_ that answer is right?
 
-This project shows that correctness and justification require different amounts of memory, and that the gap between them is measurable, structured, and unavoidable. The key object is a *memory quotient*: the smallest compressed state that preserves everything a given task needs. Different tasks (bare feasibility, witness preservation, causal identification) have different quotients, forming a tower of increasing fidelity.
+This project shows that correctness and justification require different amounts of memory, and that the gap between them is measurable and structured — exact on the scanned quotient families, and a stable observed pattern across the broader sweep grid. The key object is a *memory quotient*: the smallest compressed state that preserves everything a given task needs. Different tasks (bare feasibility, witness preservation, causal identification) have different quotients, forming a tower of increasing fidelity.
 
 For the full synthesis with proofs, see [selective-memory-master-synthesis.md](selective-memory-master-synthesis.md).
 

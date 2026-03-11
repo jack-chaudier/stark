@@ -10,7 +10,7 @@ Every result is verified by exhaustive finite search — no approximations, no s
 
 Under memory constraints, correctness and justification come apart in a structured way. Stark proves that memory is not one thing but a **tower of layers**, each preserving a different level of causal fidelity. The main results:
 
-1. **A system can be right without knowing why.** There is a measurable zone — the *mirage shelf* — where answers survive but the reasons behind them don't. At 1 bit below a critical memory threshold, answer accuracy is 0.999 while justification accuracy drops to 0.987.
+1. **A system can be right without knowing why.** There is a measurable zone — the *mirage shelf* — where answers survive but the reasons behind them don't. For the `Q_(5,3)` witness quotient at 1 bit below its 10-bit threshold under prefix forcing, answer accuracy is 0.999 while justification accuracy drops to 0.987; neighboring forcing modes at the same threshold are materially lower (suffix: 0.909 / 0.733, interleaved: 0.995 / 0.970).
 
 2. **The right memory structure depends on the task.** There is no universal "right" memory format. A bare count of predecessors is enough to know _whether_ an answer exists, but preserving _which_ specific variables justify it requires a richer state — the *witness quotient* — with a precisely calculated cost.
 
@@ -32,7 +32,7 @@ Under memory constraints, correctness and justification come apart in a structur
 |--------|--------------|
 | **Witness quotient is exact** | The witness-preserving state count `\|Q_(k,p)\| = Σ (d+2)^p` is tight — no wasted states |
 | **Causal factorization works** | On 89,291 unique-minimal causal queries, witness-faithful factorization has 0 failures |
-| **Mirage shelf is real** | At 1 bit below threshold, answer fidelity = 0.999 while witness fidelity = 0.987 |
+| **Mirage shelf is real** | On `Q_(5,3)` prefix forcing at 1 bit below the 10-bit threshold, answer fidelity = 0.999 while witness fidelity = 0.987 |
 | **Hypergraph contracts needed** | Overlapping variable families force a hypergraph-valued contract layer |
 | **Runtime stays simple** | Across 6,336 antichain configurations, runtime never exceeds coordinate tracking — 0 collapses |
 | **Transport tower is strict** | Pair → simplex → global: each level captures structure the previous one misses |
