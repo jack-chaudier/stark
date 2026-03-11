@@ -1,1 +1,83 @@
-../../runtime_hypergraph_curvature_search.svg
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="900" viewBox="0 0 1500 900">
+<style>
+text { font-family: Menlo, Monaco, Consolas, monospace; font-size: 12px; fill: #1f2933; }
+.title { font-size: 18px; font-weight: 700; }
+.subtitle { fill: #52606d; }
+.header { font-weight: 700; fill: #102a43; }
+.panel { fill: #ffffff; stroke: #d9e2ec; stroke-width: 1; }
+.flat { fill: #f4f7f9; }
+.curved { fill: #eef6ff; }
+.positive { fill: #eefbf3; }
+</style>
+<rect x="0" y="0" width="1500" height="900" fill="#fbfbfd"/>
+<text x="48" y="28" class="title">Runtime Hypergraph Curvature Search</text>
+<text x="48" y="46" class="subtitle">Coordinate curvature is positive when the runtime quotient strictly exceeds the full coordinate quotient.</text>
+<rect x="48" y="58" width="1404" height="286" class="panel"/>
+<text x="64" y="82" class="header">semantics</text>
+<text x="218" y="82" class="header">seed counts</text>
+<text x="378" y="82" class="header">first split</text>
+<text x="648" y="82" class="header">first kappa>0</text>
+<text x="948" y="82" class="header">max gap</text>
+<text x="1058" y="82" class="header">holonomy</text>
+<text x="1168" y="82" class="header">full assignment exact</text>
+<text x="1318" y="82" class="header">status</text>
+<rect x="58" y="94" width="1384" height="26" class="flat"/>
+<text x="64" y="108">Broadcast</text>
+<text x="218" y="108">8/8/8</text>
+<text x="378" y="108">none</text>
+<text x="648" y="108">none</text>
+<text x="948" y="108">0.000</text>
+<text x="1058" y="108">1</text>
+<text x="1168" y="108">True</text>
+<text x="1318" y="108">flat on scan</text>
+<rect x="58" y="136" width="1384" height="26" class="flat"/>
+<text x="64" y="150">Incidence Broadcast</text>
+<text x="218" y="150">8/8/8</text>
+<text x="378" y="150">none</text>
+<text x="648" y="150">none</text>
+<text x="948" y="150">0.000</text>
+<text x="1058" y="150">1</text>
+<text x="1168" y="150">True</text>
+<text x="1318" y="150">flat on scan</text>
+<rect x="58" y="178" width="1384" height="26" class="curved"/>
+<text x="64" y="192">Exclusive Claim</text>
+<text x="218" y="192">6/8/10</text>
+<text x="378" y="192">(p=3,k=2)</text>
+<text x="648" y="192">(p=4,k=2)</text>
+<text x="948" y="192">0.087</text>
+<text x="1058" y="192">4</text>
+<text x="1168" y="192">True</text>
+<text x="1318" y="192">kappa>0</text>
+<rect x="58" y="220" width="1384" height="26" class="curved"/>
+<text x="64" y="234">Budget Routing</text>
+<text x="218" y="234">8/8/10</text>
+<text x="378" y="234">(p=3,k=2)</text>
+<text x="648" y="234">(p=4,k=2)</text>
+<text x="948" y="234">0.322</text>
+<text x="1058" y="234">3</text>
+<text x="1168" y="234">True</text>
+<text x="1318" y="234">kappa>0</text>
+<rect x="58" y="262" width="1384" height="26" class="positive"/>
+<text x="64" y="276">Committed Allocation</text>
+<text x="218" y="276">11/8/12</text>
+<text x="378" y="276">(p=3,k=2)</text>
+<text x="648" y="276">(p=3,k=2)</text>
+<text x="948" y="276">2.883</text>
+<text x="1058" y="276">12</text>
+<text x="1168" y="276">True</text>
+<text x="1318" y="276">positive control</text>
+<rect x="48" y="372" width="1404" height="470" class="panel"/>
+<text x="64" y="396" class="header">Boundary statement from the scan</text>
+<text x="64" y="424">First split: exclusive_overlap_claim on ((1, 2), (1, 3)) at (p=3, k=2).</text>
+<text x="64" y="446">Counts: runtime 6, coordinate 8, incidence 10, family 8.</text>
+<text x="64" y="468">Witness u = [1, 3]</text>
+<text x="64" y="490">Witness v = [3, 1]</text>
+<text x="64" y="512">Suffix w = []</text>
+<text x="64" y="534">Coordinate fiber = (1, 0, 1)</text>
+<text x="64" y="556">Outputs now: () vs ((1, 3),)</text>
+<text x="64" y="578">Outputs after suffix: () vs ((1, 3),)</text>
+<text x="64" y="602">First positive kappa_pi: committed_allocation on ((1, 2), (1, 3)) with gap 0.459 bits.</text>
+<text x="64" y="642">Controls: broadcast_control and incidence_local_progress remain coordinate-flat on the full scan.</text>
+<text x="64" y="664">Positive control: committed_allocation reproduces kappa_pi &gt; 0 on the seed V-hypergraph.</text>
+<text x="64" y="686">No scanned semantics made full_assignment itself inexact, so the current evidence points to an incidence-transport runtime object rather than a fully global one.</text>
+</svg>

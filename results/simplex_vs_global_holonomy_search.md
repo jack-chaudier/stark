@@ -1,1 +1,0 @@
-holonomy/simplex-vs-global-holonomy/simplex_vs_global_holonomy_search.md

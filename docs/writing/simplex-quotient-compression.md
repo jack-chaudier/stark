@@ -1,1 +1,0 @@
-experiments/holonomy/simplex-quotient-compression.md

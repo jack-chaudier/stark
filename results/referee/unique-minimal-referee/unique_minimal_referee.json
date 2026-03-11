@@ -1,1 +1,464 @@
-../../unique_minimal_referee.json
+{
+  "max_n": 6,
+  "ordered_dag_counts": {
+    "3": 8,
+    "4": 64,
+    "5": 1024,
+    "6": 32768
+  },
+  "queries_with_path": 325404,
+  "unique_nonempty_queries": 89291,
+  "prefix_witness_queries": 89291,
+  "residual_q_failures": 0,
+  "residual_orbit_failures": 0,
+  "total_prefix_witness_records": 89291,
+  "exact_q_recovery_rate": 1.0,
+  "exact_orbit_recovery_rate": 1.0,
+  "bare_collision_group_count": 10,
+  "label_distinct_bare_collision_group_count": 6,
+  "records_by_k": {
+    "1": {
+      "count": 72389,
+      "prefix_len_min": 1,
+      "prefix_len_max": 4
+    },
+    "2": {
+      "count": 15182,
+      "prefix_len_min": 2,
+      "prefix_len_max": 4
+    },
+    "3": {
+      "count": 1656,
+      "prefix_len_min": 3,
+      "prefix_len_max": 4
+    },
+    "4": {
+      "count": 64,
+      "prefix_len_min": 4,
+      "prefix_len_max": 4
+    }
+  },
+  "bare_collision_examples": [
+    {
+      "k": 1,
+      "bare_state": {
+        "weights": [
+          1,
+          1
+        ],
+        "d_total": 2
+      },
+      "examples": [
+        {
+          "graph_id": "n4_m11",
+          "query": [
+            1,
+            2
+          ],
+          "witness_set": [
+            0
+          ],
+          "word": [
+            "W0",
+            "N",
+            "T"
+          ]
+        },
+        {
+          "graph_id": "n4_m56",
+          "query": [
+            2,
+            3
+          ],
+          "witness_set": [
+            1
+          ],
+          "word": [
+            "W1",
+            "N",
+            "T"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 1,
+      "bare_state": {
+        "weights": [
+          1,
+          1
+        ],
+        "d_total": 3
+      },
+      "examples": [
+        {
+          "graph_id": "n5_m19",
+          "query": [
+            1,
+            2
+          ],
+          "witness_set": [
+            0
+          ],
+          "word": [
+            "W0",
+            "N",
+            "N",
+            "T"
+          ]
+        },
+        {
+          "graph_id": "n5_m176",
+          "query": [
+            2,
+            3
+          ],
+          "witness_set": [
+            1
+          ],
+          "word": [
+            "W1",
+            "N",
+            "N",
+            "T"
+          ]
+        },
+        {
+          "graph_id": "n5_m896",
+          "query": [
+            3,
+            4
+          ],
+          "witness_set": [
+            2
+          ],
+          "word": [
+            "W2",
+            "N",
+            "N",
+            "T"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 2,
+      "bare_state": {
+        "weights": [
+          1,
+          1,
+          1
+        ],
+        "d_total": 3
+      },
+      "examples": [
+        {
+          "graph_id": "n5_m182",
+          "query": [
+            2,
+            3
+          ],
+          "witness_set": [
+            0,
+            1
+          ],
+          "word": [
+            "W0",
+            "W1",
+            "N",
+            "T"
+          ]
+        },
+        {
+          "graph_id": "n5_m908",
+          "query": [
+            3,
+            4
+          ],
+          "witness_set": [
+            0,
+            2
+          ],
+          "word": [
+            "W0",
+            "W2",
+            "N",
+            "T"
+          ]
+        },
+        {
+          "graph_id": "n5_m992",
+          "query": [
+            3,
+            4
+          ],
+          "witness_set": [
+            1,
+            2
+          ],
+          "word": [
+            "W1",
+            "W2",
+            "N",
+            "T"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 1,
+      "bare_state": {
+        "weights": [
+          1,
+          1
+        ],
+        "d_total": 4
+      },
+      "examples": [
+        {
+          "graph_id": "n6_m35",
+          "query": [
+            1,
+            2
+          ],
+          "witness_set": [
+            0
+          ],
+          "word": [
+            "W0",
+            "N",
+            "N",
+            "N",
+            "T"
+          ]
+        },
+        {
+          "graph_id": "n6_m608",
+          "query": [
+            2,
+            3
+          ],
+          "witness_set": [
+            1
+          ],
+          "word": [
+            "W1",
+            "N",
+            "N",
+            "N",
+            "T"
+          ]
+        },
+        {
+          "graph_id": "n6_m5632",
+          "query": [
+            3,
+            4
+          ],
+          "witness_set": [
+            2
+          ],
+          "word": [
+            "W2",
+            "N",
+            "N",
+            "N",
+            "T"
+          ]
+        },
+        {
+          "graph_id": "n6_m28672",
+          "query": [
+            4,
+            5
+          ],
+          "witness_set": [
+            3
+          ],
+          "word": [
+            "W3",
+            "N",
+            "N",
+            "N",
+            "T"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 2,
+      "bare_state": {
+        "weights": [
+          1,
+          1,
+          1
+        ],
+        "d_total": 4
+      },
+      "examples": [
+        {
+          "graph_id": "n6_m614",
+          "query": [
+            2,
+            3
+          ],
+          "witness_set": [
+            0,
+            1
+          ],
+          "word": [
+            "W0",
+            "W1",
+            "N",
+            "N",
+            "T"
+          ]
+        },
+        {
+          "graph_id": "n6_m5644",
+          "query": [
+            3,
+            4
+          ],
+          "witness_set": [
+            0,
+            2
+          ],
+          "word": [
+            "W0",
+            "W2",
+            "N",
+            "N",
+            "T"
+          ]
+        },
+        {
+          "graph_id": "n6_m5824",
+          "query": [
+            3,
+            4
+          ],
+          "witness_set": [
+            1,
+            2
+          ],
+          "word": [
+            "W1",
+            "W2",
+            "N",
+            "N",
+            "T"
+          ]
+        },
+        {
+          "graph_id": "n6_m28696",
+          "query": [
+            4,
+            5
+          ],
+          "witness_set": [
+            0,
+            3
+          ],
+          "word": [
+            "W0",
+            "W3",
+            "N",
+            "N",
+            "T"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 3,
+      "bare_state": {
+        "weights": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "d_total": 4
+      },
+      "examples": [
+        {
+          "graph_id": "n6_m5836",
+          "query": [
+            3,
+            4
+          ],
+          "witness_set": [
+            0,
+            1,
+            2
+          ],
+          "word": [
+            "W0",
+            "W1",
+            "W2",
+            "N",
+            "T"
+          ]
+        },
+        {
+          "graph_id": "n6_m29080",
+          "query": [
+            4,
+            5
+          ],
+          "witness_set": [
+            0,
+            1,
+            3
+          ],
+          "word": [
+            "W0",
+            "W1",
+            "W3",
+            "N",
+            "T"
+          ]
+        },
+        {
+          "graph_id": "n6_m31768",
+          "query": [
+            4,
+            5
+          ],
+          "witness_set": [
+            0,
+            2,
+            3
+          ],
+          "word": [
+            "W0",
+            "W2",
+            "W3",
+            "N",
+            "T"
+          ]
+        },
+        {
+          "graph_id": "n6_m32128",
+          "query": [
+            4,
+            5
+          ],
+          "witness_set": [
+            1,
+            2,
+            3
+          ],
+          "word": [
+            "W1",
+            "W2",
+            "W3",
+            "N",
+            "T"
+          ]
+        }
+      ]
+    }
+  ]
+}

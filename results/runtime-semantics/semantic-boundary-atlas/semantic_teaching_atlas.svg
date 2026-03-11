@@ -1,1 +1,82 @@
-../../semantic_teaching_atlas.svg
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="700" viewBox="0 0 1280 700">
+<style>
+text { font-family: Menlo, Monaco, Consolas, monospace; font-size: 11px; fill: #1f2933; }
+.title { font-size: 15px; font-weight: 700; }
+.panel { fill: #ffffff; stroke: #d9e2ec; stroke-width: 1; }
+.grid { stroke: #d9e2ec; stroke-width: 1; stroke-dasharray: 4 4; }
+.axis { stroke: #9fb3c8; stroke-width: 1; }
+</style>
+<rect x="0" y="0" width="1280" height="700" fill="#fbfbfd"/>
+<text x="80" y="26" class="title">Teaching Complexity Under Semantic Enrichment</text>
+<text x="80" y="44">For each semantics, bars show answer / variable / family basis sizes on the earliest nontrivial teaching group or the first inexact family-teaching group.</text>
+<rect x="80" y="62" width="1160" height="538" class="panel"/>
+<line x1="80" y1="582.00" x2="1240" y2="582.00" class="grid"/>
+<text x="56" y="586.00">0</text>
+<line x1="80" y1="510.29" x2="1240" y2="510.29" class="grid"/>
+<text x="56" y="514.29">1</text>
+<line x1="80" y1="438.57" x2="1240" y2="438.57" class="grid"/>
+<text x="56" y="442.57">2</text>
+<line x1="80" y1="366.86" x2="1240" y2="366.86" class="grid"/>
+<text x="56" y="370.86">3</text>
+<line x1="80" y1="295.14" x2="1240" y2="295.14" class="grid"/>
+<text x="56" y="299.14">4</text>
+<line x1="80" y1="223.43" x2="1240" y2="223.43" class="grid"/>
+<text x="56" y="227.43">5</text>
+<line x1="80" y1="151.71" x2="1240" y2="151.71" class="grid"/>
+<text x="56" y="155.71">6</text>
+<line x1="80" y1="80.00" x2="1240" y2="80.00" class="grid"/>
+<text x="56" y="84.00">7</text>
+<line x1="80" y1="600" x2="1240" y2="600" class="axis"/>
+<line x1="80" y1="62" x2="80" y2="600" class="axis"/>
+<rect x="98.00" y="151.71" width="18.41" height="448.29" fill="#c44536"/>
+<rect x="124.41" y="366.86" width="18.41" height="233.14" fill="#22577a"/>
+<rect x="150.83" y="510.29" width="18.41" height="89.71" fill="#0b6e4f"/>
+<text x="92.00" y="618">Binary</text>
+<text x="92.00" y="632">(3,2)</text>
+<rect x="226.89" y="582.00" width="18.41" height="18.00" fill="#c44536"/>
+<rect x="253.30" y="438.57" width="18.41" height="161.43" fill="#22577a"/>
+<rect x="279.71" y="510.29" width="18.41" height="89.71" fill="#0b6e4f"/>
+<text x="220.89" y="618">Additive</text>
+<text x="220.89" y="632">(3,2)</text>
+<rect x="355.78" y="151.71" width="18.41" height="448.29" fill="#c44536"/>
+<rect x="382.19" y="366.86" width="18.41" height="233.14" fill="#22577a"/>
+<rect x="408.60" y="510.29" width="18.41" height="89.71" fill="#0b6e4f"/>
+<text x="349.78" y="618">Capped</text>
+<text x="349.78" y="632">(3,2)</text>
+<rect x="484.67" y="582.00" width="18.41" height="18.00" fill="#c44536"/>
+<rect x="511.08" y="438.57" width="18.41" height="161.43" fill="#22577a"/>
+<rect x="537.49" y="510.29" width="18.41" height="89.71" fill="#0b6e4f"/>
+<text x="478.67" y="618">Weights</text>
+<text x="478.67" y="632">(3,2)</text>
+<rect x="613.56" y="582.00" width="18.41" height="18.00" fill="#c44536"/>
+<rect x="639.97" y="295.14" width="18.41" height="304.86" fill="#22577a"/>
+<rect x="666.38" y="510.29" width="18.41" height="89.71" fill="#0b6e4f"/>
+<text x="607.56" y="618">Family Priority</text>
+<text x="607.56" y="632">(3,2)</text>
+<rect x="742.44" y="582.00" width="18.41" height="18.00" fill="#c44536"/>
+<rect x="768.86" y="582.00" width="18.41" height="18.00" fill="#22577a"/>
+<rect x="795.27" y="582.00" width="18.41" height="18.00" fill="#0b6e4f"/>
+<text x="736.44" y="618">Order</text>
+<text x="736.44" y="632">inexact</text>
+<rect x="871.33" y="151.71" width="18.41" height="448.29" fill="#c44536"/>
+<rect x="897.75" y="366.86" width="18.41" height="233.14" fill="#22577a"/>
+<rect x="924.16" y="510.29" width="18.41" height="89.71" fill="#0b6e4f"/>
+<text x="865.33" y="618">Multilevel</text>
+<text x="865.33" y="632">(3,2)</text>
+<rect x="1000.22" y="151.71" width="18.41" height="448.29" fill="#c44536"/>
+<rect x="1026.63" y="366.86" width="18.41" height="233.14" fill="#22577a"/>
+<rect x="1053.05" y="510.29" width="18.41" height="89.71" fill="#0b6e4f"/>
+<text x="994.22" y="618">Bonus</text>
+<text x="994.22" y="632">(3,2)</text>
+<rect x="1129.11" y="151.71" width="18.41" height="448.29" fill="#c44536"/>
+<rect x="1155.52" y="366.86" width="18.41" height="233.14" fill="#22577a"/>
+<rect x="1181.94" y="366.86" width="18.41" height="233.14" fill="#0b6e4f"/>
+<text x="1123.11" y="618">Exclusion</text>
+<text x="1123.11" y="632">(3,2)</text>
+<rect x="1090" y="74" width="8" height="8" fill="#c44536"/>
+<text x="1104" y="82">answer</text>
+<rect x="1090" y="90" width="8" height="8" fill="#22577a"/>
+<text x="1104" y="98">variable</text>
+<rect x="1090" y="106" width="8" height="8" fill="#0b6e4f"/>
+<text x="1104" y="114">family</text>
+</svg>

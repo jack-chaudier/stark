@@ -1,1 +1,465 @@
-../../exact_pareto_frontier.json
+{
+  "models": [
+    {
+      "label": "M_3",
+      "scope": "canonical_row_aggregated",
+      "state_count": 5,
+      "answer_threshold_bits": 2.321928094887362,
+      "joint_threshold_bits": 3.807354922057604,
+      "summaries": {
+        "forced": [
+          {
+            "budget_bits": 0,
+            "bucket_limit": 1,
+            "frontier_size": 1,
+            "best_answer": 0.7806122448979592,
+            "best_witness": 0.7806122448979592,
+            "witness_at_perfect_answer": null,
+            "answer_at_perfect_witness": null
+          },
+          {
+            "budget_bits": 1,
+            "bucket_limit": 2,
+            "frontier_size": 1,
+            "best_answer": 0.8979591836734694,
+            "best_witness": 0.8979591836734694,
+            "witness_at_perfect_answer": null,
+            "answer_at_perfect_witness": null
+          },
+          {
+            "budget_bits": 2,
+            "bucket_limit": 4,
+            "frontier_size": 1,
+            "best_answer": 0.9795918367346939,
+            "best_witness": 0.9795918367346939,
+            "witness_at_perfect_answer": null,
+            "answer_at_perfect_witness": null
+          },
+          {
+            "budget_bits": 3,
+            "bucket_limit": 5,
+            "frontier_size": 1,
+            "best_answer": 1.0,
+            "best_witness": 1.0,
+            "witness_at_perfect_answer": 1.0,
+            "answer_at_perfect_witness": 1.0
+          }
+        ],
+        "breach": [
+          {
+            "budget_bits": 0,
+            "bucket_limit": 1,
+            "frontier_size": 1,
+            "best_answer": 0.07142857142857142,
+            "best_witness": 0.07142857142857142,
+            "witness_at_perfect_answer": null,
+            "answer_at_perfect_witness": null
+          },
+          {
+            "budget_bits": 1,
+            "bucket_limit": 2,
+            "frontier_size": 1,
+            "best_answer": 0.6683673469387755,
+            "best_witness": 0.6683673469387755,
+            "witness_at_perfect_answer": null,
+            "answer_at_perfect_witness": null
+          },
+          {
+            "budget_bits": 2,
+            "bucket_limit": 4,
+            "frontier_size": 1,
+            "best_answer": 0.9489795918367347,
+            "best_witness": 0.9489795918367347,
+            "witness_at_perfect_answer": null,
+            "answer_at_perfect_witness": null
+          },
+          {
+            "budget_bits": 3,
+            "bucket_limit": 5,
+            "frontier_size": 1,
+            "best_answer": 1.0,
+            "best_witness": 1.0,
+            "witness_at_perfect_answer": 1.0,
+            "answer_at_perfect_witness": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "label": "Q_(3,2)",
+      "scope": "probe_joint",
+      "state_count": 7,
+      "answer_threshold_bits": 2.321928094887362,
+      "joint_threshold_bits": 2.807354922057604,
+      "summaries": {
+        "forced": [
+          {
+            "budget_bits": 0,
+            "bucket_limit": 1,
+            "frontier_size": 1,
+            "best_answer": 0.7986968449931413,
+            "best_witness": 0.6697530864197531,
+            "witness_at_perfect_answer": null,
+            "answer_at_perfect_witness": null
+          },
+          {
+            "budget_bits": 1,
+            "bucket_limit": 2,
+            "frontier_size": 2,
+            "best_answer": 0.9026063100137174,
+            "best_witness": 0.843278463648834,
+            "witness_at_perfect_answer": null,
+            "answer_at_perfect_witness": null
+          },
+          {
+            "budget_bits": 2,
+            "bucket_limit": 4,
+            "frontier_size": 2,
+            "best_answer": 0.9876543209876543,
+            "best_witness": 0.9540466392318244,
+            "witness_at_perfect_answer": null,
+            "answer_at_perfect_witness": null
+          },
+          {
+            "budget_bits": 3,
+            "bucket_limit": 7,
+            "frontier_size": 1,
+            "best_answer": 1.0,
+            "best_witness": 1.0,
+            "witness_at_perfect_answer": 1.0,
+            "answer_at_perfect_witness": 1.0
+          }
+        ],
+        "breach": [
+          {
+            "budget_bits": 0,
+            "bucket_limit": 1,
+            "frontier_size": 1,
+            "best_answer": 0.018518518518518517,
+            "best_witness": 0.018518518518518517,
+            "witness_at_perfect_answer": null,
+            "answer_at_perfect_witness": null
+          },
+          {
+            "budget_bits": 1,
+            "bucket_limit": 2,
+            "frontier_size": 1,
+            "best_answer": 0.4660493827160494,
+            "best_witness": 0.4660493827160494,
+            "witness_at_perfect_answer": null,
+            "answer_at_perfect_witness": null
+          },
+          {
+            "budget_bits": 2,
+            "bucket_limit": 4,
+            "frontier_size": 1,
+            "best_answer": 0.8545953360768176,
+            "best_witness": 0.8545953360768176,
+            "witness_at_perfect_answer": null,
+            "answer_at_perfect_witness": null
+          },
+          {
+            "budget_bits": 3,
+            "bucket_limit": 7,
+            "frontier_size": 1,
+            "best_answer": 1.0,
+            "best_witness": 1.0,
+            "witness_at_perfect_answer": 1.0,
+            "answer_at_perfect_witness": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "label": "Q_(4,2)",
+      "scope": "probe_joint",
+      "state_count": 8,
+      "answer_threshold_bits": 2.584962500721156,
+      "joint_threshold_bits": 3.0,
+      "summaries": {
+        "forced": [
+          {
+            "budget_bits": 0,
+            "bucket_limit": 1,
+            "frontier_size": 1,
+            "best_answer": 0.8123456790123457,
+            "best_witness": 0.6795061728395062,
+            "witness_at_perfect_answer": null,
+            "answer_at_perfect_witness": null
+          },
+          {
+            "budget_bits": 1,
+            "bucket_limit": 2,
+            "frontier_size": 2,
+            "best_answer": 0.904320987654321,
+            "best_witness": 0.8276543209876543,
+            "witness_at_perfect_answer": null,
+            "answer_at_perfect_witness": null
+          },
+          {
+            "budget_bits": 2,
+            "bucket_limit": 4,
+            "frontier_size": 1,
+            "best_answer": 0.984320987654321,
+            "best_witness": 0.9611111111111111,
+            "witness_at_perfect_answer": null,
+            "answer_at_perfect_witness": null
+          },
+          {
+            "budget_bits": 3,
+            "bucket_limit": 8,
+            "frontier_size": 1,
+            "best_answer": 1.0,
+            "best_witness": 1.0,
+            "witness_at_perfect_answer": 1.0,
+            "answer_at_perfect_witness": 1.0
+          }
+        ],
+        "breach": [
+          {
+            "budget_bits": 0,
+            "bucket_limit": 1,
+            "frontier_size": 1,
+            "best_answer": 0.011111111111111112,
+            "best_witness": 0.011111111111111112,
+            "witness_at_perfect_answer": null,
+            "answer_at_perfect_witness": null
+          },
+          {
+            "budget_bits": 1,
+            "bucket_limit": 2,
+            "frontier_size": 1,
+            "best_answer": 0.4111111111111111,
+            "best_witness": 0.4111111111111111,
+            "witness_at_perfect_answer": null,
+            "answer_at_perfect_witness": null
+          },
+          {
+            "budget_bits": 2,
+            "bucket_limit": 4,
+            "frontier_size": 1,
+            "best_answer": 0.8123456790123457,
+            "best_witness": 0.8123456790123457,
+            "witness_at_perfect_answer": null,
+            "answer_at_perfect_witness": null
+          },
+          {
+            "budget_bits": 3,
+            "bucket_limit": 8,
+            "frontier_size": 1,
+            "best_answer": 1.0,
+            "best_witness": 1.0,
+            "witness_at_perfect_answer": 1.0,
+            "answer_at_perfect_witness": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "label": "Q_(5,3)",
+      "scope": "probe_joint",
+      "state_count": 13,
+      "answer_threshold_bits": 2.807354922057604,
+      "joint_threshold_bits": 3.700439718141092,
+      "summaries": {
+        "forced": [
+          {
+            "budget_bits": 0,
+            "bucket_limit": 1,
+            "frontier_size": 1,
+            "best_answer": 0.9038296234315083,
+            "best_witness": 0.6468163676073131,
+            "witness_at_perfect_answer": null,
+            "answer_at_perfect_witness": null
+          },
+          {
+            "budget_bits": 1,
+            "bucket_limit": 2,
+            "frontier_size": 2,
+            "best_answer": 0.9472393078329574,
+            "best_witness": 0.8056676926188531,
+            "witness_at_perfect_answer": null,
+            "answer_at_perfect_witness": null
+          },
+          {
+            "budget_bits": 2,
+            "bucket_limit": 4,
+            "frontier_size": 1,
+            "best_answer": 0.9859351578645189,
+            "best_witness": 0.9496761481611968,
+            "witness_at_perfect_answer": null,
+            "answer_at_perfect_witness": null
+          },
+          {
+            "budget_bits": 3,
+            "bucket_limit": 8,
+            "frontier_size": 3,
+            "best_answer": 1.0,
+            "best_witness": 0.9926650127469259,
+            "witness_at_perfect_answer": 0.9820156616739169,
+            "answer_at_perfect_witness": null
+          },
+          {
+            "budget_bits": 4,
+            "bucket_limit": 13,
+            "frontier_size": 1,
+            "best_answer": 1.0,
+            "best_witness": 1.0,
+            "witness_at_perfect_answer": 1.0,
+            "answer_at_perfect_witness": 1.0
+          }
+        ],
+        "breach": [
+          {
+            "budget_bits": 0,
+            "bucket_limit": 1,
+            "frontier_size": 1,
+            "best_answer": 0.001277139208173691,
+            "best_witness": 0.001277139208173691,
+            "witness_at_perfect_answer": null,
+            "answer_at_perfect_witness": null
+          },
+          {
+            "budget_bits": 1,
+            "bucket_limit": 2,
+            "frontier_size": 1,
+            "best_answer": 0.31131369181309726,
+            "best_witness": 0.31131369181309726,
+            "witness_at_perfect_answer": null,
+            "answer_at_perfect_witness": null
+          },
+          {
+            "budget_bits": 2,
+            "bucket_limit": 4,
+            "frontier_size": 1,
+            "best_answer": 0.7390672479852028,
+            "best_witness": 0.7390672479852028,
+            "witness_at_perfect_answer": null,
+            "answer_at_perfect_witness": null
+          },
+          {
+            "budget_bits": 3,
+            "bucket_limit": 8,
+            "frontier_size": 1,
+            "best_answer": 0.9579718442183761,
+            "best_witness": 0.9579718442183761,
+            "witness_at_perfect_answer": null,
+            "answer_at_perfect_witness": null
+          },
+          {
+            "budget_bits": 4,
+            "bucket_limit": 13,
+            "frontier_size": 1,
+            "best_answer": 1.0,
+            "best_witness": 1.0,
+            "witness_at_perfect_answer": 1.0,
+            "answer_at_perfect_witness": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "label": "causal_referee",
+      "scope": "empirical_support",
+      "state_count": 15,
+      "answer_threshold_bits": 2.0,
+      "joint_threshold_bits": 3.9068905956085187,
+      "summaries": {
+        "forced": [
+          {
+            "budget_bits": 0,
+            "bucket_limit": 1,
+            "frontier_size": 1,
+            "best_answer": 0.8107088060386826,
+            "best_witness": 0.5320469028233529,
+            "witness_at_perfect_answer": null,
+            "answer_at_perfect_witness": null
+          },
+          {
+            "budget_bits": 1,
+            "bucket_limit": 2,
+            "frontier_size": 2,
+            "best_answer": 0.9807371403612906,
+            "best_witness": 0.7357180454917069,
+            "witness_at_perfect_answer": null,
+            "answer_at_perfect_witness": null
+          },
+          {
+            "budget_bits": 2,
+            "bucket_limit": 4,
+            "frontier_size": 3,
+            "best_answer": 1.0,
+            "best_witness": 0.8941214680090939,
+            "witness_at_perfect_answer": 0.6408372624340639,
+            "answer_at_perfect_witness": null
+          },
+          {
+            "budget_bits": 3,
+            "bucket_limit": 8,
+            "frontier_size": 2,
+            "best_answer": 1.0,
+            "best_witness": 0.9763022029095878,
+            "witness_at_perfect_answer": 0.9644533043643816,
+            "answer_at_perfect_witness": null
+          },
+          {
+            "budget_bits": 4,
+            "bucket_limit": 15,
+            "frontier_size": 1,
+            "best_answer": 1.0,
+            "best_witness": 1.0,
+            "witness_at_perfect_answer": 1.0,
+            "answer_at_perfect_witness": 1.0
+          }
+        ],
+        "breach": [
+          {
+            "budget_bits": 0,
+            "bucket_limit": 1,
+            "frontier_size": 1,
+            "best_answer": 0.0,
+            "best_witness": 0.0,
+            "witness_at_perfect_answer": null,
+            "answer_at_perfect_witness": null
+          },
+          {
+            "budget_bits": 1,
+            "bucket_limit": 2,
+            "frontier_size": 1,
+            "best_answer": 0.5320469028233529,
+            "best_witness": 0.5320469028233529,
+            "witness_at_perfect_answer": null,
+            "answer_at_perfect_witness": null
+          },
+          {
+            "budget_bits": 2,
+            "bucket_limit": 4,
+            "frontier_size": 1,
+            "best_answer": 0.8316963635752763,
+            "best_witness": 0.8316963635752763,
+            "witness_at_perfect_answer": null,
+            "answer_at_perfect_witness": null
+          },
+          {
+            "budget_bits": 3,
+            "bucket_limit": 8,
+            "frontier_size": 1,
+            "best_answer": 0.9642069189503981,
+            "best_witness": 0.9642069189503981,
+            "witness_at_perfect_answer": null,
+            "answer_at_perfect_witness": null
+          },
+          {
+            "budget_bits": 4,
+            "bucket_limit": 15,
+            "frontier_size": 1,
+            "best_answer": 1.0,
+            "best_witness": 1.0,
+            "witness_at_perfect_answer": 1.0,
+            "answer_at_perfect_witness": 1.0
+          }
+        ]
+      }
+    }
+  ]
+}

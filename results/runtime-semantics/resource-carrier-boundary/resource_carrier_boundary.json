@@ -1,1 +1,577 @@
-../../resource_carrier_boundary.json
+{
+  "scan": {
+    "p_scan": [
+      2,
+      3,
+      4
+    ],
+    "k_max": 3,
+    "family_count": 124,
+    "smallest_counterexample": {
+      "p": 3,
+      "k": 2,
+      "family": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "overlap": true,
+      "raw_state_count": 12,
+      "raw_bits": 3.584962500721156,
+      "answer_row_count": 11,
+      "answer_bits": 3.4594316186372973,
+      "variable_row_count": 8,
+      "variable_bits": 3.0,
+      "family_row_count": 11,
+      "family_bits": 3.4594316186372973,
+      "family_gap_bits": 0.4594316186372973,
+      "candidate_exactness": {
+        "domain_only": {
+          "summary_count": 8,
+          "mixed_classes": 3,
+          "exact": false
+        },
+        "domain_size": {
+          "summary_count": 4,
+          "mixed_classes": 2,
+          "exact": false
+        },
+        "edge_load_vector": {
+          "summary_count": 8,
+          "mixed_classes": 3,
+          "exact": false
+        },
+        "edge_load_multiset": {
+          "summary_count": 5,
+          "mixed_classes": 3,
+          "exact": false
+        },
+        "residual_profile": {
+          "summary_count": 7,
+          "mixed_classes": 3,
+          "exact": false
+        },
+        "full_assignment": {
+          "summary_count": 12,
+          "mixed_classes": 0,
+          "exact": true
+        }
+      },
+      "counterexample": {
+        "shared_domain": [
+          1
+        ],
+        "left_state": "{1->(1, 2)}",
+        "alternate_state": "{1->(1, 3)}",
+        "future_segment": "{3->(1, 3)}",
+        "left_future_family": [
+          [
+            2
+          ]
+        ],
+        "alternate_future_family": [
+          []
+        ]
+      }
+    },
+    "group_summaries": [
+      {
+        "p": 2,
+        "k": 1,
+        "family_count": 1,
+        "overlap_family_count": 0,
+        "family_gap_count": 0,
+        "variable_rows_equal_2_to_p": true,
+        "family_gap_iff_overlap": true,
+        "min_family_bits": 2.0,
+        "max_family_bits": 2.0,
+        "max_gap_bits": 0.0,
+        "max_gap_family": [
+          [
+            1
+          ],
+          [
+            2
+          ]
+        ]
+      },
+      {
+        "p": 2,
+        "k": 2,
+        "family_count": 1,
+        "overlap_family_count": 0,
+        "family_gap_count": 0,
+        "variable_rows_equal_2_to_p": true,
+        "family_gap_iff_overlap": true,
+        "min_family_bits": 2.0,
+        "max_family_bits": 2.0,
+        "max_gap_bits": 0.0,
+        "max_gap_family": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "p": 3,
+        "k": 1,
+        "family_count": 1,
+        "overlap_family_count": 0,
+        "family_gap_count": 0,
+        "variable_rows_equal_2_to_p": true,
+        "family_gap_iff_overlap": true,
+        "min_family_bits": 3.0,
+        "max_family_bits": 3.0,
+        "max_gap_bits": 0.0,
+        "max_gap_family": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ]
+        ]
+      },
+      {
+        "p": 3,
+        "k": 2,
+        "family_count": 7,
+        "overlap_family_count": 4,
+        "family_gap_count": 4,
+        "variable_rows_equal_2_to_p": true,
+        "family_gap_iff_overlap": true,
+        "min_family_bits": 3.0,
+        "max_family_bits": 4.392317422778761,
+        "max_gap_bits": 1.3923174227787607,
+        "max_gap_family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      {
+        "p": 3,
+        "k": 3,
+        "family_count": 1,
+        "overlap_family_count": 0,
+        "family_gap_count": 0,
+        "variable_rows_equal_2_to_p": true,
+        "family_gap_iff_overlap": true,
+        "min_family_bits": 3.0,
+        "max_family_bits": 3.0,
+        "max_gap_bits": 0.0,
+        "max_gap_family": [
+          [
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      {
+        "p": 4,
+        "k": 1,
+        "family_count": 1,
+        "overlap_family_count": 0,
+        "family_gap_count": 0,
+        "variable_rows_equal_2_to_p": true,
+        "family_gap_iff_overlap": true,
+        "min_family_bits": 4.0,
+        "max_family_bits": 4.0,
+        "max_gap_bits": 0.0,
+        "max_gap_family": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      {
+        "p": 4,
+        "k": 2,
+        "family_count": 63,
+        "overlap_family_count": 54,
+        "family_gap_count": 54,
+        "variable_rows_equal_2_to_p": true,
+        "family_gap_iff_overlap": true,
+        "min_family_bits": 4.0,
+        "max_family_bits": 6.882643049361842,
+        "max_gap_bits": 2.8826430493618416,
+        "max_gap_family": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      {
+        "p": 4,
+        "k": 3,
+        "family_count": 49,
+        "overlap_family_count": 45,
+        "family_gap_count": 45,
+        "variable_rows_equal_2_to_p": true,
+        "family_gap_iff_overlap": true,
+        "min_family_bits": 4.0,
+        "max_family_bits": 6.149747119504682,
+        "max_gap_bits": 2.1497471195046822,
+        "max_gap_family": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            4
+          ],
+          [
+            1,
+            3,
+            4
+          ],
+          [
+            2,
+            3,
+            4
+          ]
+        ]
+      }
+    ]
+  },
+  "representatives": {
+    "disjoint_pair": {
+      "p": 3,
+      "k": 2,
+      "family": [
+        [
+          1,
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "overlap": false,
+      "raw_state_count": 8,
+      "raw_bits": 3.0,
+      "answer_row_count": 8,
+      "answer_bits": 3.0,
+      "variable_row_count": 8,
+      "variable_bits": 3.0,
+      "family_row_count": 8,
+      "family_bits": 3.0,
+      "family_gap_bits": 0.0,
+      "candidate_exactness": {
+        "domain_only": {
+          "summary_count": 8,
+          "mixed_classes": 0,
+          "exact": true
+        },
+        "domain_size": {
+          "summary_count": 4,
+          "mixed_classes": 2,
+          "exact": false
+        },
+        "edge_load_vector": {
+          "summary_count": 6,
+          "mixed_classes": 2,
+          "exact": false
+        },
+        "edge_load_multiset": {
+          "summary_count": 5,
+          "mixed_classes": 2,
+          "exact": false
+        },
+        "residual_profile": {
+          "summary_count": 8,
+          "mixed_classes": 0,
+          "exact": true
+        },
+        "full_assignment": {
+          "summary_count": 8,
+          "mixed_classes": 0,
+          "exact": true
+        }
+      },
+      "counterexample": null
+    },
+    "overlap_path": {
+      "p": 3,
+      "k": 2,
+      "family": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "overlap": true,
+      "raw_state_count": 12,
+      "raw_bits": 3.584962500721156,
+      "answer_row_count": 11,
+      "answer_bits": 3.4594316186372973,
+      "variable_row_count": 8,
+      "variable_bits": 3.0,
+      "family_row_count": 11,
+      "family_bits": 3.4594316186372973,
+      "family_gap_bits": 0.4594316186372973,
+      "candidate_exactness": {
+        "domain_only": {
+          "summary_count": 8,
+          "mixed_classes": 3,
+          "exact": false
+        },
+        "domain_size": {
+          "summary_count": 4,
+          "mixed_classes": 2,
+          "exact": false
+        },
+        "edge_load_vector": {
+          "summary_count": 8,
+          "mixed_classes": 3,
+          "exact": false
+        },
+        "edge_load_multiset": {
+          "summary_count": 5,
+          "mixed_classes": 3,
+          "exact": false
+        },
+        "residual_profile": {
+          "summary_count": 7,
+          "mixed_classes": 3,
+          "exact": false
+        },
+        "full_assignment": {
+          "summary_count": 12,
+          "mixed_classes": 0,
+          "exact": true
+        }
+      },
+      "counterexample": {
+        "shared_domain": [
+          1
+        ],
+        "left_state": "{1->(1, 2)}",
+        "alternate_state": "{1->(1, 3)}",
+        "future_segment": "{3->(1, 3)}",
+        "left_future_family": [
+          [
+            2
+          ]
+        ],
+        "alternate_future_family": [
+          []
+        ]
+      }
+    },
+    "triangle": {
+      "p": 3,
+      "k": 2,
+      "family": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "overlap": true,
+      "raw_state_count": 27,
+      "raw_bits": 4.754887502163468,
+      "answer_row_count": 21,
+      "answer_bits": 4.392317422778761,
+      "variable_row_count": 8,
+      "variable_bits": 3.0,
+      "family_row_count": 21,
+      "family_bits": 4.392317422778761,
+      "family_gap_bits": 1.3923174227787607,
+      "candidate_exactness": {
+        "domain_only": {
+          "summary_count": 8,
+          "mixed_classes": 7,
+          "exact": false
+        },
+        "domain_size": {
+          "summary_count": 4,
+          "mixed_classes": 3,
+          "exact": false
+        },
+        "edge_load_vector": {
+          "summary_count": 17,
+          "mixed_classes": 6,
+          "exact": false
+        },
+        "edge_load_multiset": {
+          "summary_count": 6,
+          "mixed_classes": 3,
+          "exact": false
+        },
+        "residual_profile": {
+          "summary_count": 15,
+          "mixed_classes": 4,
+          "exact": false
+        },
+        "full_assignment": {
+          "summary_count": 27,
+          "mixed_classes": 0,
+          "exact": true
+        }
+      },
+      "counterexample": {
+        "shared_domain": [
+          1
+        ],
+        "left_state": "{1->(1, 2)}",
+        "alternate_state": "{1->(1, 3)}",
+        "future_segment": "{3->(1, 3)}",
+        "left_future_family": [
+          [
+            2
+          ]
+        ],
+        "alternate_future_family": [
+          []
+        ]
+      }
+    },
+    "overlap_star": {
+      "p": 4,
+      "k": 2,
+      "family": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "overlap": true,
+      "raw_state_count": 32,
+      "raw_bits": 5.0,
+      "answer_row_count": 27,
+      "answer_bits": 4.754887502163468,
+      "variable_row_count": 16,
+      "variable_bits": 4.0,
+      "family_row_count": 27,
+      "family_bits": 4.754887502163468,
+      "family_gap_bits": 0.7548875021634682,
+      "candidate_exactness": {
+        "domain_only": {
+          "summary_count": 16,
+          "mixed_classes": 7,
+          "exact": false
+        },
+        "domain_size": {
+          "summary_count": 5,
+          "mixed_classes": 3,
+          "exact": false
+        },
+        "edge_load_vector": {
+          "summary_count": 20,
+          "mixed_classes": 7,
+          "exact": false
+        },
+        "edge_load_multiset": {
+          "summary_count": 7,
+          "mixed_classes": 5,
+          "exact": false
+        },
+        "residual_profile": {
+          "summary_count": 12,
+          "mixed_classes": 4,
+          "exact": false
+        },
+        "full_assignment": {
+          "summary_count": 32,
+          "mixed_classes": 0,
+          "exact": true
+        }
+      },
+      "counterexample": {
+        "shared_domain": [
+          1
+        ],
+        "left_state": "{1->(1, 2)}",
+        "alternate_state": "{1->(1, 3)}",
+        "future_segment": "{4->(1, 4)}",
+        "left_future_family": [
+          [
+            2
+          ]
+        ],
+        "alternate_future_family": [
+          [
+            3
+          ]
+        ]
+      }
+    }
+  },
+  "observed_laws": {
+    "variable_rows_equal_2_to_p_on_scan": true,
+    "family_gap_iff_overlap_on_scan": true
+  }
+}

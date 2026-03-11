@@ -1,1 +1,80 @@
-../../semantic_runtime_thresholds.svg
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<style>
+text { font-family: Menlo, Monaco, Consolas, monospace; font-size: 11px; fill: #1f2933; }
+.title { font-size: 15px; font-weight: 700; }
+.panel { fill: #ffffff; stroke: #d9e2ec; stroke-width: 1; }
+.grid { stroke: #d9e2ec; stroke-width: 1; stroke-dasharray: 4 4; }
+.axis { stroke: #9fb3c8; stroke-width: 1; }
+</style>
+<rect x="0" y="0" width="1280" height="720" fill="#fbfbfd"/>
+<text x="80" y="26" class="title">Runtime Threshold Comparisons Across Enrichments</text>
+<text x="80" y="44">Bars show answer / variable / family bits on the first family-gap world, or the first break when no family-gap world appears on the scan.</text>
+<rect x="80" y="62" width="1160" height="558" class="panel"/>
+<line x1="80" y1="602.00" x2="1240" y2="602.00" class="grid"/>
+<text x="56" y="606.00">0</text>
+<line x1="80" y1="509.74" x2="1240" y2="509.74" class="grid"/>
+<text x="56" y="513.74">1</text>
+<line x1="80" y1="417.48" x2="1240" y2="417.48" class="grid"/>
+<text x="56" y="421.48">2</text>
+<line x1="80" y1="325.22" x2="1240" y2="325.22" class="grid"/>
+<text x="56" y="329.22">3</text>
+<line x1="80" y1="232.96" x2="1240" y2="232.96" class="grid"/>
+<text x="56" y="236.96">4</text>
+<line x1="80" y1="140.70" x2="1240" y2="140.70" class="grid"/>
+<text x="56" y="144.70">5</text>
+<line x1="80" y1="48.45" x2="1240" y2="48.45" class="grid"/>
+<text x="56" y="52.45">6</text>
+<line x1="80" y1="620" x2="1240" y2="620" class="axis"/>
+<line x1="80" y1="62" x2="80" y2="620" class="axis"/>
+<rect x="98.00" y="363.51" width="18.41" height="256.49" fill="#c44536"/>
+<rect x="124.41" y="295.52" width="18.41" height="324.48" fill="#22577a"/>
+<rect x="150.83" y="295.52" width="18.41" height="324.48" fill="#0b6e4f"/>
+<text x="92.00" y="638">Binary</text>
+<text x="92.00" y="652">(p=3,k=2)</text>
+<rect x="226.89" y="387.78" width="18.41" height="232.22" fill="#c44536"/>
+<rect x="253.30" y="295.52" width="18.41" height="324.48" fill="#22577a"/>
+<rect x="279.71" y="282.84" width="18.41" height="337.16" fill="#0b6e4f"/>
+<text x="220.89" y="638">Additive</text>
+<text x="220.89" y="652">(p=3,k=2)</text>
+<rect x="355.78" y="309.55" width="18.41" height="310.45" fill="#c44536"/>
+<rect x="382.19" y="363.51" width="18.41" height="256.49" fill="#22577a"/>
+<rect x="408.60" y="309.55" width="18.41" height="310.45" fill="#0b6e4f"/>
+<text x="349.78" y="638">Capped</text>
+<text x="349.78" y="652">(p=2,k=2)</text>
+<rect x="484.67" y="343.00" width="18.41" height="277.00" fill="#c44536"/>
+<rect x="511.08" y="295.52" width="18.41" height="324.48" fill="#22577a"/>
+<rect x="537.49" y="282.84" width="18.41" height="337.16" fill="#0b6e4f"/>
+<text x="478.67" y="638">Weights</text>
+<text x="478.67" y="652">(p=3,k=2)</text>
+<rect x="613.56" y="387.78" width="18.41" height="232.22" fill="#c44536"/>
+<rect x="639.97" y="295.52" width="18.41" height="324.48" fill="#22577a"/>
+<rect x="666.38" y="271.25" width="18.41" height="348.75" fill="#0b6e4f"/>
+<text x="607.56" y="638">Family Priority</text>
+<text x="607.56" y="652">(p=3,k=2)</text>
+<rect x="742.44" y="309.55" width="18.41" height="310.45" fill="#c44536"/>
+<rect x="768.86" y="363.51" width="18.41" height="256.49" fill="#22577a"/>
+<rect x="795.27" y="309.55" width="18.41" height="310.45" fill="#0b6e4f"/>
+<text x="736.44" y="638">Order</text>
+<text x="736.44" y="652">(p=2,k=2)</text>
+<rect x="871.33" y="260.60" width="18.41" height="359.40" fill="#c44536"/>
+<rect x="897.75" y="363.51" width="18.41" height="256.49" fill="#22577a"/>
+<rect x="924.16" y="260.60" width="18.41" height="359.40" fill="#0b6e4f"/>
+<text x="865.33" y="638">Multilevel</text>
+<text x="865.33" y="652">(p=2,k=2)</text>
+<rect x="1000.22" y="196.77" width="18.41" height="423.23" fill="#c44536"/>
+<rect x="1026.63" y="295.52" width="18.41" height="324.48" fill="#22577a"/>
+<rect x="1053.05" y="153.81" width="18.41" height="466.19" fill="#0b6e4f"/>
+<text x="994.22" y="638">Bonus</text>
+<text x="994.22" y="652">(p=3,k=2)</text>
+<rect x="1129.11" y="224.89" width="18.41" height="395.11" fill="#c44536"/>
+<rect x="1155.52" y="295.52" width="18.41" height="324.48" fill="#22577a"/>
+<rect x="1181.94" y="224.89" width="18.41" height="395.11" fill="#0b6e4f"/>
+<text x="1123.11" y="638">Exclusion</text>
+<text x="1123.11" y="652">(p=3,k=2)</text>
+<rect x="1090" y="74" width="8" height="8" fill="#c44536"/>
+<text x="1104" y="82">answer</text>
+<rect x="1090" y="90" width="8" height="8" fill="#22577a"/>
+<text x="1104" y="98">variable</text>
+<rect x="1090" y="106" width="8" height="8" fill="#0b6e4f"/>
+<text x="1104" y="114">family</text>
+</svg>

@@ -1,1 +1,19 @@
-../../causal_contract_counterexamples.txt
+Example 1: bare L2 collision
+  confounded minimal adjustment sets: [('C',)]
+  clean minimal adjustment sets:      [()]
+  confounded bare L2:                W=['100', '100'], d_total=1
+  clean bare L2:                     W=['100', '100'], d_total=1
+  same bare L2 summary?              True
+  same causal answer?                False
+
+Example 2: over-recovery pressure in a mixed prefix
+  mixed minimal adjustment sets:     [('C',)]
+  pre-pivot non-focal prefix:        ['C', 'U']
+  bare L2 can see the count 2, but not which predecessor is the confounder.
+
+Example 3: witness quotient counts
+  |Q_(3,1)| = 14 (matches |M_3| = 14)
+  |Q_(2,2)| = 29
+  |Q_(2,2)^sym| = 19
+
+All checks passed.
