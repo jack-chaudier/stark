@@ -30,31 +30,31 @@ These five figures capture the program's geometry. Each is self-contained.
 
 How finite probes decompose memory into layers. The gap between "algebraic" and "joint" is structure invisible to probes. The gap between "joint" and "answer" is the mirage shelf — where answers survive but reasons don't.
 
-![Memory stratigraphy](results/quotient-thresholds/separator-closure-experiment/memory_stratigraphy.svg)
+![Memory stratigraphy](https://raw.githubusercontent.com/jack-chaudier/stark/main/results/quotient-thresholds/separator-closure-experiment/memory_stratigraphy.svg)
 
 ### 2. Exact Pareto Frontier
 
 The answer/witness trade-off under budget pressure. Solid lines = answer fidelity, dashed = witness fidelity. When solid rises above dashed, the system "knows" but can't justify. With abstention (right panel), the mirage vanishes.
 
-![Exact Pareto frontier](results/quotient-thresholds/exact-pareto-frontier/exact_pareto_frontier.svg)
+![Exact Pareto frontier](https://raw.githubusercontent.com/jack-chaudier/stark/main/results/quotient-thresholds/exact-pareto-frontier/exact_pareto_frontier.svg)
 
 ### 3. Runtime Collapse Boundary
 
 Even when the contract layer is complex (hypergraph-valued), runtime memory stays simple — just depth and completed variables. 6,336 configurations tested, zero collapses. The first break requires changing the _carrier semantics_, not the combinatorics.
 
-![Runtime-collapse boundary](results/family-runtime/runtime-collapse-boundary/runtime_collapse_boundary.svg)
+![Runtime-collapse boundary](https://raw.githubusercontent.com/jack-chaudier/stark/main/results/family-runtime/runtime-collapse-boundary/runtime_collapse_boundary.svg)
 
 ### 4. Pair vs Simplex Holonomy
 
 Where pairwise variable tracking breaks. The triangle family at (p=3, k=2) is the first exact structure where tracking pairs of variables isn't enough — you need triangle-local (simplex) transport.
 
-![Pair vs simplex holonomy](results/holonomy/pair-vs-simplex-holonomy/pair_vs_simplex_holonomy_search.svg)
+![Pair vs simplex holonomy](https://raw.githubusercontent.com/jack-chaudier/stark/main/results/holonomy/pair-vs-simplex-holonomy/pair_vs_simplex_holonomy_search.svg)
 
 ### 5. Global Holonomy Atlas
 
 Beyond simplex transport, there are two kinds of failure: **static** (states differ right now) and **dynamic** (states differ in the future). These appear on structurally different families (5-edge cycle vs 4-edge mixed), and the raw global layer admits exact compression.
 
-![Global holonomy atlas](results/holonomy/global-holonomy-atlas/global_holonomy_atlas.svg)
+![Global holonomy atlas](https://raw.githubusercontent.com/jack-chaudier/stark/main/results/holonomy/global-holonomy-atlas/global_holonomy_atlas.svg)
 
 ## Reading Guide
 
