@@ -4,6 +4,10 @@ This atlas keeps the witness carrier and the witness composition law fixed, and 
 
 The exact boundary question is no longer whether overlapping families matter in the abstract. It is where they first become computationally necessary: in the contract, in the probe bank, or in the runtime automaton itself.
 
+## Scope
+
+This artifact is exact on the scanned semantic library and on the reported exact antichain search range `p in [2, 3, 4]`, `k <= 3`.
+
 ## Aggregate boundary
 
 - semantic enrichments scanned: `8` plus the binary baseline
@@ -230,3 +234,10 @@ So hypergraph complexity has now been located more sharply:
 - now(left) / now(alternate): `()` / `()`
 - future(left) / future(alternate): `((1, 2),)` / `()`
 - same-now / future-separate: `True`
+
+## Artifacts
+
+- Figure: [semantic_boundary_atlas.svg](semantic_boundary_atlas.svg)
+- Figure: [semantic_runtime_thresholds.svg](semantic_runtime_thresholds.svg)
+- Figure: [semantic_teaching_atlas.svg](semantic_teaching_atlas.svg)
+- JSON: [semantic_boundary_atlas.json](semantic_boundary_atlas.json)

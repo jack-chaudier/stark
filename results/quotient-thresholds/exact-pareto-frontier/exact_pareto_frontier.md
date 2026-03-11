@@ -2,6 +2,10 @@
 
 This report computes exact partition frontiers for the atomic state spaces listed below.
 
+## Scope
+
+This artifact is exact on the stated atomic spaces. It does not extrapolate beyond them.
+
 Scope matters:
 
 - `M_3` is solved exactly after lossless aggregation of identical output rows for the frontier objective.
@@ -137,3 +141,8 @@ Scope matters:
 The exact frontier tells us whether the shelf is a compressor artifact or an intrinsic underbudget tradeoff on the chosen atomic state space.
 
 The strongest observational cases are the families where `answer_threshold_bits < joint_threshold_bits`. There, the exact frontier should admit budgets where perfect answerability is possible but perfect witness recovery is not. That is the intrinsic shelf for the measured quotient tower.
+
+## Artifacts
+
+- Figure: [exact_pareto_frontier.svg](exact_pareto_frontier.svg)
+- JSON: [exact_pareto_frontier.json](exact_pareto_frontier.json)

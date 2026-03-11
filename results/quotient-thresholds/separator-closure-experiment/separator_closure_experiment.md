@@ -2,6 +2,10 @@
 
 This report measures how quickly the current right-bank observational quotient closes back up to the exact two-sided quotient once left separators are added explicitly.
 
+## Scope
+
+This artifact is exact on the listed synthetic witness families and on the scanned `Q_(k,p)` grid used for the closure-rank observation.
+
 ## Takeaways
 
 - `Q_(3,2)` starts at probe-joint `7` and reaches the canonical `54` after `3` added left actions.
@@ -118,3 +122,9 @@ That means separator-complete closure is doing two things at once:
 
 - it repairs probe deficiency by restoring the missing two-sided distinctions,
 - it reveals a larger answer-vs-justification gap inside the observational tower before exact closure arrives.
+
+## Artifacts
+
+- Figure: [separator_closure_deficiency.svg](separator_closure_deficiency.svg)
+- Figure: [memory_stratigraphy.svg](memory_stratigraphy.svg)
+- JSON: [separator_closure_experiment.json](separator_closure_experiment.json)

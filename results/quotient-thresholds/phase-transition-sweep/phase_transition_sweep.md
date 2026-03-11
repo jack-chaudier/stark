@@ -3,6 +3,10 @@
 This artifact sweeps explicit bit budgets against exact contract state spaces.
 It compares positional bit-geometry schemes with trace-based clustering baselines.
 
+## Scope
+
+This report is exact on the listed synthetic quotient families and on the empirical support states used for `causal_referee`. The larger canonical causal upper bound is reported separately as an upper-bound comparison, not as the empirical sweep domain.
+
 Schemes:
 
 - `prefix`: Keep the first B bits of the canonical binary code.
@@ -304,6 +308,12 @@ Policies:
 | causal_referee | 3.907 | 7 | 1.000 | 0.000 | 0.000 | 1.000 | sound |
 | causal_referee | 3.907 | 8 | 1.000 | 0.000 | 0.000 | 1.000 | sound |
 | causal_referee | 3.907 | 9 | 1.000 | 0.000 | 0.000 | 1.000 | sound |
+
+## Artifacts
+
+- Figure: [phase_transition_breach.svg](phase_transition_breach.svg)
+- Figure: [phase_transition_forced.svg](phase_transition_forced.svg)
+- JSON: [phase_transition_sweep.json](phase_transition_sweep.json)
 
 ### Policy: `forced`
 

@@ -6,6 +6,10 @@ This report separates three boundary questions:
 2. what the exact teaching laws are on the same exact `(p,k)` contract classes,
 3. which minimal semantic enrichment breaks the collapse first.
 
+## Scope
+
+This artifact is exact on the enumerated arbitrary full-union antichains reported here, and exact on the listed small semantic enrichments tested against that scan.
+
 ## Aggregate result
 
 - exact antichain classes scanned: `11`
@@ -105,3 +109,9 @@ The cleanest boundary result in this pass is:
 4. The first break is semantic, not combinatorial: additive partial progress destroys the old runtime collapse before overlap itself does.
 
 So hypergraph complexity enters the present system first in the contract, then in the probes, and only later in runtime once the completion semantics are enriched.
+
+## Artifacts
+
+- Figure: [runtime_collapse_boundary.svg](runtime_collapse_boundary.svg)
+- Figure: [teaching_complexity_boundary.svg](teaching_complexity_boundary.svg)
+- JSON: [runtime_collapse_boundary.json](runtime_collapse_boundary.json)

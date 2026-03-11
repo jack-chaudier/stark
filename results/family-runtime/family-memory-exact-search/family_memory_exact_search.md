@@ -2,6 +2,10 @@
 
 This report separates contract-level family identity from runtime family memory.
 
+## Scope
+
+This artifact is exact on the normalized overlapping-family worlds produced by the small DAG scan reported here. Contract claims are about the compared summary classes on that enumerated world, and runtime claims are about the fixed-family witness-style dynamics measured on the same scan.
+
 ## Aggregate finding
 
 - normalized overlapping family worlds from the DAG scan: `52`
@@ -112,3 +116,8 @@ So the next exact object looks two-layered:
 - universal and variable-based at runtime once the contract is fixed.
 
 That is a stronger and more surprising answer than the original expectation that overlap would automatically force a hypergraph-valued runtime memory state.
+
+## Artifacts
+
+- Figure: [family_memory_thresholds.svg](family_memory_thresholds.svg)
+- JSON: [family_memory_exact_search.json](family_memory_exact_search.json)
