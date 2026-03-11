@@ -1,124 +1,381 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="660" viewBox="0 0 1120 660">
-<style>
-text { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 12px; fill: #243b53; }
-.title { font-size: 22px; font-weight: 700; fill: #102a43; }
-.subtitle { font-size: 13px; fill: #52606d; }
-.paneltitle { font-size: 15px; font-weight: 700; fill: #102a43; }
-.axis { stroke: #9fb3c8; stroke-width: 1.2; }
-.grid { stroke: #e5e7eb; stroke-width: 1; stroke-dasharray: 3 6; }
-.panel { fill: #ffffff; stroke: #d9e2ec; stroke-width: 1; }
-</style>
-<rect x="0" y="0" width="1120" height="660" fill="#fbfbfd"/>
-<text x="92" y="34" class="title">Exact Pareto Frontier Envelopes</text>
-<text x="92" y="56" class="subtitle">Solid lines track best achievable answer fidelity. Dashed lines track best achievable witness fidelity.</text>
-<line x1="814" y1="34" x2="840" y2="34" stroke="#102a43" stroke-width="3.5" stroke-linecap="round"/>
-<text x="850" y="38">M_3</text>
-<line x1="814" y1="54" x2="840" y2="54" stroke="#0b6e4f" stroke-width="3.5" stroke-linecap="round"/>
-<text x="850" y="58">Q_(3,2)</text>
-<line x1="814" y1="74" x2="840" y2="74" stroke="#c44536" stroke-width="3.5" stroke-linecap="round"/>
-<text x="850" y="78">Q_(4,2)</text>
-<line x1="814" y1="94" x2="840" y2="94" stroke="#22577a" stroke-width="3.5" stroke-linecap="round"/>
-<text x="850" y="98">Q_(5,3)</text>
-<line x1="814" y1="114" x2="840" y2="114" stroke="#f4a261" stroke-width="3.5" stroke-linecap="round"/>
-<text x="850" y="118">causal_referee</text>
-<line x1="814" y1="144" x2="840" y2="144" stroke="#52606d" stroke-width="3.5" stroke-linecap="round"/>
-<line x1="814" y1="156" x2="840" y2="156" stroke="#52606d" stroke-width="2.2" stroke-dasharray="7 5" stroke-linecap="round"/>
-<text x="850" y="148">answer</text>
-<text x="850" y="160">witness</text>
-<rect x="92.0" y="86" width="469.0" height="466" rx="18" ry="18" class="panel"/>
-<text x="104.0" y="70" class="paneltitle">Forced decoding</text>
-<text x="104.0" y="84" class="subtitle">quality preserved by output coercion</text>
-<line x1="107.00" y1="86" x2="107.00" y2="552" class="grid"/>
-<text x="103.00" y="574">0</text>
-<line x1="216.75" y1="86" x2="216.75" y2="552" class="grid"/>
-<text x="212.75" y="574">1</text>
-<line x1="326.50" y1="86" x2="326.50" y2="552" class="grid"/>
-<text x="322.50" y="574">2</text>
-<line x1="436.25" y1="86" x2="436.25" y2="552" class="grid"/>
-<text x="432.25" y="574">3</text>
-<line x1="546.00" y1="86" x2="546.00" y2="552" class="grid"/>
-<text x="542.00" y="574">4</text>
-<line x1="92.0" y1="536.00" x2="561.0" y2="536.00" class="grid"/>
-<text x="64.0" y="540.00">0.0</text>
-<line x1="92.0" y1="492.20" x2="561.0" y2="492.20" class="grid"/>
-<text x="64.0" y="496.20">0.1</text>
-<line x1="92.0" y1="448.40" x2="561.0" y2="448.40" class="grid"/>
-<text x="64.0" y="452.40">0.2</text>
-<line x1="92.0" y1="404.60" x2="561.0" y2="404.60" class="grid"/>
-<text x="64.0" y="408.60">0.3</text>
-<line x1="92.0" y1="360.80" x2="561.0" y2="360.80" class="grid"/>
-<text x="64.0" y="364.80">0.4</text>
-<line x1="92.0" y1="317.00" x2="561.0" y2="317.00" class="grid"/>
-<text x="64.0" y="321.00">0.5</text>
-<line x1="92.0" y1="273.20" x2="561.0" y2="273.20" class="grid"/>
-<text x="64.0" y="277.20">0.6</text>
-<line x1="92.0" y1="229.40" x2="561.0" y2="229.40" class="grid"/>
-<text x="64.0" y="233.40">0.7</text>
-<line x1="92.0" y1="185.60" x2="561.0" y2="185.60" class="grid"/>
-<text x="64.0" y="189.60">0.8</text>
-<line x1="92.0" y1="141.80" x2="561.0" y2="141.80" class="grid"/>
-<text x="64.0" y="145.80">0.9</text>
-<line x1="92.0" y1="98.00" x2="561.0" y2="98.00" class="grid"/>
-<text x="64.0" y="102.00">1.0</text>
-<line x1="92.0" y1="552" x2="561.0" y2="552" class="axis"/>
-<line x1="92.0" y1="86" x2="92.0" y2="552" class="axis"/>
-<text x="314.50" y="636" class="subtitle">bits</text>
-<polyline fill="none" stroke="#102a43" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" points="107.00,194.09 216.75,142.69 326.50,106.94 436.25,98.00"/>
-<polyline fill="none" stroke="#102a43" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5" points="107.00,194.09 216.75,142.69 326.50,106.94 436.25,98.00"/>
-<polyline fill="none" stroke="#0b6e4f" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" points="107.00,186.17 216.75,140.66 326.50,103.41 436.25,98.00"/>
-<polyline fill="none" stroke="#0b6e4f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5" points="107.00,242.65 216.75,166.64 326.50,118.13 436.25,98.00"/>
-<polyline fill="none" stroke="#c44536" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" points="107.00,180.19 216.75,139.91 326.50,104.87 436.25,98.00"/>
-<polyline fill="none" stroke="#c44536" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5" points="107.00,238.38 216.75,173.49 326.50,115.03 436.25,98.00"/>
-<polyline fill="none" stroke="#22577a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" points="107.00,140.12 216.75,121.11 326.50,104.16 436.25,98.00 546.00,98.00"/>
-<polyline fill="none" stroke="#22577a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5" points="107.00,252.69 216.75,183.12 326.50,120.04 436.25,101.21 546.00,98.00"/>
-<polyline fill="none" stroke="#f4a261" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" points="107.00,180.91 216.75,106.44 326.50,98.00 436.25,98.00 546.00,98.00"/>
-<polyline fill="none" stroke="#f4a261" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5" points="107.00,302.96 216.75,213.76 326.50,144.37 436.25,108.38 546.00,98.00"/>
-<rect x="595.0" y="86" width="469.0" height="466" rx="18" ry="18" class="panel"/>
-<text x="607.0" y="70" class="paneltitle">Breach-enabled decoding</text>
-<text x="607.0" y="84" class="subtitle">quality preserved by abstention</text>
-<line x1="610.00" y1="86" x2="610.00" y2="552" class="grid"/>
-<text x="606.00" y="574">0</text>
-<line x1="719.75" y1="86" x2="719.75" y2="552" class="grid"/>
-<text x="715.75" y="574">1</text>
-<line x1="829.50" y1="86" x2="829.50" y2="552" class="grid"/>
-<text x="825.50" y="574">2</text>
-<line x1="939.25" y1="86" x2="939.25" y2="552" class="grid"/>
-<text x="935.25" y="574">3</text>
-<line x1="1049.00" y1="86" x2="1049.00" y2="552" class="grid"/>
-<text x="1045.00" y="574">4</text>
-<line x1="595.0" y1="536.00" x2="1064.0" y2="536.00" class="grid"/>
-<text x="567.0" y="540.00">0.0</text>
-<line x1="595.0" y1="492.20" x2="1064.0" y2="492.20" class="grid"/>
-<text x="567.0" y="496.20">0.1</text>
-<line x1="595.0" y1="448.40" x2="1064.0" y2="448.40" class="grid"/>
-<text x="567.0" y="452.40">0.2</text>
-<line x1="595.0" y1="404.60" x2="1064.0" y2="404.60" class="grid"/>
-<text x="567.0" y="408.60">0.3</text>
-<line x1="595.0" y1="360.80" x2="1064.0" y2="360.80" class="grid"/>
-<text x="567.0" y="364.80">0.4</text>
-<line x1="595.0" y1="317.00" x2="1064.0" y2="317.00" class="grid"/>
-<text x="567.0" y="321.00">0.5</text>
-<line x1="595.0" y1="273.20" x2="1064.0" y2="273.20" class="grid"/>
-<text x="567.0" y="277.20">0.6</text>
-<line x1="595.0" y1="229.40" x2="1064.0" y2="229.40" class="grid"/>
-<text x="567.0" y="233.40">0.7</text>
-<line x1="595.0" y1="185.60" x2="1064.0" y2="185.60" class="grid"/>
-<text x="567.0" y="189.60">0.8</text>
-<line x1="595.0" y1="141.80" x2="1064.0" y2="141.80" class="grid"/>
-<text x="567.0" y="145.80">0.9</text>
-<line x1="595.0" y1="98.00" x2="1064.0" y2="98.00" class="grid"/>
-<text x="567.0" y="102.00">1.0</text>
-<line x1="595.0" y1="552" x2="1064.0" y2="552" class="axis"/>
-<line x1="595.0" y1="86" x2="595.0" y2="552" class="axis"/>
-<text x="817.50" y="636" class="subtitle">bits</text>
-<polyline fill="none" stroke="#102a43" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" points="610.00,504.71 719.75,243.26 829.50,120.35 939.25,98.00"/>
-<polyline fill="none" stroke="#102a43" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5" points="610.00,504.71 719.75,243.26 829.50,120.35 939.25,98.00"/>
-<polyline fill="none" stroke="#0b6e4f" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" points="610.00,527.89 719.75,331.87 829.50,161.69 939.25,98.00"/>
-<polyline fill="none" stroke="#0b6e4f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5" points="610.00,527.89 719.75,331.87 829.50,161.69 939.25,98.00"/>
-<polyline fill="none" stroke="#c44536" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" points="610.00,531.13 719.75,355.93 829.50,180.19 939.25,98.00"/>
-<polyline fill="none" stroke="#c44536" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5" points="610.00,531.13 719.75,355.93 829.50,180.19 939.25,98.00"/>
-<polyline fill="none" stroke="#22577a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" points="610.00,535.44 719.75,399.64 829.50,212.29 939.25,116.41 1049.00,98.00"/>
-<polyline fill="none" stroke="#22577a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5" points="610.00,535.44 719.75,399.64 829.50,212.29 939.25,116.41 1049.00,98.00"/>
-<polyline fill="none" stroke="#f4a261" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" points="610.00,536.00 719.75,302.96 829.50,171.72 939.25,113.68 1049.00,98.00"/>
-<polyline fill="none" stroke="#f4a261" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5" points="610.00,536.00 719.75,302.96 829.50,171.72 939.25,113.68 1049.00,98.00"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="660" viewBox="0 0 1200 660">
+  <defs>
+    <!-- Glow for lines on hover / emphasis -->
+    <filter id="lineGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Subtle drop shadow for panels -->
+    <filter id="panelShadow" x="-2%" y="-2%" width="104%" height="106%">
+      <feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+    <!-- Title accent gradient -->
+    <linearGradient id="accentGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="40%" stop-color="#34d399"/>
+      <stop offset="70%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f87171" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Mirage zone fills per model -->
+    <linearGradient id="mirageQ32" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#34d399" stop-opacity="0.015"/>
+      <stop offset="100%" stop-color="#34d399" stop-opacity="0.015"/>
+    </linearGradient>
+    <linearGradient id="mirageQ42" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f87171" stop-opacity="0.015"/>
+      <stop offset="100%" stop-color="#f87171" stop-opacity="0.015"/>
+    </linearGradient>
+    <linearGradient id="mirageQ53" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.015"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.015"/>
+    </linearGradient>
+    <linearGradient id="mirageCR" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0.04"/>
+    </linearGradient>
+    <!-- Dot marker template -->
+    <circle id="dot" r="3.5"/>
+  </defs>
+
+  <style>
+    text { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; }
+  </style>
+
+  <!-- ══════════════ BACKGROUND ══════════════ -->
+  <rect width="1200" height="660" rx="8" fill="#0f1117"/>
+  <rect x="0.5" y="0.5" width="1199" height="659" rx="8" fill="none" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- ══════════════ HEADER ══════════════ -->
+  <text x="56" y="38" font-size="24" font-weight="700" fill="#f1f5f9" letter-spacing="-0.5">Exact Pareto Frontier</text>
+  <rect x="56" y="46" width="140" height="2.5" rx="1.25" fill="url(#accentGrad)" opacity="0.7"/>
+  <text x="56" y="63" font-size="12" font-weight="400" fill="#94a3b8" letter-spacing="0.15">Answers can reach 100% before the system remembers why — the mirage shelf</text>
+
+  <!-- ══════════════ LEGEND (top right) ══════════════ -->
+  <g transform="translate(720, 14)">
+    <rect x="0" y="0" width="432" height="60" rx="6" fill="#161b22" stroke="#1e293b" stroke-width="1"/>
+
+    <!-- Model colors -->
+    <line x1="14" y1="16" x2="34" y2="16" stroke="#60a5fa" stroke-width="2.8" stroke-linecap="round"/>
+    <text x="40" y="20" font-size="10" font-weight="600" fill="#60a5fa">M₃</text>
+
+    <line x1="80" y1="16" x2="100" y2="16" stroke="#34d399" stroke-width="2.8" stroke-linecap="round"/>
+    <text x="106" y="20" font-size="10" font-weight="600" fill="#34d399">Q₍₃,₂₎</text>
+
+    <line x1="168" y1="16" x2="188" y2="16" stroke="#f87171" stroke-width="2.8" stroke-linecap="round"/>
+    <text x="194" y="20" font-size="10" font-weight="600" fill="#f87171">Q₍₄,₂₎</text>
+
+    <line x1="256" y1="16" x2="276" y2="16" stroke="#38bdf8" stroke-width="2.8" stroke-linecap="round"/>
+    <text x="282" y="20" font-size="10" font-weight="600" fill="#38bdf8">Q₍₅,₃₎</text>
+
+    <line x1="336" y1="16" x2="356" y2="16" stroke="#fbbf24" stroke-width="2.8" stroke-linecap="round"/>
+    <text x="362" y="20" font-size="9.5" font-weight="600" fill="#fbbf24">causal_ref</text>
+
+    <!-- Line style legend -->
+    <line x1="14" y1="44" x2="42" y2="44" stroke="#94a3b8" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="48" y="48" font-size="9.5" font-weight="500" fill="#94a3b8">answer fidelity (solid)</text>
+
+    <line x1="210" y1="44" x2="238" y2="44" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-dasharray="6,4"/>
+    <text x="244" y="48" font-size="9.5" font-weight="500" fill="#94a3b8">witness fidelity (dashed)</text>
+  </g>
+
+  <!-- ══════════════════════════════════════════════════════════════════════════════ -->
+  <!-- LEFT PANEL: FORCED DECODING                                                  -->
+  <!-- Panel card: x=40..590, chart: x=120..565, y=120..540                         -->
+  <!-- ══════════════════════════════════════════════════════════════════════════════ -->
+  <rect x="40" y="82" width="556" height="500" rx="10" fill="#1a1d27" filter="url(#panelShadow)"/>
+  <rect x="40" y="82" width="556" height="500" rx="10" fill="none" stroke="#252a36" stroke-width="1"/>
+
+  <!-- Panel title -->
+  <text x="56" y="104" font-size="14" font-weight="700" fill="#e2e8f0">Forced decoding</text>
+  <text x="175" y="104" font-size="10" font-weight="400" fill="#64748b">system must always give an answer</text>
+
+  <!-- Y axis grid + labels (fidelity 0.0 to 1.0) -->
+  <g font-size="9" font-weight="400" fill="#475569" text-anchor="end">
+    <line x1="120" y1="540" x2="565" y2="540" stroke="#252a36" stroke-width="0.7"/>
+    <text x="112" y="543">0.0</text>
+    <line x1="120" y1="498" x2="565" y2="498" stroke="#252a36" stroke-width="0.5" stroke-dasharray="2,4"/>
+    <text x="112" y="501" opacity="0.6">0.1</text>
+    <line x1="120" y1="456" x2="565" y2="456" stroke="#252a36" stroke-width="0.5" stroke-dasharray="2,4"/>
+    <text x="112" y="459" opacity="0.6">0.2</text>
+    <line x1="120" y1="414" x2="565" y2="414" stroke="#252a36" stroke-width="0.5" stroke-dasharray="2,4"/>
+    <text x="112" y="417" opacity="0.6">0.3</text>
+    <line x1="120" y1="372" x2="565" y2="372" stroke="#252a36" stroke-width="0.5" stroke-dasharray="2,4"/>
+    <text x="112" y="375" opacity="0.6">0.4</text>
+    <line x1="120" y1="330" x2="565" y2="330" stroke="#252a36" stroke-width="0.5" stroke-dasharray="2,4"/>
+    <text x="112" y="333">0.5</text>
+    <line x1="120" y1="288" x2="565" y2="288" stroke="#252a36" stroke-width="0.5" stroke-dasharray="2,4"/>
+    <text x="112" y="291" opacity="0.6">0.6</text>
+    <line x1="120" y1="246" x2="565" y2="246" stroke="#252a36" stroke-width="0.5" stroke-dasharray="2,4"/>
+    <text x="112" y="249" opacity="0.6">0.7</text>
+    <line x1="120" y1="204" x2="565" y2="204" stroke="#252a36" stroke-width="0.5" stroke-dasharray="2,4"/>
+    <text x="112" y="207">0.8</text>
+    <line x1="120" y1="162" x2="565" y2="162" stroke="#252a36" stroke-width="0.5" stroke-dasharray="2,4"/>
+    <text x="112" y="165" opacity="0.6">0.9</text>
+    <line x1="120" y1="120" x2="565" y2="120" stroke="#252a36" stroke-width="0.7"/>
+    <text x="112" y="123">1.0</text>
+  </g>
+
+  <!-- X axis grid + labels (budget 0-4) -->
+  <g font-size="9" font-weight="400" fill="#475569" text-anchor="middle">
+    <line x1="120.0" y1="120" x2="120.0" y2="540" stroke="#252a36" stroke-width="0.7"/>
+    <text x="120.0" y="556">0</text>
+    <line x1="231.2" y1="120" x2="231.2" y2="540" stroke="#252a36" stroke-width="0.5" stroke-dasharray="2,4"/>
+    <text x="231.2" y="556">1</text>
+    <line x1="342.5" y1="120" x2="342.5" y2="540" stroke="#252a36" stroke-width="0.5" stroke-dasharray="2,4"/>
+    <text x="342.5" y="556">2</text>
+    <line x1="453.8" y1="120" x2="453.8" y2="540" stroke="#252a36" stroke-width="0.5" stroke-dasharray="2,4"/>
+    <text x="453.8" y="556">3</text>
+    <line x1="565.0" y1="120" x2="565.0" y2="540" stroke="#252a36" stroke-width="0.7"/>
+    <text x="565.0" y="556">4</text>
+  </g>
+  <text x="342.5" y="574" font-size="10" font-weight="500" fill="#64748b" text-anchor="middle">memory budget (bits)</text>
+
+  <!-- Y axis label -->
+  <text x="48" y="330" font-size="10" font-weight="500" fill="#64748b" text-anchor="middle" transform="rotate(-90 48 330)">fidelity</text>
+
+  <!-- ═══ MIRAGE ZONE FILLS (where answer > witness) ═══ -->
+  <!-- Q_(3,2) mirage fill -->
+  <polygon points="120.0,204.4 231.2,160.7 342.5,125.0 453.8,120.0 453.8,120.0 342.5,139.3 231.2,185.9 120.0,258.6"
+           fill="url(#mirageQ32)" stroke="none"/>
+  <!-- Q_(4,2) mirage fill -->
+  <polygon points="120.0,199.0 231.2,160.3 342.5,126.7 453.8,120.0 453.8,120.0 342.5,136.4 231.2,192.2 120.0,254.4"
+           fill="url(#mirageQ42)" stroke="none"/>
+  <!-- Q_(5,3) mirage fill -->
+  <polygon points="120.0,160.3 231.2,142.3 342.5,125.9 453.8,120.0 565.0,120.0 565.0,120.0 453.8,127.6 342.5,141.0 231.2,201.5 120.0,268.3"
+           fill="url(#mirageQ53)" stroke="none"/>
+  <!-- causal_referee mirage fill (biggest gap — most visible) -->
+  <polygon points="120.0,199.4 231.2,128.0 342.5,120.0 453.8,120.0 565.0,120.0 565.0,120.0 453.8,135.1 342.5,270.8 231.2,230.9 120.0,316.6"
+           fill="url(#mirageCR)" stroke="none"/>
+
+  <!-- ═══ DATA LINES — FORCED PANEL ═══ -->
+
+  <!-- M₃ — answer (solid) and witness (dashed) are identical -->
+  <polyline fill="none" stroke="#60a5fa" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"
+            points="120.0,212.0 231.2,162.8 342.5,128.4 453.8,120.0"/>
+  <polyline fill="none" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6,4"
+            points="120.0,212.0 231.2,162.8 342.5,128.4 453.8,120.0"/>
+
+  <!-- Q_(3,2) — answer -->
+  <polyline fill="none" stroke="#34d399" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"
+            points="120.0,204.4 231.2,160.7 342.5,125.0 453.8,120.0"/>
+  <!-- Q_(3,2) — witness -->
+  <polyline fill="none" stroke="#34d399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6,4"
+            points="120.0,258.6 231.2,185.9 342.5,139.3 453.8,120.0"/>
+
+  <!-- Q_(4,2) — answer -->
+  <polyline fill="none" stroke="#f87171" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"
+            points="120.0,199.0 231.2,160.3 342.5,126.7 453.8,120.0"/>
+  <!-- Q_(4,2) — witness -->
+  <polyline fill="none" stroke="#f87171" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6,4"
+            points="120.0,254.4 231.2,192.2 342.5,136.4 453.8,120.0"/>
+
+  <!-- Q_(5,3) — answer -->
+  <polyline fill="none" stroke="#38bdf8" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"
+            points="120.0,160.3 231.2,142.3 342.5,125.9 453.8,120.0 565.0,120.0"/>
+  <!-- Q_(5,3) — witness -->
+  <polyline fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6,4"
+            points="120.0,268.3 231.2,201.5 342.5,141.0 453.8,127.6 565.0,120.0"/>
+
+  <!-- causal_referee — answer -->
+  <polyline fill="none" stroke="#fbbf24" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"
+            points="120.0,199.4 231.2,128.0 342.5,120.0 453.8,120.0 565.0,120.0"/>
+  <!-- causal_referee — witness -->
+  <polyline fill="none" stroke="#fbbf24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6,4"
+            points="120.0,316.6 231.2,230.9 342.5,270.8 453.8,135.1 565.0,120.0"/>
+
+  <!-- ═══ DATA POINT DOTS — FORCED ═══ -->
+  <!-- M₃ dots -->
+  <circle cx="120.0" cy="212.0" r="3" fill="#60a5fa" opacity="0.9"/>
+  <circle cx="231.2" cy="162.8" r="3" fill="#60a5fa" opacity="0.9"/>
+  <circle cx="342.5" cy="128.4" r="3" fill="#60a5fa" opacity="0.9"/>
+  <circle cx="453.8" cy="120.0" r="3" fill="#60a5fa" opacity="0.9"/>
+  <!-- Q32 dots (answer) -->
+  <circle cx="120.0" cy="204.4" r="3" fill="#34d399" opacity="0.9"/>
+  <circle cx="231.2" cy="160.7" r="3" fill="#34d399" opacity="0.9"/>
+  <circle cx="342.5" cy="125.0" r="3" fill="#34d399" opacity="0.9"/>
+  <circle cx="453.8" cy="120.0" r="3" fill="#34d399" opacity="0.9"/>
+  <!-- Q32 dots (witness) -->
+  <circle cx="120.0" cy="258.6" r="2.5" fill="none" stroke="#34d399" stroke-width="1.2"/>
+  <circle cx="231.2" cy="185.9" r="2.5" fill="none" stroke="#34d399" stroke-width="1.2"/>
+  <circle cx="342.5" cy="139.3" r="2.5" fill="none" stroke="#34d399" stroke-width="1.2"/>
+  <!-- Q42 dots (answer) -->
+  <circle cx="120.0" cy="199.0" r="3" fill="#f87171" opacity="0.9"/>
+  <circle cx="231.2" cy="160.3" r="3" fill="#f87171" opacity="0.9"/>
+  <circle cx="342.5" cy="126.7" r="3" fill="#f87171" opacity="0.9"/>
+  <circle cx="453.8" cy="120.0" r="3" fill="#f87171" opacity="0.9"/>
+  <!-- Q42 dots (witness) -->
+  <circle cx="120.0" cy="254.4" r="2.5" fill="none" stroke="#f87171" stroke-width="1.2"/>
+  <circle cx="231.2" cy="192.2" r="2.5" fill="none" stroke="#f87171" stroke-width="1.2"/>
+  <circle cx="342.5" cy="136.4" r="2.5" fill="none" stroke="#f87171" stroke-width="1.2"/>
+  <!-- Q53 dots (answer) -->
+  <circle cx="120.0" cy="160.3" r="3" fill="#38bdf8" opacity="0.9"/>
+  <circle cx="231.2" cy="142.3" r="3" fill="#38bdf8" opacity="0.9"/>
+  <circle cx="342.5" cy="125.9" r="3" fill="#38bdf8" opacity="0.9"/>
+  <circle cx="453.8" cy="120.0" r="3" fill="#38bdf8" opacity="0.9"/>
+  <circle cx="565.0" cy="120.0" r="3" fill="#38bdf8" opacity="0.9"/>
+  <!-- Q53 dots (witness) -->
+  <circle cx="120.0" cy="268.3" r="2.5" fill="none" stroke="#38bdf8" stroke-width="1.2"/>
+  <circle cx="231.2" cy="201.5" r="2.5" fill="none" stroke="#38bdf8" stroke-width="1.2"/>
+  <circle cx="342.5" cy="141.0" r="2.5" fill="none" stroke="#38bdf8" stroke-width="1.2"/>
+  <circle cx="453.8" cy="127.6" r="2.5" fill="none" stroke="#38bdf8" stroke-width="1.2"/>
+  <!-- causal_referee dots (answer) -->
+  <circle cx="120.0" cy="199.4" r="3" fill="#fbbf24" opacity="0.9"/>
+  <circle cx="231.2" cy="128.0" r="3" fill="#fbbf24" opacity="0.9"/>
+  <circle cx="342.5" cy="120.0" r="3" fill="#fbbf24" opacity="0.9"/>
+  <circle cx="453.8" cy="120.0" r="3" fill="#fbbf24" opacity="0.9"/>
+  <circle cx="565.0" cy="120.0" r="3" fill="#fbbf24" opacity="0.9"/>
+  <!-- causal_referee dots (witness) -->
+  <circle cx="120.0" cy="316.6" r="2.5" fill="none" stroke="#fbbf24" stroke-width="1.2"/>
+  <circle cx="231.2" cy="230.9" r="2.5" fill="none" stroke="#fbbf24" stroke-width="1.2"/>
+  <circle cx="342.5" cy="270.8" r="2.5" fill="none" stroke="#fbbf24" stroke-width="1.2"/>
+  <circle cx="453.8" cy="135.1" r="2.5" fill="none" stroke="#fbbf24" stroke-width="1.2"/>
+
+  <!-- ═══ MIRAGE ZONE CALLOUT (forced panel) ═══ -->
+  <!-- Arrow pointing to the gap at budget=2 for causal_referee (answer=1.0, witness=0.641) -->
+  <g>
+    <!-- Callout background pill -->
+    <rect x="370" y="288" width="114" height="34" rx="6" fill="#1a1d27" stroke="#fbbf24" stroke-width="0.8" opacity="0.9"/>
+    <text x="377" y="303" font-size="10" font-weight="700" fill="#fbbf24">mirage zone</text>
+    <text x="377" y="316" font-size="8" font-weight="400" fill="#94a3b8">answer=1, witness≠1</text>
+    <!-- Arrow line from callout to the gap -->
+    <line x1="420" y1="288" x2="365" y2="220" stroke="#fbbf24" stroke-width="0.8" opacity="0.5" stroke-dasharray="2,2"/>
+    <circle cx="342.5" cy="195" r="12" fill="none" stroke="#fbbf24" stroke-width="0.6" opacity="0.3" stroke-dasharray="2,2"/>
+  </g>
+
+  <!-- ══════════════════════════════════════════════════════════════════════════════ -->
+  <!-- RIGHT PANEL: BREACH-ENABLED DECODING                                         -->
+  <!-- Panel card: x=608..1158, chart: x=675..1120, y=120..540                      -->
+  <!-- ══════════════════════════════════════════════════════════════════════════════ -->
+  <rect x="608" y="82" width="556" height="500" rx="10" fill="#1a1d27" filter="url(#panelShadow)"/>
+  <rect x="608" y="82" width="556" height="500" rx="10" fill="none" stroke="#252a36" stroke-width="1"/>
+
+  <!-- Panel title -->
+  <text x="624" y="104" font-size="14" font-weight="700" fill="#e2e8f0">Breach-enabled decoding</text>
+  <text x="795" y="104" font-size="10" font-weight="400" fill="#64748b">system can abstain when uncertain</text>
+
+  <!-- Y axis grid + labels -->
+  <g font-size="9" font-weight="400" fill="#475569" text-anchor="end">
+    <line x1="675" y1="540" x2="1120" y2="540" stroke="#252a36" stroke-width="0.7"/>
+    <text x="667" y="543">0.0</text>
+    <line x1="675" y1="498" x2="1120" y2="498" stroke="#252a36" stroke-width="0.5" stroke-dasharray="2,4"/>
+    <text x="667" y="501" opacity="0.6">0.1</text>
+    <line x1="675" y1="456" x2="1120" y2="456" stroke="#252a36" stroke-width="0.5" stroke-dasharray="2,4"/>
+    <text x="667" y="459" opacity="0.6">0.2</text>
+    <line x1="675" y1="414" x2="1120" y2="414" stroke="#252a36" stroke-width="0.5" stroke-dasharray="2,4"/>
+    <text x="667" y="417" opacity="0.6">0.3</text>
+    <line x1="675" y1="372" x2="1120" y2="372" stroke="#252a36" stroke-width="0.5" stroke-dasharray="2,4"/>
+    <text x="667" y="375" opacity="0.6">0.4</text>
+    <line x1="675" y1="330" x2="1120" y2="330" stroke="#252a36" stroke-width="0.5" stroke-dasharray="2,4"/>
+    <text x="667" y="333">0.5</text>
+    <line x1="675" y1="288" x2="1120" y2="288" stroke="#252a36" stroke-width="0.5" stroke-dasharray="2,4"/>
+    <text x="667" y="291" opacity="0.6">0.6</text>
+    <line x1="675" y1="246" x2="1120" y2="246" stroke="#252a36" stroke-width="0.5" stroke-dasharray="2,4"/>
+    <text x="667" y="249" opacity="0.6">0.7</text>
+    <line x1="675" y1="204" x2="1120" y2="204" stroke="#252a36" stroke-width="0.5" stroke-dasharray="2,4"/>
+    <text x="667" y="207">0.8</text>
+    <line x1="675" y1="162" x2="1120" y2="162" stroke="#252a36" stroke-width="0.5" stroke-dasharray="2,4"/>
+    <text x="667" y="165" opacity="0.6">0.9</text>
+    <line x1="675" y1="120" x2="1120" y2="120" stroke="#252a36" stroke-width="0.7"/>
+    <text x="667" y="123">1.0</text>
+  </g>
+
+  <!-- X axis grid + labels -->
+  <g font-size="9" font-weight="400" fill="#475569" text-anchor="middle">
+    <line x1="675.0" y1="120" x2="675.0" y2="540" stroke="#252a36" stroke-width="0.7"/>
+    <text x="675.0" y="556">0</text>
+    <line x1="786.2" y1="120" x2="786.2" y2="540" stroke="#252a36" stroke-width="0.5" stroke-dasharray="2,4"/>
+    <text x="786.2" y="556">1</text>
+    <line x1="897.5" y1="120" x2="897.5" y2="540" stroke="#252a36" stroke-width="0.5" stroke-dasharray="2,4"/>
+    <text x="897.5" y="556">2</text>
+    <line x1="1008.8" y1="120" x2="1008.8" y2="540" stroke="#252a36" stroke-width="0.5" stroke-dasharray="2,4"/>
+    <text x="1008.8" y="556">3</text>
+    <line x1="1120.0" y1="120" x2="1120.0" y2="540" stroke="#252a36" stroke-width="0.7"/>
+    <text x="1120.0" y="556">4</text>
+  </g>
+  <text x="897.5" y="574" font-size="10" font-weight="500" fill="#64748b" text-anchor="middle">memory budget (bits)</text>
+
+  <!-- ═══ DATA LINES — BREACH PANEL ═══ -->
+  <!-- In breach mode, answer = witness for all models (lines overlap) -->
+  <!-- So we draw just one solid line per model with a thin dashed overlay -->
+
+  <!-- M₃ -->
+  <polyline fill="none" stroke="#60a5fa" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"
+            points="675.0,510.2 786.2,259.4 897.5,141.4 1008.8,120.0"/>
+  <polyline fill="none" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6,4"
+            points="675.0,510.2 786.2,259.4 897.5,141.4 1008.8,120.0"/>
+
+  <!-- Q_(3,2) -->
+  <polyline fill="none" stroke="#34d399" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"
+            points="675.0,532.0 786.2,344.3 897.5,180.9 1008.8,120.0"/>
+  <polyline fill="none" stroke="#34d399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6,4"
+            points="675.0,532.0 786.2,344.3 897.5,180.9 1008.8,120.0"/>
+
+  <!-- Q_(4,2) -->
+  <polyline fill="none" stroke="#f87171" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"
+            points="675.0,535.4 786.2,367.4 897.5,199.0 1008.8,120.0"/>
+  <polyline fill="none" stroke="#f87171" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6,4"
+            points="675.0,535.4 786.2,367.4 897.5,199.0 1008.8,120.0"/>
+
+  <!-- Q_(5,3) -->
+  <polyline fill="none" stroke="#38bdf8" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"
+            points="675.0,539.6 786.2,409.4 897.5,229.6 1008.8,137.6 1120.0,120.0"/>
+  <polyline fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6,4"
+            points="675.0,539.6 786.2,409.4 897.5,229.6 1008.8,137.6 1120.0,120.0"/>
+
+  <!-- causal_referee -->
+  <polyline fill="none" stroke="#fbbf24" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"
+            points="675.0,540.0 786.2,316.6 897.5,190.6 1008.8,135.1 1120.0,120.0"/>
+  <polyline fill="none" stroke="#fbbf24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6,4"
+            points="675.0,540.0 786.2,316.6 897.5,190.6 1008.8,135.1 1120.0,120.0"/>
+
+  <!-- ═══ DATA POINT DOTS — BREACH ═══ -->
+  <!-- M₃ -->
+  <circle cx="675.0" cy="510.2" r="3" fill="#60a5fa" opacity="0.9"/>
+  <circle cx="786.2" cy="259.4" r="3" fill="#60a5fa" opacity="0.9"/>
+  <circle cx="897.5" cy="141.4" r="3" fill="#60a5fa" opacity="0.9"/>
+  <circle cx="1008.8" cy="120.0" r="3" fill="#60a5fa" opacity="0.9"/>
+  <!-- Q32 -->
+  <circle cx="675.0" cy="532.0" r="3" fill="#34d399" opacity="0.9"/>
+  <circle cx="786.2" cy="344.3" r="3" fill="#34d399" opacity="0.9"/>
+  <circle cx="897.5" cy="180.9" r="3" fill="#34d399" opacity="0.9"/>
+  <circle cx="1008.8" cy="120.0" r="3" fill="#34d399" opacity="0.9"/>
+  <!-- Q42 -->
+  <circle cx="675.0" cy="535.4" r="3" fill="#f87171" opacity="0.9"/>
+  <circle cx="786.2" cy="367.4" r="3" fill="#f87171" opacity="0.9"/>
+  <circle cx="897.5" cy="199.0" r="3" fill="#f87171" opacity="0.9"/>
+  <circle cx="1008.8" cy="120.0" r="3" fill="#f87171" opacity="0.9"/>
+  <!-- Q53 -->
+  <circle cx="675.0" cy="539.6" r="3" fill="#38bdf8" opacity="0.9"/>
+  <circle cx="786.2" cy="409.4" r="3" fill="#38bdf8" opacity="0.9"/>
+  <circle cx="897.5" cy="229.6" r="3" fill="#38bdf8" opacity="0.9"/>
+  <circle cx="1008.8" cy="137.6" r="3" fill="#38bdf8" opacity="0.9"/>
+  <circle cx="1120.0" cy="120.0" r="3" fill="#38bdf8" opacity="0.9"/>
+  <!-- causal_referee -->
+  <circle cx="675.0" cy="540.0" r="3" fill="#fbbf24" opacity="0.9"/>
+  <circle cx="786.2" cy="316.6" r="3" fill="#fbbf24" opacity="0.9"/>
+  <circle cx="897.5" cy="190.6" r="3" fill="#fbbf24" opacity="0.9"/>
+  <circle cx="1008.8" cy="135.1" r="3" fill="#fbbf24" opacity="0.9"/>
+  <circle cx="1120.0" cy="120.0" r="3" fill="#fbbf24" opacity="0.9"/>
+
+  <!-- ═══ BREACH PANEL ANNOTATION ═══ -->
+  <g>
+    <rect x="740" y="430" width="172" height="34" rx="6" fill="#1a1d27" stroke="#475569" stroke-width="0.6" opacity="0.95"/>
+    <text x="748" y="445" font-size="9.5" font-weight="600" fill="#94a3b8">no mirage zone</text>
+    <text x="748" y="458" font-size="8" font-weight="400" fill="#64748b">answer = witness when abstention allowed</text>
+    <line x1="826" y1="430" x2="826" y2="400" stroke="#475569" stroke-width="0.6" opacity="0.4" stroke-dasharray="2,2"/>
+  </g>
+
+  <!-- ══════════════ INSIGHT STRIP (bottom) ══════════════ -->
+  <g transform="translate(40, 600)">
+    <rect x="0" y="0" width="1124" height="38" rx="6" fill="#161b22" stroke="#1e293b" stroke-width="1"/>
+    <text x="16" y="15" font-size="9" font-weight="700" fill="#fbbf24" letter-spacing="0.5">KEY INSIGHT</text>
+    <text x="16" y="29" font-size="9.5" font-weight="400" fill="#94a3b8">In forced decoding, causal_referee hits answer = 1.0 at just 2 bits, but witness fidelity drops to 0.641 — the system "knows" the answer but has lost track of why.</text>
+    <text x="870" y="29" font-size="9.5" font-weight="400" fill="#64748b">With abstention, this mirage vanishes entirely.</text>
+  </g>
+
+  <!-- Figure label -->
+  <text x="56" y="652" font-size="9" font-weight="400" fill="#334155">Figure 2 · Stark: Selective Memory Theory · Exact Pareto Frontier Envelopes</text>
 </svg>

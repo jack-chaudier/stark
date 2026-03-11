@@ -1,100 +1,355 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="428" viewBox="0 0 1120 428">
-<style>
-text { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 12px; fill: #243b53; }
-.title { font-size: 22px; font-weight: 700; fill: #102a43; }
-.subtitle { font-size: 13px; fill: #52606d; }
-.label { font-size: 14px; font-weight: 600; fill: #102a43; }
-.grid { stroke: #e5e7eb; stroke-width: 1; stroke-dasharray: 3 6; }
-.axis { stroke: #9fb3c8; stroke-width: 1.2; }
-.badge { fill: #ffffff; stroke: #d9e2ec; stroke-width: 1; }
-</style>
-<rect x="0" y="0" width="1120" height="428" fill="#fcfcfb"/>
-<text x="210" y="34" class="title">Memory Stratigraphy</text>
-<text x="210" y="56" class="subtitle">Bit thresholds from the canonical quotient down to answer-only observation</text>
-<rect x="184" y="54" width="874" height="322" rx="18" ry="18" fill="#ffffff" stroke="#e6e8eb" stroke-width="1.2"/>
-<line x1="210.00" y1="78" x2="210.00" y2="374" class="grid"/>
-<text x="206.00" y="400">0</text>
-<line x1="276.80" y1="78" x2="276.80" y2="374" class="grid"/>
-<text x="272.80" y="400">1</text>
-<line x1="343.59" y1="78" x2="343.59" y2="374" class="grid"/>
-<text x="339.59" y="400">2</text>
-<line x1="410.39" y1="78" x2="410.39" y2="374" class="grid"/>
-<text x="406.39" y="400">3</text>
-<line x1="477.19" y1="78" x2="477.19" y2="374" class="grid"/>
-<text x="473.19" y="400">4</text>
-<line x1="543.98" y1="78" x2="543.98" y2="374" class="grid"/>
-<text x="539.98" y="400">5</text>
-<line x1="610.78" y1="78" x2="610.78" y2="374" class="grid"/>
-<text x="606.78" y="400">6</text>
-<line x1="677.57" y1="78" x2="677.57" y2="374" class="grid"/>
-<text x="673.57" y="400">7</text>
-<line x1="744.37" y1="78" x2="744.37" y2="374" class="grid"/>
-<text x="740.37" y="400">8</text>
-<line x1="811.17" y1="78" x2="811.17" y2="374" class="grid"/>
-<text x="807.17" y="400">9</text>
-<line x1="877.96" y1="78" x2="877.96" y2="374" class="grid"/>
-<text x="873.96" y="400">10</text>
-<line x1="944.76" y1="78" x2="944.76" y2="374" class="grid"/>
-<text x="940.76" y="400">11</text>
-<line x1="1011.56" y1="78" x2="1011.56" y2="374" class="grid"/>
-<text x="1007.56" y="400">12</text>
-<line x1="1078.35" y1="78" x2="1078.35" y2="374" class="grid"/>
-<text x="1074.35" y="400">13</text>
-<line x1="210" y1="382" x2="1032" y2="382" class="axis"/>
-<text x="607.00" y="416" class="subtitle">bits</text>
-<circle cx="838" cy="30" r="5.5" fill="#102a43"/>
-<text x="852" y="34">algebraic</text>
-<circle cx="838" cy="50" r="5.5" fill="#0b6e4f"/>
-<text x="852" y="54">empirical</text>
-<circle cx="838" cy="70" r="5.5" fill="#22577a"/>
-<text x="852" y="74">probe-joint</text>
-<circle cx="838" cy="90" r="5.5" fill="#c44536"/>
-<text x="852" y="94">probe-witness</text>
-<circle cx="838" cy="110" r="5.5" fill="#f4a261"/>
-<text x="852" y="114">probe-answer</text>
-<text x="28" y="110" class="label">M_3</text>
-<line x1="365.10" y1="106.00" x2="464.32" y2="106.00" stroke="#d9e2ec" stroke-width="7" stroke-linecap="round"/>
-<circle cx="365.10" cy="106.00" r="6" fill="#f4a261" stroke="#ffffff" stroke-width="1.5"/>
-<circle cx="210.00" cy="106.00" r="6" fill="#c44536" stroke="#ffffff" stroke-width="1.5"/>
-<circle cx="365.10" cy="106.00" r="6" fill="#22577a" stroke="#ffffff" stroke-width="1.5"/>
-<circle cx="464.32" cy="106.00" r="6" fill="#0b6e4f" stroke="#ffffff" stroke-width="1.5"/>
-<circle cx="464.32" cy="106.00" r="6" fill="#102a43" stroke="#ffffff" stroke-width="1.5"/>
-<rect x="864" y="90" width="150" height="28" rx="14" ry="14" class="badge"/>
-<text x="876" y="110.00">Δ=1.485   ω=0.000</text>
-<text x="28" y="172" class="label">Q_(3,2)</text>
-<line x1="365.10" y1="168.00" x2="594.41" y2="168.00" stroke="#d9e2ec" stroke-width="7" stroke-linecap="round"/>
-<circle cx="365.10" cy="168.00" r="6" fill="#f4a261" stroke="#ffffff" stroke-width="1.5"/>
-<circle cx="397.52" cy="168.00" r="6" fill="#c44536" stroke="#ffffff" stroke-width="1.5"/>
-<circle cx="397.52" cy="168.00" r="6" fill="#22577a" stroke="#ffffff" stroke-width="1.5"/>
-<circle cx="594.41" cy="168.00" r="6" fill="#0b6e4f" stroke="#ffffff" stroke-width="1.5"/>
-<circle cx="594.41" cy="168.00" r="6" fill="#102a43" stroke="#ffffff" stroke-width="1.5"/>
-<rect x="864" y="152" width="150" height="28" rx="14" ry="14" class="badge"/>
-<text x="876" y="172.00">Δ=2.948   ω=0.485</text>
-<text x="28" y="234" class="label">Q_(4,2)</text>
-<line x1="382.67" y1="230.00" x2="643.63" y2="230.00" stroke="#d9e2ec" stroke-width="7" stroke-linecap="round"/>
-<circle cx="382.67" cy="230.00" r="6" fill="#f4a261" stroke="#ffffff" stroke-width="1.5"/>
-<circle cx="410.39" cy="230.00" r="6" fill="#c44536" stroke="#ffffff" stroke-width="1.5"/>
-<circle cx="410.39" cy="230.00" r="6" fill="#22577a" stroke="#ffffff" stroke-width="1.5"/>
-<circle cx="643.63" cy="230.00" r="6" fill="#0b6e4f" stroke="#ffffff" stroke-width="1.5"/>
-<circle cx="643.63" cy="230.00" r="6" fill="#102a43" stroke="#ffffff" stroke-width="1.5"/>
-<rect x="864" y="214" width="150" height="28" rx="14" ry="14" class="badge"/>
-<text x="876" y="234.00">Δ=3.492   ω=0.415</text>
-<text x="28" y="296" class="label">Q_(5,3)</text>
-<line x1="397.52" y1="292.00" x2="852.10" y2="292.00" stroke="#d9e2ec" stroke-width="7" stroke-linecap="round"/>
-<circle cx="397.52" cy="292.00" r="6" fill="#f4a261" stroke="#ffffff" stroke-width="1.5"/>
-<circle cx="457.18" cy="292.00" r="6" fill="#c44536" stroke="#ffffff" stroke-width="1.5"/>
-<circle cx="457.18" cy="292.00" r="6" fill="#22577a" stroke="#ffffff" stroke-width="1.5"/>
-<circle cx="852.10" cy="292.00" r="6" fill="#0b6e4f" stroke="#ffffff" stroke-width="1.5"/>
-<circle cx="852.10" cy="292.00" r="6" fill="#102a43" stroke="#ffffff" stroke-width="1.5"/>
-<rect x="864" y="276" width="150" height="28" rx="14" ry="14" class="badge"/>
-<text x="876" y="296.00">Δ=5.912   ω=0.893</text>
-<text x="28" y="358" class="label">causal_referee</text>
-<line x1="343.59" y1="354.00" x2="965.20" y2="354.00" stroke="#d9e2ec" stroke-width="7" stroke-linecap="round"/>
-<circle cx="343.59" cy="354.00" r="6" fill="#f4a261" stroke="#ffffff" stroke-width="1.5"/>
-<circle cx="470.97" cy="354.00" r="6" fill="#c44536" stroke="#ffffff" stroke-width="1.5"/>
-<circle cx="470.97" cy="354.00" r="6" fill="#22577a" stroke="#ffffff" stroke-width="1.5"/>
-<circle cx="470.97" cy="354.00" r="6" fill="#0b6e4f" stroke="#ffffff" stroke-width="1.5"/>
-<circle cx="965.20" cy="354.00" r="6" fill="#102a43" stroke="#ffffff" stroke-width="1.5"/>
-<rect x="864" y="338" width="150" height="28" rx="14" ry="14" class="badge"/>
-<text x="876" y="358.00">Δ=7.399   ω=1.907</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520">
+  <defs>
+    <!-- Glow for mirage zone -->
+    <filter id="mirageGlow" x="-10%" y="-30%" width="120%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0.6 0 0.3 0 0  0.3 0 0.5 0 0  0.8 0 1 0 0  0 0 0 0.25 0" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Bar shadow -->
+    <filter id="barShadow" x="-2%" y="-8%" width="104%" height="120%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <!-- Mirage zone gradient -->
+    <linearGradient id="mirageGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#a78bfa" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.12"/>
+    </linearGradient>
+    <!-- Probe gap zone gradient -->
+    <linearGradient id="probeGapGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f43f5e" stop-opacity="0.06"/>
+      <stop offset="50%" stop-color="#f43f5e" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#f43f5e" stop-opacity="0.06"/>
+    </linearGradient>
+    <!-- Accent gradient for title underline -->
+    <linearGradient id="accentGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="50%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#f43f5e" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    text {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    }
+  </style>
+
+  <!-- ══════════════ BACKGROUND ══════════════ -->
+  <rect width="1200" height="520" rx="8" fill="#0f1117"/>
+  <rect x="0.5" y="0.5" width="1199" height="519" rx="8" fill="none" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- ══════════════ HEADER ══════════════ -->
+  <text x="56" y="44" font-size="24" font-weight="700" fill="#f1f5f9" letter-spacing="-0.5">Memory Stratigraphy</text>
+  <rect x="56" y="52" width="120" height="2.5" rx="1.25" fill="url(#accentGrad)" opacity="0.7"/>
+  <text x="56" y="68" font-size="12" font-weight="400" fill="#94a3b8" letter-spacing="0.2">How finite probes decompose infinite memory structure into measurable layers</text>
+
+  <!-- ══════════════ METRIC KEY (top right) ══════════════ -->
+  <g transform="translate(880, 28)">
+    <rect x="0" y="0" width="270" height="52" rx="6" fill="#161b22" stroke="#1e293b" stroke-width="1"/>
+    <text x="16" y="18" font-size="10" font-weight="600" fill="#f43f5e">Δ</text>
+    <text x="28" y="18" font-size="10" font-weight="500" fill="#94a3b8">= probe gap</text>
+    <text x="16" y="31" font-size="9" font-weight="400" fill="#64748b">algebraic − joint: structure invisible to probes</text>
+    <text x="148" y="18" font-size="10" font-weight="600" fill="#a78bfa">ω</text>
+    <text x="160" y="18" font-size="10" font-weight="500" fill="#94a3b8">= mirage shelf</text>
+    <text x="148" y="31" font-size="9" font-weight="400" fill="#64748b">joint − answer: right answer, lost reason</text>
+    <line x1="138" y1="8" x2="138" y2="38" stroke="#1e293b" stroke-width="1"/>
+  </g>
+
+  <!-- ══════════════ CHART AREA ══════════════ -->
+  <!-- x: label area 0-200, chart 210-1120. 910px for ~12 bits => 75.83px/bit -->
+  <!-- y: rows at y=100, 162, 224, 286, 348. Row height=48, bar height=30 -->
+
+  <!-- Vertical grid lines (0-12 bits) -->
+  <g opacity="0.5">
+    <line x1="210" y1="86" x2="210" y2="390" stroke="#1e293b" stroke-width="0.75"/>
+    <line x1="285.8" y1="86" x2="285.8" y2="390" stroke="#1e293b" stroke-width="0.5" stroke-dasharray="2,5"/>
+    <line x1="361.7" y1="86" x2="361.7" y2="390" stroke="#1e293b" stroke-width="0.5" stroke-dasharray="2,5"/>
+    <line x1="437.5" y1="86" x2="437.5" y2="390" stroke="#1e293b" stroke-width="0.5" stroke-dasharray="2,5"/>
+    <line x1="513.3" y1="86" x2="513.3" y2="390" stroke="#1e293b" stroke-width="0.5" stroke-dasharray="2,5"/>
+    <line x1="589.2" y1="86" x2="589.2" y2="390" stroke="#1e293b" stroke-width="0.5" stroke-dasharray="2,5"/>
+    <line x1="665.0" y1="86" x2="665.0" y2="390" stroke="#1e293b" stroke-width="0.5" stroke-dasharray="2,5"/>
+    <line x1="740.8" y1="86" x2="740.8" y2="390" stroke="#1e293b" stroke-width="0.5" stroke-dasharray="2,5"/>
+    <line x1="816.7" y1="86" x2="816.7" y2="390" stroke="#1e293b" stroke-width="0.5" stroke-dasharray="2,5"/>
+    <line x1="892.5" y1="86" x2="892.5" y2="390" stroke="#1e293b" stroke-width="0.5" stroke-dasharray="2,5"/>
+    <line x1="968.3" y1="86" x2="968.3" y2="390" stroke="#1e293b" stroke-width="0.5" stroke-dasharray="2,5"/>
+    <line x1="1044.2" y1="86" x2="1044.2" y2="390" stroke="#1e293b" stroke-width="0.5" stroke-dasharray="2,5"/>
+    <line x1="1120" y1="86" x2="1120" y2="390" stroke="#1e293b" stroke-width="0.75"/>
+  </g>
+
+  <!-- Axis tick labels -->
+  <g font-size="9.5" font-weight="400" fill="#475569" text-anchor="middle">
+    <text x="210" y="404">0</text>
+    <text x="285.8" y="404">1</text>
+    <text x="361.7" y="404">2</text>
+    <text x="437.5" y="404">3</text>
+    <text x="513.3" y="404">4</text>
+    <text x="589.2" y="404">5</text>
+    <text x="665.0" y="404">6</text>
+    <text x="740.8" y="404">7</text>
+    <text x="816.7" y="404">8</text>
+    <text x="892.5" y="404">9</text>
+    <text x="968.3" y="404">10</text>
+    <text x="1044.2" y="404">11</text>
+    <text x="1120" y="404">12</text>
+  </g>
+  <text x="665" y="420" font-size="10" font-weight="500" fill="#64748b" text-anchor="middle">information content (bits)</text>
+
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <!-- ROW 1: M₃                                                           -->
+  <!-- algebraic=3.807, empirical=3.807, joint=3.807, witness=3.807,        -->
+  <!-- answer=2.322. Δ=0.000, ω=1.485                                      -->
+  <!-- px: 3.807 * 75.83 = 288.7   2.322 * 75.83 = 176.1                   -->
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <g transform="translate(0, 90)">
+    <!-- Row background -->
+    <rect x="205" y="0" width="920" height="48" rx="4" fill="#12161e" opacity="0.5"/>
+
+    <!-- Label -->
+    <text x="190" y="29" font-size="13" font-weight="600" fill="#e2e8f0" text-anchor="end" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', monospace">M₃</text>
+
+    <!-- Mirage zone: answer → joint (176.1 → 288.7) -->
+    <rect x="386.1" y="4" width="112.6" height="40" rx="3" fill="url(#mirageGrad)" filter="url(#mirageGlow)"/>
+    <rect x="386.1" y="4" width="112.6" height="40" rx="3" fill="none" stroke="#a78bfa" stroke-width="0.6" stroke-dasharray="3,3" opacity="0.45"/>
+
+    <!-- Algebraic bar (outermost, full width) -->
+    <rect x="210" y="6" width="288.7" height="36" rx="5" fill="#3b82f6" opacity="0.15"/>
+    <rect x="210" y="6" width="288.7" height="36" rx="5" fill="none" stroke="#3b82f6" stroke-width="0.8" opacity="0.3"/>
+
+    <!-- Empirical bar (same extent) -->
+    <rect x="210" y="10" width="288.7" height="28" rx="4" fill="#10b981" opacity="0.15"/>
+
+    <!-- Joint bar (same extent) -->
+    <rect x="210" y="14" width="288.7" height="20" rx="3" fill="#f59e0b" opacity="0.2"/>
+
+    <!-- Witness bar (same extent) -->
+    <rect x="210" y="17" width="288.7" height="14" rx="2.5" fill="#f43f5e" opacity="0.25"/>
+
+    <!-- Answer bar (innermost) -->
+    <rect x="210" y="19" width="176.1" height="10" rx="2" fill="#8b5cf6" opacity="0.9" filter="url(#barShadow)"/>
+
+    <!-- ω label in mirage zone -->
+    <text x="442.4" y="30" font-size="8.5" font-weight="600" fill="#a78bfa" text-anchor="middle" opacity="0.8">ω=1.485</text>
+
+    <!-- Right-side values -->
+    <text x="506" y="22" font-size="9" font-weight="500" fill="#64748b">3.807 bits</text>
+    <text x="506" y="34" font-size="8.5" font-weight="600" fill="#334155">Δ = 0.000</text>
+    <text x="506" y="34" font-size="8.5" font-weight="600" fill="#475569">Δ = 0.000</text>
+  </g>
+
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <!-- ROW 2: Q₍₃,₂₎                                                       -->
+  <!-- algebraic=5.755, empirical=5.755, joint=2.807, witness=2.807,        -->
+  <!-- answer=2.322. Δ=2.948, ω=0.485                                      -->
+  <!-- px: 5.755*75.83=436.4  2.807*75.83=212.9  2.322*75.83=176.1         -->
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <g transform="translate(0, 152)">
+    <rect x="205" y="0" width="920" height="48" rx="4" fill="#12161e" opacity="0.3"/>
+
+    <text x="190" y="29" font-size="13" font-weight="600" fill="#e2e8f0" text-anchor="end" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', monospace">Q₍₃,₂₎</text>
+
+    <!-- Probe gap zone: joint → algebraic (212.9 → 436.4) -->
+    <rect x="422.9" y="4" width="223.5" height="40" rx="3" fill="url(#probeGapGrad)"/>
+    <!-- Probe gap bracket -->
+    <line x1="422.9" y1="2" x2="422.9" y2="6" stroke="#f43f5e" stroke-width="0.8" opacity="0.5"/>
+    <line x1="422.9" y1="2" x2="646.4" y2="2" stroke="#f43f5e" stroke-width="0.8" opacity="0.4" stroke-dasharray="3,2"/>
+    <line x1="646.4" y1="2" x2="646.4" y2="6" stroke="#f43f5e" stroke-width="0.8" opacity="0.5"/>
+    <text x="534.6" y="-2" font-size="8" font-weight="600" fill="#f43f5e" text-anchor="middle" opacity="0.7">Δ = 2.948</text>
+
+    <!-- Mirage zone: answer → joint (176.1 → 212.9) -->
+    <rect x="386.1" y="4" width="36.8" height="40" rx="3" fill="url(#mirageGrad)" filter="url(#mirageGlow)"/>
+    <rect x="386.1" y="4" width="36.8" height="40" rx="3" fill="none" stroke="#a78bfa" stroke-width="0.6" stroke-dasharray="3,3" opacity="0.45"/>
+
+    <!-- Algebraic -->
+    <rect x="210" y="6" width="436.4" height="36" rx="5" fill="#3b82f6" opacity="0.15"/>
+    <rect x="210" y="6" width="436.4" height="36" rx="5" fill="none" stroke="#3b82f6" stroke-width="0.8" opacity="0.3"/>
+    <!-- Empirical (same as algebraic) -->
+    <rect x="210" y="10" width="436.4" height="28" rx="4" fill="#10b981" opacity="0.15"/>
+    <!-- Joint -->
+    <rect x="210" y="14" width="212.9" height="20" rx="3" fill="#f59e0b" opacity="0.2"/>
+    <!-- Witness (same as joint) -->
+    <rect x="210" y="17" width="212.9" height="14" rx="2.5" fill="#f43f5e" opacity="0.25"/>
+    <!-- Answer -->
+    <rect x="210" y="19" width="176.1" height="10" rx="2" fill="#8b5cf6" opacity="0.9" filter="url(#barShadow)"/>
+
+    <!-- ω label -->
+    <text x="404.5" y="48" font-size="7.5" font-weight="600" fill="#a78bfa" text-anchor="middle" opacity="0.75">ω=0.485</text>
+
+    <!-- Right-side values -->
+    <text x="654" y="22" font-size="9" font-weight="500" fill="#64748b">5.755 bits</text>
+  </g>
+
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <!-- ROW 3: Q₍₄,₂₎                                                       -->
+  <!-- algebraic=6.492, empirical=6.492, joint=3.000, witness=3.000,        -->
+  <!-- answer=2.585. Δ=3.492, ω=0.415                                      -->
+  <!-- px: 6.492*75.83=492.3  3.000*75.83=227.5  2.585*75.83=196.0         -->
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <g transform="translate(0, 214)">
+    <rect x="205" y="0" width="920" height="48" rx="4" fill="#12161e" opacity="0.5"/>
+
+    <text x="190" y="29" font-size="13" font-weight="600" fill="#e2e8f0" text-anchor="end" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', monospace">Q₍₄,₂₎</text>
+
+    <!-- Probe gap zone -->
+    <rect x="437.5" y="4" width="264.8" height="40" rx="3" fill="url(#probeGapGrad)"/>
+    <line x1="437.5" y1="2" x2="437.5" y2="6" stroke="#f43f5e" stroke-width="0.8" opacity="0.5"/>
+    <line x1="437.5" y1="2" x2="702.3" y2="2" stroke="#f43f5e" stroke-width="0.8" opacity="0.4" stroke-dasharray="3,2"/>
+    <line x1="702.3" y1="2" x2="702.3" y2="6" stroke="#f43f5e" stroke-width="0.8" opacity="0.5"/>
+    <text x="569.9" y="-2" font-size="8" font-weight="600" fill="#f43f5e" text-anchor="middle" opacity="0.7">Δ = 3.492</text>
+
+    <!-- Mirage zone -->
+    <rect x="406.0" y="4" width="31.5" height="40" rx="3" fill="url(#mirageGrad)" filter="url(#mirageGlow)"/>
+    <rect x="406.0" y="4" width="31.5" height="40" rx="3" fill="none" stroke="#a78bfa" stroke-width="0.6" stroke-dasharray="3,3" opacity="0.45"/>
+
+    <!-- Algebraic -->
+    <rect x="210" y="6" width="492.3" height="36" rx="5" fill="#3b82f6" opacity="0.15"/>
+    <rect x="210" y="6" width="492.3" height="36" rx="5" fill="none" stroke="#3b82f6" stroke-width="0.8" opacity="0.3"/>
+    <!-- Empirical -->
+    <rect x="210" y="10" width="492.3" height="28" rx="4" fill="#10b981" opacity="0.15"/>
+    <!-- Joint -->
+    <rect x="210" y="14" width="227.5" height="20" rx="3" fill="#f59e0b" opacity="0.2"/>
+    <!-- Witness -->
+    <rect x="210" y="17" width="227.5" height="14" rx="2.5" fill="#f43f5e" opacity="0.25"/>
+    <!-- Answer -->
+    <rect x="210" y="19" width="196.0" height="10" rx="2" fill="#8b5cf6" opacity="0.9" filter="url(#barShadow)"/>
+
+    <!-- ω label -->
+    <text x="421.8" y="48" font-size="7.5" font-weight="600" fill="#a78bfa" text-anchor="middle" opacity="0.75">ω=0.415</text>
+
+    <text x="710" y="22" font-size="9" font-weight="500" fill="#64748b">6.492 bits</text>
+  </g>
+
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <!-- ROW 4: Q₍₅,₃₎                                                       -->
+  <!-- algebraic=9.613, empirical=9.613, joint=3.700, witness=3.700,        -->
+  <!-- answer=2.807. Δ=5.913, ω=0.893                                      -->
+  <!-- px: 9.613*75.83=729.0  3.700*75.83=280.6  2.807*75.83=212.9         -->
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <g transform="translate(0, 276)">
+    <rect x="205" y="0" width="920" height="48" rx="4" fill="#12161e" opacity="0.3"/>
+
+    <text x="190" y="29" font-size="13" font-weight="600" fill="#e2e8f0" text-anchor="end" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', monospace">Q₍₅,₃₎</text>
+
+    <!-- Probe gap zone -->
+    <rect x="490.6" y="4" width="448.4" height="40" rx="3" fill="url(#probeGapGrad)"/>
+    <line x1="490.6" y1="2" x2="490.6" y2="6" stroke="#f43f5e" stroke-width="0.8" opacity="0.5"/>
+    <line x1="490.6" y1="2" x2="939.0" y2="2" stroke="#f43f5e" stroke-width="0.8" opacity="0.4" stroke-dasharray="3,2"/>
+    <line x1="939.0" y1="2" x2="939.0" y2="6" stroke="#f43f5e" stroke-width="0.8" opacity="0.5"/>
+    <text x="714.8" y="-2" font-size="8" font-weight="600" fill="#f43f5e" text-anchor="middle" opacity="0.7">Δ = 5.913</text>
+
+    <!-- Mirage zone -->
+    <rect x="422.9" y="4" width="67.7" height="40" rx="3" fill="url(#mirageGrad)" filter="url(#mirageGlow)"/>
+    <rect x="422.9" y="4" width="67.7" height="40" rx="3" fill="none" stroke="#a78bfa" stroke-width="0.6" stroke-dasharray="3,3" opacity="0.45"/>
+
+    <!-- Algebraic -->
+    <rect x="210" y="6" width="729.0" height="36" rx="5" fill="#3b82f6" opacity="0.15"/>
+    <rect x="210" y="6" width="729.0" height="36" rx="5" fill="none" stroke="#3b82f6" stroke-width="0.8" opacity="0.3"/>
+    <!-- Empirical -->
+    <rect x="210" y="10" width="729.0" height="28" rx="4" fill="#10b981" opacity="0.15"/>
+    <!-- Joint -->
+    <rect x="210" y="14" width="280.6" height="20" rx="3" fill="#f59e0b" opacity="0.2"/>
+    <!-- Witness -->
+    <rect x="210" y="17" width="280.6" height="14" rx="2.5" fill="#f43f5e" opacity="0.25"/>
+    <!-- Answer -->
+    <rect x="210" y="19" width="212.9" height="10" rx="2" fill="#8b5cf6" opacity="0.9" filter="url(#barShadow)"/>
+
+    <!-- ω label -->
+    <text x="456.7" y="48" font-size="7.5" font-weight="600" fill="#a78bfa" text-anchor="middle" opacity="0.75">ω=0.893</text>
+
+    <text x="946" y="22" font-size="9" font-weight="500" fill="#64748b">9.613 bits</text>
+  </g>
+
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <!-- ROW 5: causal_referee                                                -->
+  <!-- algebraic=11.306, empirical=3.907, joint=3.907, witness=3.907,       -->
+  <!-- answer=2.000. Δ=7.399, ω=1.907                                      -->
+  <!-- px: 11.306*75.83=857.3  3.907*75.83=296.3  2.000*75.83=151.7        -->
+  <!-- NOTE: empirical ≠ algebraic here!                                    -->
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <g transform="translate(0, 338)">
+    <rect x="205" y="0" width="920" height="48" rx="4" fill="#12161e" opacity="0.5"/>
+
+    <text x="190" y="24" font-size="11.5" font-weight="600" fill="#e2e8f0" text-anchor="end" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', monospace">causal</text>
+    <text x="190" y="37" font-size="11.5" font-weight="600" fill="#e2e8f0" text-anchor="end" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', monospace">_referee</text>
+
+    <!-- Probe gap zone: joint → algebraic -->
+    <rect x="506.3" y="4" width="561.0" height="40" rx="3" fill="url(#probeGapGrad)"/>
+    <line x1="506.3" y1="2" x2="506.3" y2="6" stroke="#f43f5e" stroke-width="0.8" opacity="0.5"/>
+    <line x1="506.3" y1="2" x2="1067.3" y2="2" stroke="#f43f5e" stroke-width="0.8" opacity="0.4" stroke-dasharray="3,2"/>
+    <line x1="1067.3" y1="2" x2="1067.3" y2="6" stroke="#f43f5e" stroke-width="0.8" opacity="0.5"/>
+    <text x="786.8" y="-2" font-size="8" font-weight="600" fill="#f43f5e" text-anchor="middle" opacity="0.7">Δ = 7.399</text>
+
+    <!-- Mirage zone: answer → joint (151.7 → 296.3) -->
+    <rect x="361.7" y="4" width="144.6" height="40" rx="3" fill="url(#mirageGrad)" filter="url(#mirageGlow)"/>
+    <rect x="361.7" y="4" width="144.6" height="40" rx="3" fill="none" stroke="#a78bfa" stroke-width="0.6" stroke-dasharray="3,3" opacity="0.45"/>
+
+    <!-- Algebraic (full extent) -->
+    <rect x="210" y="6" width="857.3" height="36" rx="5" fill="#3b82f6" opacity="0.15"/>
+    <rect x="210" y="6" width="857.3" height="36" rx="5" fill="none" stroke="#3b82f6" stroke-width="0.8" opacity="0.3"/>
+
+    <!-- Empirical (SHORTER than algebraic — the key collapse) -->
+    <rect x="210" y="10" width="296.3" height="28" rx="4" fill="#10b981" opacity="0.15"/>
+    <!-- Empirical collapse marker -->
+    <line x1="506.3" y1="10" x2="506.3" y2="38" stroke="#10b981" stroke-width="0.6" stroke-dasharray="2,2" opacity="0.4"/>
+    <text x="510" y="46" font-size="7.5" font-weight="500" fill="#10b981" opacity="0.7">empirical collapses → 3.907</text>
+
+    <!-- Joint (same as empirical here) -->
+    <rect x="210" y="14" width="296.3" height="20" rx="3" fill="#f59e0b" opacity="0.2"/>
+    <!-- Witness -->
+    <rect x="210" y="17" width="296.3" height="14" rx="2.5" fill="#f43f5e" opacity="0.25"/>
+    <!-- Answer -->
+    <rect x="210" y="19" width="151.7" height="10" rx="2" fill="#8b5cf6" opacity="0.9" filter="url(#barShadow)"/>
+
+    <!-- ω label in mirage zone -->
+    <text x="434.0" y="30" font-size="8" font-weight="600" fill="#a78bfa" text-anchor="middle" opacity="0.8">ω=1.907</text>
+
+    <text x="1074" y="22" font-size="9" font-weight="500" fill="#64748b">11.306 bits</text>
+  </g>
+
+  <!-- ══════════════ LEGEND ══════════════ -->
+  <g transform="translate(56, 448)">
+    <rect x="-10" y="-10" width="1110" height="48" rx="6" fill="#12161e" opacity="0.4"/>
+
+    <!-- Algebraic -->
+    <rect x="6" y="2" width="14" height="14" rx="3" fill="#3b82f6" opacity="0.45" stroke="#3b82f6" stroke-width="0.6" stroke-opacity="0.5"/>
+    <text x="26" y="13" font-size="10.5" font-weight="600" fill="#cbd5e1">Algebraic</text>
+    <text x="26" y="25" font-size="8.5" font-weight="400" fill="#64748b">full structure</text>
+
+    <!-- Empirical -->
+    <rect x="140" y="2" width="14" height="14" rx="3" fill="#10b981" opacity="0.45"/>
+    <text x="160" y="13" font-size="10.5" font-weight="600" fill="#cbd5e1">Empirical</text>
+    <text x="160" y="25" font-size="8.5" font-weight="400" fill="#64748b">reachable states</text>
+
+    <!-- Joint -->
+    <rect x="282" y="2" width="14" height="14" rx="3" fill="#f59e0b" opacity="0.55"/>
+    <text x="302" y="13" font-size="10.5" font-weight="600" fill="#cbd5e1">Joint</text>
+    <text x="302" y="25" font-size="8.5" font-weight="400" fill="#64748b">probe-distinguishable</text>
+
+    <!-- Witness -->
+    <rect x="436" y="2" width="14" height="14" rx="3" fill="#f43f5e" opacity="0.55"/>
+    <text x="456" y="13" font-size="10.5" font-weight="600" fill="#cbd5e1">Witness</text>
+    <text x="456" y="25" font-size="8.5" font-weight="400" fill="#64748b">about reasons</text>
+
+    <!-- Answer -->
+    <rect x="570" y="2" width="14" height="14" rx="3" fill="#8b5cf6" opacity="0.85"/>
+    <text x="590" y="13" font-size="10.5" font-weight="600" fill="#cbd5e1">Answer</text>
+    <text x="590" y="25" font-size="8.5" font-weight="400" fill="#64748b">about outcomes</text>
+
+    <!-- Mirage shelf -->
+    <rect x="700" y="2" width="28" height="14" rx="3" fill="url(#mirageGrad)" stroke="#a78bfa" stroke-width="0.6" stroke-dasharray="2,2" opacity="0.9"/>
+    <text x="734" y="13" font-size="10.5" font-weight="600" fill="#a78bfa">Mirage shelf</text>
+    <text x="734" y="25" font-size="8.5" font-weight="400" fill="#64748b">right answer, lost reason</text>
+
+    <!-- Probe gap -->
+    <rect x="892" y="2" width="28" height="14" rx="3" fill="url(#probeGapGrad)" stroke="#f43f5e" stroke-width="0.6" stroke-dasharray="2,2" opacity="0.7"/>
+    <text x="926" y="13" font-size="10.5" font-weight="600" fill="#f43f5e" opacity="0.8">Probe gap</text>
+    <text x="926" y="25" font-size="8.5" font-weight="400" fill="#64748b">invisible to probes</text>
+  </g>
+
+  <!-- Figure label -->
+  <text x="56" y="510" font-size="9" font-weight="400" fill="#334155">Figure 1 · Stark: Selective Memory Theory · Separator Closure Experiment</text>
 </svg>

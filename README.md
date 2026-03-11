@@ -1,189 +1,145 @@
 # Stark
 
-Exact theory and exact experiments for selective memory, witness preservation, causal justification, and runtime holonomy.
+**When a system has limited memory, can it still know _why_ it's right — or only _that_ it's right?**
 
-This repository studies a single question from several angles:
+Stark is an exact computational and theoretical investigation into what survives under finite memory: correct answers, the witnesses (reasons) behind them, or the full causal structure. Every result is verified by exhaustive finite search — no approximations, no sampling.
 
-> Under finite memory, what survives first: being right, knowing the witnesses, or preserving the full admissible family structure behind a causal claim?
+## The Core Finding
 
-The project starts from tropical threshold memory, proves that bare capacity is too coarse for causal identity, builds the protected-witness quotient, validates unique-minimal causal factorization exactly, measures the mirage shelf where answers outlive reasons, and then pushes into overlapping-family and runtime-holonomy boundaries.
+Under memory pressure, a system can remain **correct** long after it has lost track of **why** it's correct. We call this the **mirage shelf**: a measurable zone where answers survive but justifications don't.
 
-Holonomy tower so far: `coordinate -> assignment -> pair -> simplex -> global`.
+This isn't a single result — it's a layered decomposition. Stark proves that memory structure is _not_ one thing but a **tower of quotients**, each capturing a different level of causal fidelity. The project traces exactly where each layer breaks, from bare thresholds through witness preservation, family contracts, runtime collapse, and transport holonomy.
 
-## Inspection Map
+## Key Results at a Glance
 
-The repo now has one canonical, experiment-oriented layout:
+| Result | What it shows |
+|--------|--------------|
+| **Witness quotient is exact** | The protected-witness state count `\|Q_(k,p)\| = Σ (d+2)^p` is tight — no wasted states |
+| **Causal factorization works** | On 89,291 unique-minimal causal queries, witness-faithful factorization has 0 failures |
+| **Mirage shelf is real** | At 1 bit below threshold, answer fidelity = 0.999 while witness fidelity = 0.987 |
+| **Hypergraph contracts needed** | Overlapping variable families force a hypergraph-valued contract layer |
+| **Runtime stays simple** | Across 6,336 antichain configurations, runtime never exceeds coordinate tracking — 0 collapses |
+| **Transport tower is strict** | Pair → simplex → global: each level captures structure the previous one misses |
+| **Static ≠ dynamic obstructions** | The first "different now" failure (5 edges) and "different future" failure (4 edges) don't coincide |
 
-- [`scripts/referee/`](scripts/referee), [`scripts/quotient-thresholds/`](scripts/quotient-thresholds), [`scripts/family-runtime/`](scripts/family-runtime), [`scripts/runtime-semantics/`](scripts/runtime-semantics), [`scripts/holonomy/`](scripts/holonomy)
-- [`results/referee/`](results/referee), [`results/quotient-thresholds/`](results/quotient-thresholds), [`results/family-runtime/`](results/family-runtime), [`results/runtime-semantics/`](results/runtime-semantics), [`results/holonomy/`](results/holonomy)
-- [`docs/writing/synthesis/`](docs/writing/synthesis), [`docs/writing/foundations/`](docs/writing/foundations), [`docs/writing/experiments/`](docs/writing/experiments)
+## Figures
 
-Every script, report, figure, and note now lives in exactly one place.
-
-## Start Here
-
-If you are comfortable with ML and new to the quotient language, this is the intended path:
-
-1. [Short overview](docs/writing/synthesis/selective-memory-master-synthesis-short.md)
-2. [Master synthesis](docs/writing/synthesis/selective-memory-master-synthesis.md)
-3. [Theorem and status ledger](docs/writing/synthesis/selective-memory-theorem-ledger.md)
-
-Then use the layer-specific notes and reports as needed:
-
-- Foundations
-  - [Causal contract refinement](docs/writing/foundations/causal-contract-refinement.md)
-  - [Witness-faithful factorization](docs/writing/foundations/witness-faithful-factorization.md)
-  - [Contract representation theorem](docs/writing/foundations/contract-representation-theorem.md)
-- Mid-layer theory and experiments
-  - [Finite-probe quotient tower](docs/writing/experiments/quotient-thresholds/finite-probe-quotient-tower.md)
-  - [Separator closure and family memory](docs/writing/experiments/quotient-thresholds/separator-closure-and-family-memory.md)
-  - [Family-memory contract and runtime](docs/writing/experiments/family-runtime/family-memory-contract-and-runtime.md)
-  - [Runtime-collapse boundary](docs/writing/experiments/family-runtime/runtime-collapse-boundary.md)
-  - [Semantic boundary atlas](docs/writing/experiments/runtime-semantics/semantic-boundary-atlas.md)
-- Current runtime-holonomy boundary
-  - [Runtime hypergraph curvature](docs/writing/experiments/runtime-semantics/runtime-hypergraph-curvature.md)
-  - [Full-assignment holonomy](docs/writing/experiments/holonomy/full-assignment-holonomy.md)
-  - [Simplex-holonomy boundary](docs/writing/experiments/holonomy/simplex-holonomy-boundary.md)
-  - [Global-holonomy boundary](docs/writing/experiments/holonomy/global-holonomy-boundary.md)
-  - [Global-holonomy atlas](docs/writing/experiments/holonomy/global-holonomy-atlas.md)
-  - [Atlas report](results/holonomy/global-holonomy-atlas/global_holonomy_atlas.md)
-  - [Atlas figure](results/holonomy/global-holonomy-atlas/global_holonomy_atlas.svg)
-  - [Global-quotient compression](docs/writing/experiments/holonomy/global-quotient-compression.md)
-  - [Simplex-quotient compression](docs/writing/experiments/holonomy/simplex-quotient-compression.md)
-
-## What This Repo Establishes
-
-- Bare tropical memory preserves capacity but not witness identity.
-- The exact protected-witness state count is
-  `|Q_(k,p)| = sum_(d=0)^k (d + 2)^p`.
-- Unique-minimal causal queries factor through the witness quotient on the scanned exact class.
-- Under finite budgets, there is a real mirage shelf: answer fidelity can remain high after witness fidelity has already degraded.
-- The measured system is not governed by a single quotient but by a tower:
-  canonical quotient -> empirical support quotient -> probe-joint quotient -> probe-answer quotient.
-- Overlapping adjustment families force a hypergraph-valued contract layer.
-- Under binary completion, runtime still collapses to coordinate state on the scanned arbitrary-antichain grid.
-- Changing only the readout is not enough to force genuinely non-coordinate runtime state.
-- Changing the carrier does force runtime curvature.
-- Pair transport is enough to break raw assignment exactness.
-- Pair transport is not final: on the exact base grid, a triangle-local simplex law already breaks `assignment + pair` exactness.
-- Simplex transport is not final either: on the scanned tetra/cycle-local law library, the first simplex-insufficient split appears on a 5-edge overlap family and the first hidden future beyond simplex appears on a 4-edge mixed family.
-- Beyond simplex, the first static obstruction and the first dynamic hidden-future obstruction do not coincide.
-- The raw global token layer is not canonical: at least one explicit global compression stays exact while shrinking the raw global quotient.
-
-## Best Figures
-
-These are the fastest way to see the program’s geometry.
+These five figures capture the program's geometry. Each is self-contained.
 
 ### 1. Memory Stratigraphy
 
-Shows the quotient tower as a measured object rather than a slogan.
+How finite probes decompose memory into layers. The gap between "algebraic" and "joint" is structure invisible to probes. The gap between "joint" and "answer" is the mirage shelf — where answers survive but reasons don't.
 
 ![Memory stratigraphy](results/quotient-thresholds/separator-closure-experiment/memory_stratigraphy.svg)
 
 ### 2. Exact Pareto Frontier
 
-Shows that the answer/witness shelf is intrinsic on the measured observational tower.
+The answer/witness trade-off under budget pressure. Solid lines = answer fidelity, dashed = witness fidelity. When solid rises above dashed, the system "knows" but can't justify. With abstention (right panel), the mirage vanishes.
 
 ![Exact Pareto frontier](results/quotient-thresholds/exact-pareto-frontier/exact_pareto_frontier.svg)
 
-### 3. Runtime-Collapse Boundary
+### 3. Runtime Collapse Boundary
 
-Shows where family contract complexity fails to enter runtime under the original binary-completion carrier.
+Even when the contract layer is complex (hypergraph-valued), runtime memory stays simple — just depth and completed variables. 6,336 configurations tested, zero collapses. The first break requires changing the _carrier semantics_, not the combinatorics.
 
 ![Runtime-collapse boundary](results/family-runtime/runtime-collapse-boundary/runtime_collapse_boundary.svg)
 
-### 4. Pair vs Simplex Holonomy Boundary
+### 4. Pair vs Simplex Holonomy
 
-Shows the first exact base-grid boundary where pairwise transport stops being enough.
+Where pairwise variable tracking breaks. The triangle family at (p=3, k=2) is the first exact structure where tracking pairs of variables isn't enough — you need triangle-local (simplex) transport.
 
 ![Pair vs simplex holonomy](results/holonomy/pair-vs-simplex-holonomy/pair_vs_simplex_holonomy_search.svg)
 
 ### 5. Global Holonomy Atlas
 
-Shows that the first static global obstruction is cycle-like, while the first dynamic hidden-future obstruction is mixed/tetra-local.
-Static means same lower-layer summary, different now; dynamic means same lower-layer summary, same now, different future under a non-empty suffix.
+Beyond simplex transport, there are two kinds of failure: **static** (states differ right now) and **dynamic** (states differ in the future). These appear on structurally different families (5-edge cycle vs 4-edge mixed), and the raw global layer admits exact compression.
 
 ![Global holonomy atlas](results/holonomy/global-holonomy-atlas/global_holonomy_atlas.svg)
 
-## Repo Layout
+## Reading Guide
 
-- [`docs/writing/synthesis/`](docs/writing/synthesis): the master synthesis, short overview, and theorem ledger
-- [`docs/writing/foundations/`](docs/writing/foundations): the contract and factorization foundations
-- [`docs/writing/experiments/`](docs/writing/experiments): layer-by-layer experiment notes and boundary statements
-- [`results/referee/`](results/referee): exact referee and counterexample artifacts
-- [`results/quotient-thresholds/`](results/quotient-thresholds): phase sweeps, separator closure, and Pareto frontiers
-- [`results/family-runtime/`](results/family-runtime): overlapping-family and fixed-family runtime artifacts
-- [`results/runtime-semantics/`](results/runtime-semantics): semantic boundary and carrier-change experiments
-- [`results/holonomy/`](results/holonomy): the runtime holonomy stack from assignment to pair to simplex to global
-- [`scripts/`](scripts): runnable experiment scripts grouped by layer
+### New to the project?
 
-Most scripts follow the same pattern:
+1. **[Short overview](docs/writing/synthesis/selective-memory-master-synthesis-short.md)** — the full program in 3 pages
+2. **[Master synthesis](docs/writing/synthesis/selective-memory-master-synthesis.md)** — complete narrative with proofs
+3. **[Theorem ledger](docs/writing/synthesis/selective-memory-theorem-ledger.md)** — status of every claim (proved / exact computational / open)
 
-- exact finite scan or exact quotient computation
-- markdown report in `results/`
-- JSON companion in `results/`
-- one or more SVG figures in `results/`
+### By question
 
-## Suggested Reading by Question
+<details>
+<summary><strong>"What is the main theorem?"</strong></summary>
 
-### “What is the main theorem-level idea?”
+Memory quotients are contract-relative. The bare threshold quotient `M_k` has `((k+1)(k+4))/2` states. The witness quotient `Q_(k,p)` has `Σ (d+2)^p` states. Unique-minimal causal queries factor through the witness quotient exactly.
 
-- [Master synthesis](docs/writing/synthesis/selective-memory-master-synthesis.md)
-- [Theorem and status ledger](docs/writing/synthesis/selective-memory-theorem-ledger.md)
+→ [Master synthesis](docs/writing/synthesis/selective-memory-master-synthesis.md) · [Theorem ledger](docs/writing/synthesis/selective-memory-theorem-ledger.md)
+</details>
 
-### “Why is bare memory not enough for causality?”
+<details>
+<summary><strong>"Why isn't bare memory enough for causality?"</strong></summary>
 
-- [Causal contract refinement](docs/writing/foundations/causal-contract-refinement.md)
-- [Witness-faithful factorization](docs/writing/foundations/witness-faithful-factorization.md)
-- [Unique-minimal referee report](results/referee/unique-minimal-referee/unique_minimal_referee.md)
+Bare tropical memory preserves capacity but not witness identity. Six collision groups in the bare quotient map to distinct witness signatures — the quotient is too coarse.
 
-### “Where does the mirage shelf come from?”
+→ [Causal contract refinement](docs/writing/foundations/causal-contract-refinement.md) · [Witness-faithful factorization](docs/writing/foundations/witness-faithful-factorization.md) · [Referee report](results/referee/unique-minimal-referee/unique_minimal_referee.md)
+</details>
 
-- [Phase-transition sweep](results/quotient-thresholds/phase-transition-sweep/phase_transition_sweep.md)
-- [Finite-probe quotient tower](docs/writing/experiments/quotient-thresholds/finite-probe-quotient-tower.md)
-- [Exact Pareto frontier](results/quotient-thresholds/exact-pareto-frontier/exact_pareto_frontier.md)
+<details>
+<summary><strong>"Where does the mirage shelf come from?"</strong></summary>
 
-### “Where do hypergraphs first matter?”
+The observational quotient tower — canonical → empirical → probe-joint → probe-answer — has strictly decreasing size. The gap between probe-answer and probe-joint is the shelf. It's intrinsic: even after separator closure, the Pareto frontier shows answer-perfect allocations with imperfect witness fidelity.
 
-- [Overlapping adjustment families](results/family-runtime/overlapping-adjustment-families/overlapping_adjustment_families.md)
-- [Family-memory exact search](results/family-runtime/family-memory-exact-search/family_memory_exact_search.md)
-- [Runtime-collapse boundary](results/family-runtime/runtime-collapse-boundary/runtime_collapse_boundary.md)
+→ [Phase-transition sweep](results/quotient-thresholds/phase-transition-sweep/phase_transition_sweep.md) · [Pareto frontier](results/quotient-thresholds/exact-pareto-frontier/exact_pareto_frontier.md) · [Finite-probe tower](docs/writing/experiments/quotient-thresholds/finite-probe-quotient-tower.md)
+</details>
 
-### “What is the current open seam?”
+<details>
+<summary><strong>"Where do hypergraphs first matter?"</strong></summary>
 
-- [Semantic boundary atlas](results/runtime-semantics/semantic-boundary-atlas/semantic_boundary_atlas.md)
-- [Full-assignment holonomy search](results/holonomy/full-assignment-holonomy/full_assignment_holonomy_search.md)
-- [Pair-vs-simplex holonomy search](results/holonomy/pair-vs-simplex-holonomy/pair_vs_simplex_holonomy_search.md)
-- [Simplex-vs-global holonomy search](results/holonomy/simplex-vs-global-holonomy/simplex_vs_global_holonomy_search.md)
-- [Global holonomy atlas](results/holonomy/global-holonomy-atlas/global_holonomy_atlas.md)
+Overlapping adjustment families can't be captured by union/core/size, degree signatures, intersection signatures, or orbit summaries. Only the full antichain is exact. But once the family is fixed, runtime collapses to coordinate state.
+
+→ [Overlapping families](results/family-runtime/overlapping-adjustment-families/overlapping_adjustment_families.md) · [Family memory](results/family-runtime/family-memory-exact-search/family_memory_exact_search.md) · [Collapse boundary](results/family-runtime/runtime-collapse-boundary/runtime_collapse_boundary.md)
+</details>
+
+<details>
+<summary><strong>"What is the current open problem?"</strong></summary>
+
+The holonomy tower — coordinate → assignment → pair → simplex → global — is strict at every level, and static/dynamic obstructions already separate. The raw global layer is compressible. The open question: is the canonical runtime object a cycle/tetra-local quotient on the overlap complex, or something more global?
+
+→ [Holonomy experiments](results/holonomy/) · [Global atlas](results/holonomy/global-holonomy-atlas/global_holonomy_atlas.md)
+</details>
+
+## Repo Structure
+
+```
+stark/
+├── scripts/           # Runnable experiment scripts, grouped by layer
+│   ├── referee/       #   Causal contract verification
+│   ├── quotient-thresholds/  #   Phase sweeps, Pareto frontiers, separator closure
+│   ├── family-runtime/       #   Overlapping families, runtime collapse
+│   ├── runtime-semantics/    #   Semantic boundary, carrier experiments
+│   └── holonomy/             #   Assignment → pair → simplex → global
+├── results/           # Outputs: JSON data, markdown reports, SVG figures
+│   └── (mirrors scripts/ layout)
+└── docs/writing/      # Theory and synthesis
+    ├── synthesis/     #   Master narrative, short overview, theorem ledger
+    ├── foundations/   #   Contract refinement, factorization, representation
+    └── experiments/   #   Per-layer experiment notes
+```
+
+Every script follows the same pattern: exact finite scan → JSON data → markdown report → SVG figure(s).
 
 ## Reproducibility
 
-Representative scripts:
+All experiments are exact and deterministic. Representative scripts:
 
-- [Unique-minimal referee script](scripts/referee/unique_minimal_referee.py)
-- [Phase-transition sweep script](scripts/quotient-thresholds/phase_transition_sweep.py)
-- [Separator-closure script](scripts/quotient-thresholds/separator_closure_experiment.py)
-- [Exact Pareto frontier script](scripts/quotient-thresholds/exact_pareto_frontier.py)
-- [Runtime-collapse boundary script](scripts/family-runtime/runtime_collapse_boundary.py)
-- [Semantic boundary atlas script](scripts/runtime-semantics/semantic_boundary_atlas.py)
-- [Runtime hypergraph curvature search](scripts/runtime-semantics/runtime_hypergraph_curvature_search.py)
-- [Full-assignment holonomy search](scripts/holonomy/full_assignment_holonomy_search.py)
-- [Pair-vs-simplex holonomy search](scripts/holonomy/pair_vs_simplex_holonomy_search.py)
-- [Simplex-vs-global holonomy search](scripts/holonomy/simplex_vs_global_holonomy_search.py)
-- [Global holonomy atlas](scripts/holonomy/global_holonomy_atlas.py)
+- [`unique_minimal_referee.py`](scripts/referee/unique_minimal_referee.py) — verifies causal factorization on 325,404 queries
+- [`phase_transition_sweep.py`](scripts/quotient-thresholds/phase_transition_sweep.py) — measures the mirage shelf
+- [`exact_pareto_frontier.py`](scripts/quotient-thresholds/exact_pareto_frontier.py) — computes answer/witness trade-off envelopes
+- [`runtime_collapse_boundary.py`](scripts/family-runtime/runtime_collapse_boundary.py) — tests 6,336 antichains for runtime collapse
+- [`global_holonomy_atlas.py`](scripts/holonomy/global_holonomy_atlas.py) — classifies beyond-simplex obstructions
 
-Verification artifact:
-
-- [Causal contract counterexample checker](scripts/referee/causal_contract_counterexamples.py)
-- [Saved verification output](results/referee/causal-contract-counterexamples/causal_contract_counterexamples.txt)
+Verification: [`causal_contract_counterexamples.py`](scripts/referee/causal_contract_counterexamples.py) with [saved output](results/referee/causal-contract-counterexamples/causal_contract_counterexamples.txt).
 
 ## Current Boundary
 
-The strongest clean statement currently supported by the repo is:
+The strongest clean statement:
 
-> On the fixed witness carrier, pair transport breaks raw assignment exactness; simplex transport breaks `assignment + pair` exactness; and on the scanned tetra/cycle-local law library, simplex transport itself is not final. The first simplex-insufficient split appears under a cycle-local flux law, while the first hidden future beyond simplex appears under a tetra-local freeze law.
-
-So the next seam is now:
-
-> Static and dynamic beyond-simplex obstructions already separate on the exact scanned set, and the raw global layer is compressible. Is the canonical runtime object a cycle/tetra local quotient on the overlap complex, or something still more global than the current token summaries?
+> On the fixed witness carrier, pair transport breaks assignment exactness; simplex transport breaks pair exactness; and beyond simplex, static and dynamic obstructions separate on different family structures. The raw global layer admits exact compression. The next question is whether the canonical runtime object lives on a local quotient of the overlap complex or requires genuinely global tokens.
