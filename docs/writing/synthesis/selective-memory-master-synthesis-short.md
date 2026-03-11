@@ -1,14 +1,19 @@
 # Selective Memory Master Synthesis: Short Overview
 
+## What This Is About
+
+Suppose a system must reason about cause and effect — for example, deciding which variables to adjust for in a causal analysis — but has only limited memory. How much memory does it need to get the right answer? And how much more to know _why_ that answer is right?
+
+This project shows that correctness and justification require different amounts of memory, and that the gap between them is measurable and structured — exact on the scanned quotient families, and a stable observed pattern across the broader sweep grid. The key object is a *memory quotient*: the smallest compressed state that preserves everything a given task needs. Different tasks (bare feasibility, witness preservation, causal identification) have different quotients, forming a tower of increasing fidelity.
+
+For the full synthesis with proofs, see [selective-memory-master-synthesis.md](selective-memory-master-synthesis.md).
+
 ## Abstract
 
-This note is the concise companion to the full synthesis in [selective-memory-master-synthesis.md](selective-memory-master-synthesis.md).
-It records the shortest version of what the repository now supports.
-
-The program began with bare tropical threshold memory and asked whether that memory could preserve causal justification.
+The program began with bare tropical threshold memory (a max-plus algebraic framework for tracking predecessor capacity) and asked whether that memory could preserve causal justification.
 The answer is now clear.
-Bare tropical memory is exact for a bare threshold contract, but it is too coarse for named causal identity.
-The correct repair is a protected-witness quotient, and on the unique-minimal causal class that repair is exact.
+Bare tropical memory is exact for a bare threshold contract, but it is too coarse for named causal identity — it tracks _how many_ predecessors exist, not _which_ ones.
+The correct repair is a protected-witness quotient that tracks named variables, and on the unique-minimal causal class that repair is exact.
 The later experiments then showed that finite memory fails in layers: answers can remain right before reasons remain identifiable.
 The current boundary result is that hypergraph complexity is already exact at the contract layer, can appear at the teaching/probe layer, but has not yet been forced into genuinely non-coordinate runtime state on the fixed witness carrier.
 
