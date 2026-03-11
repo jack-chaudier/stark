@@ -1,187 +1,341 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1168" viewBox="0 0 1600 1168">
-<style>
-text { font-family: 'Inter', 'Segoe UI', Arial, sans-serif; font-size: 13px; fill: #243b53; }
-.title { font-size: 24px; font-weight: 700; fill: #102a43; }
-.subtitle { font-size: 14px; fill: #52606d; }
-.panel { fill: #ffffff; stroke: #d9e2ec; stroke-width: 1.2; rx: 18; ry: 18; }
-.card { fill: #ffffff; stroke: #d9e2ec; stroke-width: 1.2; rx: 16; ry: 16; }
-.header { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; fill: #486581; }
-.section { font-size: 17px; font-weight: 700; fill: #102a43; }
-.metric { font-size: 30px; font-weight: 700; fill: #0f172a; }
-.small { font-size: 12px; fill: #52606d; }
-.cell { font-size: 12px; fill: #102a43; }
-.mono { font-family: 'SFMono-Regular', Menlo, Monaco, Consolas, monospace; font-size: 12px; fill: #102a43; }
-.control-row { fill: #f4f7f9; }
-.pair-row { fill: #eff6ff; }
-.simplex-row { fill: #f7efff; }
-.winner-row { fill: #eefbf3; }
-.divider { stroke: #e5e7eb; stroke-width: 1; }
-.chip-flat { fill: #f1f5f9; stroke: #cbd2d9; stroke-width: 1; }
-.chip-assign { fill: #dbeafe; stroke: #93c5fd; stroke-width: 1; }
-.chip-pair { fill: #ede9fe; stroke: #c4b5fd; stroke-width: 1; }
-.chip-hidden { fill: #dcfce7; stroke: #86efac; stroke-width: 1; }
-</style>
-<rect x="0" y="0" width="1600" height="1168" fill="#f7fafc"/>
-<text x="44" y="42" class="title">Pair vs Simplex Holonomy Search</text>
-<text x="44" y="66" class="subtitle">The exact base-grid search for the first deterministic law where assignment plus pair transport is no longer enough.</text>
-<rect x="44.0" y="92" width="493.3333333333333" height="126" class="card"/>
-<rect x="553.3333333333333" y="92" width="493.3333333333333" height="126" class="card"/>
-<rect x="1062.6666666666665" y="92" width="493.3333333333333" height="126" class="card"/>
-<text x="62" y="118" class="header">Scan</text>
-<text x="62" y="152" class="metric">124</text>
-<text x="144" y="152" class="section">families per semantics</text>
-<text x="62" y="178" class="small">Grid: p in (2, 3, 4), k ≤ 3; 11 local law families.</text>
-<text x="62" y="200" class="small">Status counts: 2 controls, 5 assignment-only, 0 pair splits, 4 hidden-future winners.</text>
-<text x="571.3333333333333" y="118" class="header">Boundary</text>
-<text x="571.3333333333333" y="146" class="section">First pair-insufficient split</text>
-<text x="571.3333333333333" y="174" class="small">pair_phase_shared_other_live_block_lower__feedback_orient_freeze_pairs on triangle @ (p=3, k=2)</text>
-<text x="571.3333333333333" y="196" class="small">counts = 24 / 27 / 45 / 58</text>
-<text x="1080.6666666666665" y="118" class="header">Interpretation</text>
-<text x="1080.6666666666665" y="146" class="section">Runtime object moves to the 2-simplex layer</text>
-<text x="1080.6666666666665" y="174" class="small">Pair-only laws still stop at assignment curvature. The first exact boundary appears on the triangle family, where simplex-local transport survives after assignment and pair summaries already agree.</text>
-<text x="1080.6666666666665" y="196" class="small">The figure below separates controls, pair-only laws, and the first simplex winners.</text>
-<rect x="44" y="246" width="1512" height="500" class="panel"/>
-<text x="62" y="274" class="header">Semantic Library</text>
-<text x="62" y="298" class="small">Seed quotients are runtime / assignment / pair / simplex on the smallest family where each semantics first shows structure.</text>
-<text x="64" y="328" class="header">Semantics</text>
-<text x="439" y="328" class="header">Kind</text>
-<text x="584" y="328" class="header">|pair| / |simplex|</text>
-<text x="699" y="328" class="header">Seed q</text>
-<text x="884" y="328" class="header">First pair split</text>
-<text x="1109" y="328" class="header">Hidden beyond pair</text>
-<text x="1344" y="328" class="header">Holonomy rank</text>
-<text x="1479" y="328" class="header">Status</text>
-<line x1="62" y1="338" x2="1538" y2="338" class="divider"/>
-<rect x="56" y="344" width="1488" height="28" rx="12" ry="12" class="control-row"/>
-<text x="64" y="362" class="cell">Broadcast</text>
-<text x="439" y="362" class="cell">control</text>
-<text x="584" y="362" class="cell">1 / 1</text>
-<text x="699" y="362" class="mono">8 / 8 / 8 / 8</text>
-<text x="884" y="362" class="cell">none</text>
-<text x="1109" y="362" class="cell">none</text>
-<text x="1344" y="362" class="cell">1 / 1</text>
-<rect x="1471" y="347" width="118" height="22" rx="11" ry="11" class="chip-flat"/>
-<text x="1483" y="362" class="cell">flat</text>
-<rect x="56" y="382" width="1488" height="28" rx="12" ry="12" class="control-row"/>
-<text x="64" y="400" class="cell">Committed Allocation</text>
-<text x="439" y="400" class="cell">control</text>
-<text x="584" y="400" class="cell">1 / 1</text>
-<text x="699" y="400" class="mono">11 / 12 / 12 / 12</text>
-<text x="884" y="400" class="cell">none</text>
-<text x="1109" y="400" class="cell">none</text>
-<text x="1344" y="400" class="cell">1 / 1</text>
-<rect x="1471" y="385" width="118" height="22" rx="11" ry="11" class="chip-flat"/>
-<text x="1483" y="400" class="cell">flat</text>
-<rect x="56" y="420" width="1488" height="28" rx="12" ry="12" class="pair-row"/>
-<text x="64" y="438" class="cell">Pair Phase XL</text>
-<text x="439" y="438" class="cell">pair_only</text>
-<text x="584" y="438" class="cell">2 / 1</text>
-<text x="699" y="438" class="mono">11 / 12 / 16 / 16</text>
-<text x="884" y="438" class="cell">none</text>
-<text x="1109" y="438" class="cell">none</text>
-<text x="1344" y="438" class="cell">1 / 1</text>
-<rect x="1471" y="423" width="118" height="22" rx="11" ry="11" class="chip-assign"/>
-<text x="1483" y="438" class="cell">assignment only</text>
-<rect x="56" y="458" width="1488" height="28" rx="12" ry="12" class="pair-row"/>
-<text x="64" y="476" class="cell">Pair Phase SL</text>
-<text x="439" y="476" class="cell">pair_only</text>
-<text x="584" y="476" class="cell">2 / 1</text>
-<text x="699" y="476" class="mono">9 / 12 / 16 / 16</text>
-<text x="884" y="476" class="cell">none</text>
-<text x="1109" y="476" class="cell">none</text>
-<text x="1344" y="476" class="cell">1 / 1</text>
-<rect x="1471" y="461" width="118" height="22" rx="11" ry="11" class="chip-assign"/>
-<text x="1483" y="476" class="cell">assignment only</text>
-<rect x="56" y="496" width="1488" height="28" rx="12" ry="12" class="pair-row"/>
-<text x="64" y="514" class="cell">Pair Phase AL</text>
-<text x="439" y="514" class="cell">pair_only</text>
-<text x="584" y="514" class="cell">2 / 1</text>
-<text x="699" y="514" class="mono">10 / 12 / 14 / 14</text>
-<text x="884" y="514" class="cell">none</text>
-<text x="1109" y="514" class="cell">none</text>
-<text x="1344" y="514" class="cell">1 / 1</text>
-<rect x="1471" y="499" width="118" height="22" rx="11" ry="11" class="chip-assign"/>
-<text x="1483" y="514" class="cell">assignment only</text>
-<rect x="56" y="534" width="1488" height="28" rx="12" ry="12" class="winner-row"/>
-<text x="64" y="552" class="cell">Shared Pair Phase + 2-Live Orient</text>
-<text x="439" y="552" class="cell">pair_plus_simplex</text>
-<text x="584" y="552" class="cell">2 / 4</text>
-<text x="699" y="552" class="mono">9 / 12 / 16 / 16</text>
-<text x="884" y="552" class="cell">triangle @ (p=3, k=2)</text>
-<text x="1109" y="552" class="cell">triangle @ (p=3, k=2)</text>
-<text x="1344" y="552" class="cell">2 / 1</text>
-<rect x="1471" y="537" width="118" height="22" rx="11" ry="11" class="chip-hidden"/>
-<text x="1483" y="552" class="cell">hidden future</text>
-<rect x="56" y="572" width="1488" height="28" rx="12" ry="12" class="winner-row"/>
-<text x="64" y="590" class="cell">Shared Pair Phase + 3-Live Orient</text>
-<text x="439" y="590" class="cell">pair_plus_simplex</text>
-<text x="584" y="590" class="cell">2 / 4</text>
-<text x="699" y="590" class="mono">9 / 12 / 16 / 16</text>
-<text x="884" y="590" class="cell">overlap_star @ (p=4, k=2)</text>
-<text x="1109" y="590" class="cell">overlap_star @ (p=4, k=2)</text>
-<text x="1344" y="590" class="cell">2 / 1</text>
-<rect x="1471" y="575" width="118" height="22" rx="11" ry="11" class="chip-hidden"/>
-<text x="1483" y="590" class="cell">hidden future</text>
-<rect x="56" y="610" width="1488" height="28" rx="12" ry="12" class="winner-row"/>
-<text x="64" y="628" class="cell">Shared Pair Phase + 2/3-Live Orient</text>
-<text x="439" y="628" class="cell">pair_plus_simplex</text>
-<text x="584" y="628" class="cell">2 / 4</text>
-<text x="699" y="628" class="mono">9 / 12 / 16 / 16</text>
-<text x="884" y="628" class="cell">triangle @ (p=3, k=2)</text>
-<text x="1109" y="628" class="cell">triangle @ (p=3, k=2)</text>
-<text x="1344" y="628" class="cell">2 / 1</text>
-<rect x="1471" y="613" width="118" height="22" rx="11" ry="11" class="chip-hidden"/>
-<text x="1483" y="628" class="cell">hidden future</text>
-<rect x="56" y="648" width="1488" height="28" rx="12" ry="12" class="pair-row"/>
-<text x="64" y="666" class="cell">Shared Pair Phase + Commutator Toggle</text>
-<text x="439" y="666" class="cell">pair_plus_simplex</text>
-<text x="584" y="666" class="cell">2 / 2</text>
-<text x="699" y="666" class="mono">9 / 12 / 16 / 16</text>
-<text x="884" y="666" class="cell">none</text>
-<text x="1109" y="666" class="cell">none</text>
-<text x="1344" y="666" class="cell">1 / 1</text>
-<rect x="1471" y="651" width="118" height="22" rx="11" ry="11" class="chip-assign"/>
-<text x="1483" y="666" class="cell">assignment only</text>
-<rect x="56" y="686" width="1488" height="28" rx="12" ry="12" class="pair-row"/>
-<text x="64" y="704" class="cell">Shared Pair Phase + Triangle Debt</text>
-<text x="439" y="704" class="cell">triangle_debt</text>
-<text x="584" y="704" class="cell">2 / 3</text>
-<text x="699" y="704" class="mono">9 / 12 / 16 / 16</text>
-<text x="884" y="704" class="cell">none</text>
-<text x="1109" y="704" class="cell">none</text>
-<text x="1344" y="704" class="cell">1 / 1</text>
-<rect x="1471" y="689" width="118" height="22" rx="11" ry="11" class="chip-assign"/>
-<text x="1483" y="704" class="cell">assignment only</text>
-<rect x="56" y="724" width="1488" height="28" rx="12" ry="12" class="winner-row"/>
-<text x="64" y="742" class="cell">Shared Pair Phase + Feedback Orient</text>
-<text x="439" y="742" class="cell">higher_local_interaction</text>
-<text x="584" y="742" class="cell">2 / 4</text>
-<text x="699" y="742" class="mono">9 / 12 / 16 / 16</text>
-<text x="884" y="742" class="cell">triangle @ (p=3, k=2)</text>
-<text x="1109" y="742" class="cell">triangle @ (p=3, k=2)</text>
-<text x="1344" y="742" class="cell">4 / 1</text>
-<rect x="1471" y="727" width="118" height="22" rx="11" ry="11" class="chip-hidden"/>
-<text x="1483" y="742" class="cell">hidden future</text>
-<rect x="44.0" y="770" width="748.0" height="320" class="card"/>
-<rect x="808.0" y="770" width="748.0" height="320" class="card"/>
-<text x="62" y="798" class="header">First Pair-Insufficient Witness</text>
-<text x="62" y="828" class="section">pair_phase_shared_other_live_block_lower__feedback_orient_freeze_pairs</text>
-<text x="62" y="852" class="small">triangle family at (p=3, k=2); counts 24 / 27 / 45 / 58.</text>
-<text x="62" y="888" class="mono">u = [2->(1, 2), 3->(1, 3)]</text>
-<text x="62" y="912" class="mono">v = [3->(1, 3), 2->(1, 2)]</text>
-<text x="62" y="936" class="mono">w = [1->(1, 2)]</text>
-<text x="62" y="970" class="small">Shared pair fiber: ((-1, 0, 1), (0, 0, 0))</text>
-<text x="62" y="994" class="small">Current outputs: ((1,), (1,)) vs ((1,), (1,))</text>
-<text x="62" y="1018" class="small">Future outputs: ((),) vs ()</text>
-<text x="826.0" y="798" class="header">First Hidden Future Beyond Pair</text>
-<text x="826.0" y="828" class="section">pair_phase_shared_other_live_block_lower__feedback_orient_freeze_pairs</text>
-<text x="826.0" y="852" class="small">triangle family at (p=3, k=2). This is the first witness where the future remembers simplex-local transport after the pair fiber already agrees.</text>
-<text x="826.0" y="888" class="mono">u = [2->(1, 2), 3->(1, 3)]</text>
-<text x="826.0" y="912" class="mono">v = [3->(1, 3), 2->(1, 2)]</text>
-<text x="826.0" y="936" class="mono">w = [1->(1, 2)]</text>
-<text x="826.0" y="970" class="small">Shared pair fiber: ((-1, 0, 1), (0, 0, 0))</text>
-<text x="826.0" y="994" class="small">Shared current output: ((1,), (1,))</text>
-<text x="826.0" y="1018" class="small">Future outputs after non-empty w: ((),) vs ()</text>
-<text x="44" y="1114" class="small">Canonical first-order for ties: p, k, family_count, pair_alphabet_size, simplex_alphabet_size, reachable_state_count, witness_length, family, semantics.</text>
-<text x="44" y="1136" class="small">Reading: broadcast stays flat; committed allocation adds coordinate curvature; pair-only laws still stop at the pair layer; simplex-local laws create the first exact boundary beyond pair transport.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100">
+  <defs>
+    <filter id="cardShadow" x="-2%" y="-1%" width="104%" height="105%">
+      <feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+    <linearGradient id="accentGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="50%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="winnerRowGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#064e3b" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#064e3b" stop-opacity="0.15"/>
+    </linearGradient>
+    <linearGradient id="assignRowGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1e1b4b" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#1e1b4b" stop-opacity="0.12"/>
+    </linearGradient>
+    <linearGradient id="controlRowGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#1e293b" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    text { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; }
+    .mono { font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', 'JetBrains Mono', monospace; }
+  </style>
+
+  <!-- ═══════════ BACKGROUND ═══════════ -->
+  <rect width="1600" height="1100" rx="8" fill="#0f1117"/>
+  <rect x="0.5" y="0.5" width="1599" height="1099" rx="8" fill="none" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- ═══════════ HEADER ═══════════ -->
+  <text x="48" y="40" font-size="26" font-weight="700" fill="#f1f5f9" letter-spacing="-0.5">Pair vs Simplex Holonomy</text>
+  <rect x="48" y="49" width="160" height="2.5" rx="1.25" fill="url(#accentGrad)" opacity="0.7"/>
+  <text x="48" y="67" font-size="12" font-weight="400" fill="#94a3b8">Where pairwise tracking breaks — triangle-local transport captures structure that pairs miss</text>
+
+  <!-- ═══════════ TOP METRIC CARDS ═══════════ -->
+
+  <!-- Card 1: Scan -->
+  <rect x="48" y="84" width="480" height="108" rx="10" fill="#1a1d27" filter="url(#cardShadow)"/>
+  <rect x="48" y="84" width="480" height="108" rx="10" fill="none" stroke="#252a36" stroke-width="1"/>
+  <text x="68" y="108" font-size="9" font-weight="700" fill="#64748b" letter-spacing="1.2">SCAN</text>
+  <text x="68" y="143" font-size="36" font-weight="800" fill="#f1f5f9" letter-spacing="-1">124</text>
+  <text x="158" y="143" font-size="14" font-weight="500" fill="#94a3b8">families per semantics</text>
+  <text x="68" y="164" font-size="10" font-weight="400" fill="#64748b">Grid: p in {2, 3, 4}, k ≤ 3. 11 local law families.</text>
+  <text x="68" y="180" font-size="10" font-weight="400" fill="#64748b">Status: 2 controls, 5 assignment-only, 0 pair splits, 4 hidden-future winners</text>
+
+  <!-- Card 2: Boundary -->
+  <rect x="548" y="84" width="520" height="108" rx="10" fill="#1a1d27" filter="url(#cardShadow)"/>
+  <rect x="548" y="84" width="520" height="108" rx="10" fill="none" stroke="#252a36" stroke-width="1"/>
+  <text x="568" y="108" font-size="9" font-weight="700" fill="#10b981" letter-spacing="1.2">BOUNDARY</text>
+  <text x="568" y="132" font-size="14" font-weight="700" fill="#e2e8f0">First pair-insufficient split</text>
+  <text x="568" y="150" font-size="10" font-weight="500" fill="#94a3b8">Family:</text>
+  <text x="616" y="150" font-size="10" font-weight="600" fill="#10b981" class="mono">triangle @ (p=3, k=2)</text>
+  <text x="568" y="168" font-size="10" font-weight="400" fill="#64748b">3 variables with edges {1-2, 1-3, 2-3} — the simplest structure</text>
+  <text x="568" y="184" font-size="10" font-weight="400" fill="#64748b">that pair transport cannot capture.</text>
+
+  <!-- Card 3: Interpretation -->
+  <rect x="1088" y="84" width="464" height="108" rx="10" fill="#1a1d27" filter="url(#cardShadow)"/>
+  <rect x="1088" y="84" width="464" height="108" rx="10" fill="none" stroke="#252a36" stroke-width="1"/>
+  <text x="1108" y="108" font-size="9" font-weight="700" fill="#fbbf24" letter-spacing="1.2">INTERPRETATION</text>
+  <text x="1108" y="132" font-size="14" font-weight="700" fill="#e2e8f0">Runtime moves to 2-simplex layer</text>
+  <text x="1108" y="152" font-size="10" font-weight="400" fill="#94a3b8">Pair-only laws stop at assignment curvature.</text>
+  <text x="1108" y="168" font-size="10" font-weight="400" fill="#94a3b8">Simplex-local transport survives after assignment</text>
+  <text x="1108" y="184" font-size="10" font-weight="400" fill="#94a3b8">and pair summaries already agree.</text>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+  <!-- SEMANTIC LIBRARY TABLE                                                     -->
+  <!-- Panel: x=48..1552, y=210..762                                             -->
+  <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+  <rect x="48" y="210" width="1504" height="556" rx="10" fill="#1a1d27" filter="url(#cardShadow)"/>
+  <rect x="48" y="210" width="1504" height="556" rx="10" fill="none" stroke="#252a36" stroke-width="1"/>
+
+  <!-- Table header -->
+  <text x="68" y="238" font-size="14" font-weight="700" fill="#e2e8f0">Semantic Library</text>
+  <text x="210" y="238" font-size="10" font-weight="400" fill="#64748b">Seed quotients: runtime / assignment / pair / simplex on the smallest family showing structure</text>
+
+  <!-- Column headers -->
+  <!-- Columns: # | Semantics | Kind | |pair|/|simplex| | Seed q | First pair split | Hidden beyond pair | Holonomy rank | Status -->
+  <!-- x positions: 68, 88, 370, 510, 624, 780, 1000, 1220, 1370 -->
+  <g font-size="9" font-weight="700" fill="#475569" letter-spacing="0.8">
+    <text x="68" y="268">#</text>
+    <text x="88" y="268">SEMANTICS</text>
+    <text x="368" y="268">KIND</text>
+    <text x="528" y="268">|PAIR|/|SIMP|</text>
+    <text x="630" y="268">SEED Q</text>
+    <text x="790" y="268">FIRST PAIR SPLIT</text>
+    <text x="1010" y="268">HIDDEN BEYOND PAIR</text>
+    <text x="1238" y="268">HOLO RANK</text>
+    <text x="1370" y="268">STATUS</text>
+  </g>
+  <line x1="60" y1="278" x2="1540" y2="278" stroke="#252a36" stroke-width="1"/>
+
+  <!-- ═══ ROW 1: Broadcast — control, flat ═══ -->
+  <rect x="56" y="284" width="1488" height="36" rx="6" fill="url(#controlRowGrad)"/>
+  <text x="68" y="307" font-size="10" font-weight="500" fill="#475569">1</text>
+  <text x="88" y="307" font-size="11" font-weight="600" fill="#e2e8f0">Broadcast</text>
+  <text x="368" y="307" font-size="10" font-weight="500" fill="#94a3b8">control</text>
+  <text x="528" y="307" font-size="10" font-weight="500" fill="#94a3b8" class="mono">1 / 1</text>
+  <text x="630" y="307" font-size="10" font-weight="500" fill="#94a3b8" class="mono">8 / 8 / 8 / 8</text>
+  <text x="790" y="307" font-size="10" font-weight="400" fill="#475569">—</text>
+  <text x="1010" y="307" font-size="10" font-weight="400" fill="#475569">—</text>
+  <text x="1238" y="307" font-size="10" font-weight="500" fill="#94a3b8" class="mono">1 / 1</text>
+  <!-- Status chip: flat -->
+  <rect x="1370" y="293" width="56" height="20" rx="4" fill="#1e293b" stroke="#475569" stroke-width="0.8"/>
+  <text x="1386" y="307" font-size="9" font-weight="600" fill="#475569">flat</text>
+
+  <!-- ═══ ROW 2: Committed Allocation — control, flat ═══ -->
+  <rect x="56" y="324" width="1488" height="36" rx="6" fill="url(#controlRowGrad)"/>
+  <text x="68" y="347" font-size="10" font-weight="500" fill="#475569">2</text>
+  <text x="88" y="347" font-size="11" font-weight="600" fill="#e2e8f0">Committed Allocation</text>
+  <text x="368" y="347" font-size="10" font-weight="500" fill="#94a3b8">control</text>
+  <text x="528" y="347" font-size="10" font-weight="500" fill="#94a3b8" class="mono">1 / 1</text>
+  <text x="630" y="347" font-size="10" font-weight="500" fill="#94a3b8" class="mono">11 / 12 / 12 / 12</text>
+  <text x="790" y="347" font-size="10" font-weight="400" fill="#475569">—</text>
+  <text x="1010" y="347" font-size="10" font-weight="400" fill="#475569">—</text>
+  <text x="1238" y="347" font-size="10" font-weight="500" fill="#94a3b8" class="mono">1 / 1</text>
+  <rect x="1370" y="333" width="56" height="20" rx="4" fill="#1e293b" stroke="#475569" stroke-width="0.8"/>
+  <text x="1386" y="347" font-size="9" font-weight="600" fill="#475569">flat</text>
+
+  <!-- Separator between controls and pair-only -->
+  <line x1="60" y1="364" x2="1540" y2="364" stroke="#252a36" stroke-width="0.5" stroke-dasharray="3,4"/>
+
+  <!-- ═══ ROW 3: Pair Phase XL — pair_only, assignment only ═══ -->
+  <rect x="56" y="370" width="1488" height="36" rx="6" fill="url(#assignRowGrad)"/>
+  <text x="68" y="393" font-size="10" font-weight="500" fill="#475569">3</text>
+  <text x="88" y="393" font-size="11" font-weight="600" fill="#e2e8f0">Pair Phase XL</text>
+  <text x="368" y="393" font-size="10" font-weight="500" fill="#818cf8">pair_only</text>
+  <text x="528" y="393" font-size="10" font-weight="500" fill="#94a3b8" class="mono">2 / 1</text>
+  <text x="630" y="393" font-size="10" font-weight="500" fill="#94a3b8" class="mono">11 / 12 / 16 / 16</text>
+  <text x="790" y="393" font-size="10" font-weight="400" fill="#475569">—</text>
+  <text x="1010" y="393" font-size="10" font-weight="400" fill="#475569">—</text>
+  <text x="1238" y="393" font-size="10" font-weight="500" fill="#94a3b8" class="mono">1 / 1</text>
+  <rect x="1370" y="379" width="108" height="20" rx="4" fill="#1e1b4b" stroke="#6366f1" stroke-width="0.8"/>
+  <text x="1382" y="393" font-size="9" font-weight="600" fill="#818cf8">assignment only</text>
+
+  <!-- ═══ ROW 4: Pair Phase SL — pair_only, assignment only ═══ -->
+  <rect x="56" y="410" width="1488" height="36" rx="6" fill="url(#assignRowGrad)"/>
+  <text x="68" y="433" font-size="10" font-weight="500" fill="#475569">4</text>
+  <text x="88" y="433" font-size="11" font-weight="600" fill="#e2e8f0">Pair Phase SL</text>
+  <text x="368" y="433" font-size="10" font-weight="500" fill="#818cf8">pair_only</text>
+  <text x="528" y="433" font-size="10" font-weight="500" fill="#94a3b8" class="mono">2 / 1</text>
+  <text x="630" y="433" font-size="10" font-weight="500" fill="#94a3b8" class="mono">9 / 12 / 16 / 16</text>
+  <text x="790" y="433" font-size="10" font-weight="400" fill="#475569">—</text>
+  <text x="1010" y="433" font-size="10" font-weight="400" fill="#475569">—</text>
+  <text x="1238" y="433" font-size="10" font-weight="500" fill="#94a3b8" class="mono">1 / 1</text>
+  <rect x="1370" y="419" width="108" height="20" rx="4" fill="#1e1b4b" stroke="#6366f1" stroke-width="0.8"/>
+  <text x="1382" y="433" font-size="9" font-weight="600" fill="#818cf8">assignment only</text>
+
+  <!-- ═══ ROW 5: Pair Phase AL — pair_only, assignment only ═══ -->
+  <rect x="56" y="450" width="1488" height="36" rx="6" fill="url(#assignRowGrad)"/>
+  <text x="68" y="473" font-size="10" font-weight="500" fill="#475569">5</text>
+  <text x="88" y="473" font-size="11" font-weight="600" fill="#e2e8f0">Pair Phase AL</text>
+  <text x="368" y="473" font-size="10" font-weight="500" fill="#818cf8">pair_only</text>
+  <text x="528" y="473" font-size="10" font-weight="500" fill="#94a3b8" class="mono">2 / 1</text>
+  <text x="630" y="473" font-size="10" font-weight="500" fill="#94a3b8" class="mono">10 / 12 / 14 / 14</text>
+  <text x="790" y="473" font-size="10" font-weight="400" fill="#475569">—</text>
+  <text x="1010" y="473" font-size="10" font-weight="400" fill="#475569">—</text>
+  <text x="1238" y="473" font-size="10" font-weight="500" fill="#94a3b8" class="mono">1 / 1</text>
+  <rect x="1370" y="459" width="108" height="20" rx="4" fill="#1e1b4b" stroke="#6366f1" stroke-width="0.8"/>
+  <text x="1382" y="473" font-size="9" font-weight="600" fill="#818cf8">assignment only</text>
+
+  <!-- Separator between pair-only and simplex winners -->
+  <line x1="60" y1="490" x2="1540" y2="490" stroke="#252a36" stroke-width="0.5" stroke-dasharray="3,4"/>
+
+  <!-- ═══ ROW 6: Shared Pair Phase + 2-Live Orient — hidden future ═══ -->
+  <rect x="56" y="496" width="1488" height="36" rx="6" fill="url(#winnerRowGrad)"/>
+  <text x="68" y="519" font-size="10" font-weight="500" fill="#475569">6</text>
+  <text x="88" y="519" font-size="11" font-weight="600" fill="#e2e8f0">Shared Pair Phase + 2-Live Orient</text>
+  <text x="368" y="519" font-size="10" font-weight="500" fill="#34d399">pair+simplex</text>
+  <text x="528" y="519" font-size="10" font-weight="600" fill="#e2e8f0" class="mono">2 / 4</text>
+  <text x="630" y="519" font-size="10" font-weight="500" fill="#94a3b8" class="mono">9 / 12 / 16 / 16</text>
+  <text x="790" y="519" font-size="10" font-weight="600" fill="#10b981" class="mono">triangle @ (3,2)</text>
+  <text x="1010" y="519" font-size="10" font-weight="600" fill="#10b981" class="mono">triangle @ (3,2)</text>
+  <text x="1238" y="519" font-size="10" font-weight="500" fill="#94a3b8" class="mono">2 / 1</text>
+  <rect x="1370" y="505" width="108" height="20" rx="4" fill="#064e3b" stroke="#10b981" stroke-width="0.8"/>
+  <text x="1382" y="519" font-size="9" font-weight="600" fill="#34d399">hidden future</text>
+
+  <!-- ═══ ROW 7: Shared Pair Phase + 3-Live Orient — hidden future ═══ -->
+  <rect x="56" y="536" width="1488" height="36" rx="6" fill="url(#winnerRowGrad)"/>
+  <text x="68" y="559" font-size="10" font-weight="500" fill="#475569">7</text>
+  <text x="88" y="559" font-size="11" font-weight="600" fill="#e2e8f0">Shared Pair Phase + 3-Live Orient</text>
+  <text x="368" y="559" font-size="10" font-weight="500" fill="#34d399">pair+simplex</text>
+  <text x="528" y="559" font-size="10" font-weight="600" fill="#e2e8f0" class="mono">2 / 4</text>
+  <text x="630" y="559" font-size="10" font-weight="500" fill="#94a3b8" class="mono">9 / 12 / 16 / 16</text>
+  <text x="790" y="559" font-size="10" font-weight="600" fill="#10b981" class="mono">overlap_star @ (4,2)</text>
+  <text x="1010" y="559" font-size="10" font-weight="600" fill="#10b981" class="mono">overlap_star @ (4,2)</text>
+  <text x="1238" y="559" font-size="10" font-weight="500" fill="#94a3b8" class="mono">2 / 1</text>
+  <rect x="1370" y="545" width="108" height="20" rx="4" fill="#064e3b" stroke="#10b981" stroke-width="0.8"/>
+  <text x="1382" y="559" font-size="9" font-weight="600" fill="#34d399">hidden future</text>
+
+  <!-- ═══ ROW 8: Shared Pair Phase + 2/3-Live Orient — hidden future ═══ -->
+  <rect x="56" y="576" width="1488" height="36" rx="6" fill="url(#winnerRowGrad)"/>
+  <text x="68" y="599" font-size="10" font-weight="500" fill="#475569">8</text>
+  <text x="88" y="599" font-size="11" font-weight="600" fill="#e2e8f0">Shared Pair Phase + 2/3-Live Orient</text>
+  <text x="368" y="599" font-size="10" font-weight="500" fill="#34d399">pair+simplex</text>
+  <text x="528" y="599" font-size="10" font-weight="600" fill="#e2e8f0" class="mono">2 / 4</text>
+  <text x="630" y="599" font-size="10" font-weight="500" fill="#94a3b8" class="mono">9 / 12 / 16 / 16</text>
+  <text x="790" y="599" font-size="10" font-weight="600" fill="#10b981" class="mono">triangle @ (3,2)</text>
+  <text x="1010" y="599" font-size="10" font-weight="600" fill="#10b981" class="mono">triangle @ (3,2)</text>
+  <text x="1238" y="599" font-size="10" font-weight="500" fill="#94a3b8" class="mono">2 / 1</text>
+  <rect x="1370" y="585" width="108" height="20" rx="4" fill="#064e3b" stroke="#10b981" stroke-width="0.8"/>
+  <text x="1382" y="599" font-size="9" font-weight="600" fill="#34d399">hidden future</text>
+
+  <!-- Separator between winners and remaining -->
+  <line x1="60" y1="616" x2="1540" y2="616" stroke="#252a36" stroke-width="0.5" stroke-dasharray="3,4"/>
+
+  <!-- ═══ ROW 9: Shared Pair Phase + Commutator Toggle — assignment only ═══ -->
+  <rect x="56" y="622" width="1488" height="36" rx="6" fill="url(#assignRowGrad)"/>
+  <text x="68" y="645" font-size="10" font-weight="500" fill="#475569">9</text>
+  <text x="88" y="645" font-size="11" font-weight="600" fill="#e2e8f0">Shared Pair Phase + Commutator Toggle</text>
+  <text x="368" y="645" font-size="10" font-weight="500" fill="#818cf8">pair+simplex</text>
+  <text x="528" y="645" font-size="10" font-weight="500" fill="#94a3b8" class="mono">2 / 2</text>
+  <text x="630" y="645" font-size="10" font-weight="500" fill="#94a3b8" class="mono">9 / 12 / 16 / 16</text>
+  <text x="790" y="645" font-size="10" font-weight="400" fill="#475569">—</text>
+  <text x="1010" y="645" font-size="10" font-weight="400" fill="#475569">—</text>
+  <text x="1238" y="645" font-size="10" font-weight="500" fill="#94a3b8" class="mono">1 / 1</text>
+  <rect x="1370" y="631" width="108" height="20" rx="4" fill="#1e1b4b" stroke="#6366f1" stroke-width="0.8"/>
+  <text x="1382" y="645" font-size="9" font-weight="600" fill="#818cf8">assignment only</text>
+
+  <!-- ═══ ROW 10: Shared Pair Phase + Triangle Debt — assignment only ═══ -->
+  <rect x="56" y="662" width="1488" height="36" rx="6" fill="url(#assignRowGrad)"/>
+  <text x="68" y="685" font-size="10" font-weight="500" fill="#475569">10</text>
+  <text x="88" y="685" font-size="11" font-weight="600" fill="#e2e8f0">Shared Pair Phase + Triangle Debt</text>
+  <text x="368" y="685" font-size="10" font-weight="500" fill="#818cf8">triangle_debt</text>
+  <text x="528" y="685" font-size="10" font-weight="500" fill="#94a3b8" class="mono">2 / 3</text>
+  <text x="630" y="685" font-size="10" font-weight="500" fill="#94a3b8" class="mono">9 / 12 / 16 / 16</text>
+  <text x="790" y="685" font-size="10" font-weight="400" fill="#475569">—</text>
+  <text x="1010" y="685" font-size="10" font-weight="400" fill="#475569">—</text>
+  <text x="1238" y="685" font-size="10" font-weight="500" fill="#94a3b8" class="mono">1 / 1</text>
+  <rect x="1370" y="671" width="108" height="20" rx="4" fill="#1e1b4b" stroke="#6366f1" stroke-width="0.8"/>
+  <text x="1382" y="685" font-size="9" font-weight="600" fill="#818cf8">assignment only</text>
+
+  <!-- ═══ ROW 11: Shared Pair Phase + Feedback Orient — hidden future, holonomy rank 4/1 ═══ -->
+  <rect x="56" y="702" width="1488" height="36" rx="6" fill="url(#winnerRowGrad)"/>
+  <text x="68" y="725" font-size="10" font-weight="500" fill="#475569">11</text>
+  <text x="88" y="725" font-size="11" font-weight="600" fill="#e2e8f0">Shared Pair Phase + Feedback Orient</text>
+  <text x="368" y="725" font-size="10" font-weight="500" fill="#34d399">higher_local</text>
+  <text x="528" y="725" font-size="10" font-weight="600" fill="#e2e8f0" class="mono">2 / 4</text>
+  <text x="630" y="725" font-size="10" font-weight="500" fill="#94a3b8" class="mono">9 / 12 / 16 / 16</text>
+  <text x="790" y="725" font-size="10" font-weight="600" fill="#10b981" class="mono">triangle @ (3,2)</text>
+  <text x="1010" y="725" font-size="10" font-weight="600" fill="#10b981" class="mono">triangle @ (3,2)</text>
+  <text x="1238" y="725" font-size="10" font-weight="700" fill="#fbbf24" class="mono">4 / 1</text>
+  <rect x="1370" y="711" width="108" height="20" rx="4" fill="#064e3b" stroke="#10b981" stroke-width="0.8"/>
+  <text x="1382" y="725" font-size="9" font-weight="600" fill="#34d399">hidden future</text>
+
+  <!-- Table legend strip at bottom -->
+  <g transform="translate(60, 748)">
+    <rect x="0" y="0" width="1480" height="10" rx="2" fill="#12161e"/>
+    <g font-size="8" font-weight="600" text-anchor="middle">
+      <rect x="30" y="0" width="180" height="10" rx="2" fill="url(#controlRowGrad)"/>
+      <text x="120" y="8" fill="#475569">CONTROLS (flat)</text>
+      <rect x="240" y="0" width="280" height="10" rx="2" fill="url(#assignRowGrad)"/>
+      <text x="380" y="8" fill="#818cf8">ASSIGNMENT ONLY (pair stops here)</text>
+      <rect x="550" y="0" width="280" height="10" rx="2" fill="url(#winnerRowGrad)"/>
+      <text x="690" y="8" fill="#34d399">HIDDEN FUTURE (simplex wins)</text>
+    </g>
+  </g>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+  <!-- BOTTOM DETAIL CARDS                                                        -->
+  <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+
+  <!-- Card: First Pair-Insufficient Witness -->
+  <rect x="48" y="784" width="740" height="252" rx="10" fill="#1a1d27" filter="url(#cardShadow)"/>
+  <rect x="48" y="784" width="740" height="252" rx="10" fill="none" stroke="#252a36" stroke-width="1"/>
+
+  <text x="68" y="812" font-size="9" font-weight="700" fill="#10b981" letter-spacing="1.2">FIRST PAIR-INSUFFICIENT WITNESS</text>
+  <text x="68" y="834" font-size="13" font-weight="700" fill="#e2e8f0">Shared Pair Phase + Feedback Orient</text>
+  <text x="68" y="852" font-size="10" font-weight="400" fill="#64748b">triangle family at (p=3, k=2) — counts: 24 / 27 / 45 / 58</text>
+
+  <!-- Witness states in monospace -->
+  <rect x="68" y="866" width="700" height="80" rx="6" fill="#12161e" stroke="#252a36" stroke-width="0.8"/>
+  <text x="84" y="886" font-size="10" font-weight="600" fill="#38bdf8" class="mono">u</text>
+  <text x="100" y="886" font-size="10" font-weight="400" fill="#94a3b8" class="mono">= [2→(1,2), 3→(1,3)]</text>
+  <text x="380" y="886" font-size="10" font-weight="600" fill="#38bdf8" class="mono">v</text>
+  <text x="396" y="886" font-size="10" font-weight="400" fill="#94a3b8" class="mono">= [3→(1,3), 2→(1,2)]</text>
+  <text x="84" y="906" font-size="10" font-weight="600" fill="#94a3b8" class="mono">w</text>
+  <text x="100" y="906" font-size="10" font-weight="400" fill="#94a3b8" class="mono">= [1→(1,2)]</text>
+
+  <text x="84" y="932" font-size="9" font-weight="500" fill="#64748b">Shared pair fiber:</text>
+  <text x="210" y="932" font-size="10" font-weight="500" fill="#94a3b8" class="mono">((-1, 0, 1), (0, 0, 0))</text>
+
+  <!-- Outputs comparison -->
+  <g transform="translate(68, 950)">
+    <text x="0" y="0" font-size="10" font-weight="500" fill="#64748b">Current outputs:</text>
+    <text x="110" y="0" font-size="10" font-weight="500" fill="#94a3b8" class="mono">((1,),(1,))</text>
+    <text x="214" y="0" font-size="10" font-weight="400" fill="#475569">vs</text>
+    <text x="236" y="0" font-size="10" font-weight="500" fill="#94a3b8" class="mono">((1,),(1,))</text>
+    <rect x="340" y="-10" width="48" height="16" rx="3" fill="#0d2818" stroke="#34d399" stroke-width="0.6"/>
+    <text x="350" y="2" font-size="8" font-weight="600" fill="#34d399">same</text>
+
+    <text x="0" y="22" font-size="10" font-weight="500" fill="#64748b">Future outputs:</text>
+    <text x="110" y="22" font-size="10" font-weight="500" fill="#94a3b8" class="mono">((),)</text>
+    <text x="156" y="22" font-size="10" font-weight="400" fill="#475569">vs</text>
+    <text x="178" y="22" font-size="10" font-weight="600" fill="#f87171" class="mono">()</text>
+    <rect x="340" y="12" width="48" height="16" rx="3" fill="#2a1520" stroke="#f87171" stroke-width="0.6"/>
+    <text x="349" y="24" font-size="8" font-weight="600" fill="#f87171">differs</text>
+  </g>
+
+  <text x="68" y="1020" font-size="9" font-weight="400" fill="#475569">The pair fiber already agrees — but the future diverges. Only simplex transport sees it.</text>
+
+  <!-- Card: First Hidden Future Beyond Pair -->
+  <rect x="808" y="784" width="744" height="252" rx="10" fill="#1a1d27" filter="url(#cardShadow)"/>
+  <rect x="808" y="784" width="744" height="252" rx="10" fill="none" stroke="#252a36" stroke-width="1"/>
+
+  <text x="828" y="812" font-size="9" font-weight="700" fill="#fbbf24" letter-spacing="1.2">FIRST HIDDEN FUTURE BEYOND PAIR</text>
+  <text x="828" y="834" font-size="13" font-weight="700" fill="#e2e8f0">Shared Pair Phase + Feedback Orient</text>
+  <text x="828" y="852" font-size="10" font-weight="400" fill="#64748b">triangle family at (p=3, k=2) — same witness as the first pair-insufficient split</text>
+
+  <!-- Explanation card -->
+  <rect x="828" y="866" width="704" height="106" rx="6" fill="#12161e" stroke="#252a36" stroke-width="0.8"/>
+
+  <text x="848" y="888" font-size="11" font-weight="600" fill="#e2e8f0">Why does pair transport miss this?</text>
+
+  <text x="848" y="910" font-size="10" font-weight="400" fill="#94a3b8">States u and v agree on every pairwise projection — any pair of variables</text>
+  <text x="848" y="926" font-size="10" font-weight="400" fill="#94a3b8">looks identical. But the</text>
+  <text x="990" y="926" font-size="10" font-weight="700" fill="#fbbf24">triangle (1-2-3)</text>
+  <text x="1108" y="926" font-size="10" font-weight="400" fill="#94a3b8">carries orientation information</text>
+  <text x="848" y="942" font-size="10" font-weight="400" fill="#94a3b8">that only becomes visible when you compose with w and look at future output.</text>
+  <text x="848" y="960" font-size="10" font-weight="400" fill="#94a3b8">This is the holonomy: transporting around the triangle reveals hidden state.</text>
+
+  <!-- Interpretation block -->
+  <rect x="828" y="984" width="704" height="40" rx="6" fill="#1a1520" stroke="#f87171" stroke-width="0.6"/>
+  <text x="848" y="1002" font-size="10" font-weight="600" fill="#fbbf24">The boundary is geometric:</text>
+  <text x="1032" y="1002" font-size="10" font-weight="400" fill="#94a3b8">pairwise ≠ simplicial. The triangle is the first witness.</text>
+  <text x="848" y="1016" font-size="9" font-weight="500" fill="#64748b" class="mono">holonomy_rank: 4 / 1 (simplex rank 4× the pair rank)</text>
+
+  <!-- ═══════════ BOTTOM STRIP ═══════════ -->
+  <g transform="translate(48, 1054)">
+    <rect x="0" y="0" width="1504" height="26" rx="5" fill="#12161e" stroke="#1e293b" stroke-width="0.8"/>
+    <text x="16" y="17" font-size="9" font-weight="400" fill="#475569">Tie-breaking order: p, k, family_count, pair_alphabet_size, simplex_alphabet_size, reachable_state_count, witness_length, family, semantics.</text>
+    <text x="1020" y="17" font-size="9" font-weight="400" fill="#475569">Reading: broadcast stays flat; pair-only stops at assignment; simplex-local creates the first exact boundary.</text>
+  </g>
+
+  <!-- Figure label -->
+  <text x="48" y="1094" font-size="9" font-weight="400" fill="#334155">Figure 4 · Stark: Selective Memory Theory · Pair vs Simplex Holonomy Boundary Search</text>
 </svg>
