@@ -1,20 +1,36 @@
 # Stark
 
-**When a system has limited memory, can it still know _why_ it's right — or only _that_ it's right?**
+**Stark investigates a simple question about memory and reasoning: when a system runs low on memory, can it still know _why_ it's right — or only _that_ it's right?**
 
-Stark is an exact computational and theoretical investigation into what survives under finite memory: correct answers, the witnesses (reasons) behind them, or the full causal structure. Every result is verified by exhaustive finite search — no approximations, no sampling.
+Think of a statistical model that adjusts for confounders to get the right causal answer. Under memory pressure, it may still produce correct answers long after it has lost track of _which_ confounders justified those answers. Stark makes this phenomenon precise, proves where each layer of reasoning breaks, and measures the gap between "correct" and "justified" exactly.
 
-## The Core Finding
+Every result is verified by exhaustive finite search — no approximations, no sampling.
 
-Under memory pressure, a system can remain **correct** long after it has lost track of **why** it's correct. We call this the **mirage shelf**: a measurable zone where answers survive but justifications don't.
+## What Stark Finds
 
-This isn't a single result — it's a layered decomposition. Stark proves that memory structure is _not_ one thing but a **tower of quotients**, each capturing a different level of causal fidelity. The project traces exactly where each layer breaks, from bare thresholds through witness preservation, family contracts, runtime collapse, and transport holonomy.
+Under memory constraints, correctness and justification come apart in a structured way. Stark proves that memory is not one thing but a **tower of layers**, each preserving a different level of causal fidelity. The main results:
 
-## Key Results at a Glance
+1. **A system can be right without knowing why.** There is a measurable zone — the *mirage shelf* — where answers survive but the reasons behind them don't. At 1 bit below a critical memory threshold, answer accuracy is 0.999 while justification accuracy drops to 0.987.
+
+2. **The right memory structure depends on the task.** There is no universal "right" memory format. A bare count of predecessors is enough to know _whether_ an answer exists, but preserving _which_ specific variables justify it requires a richer state — the *witness quotient* — with a precisely calculated cost.
+
+3. **Complexity enters in layers.** Contract-level memory (what the system promises to track) can require complex hypergraph structure. Runtime memory (what the system actually computes with) stays simple — just depth and completed variables — across all 6,336 configurations tested. The boundary between simple and complex is semantic, not combinatorial.
+
+## Key Terminology
+
+| Term | Meaning |
+|------|---------|
+| **Quotient** | A compressed representation of memory that keeps only the information a given task needs |
+| **Witness** | A specific variable (e.g., a confounder) whose identity must be preserved for causal reasoning |
+| **Contract** | The promise a memory system makes about what information it will preserve |
+| **Mirage shelf** | The zone where a system gives correct answers but has lost the justification for them |
+| **Tropical** | Refers to the algebraic framework (max-plus algebra) underlying the memory composition |
+
+## Evidence Summary
 
 | Result | What it shows |
 |--------|--------------|
-| **Witness quotient is exact** | The protected-witness state count `\|Q_(k,p)\| = Σ (d+2)^p` is tight — no wasted states |
+| **Witness quotient is exact** | The witness-preserving state count `\|Q_(k,p)\| = Σ (d+2)^p` is tight — no wasted states |
 | **Causal factorization works** | On 89,291 unique-minimal causal queries, witness-faithful factorization has 0 failures |
 | **Mirage shelf is real** | At 1 bit below threshold, answer fidelity = 0.999 while witness fidelity = 0.987 |
 | **Hypergraph contracts needed** | Overlapping variable families force a hypergraph-valued contract layer |
@@ -22,88 +38,88 @@ This isn't a single result — it's a layered decomposition. Stark proves that m
 | **Transport tower is strict** | Pair → simplex → global: each level captures structure the previous one misses |
 | **Static ≠ dynamic obstructions** | The first "different now" failure (5 edges) and "different future" failure (4 edges) don't coincide |
 
-## Figures
+## Start Here
 
-These five figures capture the program's geometry. Each is self-contained.
-
-### 1. Memory Stratigraphy
-
-How finite probes decompose memory into layers. The gap between "algebraic" and "joint" is structure invisible to probes. The gap between "joint" and "answer" is the mirage shelf — where answers survive but reasons don't.
-
-![Memory stratigraphy](https://raw.githubusercontent.com/jack-chaudier/stark/main/results/quotient-thresholds/separator-closure-experiment/memory_stratigraphy.svg)
-
-### 2. Exact Pareto Frontier
-
-The answer/witness trade-off under budget pressure. Solid lines = answer fidelity, dashed = witness fidelity. When solid rises above dashed, the system "knows" but can't justify. With abstention (right panel), the mirage vanishes.
-
-![Exact Pareto frontier](https://raw.githubusercontent.com/jack-chaudier/stark/main/results/quotient-thresholds/exact-pareto-frontier/exact_pareto_frontier.svg)
-
-### 3. Runtime Collapse Boundary
-
-Even when the contract layer is complex (hypergraph-valued), runtime memory stays simple — just depth and completed variables. 6,336 configurations tested, zero collapses. The first break requires changing the _carrier semantics_, not the combinatorics.
-
-![Runtime-collapse boundary](https://raw.githubusercontent.com/jack-chaudier/stark/main/results/family-runtime/runtime-collapse-boundary/runtime_collapse_boundary.svg)
-
-### 4. Pair vs Simplex Holonomy
-
-Where pairwise variable tracking breaks. The triangle family at (p=3, k=2) is the first exact structure where tracking pairs of variables isn't enough — you need triangle-local (simplex) transport.
-
-![Pair vs simplex holonomy](https://raw.githubusercontent.com/jack-chaudier/stark/main/results/holonomy/pair-vs-simplex-holonomy/pair_vs_simplex_holonomy_search.svg)
-
-### 5. Global Holonomy Atlas
-
-Beyond simplex transport, there are two kinds of failure: **static** (states differ right now) and **dynamic** (states differ in the future). These appear on structurally different families (5-edge cycle vs 4-edge mixed), and the raw global layer admits exact compression.
-
-![Global holonomy atlas](https://raw.githubusercontent.com/jack-chaudier/stark/main/results/holonomy/global-holonomy-atlas/global_holonomy_atlas.svg)
-
-## Reading Guide
-
-### New to the project?
+If you're new to the project, read these in order:
 
 1. **[Short overview](docs/writing/synthesis/selective-memory-master-synthesis-short.md)** — the full program in 3 pages
 2. **[Master synthesis](docs/writing/synthesis/selective-memory-master-synthesis.md)** — complete narrative with proofs
 3. **[Theorem ledger](docs/writing/synthesis/selective-memory-theorem-ledger.md)** — status of every claim (proved / exact computational / open)
 
-### By question
+## Figures
+
+These five figures capture the geometry of the program. Each is self-contained.
+
+### 1. Memory Stratigraphy
+
+How different layers of memory separate under finite observation. The gap between "algebraic" (full theoretical state) and "joint" (what finite probes can distinguish) is structure invisible to bounded observers. The gap between "joint" and "answer" is the mirage shelf — correct answers persist but justifications are lost.
+
+![Memory stratigraphy](https://raw.githubusercontent.com/jack-chaudier/stark/main/results/quotient-thresholds/separator-closure-experiment/memory_stratigraphy.svg)
+
+### 2. Exact Pareto Frontier
+
+The trade-off between answer accuracy and justification accuracy under a memory budget. Solid lines = answer fidelity, dashed = witness fidelity. When the solid line rises above the dashed line, the system "knows" but can't justify. The right panel shows that allowing the system to abstain (say "I don't know") eliminates the mirage.
+
+![Exact Pareto frontier](https://raw.githubusercontent.com/jack-chaudier/stark/main/results/quotient-thresholds/exact-pareto-frontier/exact_pareto_frontier.svg)
+
+### 3. Runtime Collapse Boundary
+
+Even when the contract layer is complex (requiring hypergraph structure to specify), the actual runtime memory stays simple — just tracking depth and which variables are completed. 6,336 configurations tested, zero exceptions. The first situation that breaks this simplicity requires changing the _meaning_ of completion, not the combinatorial structure.
+
+![Runtime-collapse boundary](https://raw.githubusercontent.com/jack-chaudier/stark/main/results/family-runtime/runtime-collapse-boundary/runtime_collapse_boundary.svg)
+
+### 4. Pair vs Simplex Holonomy
+
+Where pairwise variable tracking breaks down. At parameters (p=3, k=2), the triangle family is the first exact case where tracking pairs of variables is insufficient — you need triangle-local (simplex) transport to capture the full structure.
+
+![Pair vs simplex holonomy](https://raw.githubusercontent.com/jack-chaudier/stark/main/results/holonomy/pair-vs-simplex-holonomy/pair_vs_simplex_holonomy_search.svg)
+
+### 5. Global Holonomy Atlas
+
+Beyond simplex transport, there are two kinds of failure: **static** (states disagree right now) and **dynamic** (states will diverge in the future). These appear on structurally different families (5-edge cycle vs 4-edge mixed graph), and the raw global layer admits exact compression.
+
+![Global holonomy atlas](https://raw.githubusercontent.com/jack-chaudier/stark/main/results/holonomy/global-holonomy-atlas/global_holonomy_atlas.svg)
+
+## Deeper Questions
 
 <details>
 <summary><strong>"What is the main theorem?"</strong></summary>
 
-Memory quotients are contract-relative. The bare threshold quotient `M_k` has `((k+1)(k+4))/2` states. The witness quotient `Q_(k,p)` has `Σ (d+2)^p` states. Unique-minimal causal queries factor through the witness quotient exactly.
+Memory quotients are contract-relative: changing the task changes the optimal memory structure. For the bare threshold contract, the canonical quotient `M_k` has `((k+1)(k+4))/2` states. For the witness-preserving contract, `Q_(k,p)` has `Σ (d+2)^p` states. On the class of causal queries with a unique minimal adjustment set, the causal contract factors exactly through the witness quotient.
 
-→ [Master synthesis](docs/writing/synthesis/selective-memory-master-synthesis.md) · [Theorem ledger](docs/writing/synthesis/selective-memory-theorem-ledger.md)
+> [Master synthesis](docs/writing/synthesis/selective-memory-master-synthesis.md) · [Theorem ledger](docs/writing/synthesis/selective-memory-theorem-ledger.md)
 </details>
 
 <details>
 <summary><strong>"Why isn't bare memory enough for causality?"</strong></summary>
 
-Bare tropical memory preserves capacity but not witness identity. Six collision groups in the bare quotient map to distinct witness signatures — the quotient is too coarse.
+Bare tropical memory preserves how many predecessors exist but not which ones they are. Six collision groups in the bare quotient map to distinct witness signatures — the quotient is too coarse to distinguish causal scenarios that require different adjustments.
 
-→ [Causal contract refinement](docs/writing/foundations/causal-contract-refinement.md) · [Witness-faithful factorization](docs/writing/foundations/witness-faithful-factorization.md) · [Referee report](results/referee/unique-minimal-referee/unique_minimal_referee.md)
+> [Causal contract refinement](docs/writing/foundations/causal-contract-refinement.md) · [Witness-faithful factorization](docs/writing/foundations/witness-faithful-factorization.md) · [Referee report](results/referee/unique-minimal-referee/unique_minimal_referee.md)
 </details>
 
 <details>
 <summary><strong>"Where does the mirage shelf come from?"</strong></summary>
 
-The observational quotient tower — canonical → empirical → probe-joint → probe-answer — has strictly decreasing size. The gap between probe-answer and probe-joint is the shelf. It's intrinsic: even after separator closure, the Pareto frontier shows answer-perfect allocations with imperfect witness fidelity.
+The observational quotient tower — canonical → empirical → probe-joint → probe-answer — has strictly decreasing size. The gap between probe-answer and probe-joint is the shelf: the set of states where answers are preserved but justifications are not. Even after closing probing deficiencies, the Pareto frontier shows that some memory budgets achieve perfect answers with imperfect witness recovery.
 
-→ [Phase-transition sweep](results/quotient-thresholds/phase-transition-sweep/phase_transition_sweep.md) · [Pareto frontier](results/quotient-thresholds/exact-pareto-frontier/exact_pareto_frontier.md) · [Finite-probe tower](docs/writing/experiments/quotient-thresholds/finite-probe-quotient-tower.md)
+> [Phase-transition sweep](results/quotient-thresholds/phase-transition-sweep/phase_transition_sweep.md) · [Pareto frontier](results/quotient-thresholds/exact-pareto-frontier/exact_pareto_frontier.md) · [Finite-probe tower](docs/writing/experiments/quotient-thresholds/finite-probe-quotient-tower.md)
 </details>
 
 <details>
 <summary><strong>"Where do hypergraphs first matter?"</strong></summary>
 
-Overlapping adjustment families can't be captured by union/core/size, degree signatures, intersection signatures, or orbit summaries. Only the full antichain is exact. But once the family is fixed, runtime collapses to coordinate state.
+When causal variables form overlapping groups (e.g., variable 1 appears in two different adjustment sets), simple summaries like union/core/size, degree signatures, and orbit summaries all fail. Only the full family structure (antichain) is exact. But once the family is fixed, runtime collapses to simple coordinate state.
 
-→ [Overlapping families](results/family-runtime/overlapping-adjustment-families/overlapping_adjustment_families.md) · [Family memory](results/family-runtime/family-memory-exact-search/family_memory_exact_search.md) · [Collapse boundary](results/family-runtime/runtime-collapse-boundary/runtime_collapse_boundary.md)
+> [Overlapping families](results/family-runtime/overlapping-adjustment-families/overlapping_adjustment_families.md) · [Family memory](results/family-runtime/family-memory-exact-search/family_memory_exact_search.md) · [Collapse boundary](results/family-runtime/runtime-collapse-boundary/runtime_collapse_boundary.md)
 </details>
 
 <details>
 <summary><strong>"What is the current open problem?"</strong></summary>
 
-The holonomy tower — coordinate → assignment → pair → simplex → global — is strict at every level, and static/dynamic obstructions already separate. The raw global layer is compressible. The open question: is the canonical runtime object a cycle/tetra-local quotient on the overlap complex, or something more global?
+The holonomy tower — coordinate → assignment → pair → simplex → global — is strict at every level, and static/dynamic obstructions already separate. The raw global layer is compressible. The open question: is the canonical runtime object a local quotient on the overlap complex, or does it require genuinely global tokens?
 
-→ [Holonomy experiments](results/holonomy/) · [Global atlas](results/holonomy/global-holonomy-atlas/global_holonomy_atlas.md)
+> [Holonomy experiments](results/holonomy/) · [Global atlas](results/holonomy/global-holonomy-atlas/global_holonomy_atlas.md)
 </details>
 
 ## Repo Structure

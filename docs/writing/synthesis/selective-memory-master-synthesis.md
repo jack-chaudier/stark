@@ -1,9 +1,18 @@
 # Selective Memory, Causal Memory, and the Boundary of Runtime Hypergraph State
 
+## Prerequisites
+
+This document assumes familiarity with:
+- Basic causal inference (DAGs, adjustment sets, confounders)
+- Algebraic notions of quotients and congruences
+- The distinction between "getting the right answer" and "knowing which variables justify it"
+
+For a shorter introduction, start with the [short overview](selective-memory-master-synthesis-short.md).
+
 ## Abstract
 
 This document consolidates the current selective-memory / causal-memory program into one narrative.
-The program began with tropical threshold memory, where the exact question was how much compositional state is needed to preserve bare predecessor feasibility.
+The program began with tropical threshold memory — a max-plus algebraic framework where the exact question was how much compositional state is needed to preserve bare predecessor feasibility.
 It then moved through a negative causal correction, a positive witness-refined repair, a unique-minimal causal factorization theorem, a phase-transition program for answer-versus-justification failure, a finite-probe quotient tower, exact separator closure, exact Pareto frontiers, overlapping-family contract memory, a binary-completion runtime boundary, and finally the semantic boundary atlas.
 
 The strongest clean statement now supported is this:
@@ -55,9 +64,11 @@ Each layer did two things:
 
 ## Definitions And Notation
 
+This section defines the mathematical objects used throughout. If you're reading for the first time, the key intuition is: each "quotient" is a compressed view of memory that keeps only what matters for a specific task. Coarser quotients use less memory but lose more information.
+
 ### Raw compositional world
 
-The background selective-memory work starts from a raw associative memory object `L2 = (W[0..k], d_total)` with tropical composition.
+The background selective-memory work starts from a raw associative memory object `L2 = (W[0..k], d_total)` with tropical (max-plus) composition. Here `W[0..k]` is a frontier vector tracking predecessor capacity at each depth level, and `d_total` counts total predecessors seen.
 The earlier quotient ladder is:
 
 `raw L2 -> L2' -> M_k -> R_k`.
