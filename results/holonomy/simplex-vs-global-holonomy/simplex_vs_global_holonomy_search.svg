@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1640" height="1146" viewBox="0 0 1640 1146">
+<style>
+text { font-family: 'Inter', 'Segoe UI', Arial, sans-serif; font-size: 13px; fill: #243b53; }
+.title { font-size: 24px; font-weight: 700; fill: #102a43; }
+.subtitle { font-size: 14px; fill: #52606d; }
+.panel { fill: #ffffff; stroke: #d9e2ec; stroke-width: 1.2; rx: 18; ry: 18; }
+.card { fill: #ffffff; stroke: #d9e2ec; stroke-width: 1.2; rx: 16; ry: 16; }
+.header { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; fill: #486581; }
+.section { font-size: 17px; font-weight: 700; fill: #102a43; }
+.metric { font-size: 30px; font-weight: 700; fill: #0f172a; }
+.small { font-size: 12px; fill: #52606d; }
+.cell { font-size: 12px; fill: #102a43; }
+.mono { font-family: 'SFMono-Regular', Menlo, Monaco, Consolas, monospace; font-size: 12px; fill: #102a43; }
+.control-row { fill: #f4f7f9; }
+.pair-row { fill: #eff6ff; }
+.simplex-row { fill: #f7efff; }
+.global-row { fill: #eefbf3; }
+.divider { stroke: #e5e7eb; stroke-width: 1; }
+.chip-flat { fill: #f1f5f9; stroke: #cbd2d9; stroke-width: 1; }
+.chip-pair { fill: #dbeafe; stroke: #93c5fd; stroke-width: 1; }
+.chip-simplex { fill: #ede9fe; stroke: #c4b5fd; stroke-width: 1; }
+.chip-global { fill: #dcfce7; stroke: #86efac; stroke-width: 1; }
+</style>
+<rect x="0" y="0" width="1640" height="1146" fill="#f7fafc"/>
+<text x="40" y="40" class="title">Simplex vs Global Holonomy Search</text>
+<text x="40" y="64" class="subtitle">Does a hidden future survive beyond assignment + pair + simplex transport, and if not, how much of the simplex layer can be compressed exactly?</text>
+<rect x="40.0" y="84" width="509.3333333333333" height="126" class="card"/>
+<rect x="565.3333333333333" y="84" width="509.3333333333333" height="126" class="card"/>
+<rect x="1090.6666666666665" y="84" width="509.3333333333333" height="126" class="card"/>
+<text x="58" y="110" class="header">Scan</text>
+<text x="58" y="144" class="metric">129</text>
+<text x="140" y="144" class="section">families per semantics</text>
+<text x="58" y="170" class="small">Base grid: p in (2, 3, 4), k ≤ 3. Expanded pass: False. Dense pass: False.</text>
+<text x="58" y="192" class="small">11 semantics = 4 controls plus 7 tetra/global laws.</text>
+<text x="583.3333333333333" y="110" class="header">Boundary</text>
+<text x="583.3333333333333" y="138" class="section">First simplex split</text>
+<text x="583.3333333333333" y="166" class="small">pair_phase_shared_other_live_block_lower__feedback_orient_freeze_pairs__triangle_cycle_flux on |A|=5 @ (p=4, k=2)</text>
+<text x="583.3333333333333" y="188" class="small">counts = 98 / 374 / 610 / 644</text>
+<text x="1108.6666666666665" y="110" class="header">Compression</text>
+<text x="1108.6666666666665" y="138" class="section">Best simplex compression</text>
+<text x="1108.6666666666665" y="166" class="small">pair_phase_shared_other_live_block_lower__feedback_orient_freeze_pairs on |A|=5: Simplex histogram = 599</text>
+<text x="1108.6666666666665" y="188" class="small">raw simplex = 610, runtime = 106</text>
+<rect x="40" y="238" width="1560" height="474" class="panel"/>
+<text x="58" y="264" class="header">Semantic Library</text>
+<text x="58" y="288" class="small">Seed counts are runtime / pair / simplex / full. The last column shows the smallest explicit exact quotient discovered inside the simplex layer.</text>
+<text x="60" y="320" class="header">Semantics</text>
+<text x="450" y="320" class="header">Kind</text>
+<text x="585" y="320" class="header">|pair| / |simplex| / |extra|</text>
+<text x="720" y="320" class="header">Seed q</text>
+<text x="900" y="320" class="header">Pair split</text>
+<text x="1075" y="320" class="header">Simplex split</text>
+<text x="1255" y="320" class="header">Hidden beyond simplex</text>
+<text x="1425" y="320" class="header">Exact compression</text>
+<line x1="58" y1="330" x2="1582" y2="330" class="divider"/>
+<rect x="52" y="336" width="1536" height="28" rx="12" ry="12" class="control-row"/>
+<text x="60" y="354" class="cell">Broadcast</text>
+<text x="450" y="354" class="cell">control</text>
+<text x="585" y="354" class="cell">1 / 1 / 1</text>
+<text x="720" y="354" class="mono">8 / 8 / 8 / 8</text>
+<text x="900" y="354" class="cell">none</text>
+<text x="1075" y="354" class="cell">none</text>
+<text x="1255" y="354" class="cell">none</text>
+<text x="1425" y="354" class="cell">none</text>
+<rect x="1460" y="339" width="112" height="22" rx="11" ry="11" class="chip-flat"/>
+<text x="1472" y="354" class="cell">flat</text>
+<rect x="52" y="372" width="1536" height="28" rx="12" ry="12" class="control-row"/>
+<text x="60" y="390" class="cell">Committed Allocation</text>
+<text x="450" y="390" class="cell">control</text>
+<text x="585" y="390" class="cell">1 / 1 / 1</text>
+<text x="720" y="390" class="mono">21 / 27 / 27 / 27</text>
+<text x="900" y="390" class="cell">none</text>
+<text x="1075" y="390" class="cell">none</text>
+<text x="1255" y="390" class="cell">none</text>
+<text x="1425" y="390" class="cell">none</text>
+<rect x="1460" y="375" width="112" height="22" rx="11" ry="11" class="chip-flat"/>
+<text x="1472" y="390" class="cell">flat</text>
+<rect x="52" y="408" width="1536" height="28" rx="12" ry="12" class="pair-row"/>
+<text x="60" y="426" class="cell">Pair Phase XL</text>
+<text x="450" y="426" class="cell">pair_control</text>
+<text x="585" y="426" class="cell">2 / 1 / 1</text>
+<text x="720" y="426" class="mono">22 / 49 / 49 / 49</text>
+<text x="900" y="426" class="cell">none</text>
+<text x="1075" y="426" class="cell">none</text>
+<text x="1255" y="426" class="cell">none</text>
+<text x="1425" y="426" class="cell">none</text>
+<rect x="1460" y="411" width="112" height="22" rx="11" ry="11" class="chip-flat"/>
+<text x="1472" y="426" class="cell">flat</text>
+<rect x="52" y="444" width="1536" height="28" rx="12" ry="12" class="pair-row"/>
+<text x="60" y="462" class="cell">Shared Pair Phase + Feedback Orient</text>
+<text x="450" y="462" class="cell">simplex_control</text>
+<text x="585" y="462" class="cell">2 / 4 / 1</text>
+<text x="720" y="462" class="mono">24 / 45 / 58 / 58</text>
+<text x="900" y="462" class="cell">triangle</text>
+<text x="1075" y="462" class="cell">none</text>
+<text x="1255" y="462" class="cell">none</text>
+<text x="1425" y="462" class="cell">Simplex histogram (599)</text>
+<rect x="1460" y="447" width="112" height="22" rx="11" ry="11" class="chip-pair"/>
+<text x="1472" y="462" class="cell">pair split</text>
+<rect x="52" y="480" width="1536" height="28" rx="12" ry="12" class="global-row"/>
+<text x="60" y="498" class="cell">Feedback Orient + Tetra Toggle</text>
+<text x="450" y="498" class="cell">tetra_local</text>
+<text x="585" y="498" class="cell">2 / 4 / 2</text>
+<text x="720" y="498" class="mono">24 / 45 / 58 / 58</text>
+<text x="900" y="498" class="cell">triangle</text>
+<text x="1075" y="498" class="cell">|A|=4</text>
+<text x="1255" y="498" class="cell">four_edge_star</text>
+<text x="1425" y="498" class="cell">Simplex histogram (599)</text>
+<rect x="1460" y="483" width="112" height="22" rx="11" ry="11" class="chip-global"/>
+<text x="1472" y="498" class="cell">hidden future</text>
+<rect x="52" y="516" width="1536" height="28" rx="12" ry="12" class="pair-row"/>
+<text x="60" y="534" class="cell">Feedback Orient + Tetra Orient</text>
+<text x="450" y="534" class="cell">tetra_local</text>
+<text x="585" y="534" class="cell">2 / 4 / 5</text>
+<text x="720" y="534" class="mono">24 / 45 / 58 / 58</text>
+<text x="900" y="534" class="cell">triangle</text>
+<text x="1075" y="534" class="cell">none</text>
+<text x="1255" y="534" class="cell">none</text>
+<text x="1425" y="534" class="cell">Simplex histogram (599)</text>
+<rect x="1460" y="519" width="112" height="22" rx="11" ry="11" class="chip-pair"/>
+<text x="1472" y="534" class="cell">pair split</text>
+<rect x="52" y="552" width="1536" height="28" rx="12" ry="12" class="pair-row"/>
+<text x="60" y="570" class="cell">Feedback Orient + Tetra Debt</text>
+<text x="450" y="570" class="cell">tetra_local</text>
+<text x="585" y="570" class="cell">2 / 4 / 3</text>
+<text x="720" y="570" class="mono">24 / 45 / 58 / 58</text>
+<text x="900" y="570" class="cell">triangle</text>
+<text x="1075" y="570" class="cell">none</text>
+<text x="1255" y="570" class="cell">none</text>
+<text x="1425" y="570" class="cell">Simplex histogram (599)</text>
+<rect x="1460" y="555" width="112" height="22" rx="11" ry="11" class="chip-pair"/>
+<text x="1472" y="570" class="cell">pair split</text>
+<rect x="52" y="588" width="1536" height="28" rx="12" ry="12" class="global-row"/>
+<text x="60" y="606" class="cell">Feedback Orient + Tetra Freeze</text>
+<text x="450" y="606" class="cell">tetra_local</text>
+<text x="585" y="606" class="cell">2 / 4 / 2</text>
+<text x="720" y="606" class="mono">24 / 45 / 58 / 58</text>
+<text x="900" y="606" class="cell">triangle</text>
+<text x="1075" y="606" class="cell">|A|=4</text>
+<text x="1255" y="606" class="cell">|A|=4</text>
+<text x="1425" y="606" class="cell">Simplex histogram (599)</text>
+<rect x="1460" y="591" width="112" height="22" rx="11" ry="11" class="chip-global"/>
+<text x="1472" y="606" class="cell">hidden future</text>
+<rect x="52" y="624" width="1536" height="28" rx="12" ry="12" class="global-row"/>
+<text x="60" y="642" class="cell">Feedback Orient + Cycle Flux</text>
+<text x="450" y="642" class="cell">global_cycle</text>
+<text x="585" y="642" class="cell">2 / 4 / 2</text>
+<text x="720" y="642" class="mono">24 / 45 / 58 / 58</text>
+<text x="900" y="642" class="cell">triangle</text>
+<text x="1075" y="642" class="cell">|A|=5</text>
+<text x="1255" y="642" class="cell">|A|=4</text>
+<text x="1425" y="642" class="cell">Simplex histogram (226)</text>
+<rect x="1460" y="627" width="112" height="22" rx="11" ry="11" class="chip-global"/>
+<text x="1472" y="642" class="cell">hidden future</text>
+<rect x="52" y="660" width="1536" height="28" rx="12" ry="12" class="global-row"/>
+<text x="60" y="678" class="cell">Feedback Orient + Feedback Loop</text>
+<text x="450" y="678" class="cell">global_cycle</text>
+<text x="585" y="678" class="cell">2 / 4 / 2</text>
+<text x="720" y="678" class="mono">24 / 45 / 58 / 58</text>
+<text x="900" y="678" class="cell">triangle</text>
+<text x="1075" y="678" class="cell">|A|=5</text>
+<text x="1255" y="678" class="cell">|A|=4</text>
+<text x="1425" y="678" class="cell">Simplex histogram (226)</text>
+<rect x="1460" y="663" width="112" height="22" rx="11" ry="11" class="chip-global"/>
+<text x="1472" y="678" class="cell">hidden future</text>
+<rect x="52" y="696" width="1536" height="28" rx="12" ry="12" class="global-row"/>
+<text x="60" y="714" class="cell">Feedback Orient + Face-Order Parity</text>
+<text x="450" y="714" class="cell">global_cycle</text>
+<text x="585" y="714" class="cell">2 / 4 / 2</text>
+<text x="720" y="714" class="mono">24 / 45 / 58 / 58</text>
+<text x="900" y="714" class="cell">triangle</text>
+<text x="1075" y="714" class="cell">|A|=5</text>
+<text x="1255" y="714" class="cell">|A|=4</text>
+<text x="1425" y="714" class="cell">Simplex histogram (226)</text>
+<rect x="1460" y="699" width="112" height="22" rx="11" ry="11" class="chip-global"/>
+<text x="1472" y="714" class="cell">hidden future</text>
+<rect x="40.0" y="734" width="772.0" height="338" class="card"/>
+<rect x="828.0" y="734" width="772.0" height="338" class="card"/>
+<text x="58" y="762" class="header">Simplex Boundary Witness</text>
+<text x="58" y="792" class="section">pair_phase_shared_other_live_block_lower__feedback_orient_freeze_pairs__tetra_freeze_simplex</text>
+<text x="58" y="816" class="small">|A|=4 family at (p=4, k=3). This is the first witness where the full simplex fiber and current output agree but the future still remembers more.</text>
+<text x="58" y="852" class="mono">u = [2->(1, 2, 3), 3->(1, 2, 3), 4->(1, 4)]</text>
+<text x="58" y="876" class="mono">v = [2->(1, 2, 3), 4->(1, 4), 3->(1, 2, 3)]</text>
+<text x="58" y="900" class="mono">w = [1->(1, 2, 3)]</text>
+<text x="58" y="934" class="small">Shared simplex fiber: ((-1, 0, 0, 1), (0, 0, 0, 0, 0, 0), (2, 2, 0, 0))</text>
+<text x="58" y="958" class="small">Shared current output: ((1,), (1,))</text>
+<text x="58" y="982" class="small">Future outputs after non-empty w: () vs ((),)</text>
+<text x="846.0" y="762" class="header">Best Explicit Compression</text>
+<text x="846.0" y="792" class="section">pair_phase_shared_other_live_block_lower__feedback_orient_freeze_pairs</text>
+<text x="846.0" y="816" class="small">|A|=5 family; best explicit exact quotient = Simplex histogram (599).</text>
+<text x="846.0" y="852" class="small">Runtime quotient: 106</text>
+<text x="846.0" y="876" class="small">Raw simplex quotient: 610</text>
+<text x="846.0" y="900" class="small">Compressed gap: -2.498</text>
+<text x="846.0" y="944" class="small">Simplex presence: count 374, exact = False</text>
+<text x="846.0" y="966" class="small">Simplex histogram: count 599, exact = True</text>
+<text x="846.0" y="988" class="small">Triangle incidence profile: count 374, exact = False</text>
+<text x="846.0" y="1010" class="small">Blocked-edge profile: count 610, exact = True</text>
+<text x="846.0" y="1032" class="small">Sorted simplex tokens: count 599, exact = True</text>
+<text x="40" y="1096" class="small">Canonical first-order for ties: p, k, family_count, pair_alphabet_size, simplex_alphabet_size, extra_alphabet_size, reachable_state_count, witness_length, family, semantics.</text>
+<text x="40" y="1118" class="small">Reading: pair-only controls stop at assignment curvature, simplex transport fixes the triangle boundary, and the new question is whether tetra/global tokens create a genuinely deeper hidden future or whether simplex transport merely needs compression.</text>
+</svg>
