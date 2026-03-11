@@ -54,9 +54,8 @@
   <!-- ══════════════ "0 FAILURES" BADGE (top right) ══════════════ -->
   <g transform="translate(1020, 18)" filter="url(#badgeGlow)">
     <rect x="0" y="0" width="172" height="52" rx="8" fill="#0d2818" stroke="#34d399" stroke-width="1.2" opacity="0.95"/>
-    <text x="16" y="22" font-size="26" font-weight="800" fill="#34d399" letter-spacing="-1">0</text>
-    <text x="44" y="22" font-size="13" font-weight="600" fill="#34d399">failures</text>
-    <text x="16" y="40" font-size="10" font-weight="400" fill="#6ee7b7" opacity="0.7">across 6,336 antichain configs</text>
+    <text x="86" y="24" font-size="26" font-weight="800" fill="#34d399" letter-spacing="-1" text-anchor="middle">0 <tspan font-size="13" font-weight="600">failures</tspan></text>
+    <text x="86" y="42" font-size="10" font-weight="400" fill="#6ee7b7" opacity="0.7" text-anchor="middle">across 6,336 antichain configs</text>
   </g>
 
   <!-- ══════════════════════════════════════════════════════════════════════════ -->
@@ -200,13 +199,13 @@
 
   <!-- ═══ CHART LEGEND (inside left panel) ═══ -->
   <g transform="translate(480, 132)">
-    <rect x="0" y="0" width="158" height="52" rx="5" fill="#12161e" stroke="#252a36" stroke-width="0.8"/>
+    <rect x="0" y="0" width="158" height="64" rx="5" fill="#12161e" stroke="#252a36" stroke-width="0.8"/>
     <circle cx="14" cy="15" r="4.5" fill="#34d399"/>
     <text x="24" y="18" font-size="9.5" font-weight="600" fill="#34d399">family bits</text>
     <text x="24" y="28" font-size="8" font-weight="400" fill="#64748b">contract complexity</text>
-    <rect x="10" y="36" width="8" height="3" rx="1.5" fill="#f87171" opacity="0.85"/>
-    <text x="24" y="42" font-size="9.5" font-weight="600" fill="#f87171">answer bit range</text>
-    <text x="100" y="42" font-size="8" font-weight="400" fill="#64748b">runtime</text>
+    <rect x="10" y="40" width="8" height="3" rx="1.5" fill="#f87171" opacity="0.85"/>
+    <text x="24" y="45" font-size="9.5" font-weight="600" fill="#f87171">answer bit range</text>
+    <text x="24" y="55" font-size="8" font-weight="400" fill="#64748b">runtime</text>
   </g>
 
   <!-- Antichain count explanation -->

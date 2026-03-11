@@ -90,7 +90,7 @@
 
   <!-- Panel title -->
   <text x="56" y="104" font-size="14" font-weight="700" fill="#e2e8f0">Forced decoding</text>
-  <text x="175" y="104" font-size="10" font-weight="400" fill="#64748b">system must always give an answer</text>
+  <text x="56" y="120" font-size="10" font-weight="400" fill="#64748b">system must always give an answer</text>
 
   <!-- Y axis grid + labels (fidelity 0.0 to 1.0) -->
   <g font-size="9" font-weight="400" fill="#475569" text-anchor="end">
@@ -254,7 +254,7 @@
 
   <!-- Panel title -->
   <text x="624" y="104" font-size="14" font-weight="700" fill="#e2e8f0">Breach-enabled decoding</text>
-  <text x="795" y="104" font-size="10" font-weight="400" fill="#64748b">system can abstain when uncertain</text>
+  <text x="624" y="120" font-size="10" font-weight="400" fill="#64748b">system can abstain when uncertain</text>
 
   <!-- Y axis grid + labels -->
   <g font-size="9" font-weight="400" fill="#475569" text-anchor="end">
