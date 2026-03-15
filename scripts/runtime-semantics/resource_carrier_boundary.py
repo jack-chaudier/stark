@@ -604,6 +604,7 @@ def build_markdown(records: Sequence[FamilyRecord], groups: Sequence[GroupRecord
 
 
 def main() -> None:
+    RESULTS_DIR.mkdir(parents=True, exist_ok=True)
     all_records: List[FamilyRecord] = []
     grouped: Dict[Tuple[int, int], List[FamilyRecord]] = {}
     for p in P_SCAN:
