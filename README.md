@@ -142,6 +142,20 @@ stark/
 
 Every script follows the same pattern: exact finite scan → JSON data → markdown report → SVG figure(s).
 
+## Setup
+
+Requires Python 3.10+. All scripts use only the standard library — no external dependencies.
+
+```bash
+git clone https://github.com/jack-chaudier/stark.git
+cd stark
+
+# Run any experiment script directly:
+python scripts/referee/unique_minimal_referee.py
+```
+
+Each script writes its outputs (JSON data, markdown report, SVG figures) to the corresponding directory under `results/`.
+
 ## Reproducibility
 
 All experiments are exact and deterministic. Representative scripts:
