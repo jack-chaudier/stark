@@ -1207,6 +1207,7 @@ def build_payload(records: Sequence[SemanticAtlasRecord]) -> Dict[str, object]:
 
 
 def main() -> None:
+    RESULTS_DIR.mkdir(parents=True, exist_ok=True)
     records = tuple(scan_semantic(semantic) for semantic in SEMANTICS)
     payload = build_payload(records)
 
