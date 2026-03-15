@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Stark: Selective Memory and Causal Reasoning under Resource Constraints"
+type: software
+authors:
+  - family-names: Gaffney
+    given-names: Jack
+repository-code: "https://github.com/jack-chaudier/stark"
+license: MIT
+date-released: "2026-03-10"
