@@ -33,10 +33,20 @@ Under memory constraints, correctness and justification come apart in a structur
 | **Witness quotient is exact** | The witness-preserving state count `\|Q_(k,p)\| = Σ (d+2)^p` is tight — no wasted states |
 | **Causal factorization works** | On 89,291 unique-minimal causal queries, witness-faithful factorization has 0 failures |
 | **Mirage shelf is real** | On `Q_(5,3)` prefix forcing at 1 bit below the 10-bit threshold, answer fidelity = 0.999 while witness fidelity = 0.987 |
+| **Public Grok bridge** | In the companion `dreams` experiment bundle, answer accuracy falls from 0.825 to 0.775 while witness fidelity falls from 0.7867 to 0.5533 as context grows from 4K to 512K |
 | **Hypergraph contracts needed** | Overlapping variable families force a hypergraph-valued contract layer |
 | **Runtime stays simple** | Across 6,336 antichain configurations, runtime never exceeds coordinate tracking — 0 collapses |
 | **Transport tower is strict** | Pair → simplex → global: each level captures structure the previous one misses |
 | **Static ≠ dynamic obstructions** | The first "different now" failure (5 edges) and "different future" failure (4 edges) don't coincide |
+
+## Theory To Evidence
+
+The exact-search shelf in `stark` is a theorem-level statement about how answer fidelity can outrun witness fidelity under memory pressure. The companion public experiment in `dreams` measures the same qualitative separation on a frontier model rather than a finite quotient family.
+
+On the March 2026 Grok run in `dreams`, normal-condition answer accuracy falls only from `0.825` at `4K` to `0.775` at `512K`, while witness fidelity falls from `0.7867` to `0.5533`. That widens the empirical mirage gap from `+0.0383` to `+0.2217`. In the witness-removed control, answer accuracy drops to `0.315` at `4K` and `0.275` at `256K`, which is consistent with the broader Stark claim that preserving answerability and preserving the governing witness are different memory tasks.
+
+- Public page: <https://dreams-dun.vercel.app/mirage-shelf-grok-2026-03>
+- Artifact bundle: <https://github.com/jack-chaudier/dreams/tree/main/results/mirage-shelf-grok-2026-03>
 
 ## Start Here
 
